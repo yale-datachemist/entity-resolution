@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+wget -P data https://id.loc.gov/download/authorities/names.madsrdf.jsonld.gz
