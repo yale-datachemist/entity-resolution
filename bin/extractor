@@ -1,0 +1,70 @@
+#!/usr/bin/env python
+
+import sys
+import json
+
+TEMPLATE = f''
+
+def is_of_type(o, ty):
+    if not '@type' in o:
+        return false
+    k = o['@type']
+    if isinstance(k, list):
+        return ty in k
+    else:
+        return k == ty
+
+def dictify(graph):
+    d = {}
+    for elt in graph:
+        if '@id' in elt:
+            d[elt['@id']] = elt
+    return d
+
+count = 0
+for line in sys.stdin:
+    try:
+        obj = json.loads(line)
+        elts = obj['@graph']
+        d = dictify(elts)
+        name = None
+        occupation = None
+        birthplace = None
+        for i in d:
+            elt = d[i]
+            if is_of_type(elt, 'http://id.loc.gov/ontologies/bibframe/Person'):
+                if 'madsrdf:birthPlace' in elt:
+                    birthplace_id = elt['madsrdf:birthPlace']['@id']
+
+                    birthplace = d[birthplace_id]['rdfs:label']
+
+                if 'madsrdf:occupation' in elt:
+                    occupation_id = elt['madsrdf:occupation']['@id']
+
+                    occ_obj = d[occupation_id]
+                    if 'madsrdf:authoriativeLabel' in occ_obj:
+                        occupation = occ_obj['madsrdf:authoriativeLabel']
+
+            if is_of_type(elt, 'madsrdf:PersonalName'):
+                if 'madsrdf:authoritativeLabel' in elt:
+                    name = elt['madsrdf:authoritativeLabel']
+
+        embedding_string = ''
+        if name:
+            embedding_string += f'This person\'s name is {name}. '
+            print(embedding_string)
+        if occupation:
+            embedding_string += f'They work in a field described as {occupation}. '
+        if birthplace:
+            embedding_string += f'They were born in {birthplace}. '
+
+        if embedding_string == '':
+            print(f"Found no content for record with id {count}", file=sys.stderr)
+        else:
+            output_dict = {'op': 'Inserted', 'id' : count, 'string': embedding_string}
+            print(json.dumps(output_dict))
+    except Exception as e:
+        print(e)
+
+    count+=1
+
