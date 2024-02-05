@@ -5,14 +5,17 @@ import json
 
 TEMPLATE = f''
 
+def lift_to_list(o):
+    if isinstance(o, list):
+        return o
+    else:
+        return [o]
+
 def is_of_type(o, ty):
     if not '@type' in o:
         return false
     k = o['@type']
-    if isinstance(k, list):
-        return ty in k
-    else:
-        return k == ty
+    return ty in lift_to_list(k)
 
 def dictify(graph):
     d = {}
@@ -30,9 +33,17 @@ for line in sys.stdin:
         name = None
         occupation = None
         birthplace = None
+        record_type = None
+        note = None
+        source = None
         for i in d:
             elt = d[i]
+            if is_of_type(elt, 'http://id.loc.gov/ontologies/bibframe/Organization'):
+                record_type = 'Organization'
+                name = elt["rdfs:label"]
+
             if is_of_type(elt, 'http://id.loc.gov/ontologies/bibframe/Person'):
+                record_type = 'Person'
                 if 'madsrdf:birthPlace' in elt:
                     birthplace_id = elt['madsrdf:birthPlace']['@id']
 
@@ -49,14 +60,35 @@ for line in sys.stdin:
                 if 'madsrdf:authoritativeLabel' in elt:
                     name = elt['madsrdf:authoritativeLabel']
 
+                if 'madsrdf:hasSource' in elt:
+                    source_id_objs = lift_to_list(elt['madsrdf:hasSource'])
+                    for source_id_obj in source_id_objs:
+                        source_id = source_id_obj['@id']
+                        source_obj = d[source_id]
+                        if 'madsrdf:citationNote' in source_obj:
+                            note = source_obj['madsrdf:citationNote']
+                            if 'madsrdf:citationNote' in source_obj:
+                                source = source_obj['madsrdf:citationSource']
+
+
         embedding_string = ''
-        if name:
-            embedding_string += f'This person\'s name is {name}. '
-            print(embedding_string)
-        if occupation:
-            embedding_string += f'They work in a field described as {occupation}. '
-        if birthplace:
-            embedding_string += f'They were born in {birthplace}. '
+
+        if record_type == 'Person':
+            if name:
+                embedding_string += f'This person\'s name is {name}. '
+            if occupation:
+                embedding_string += f'They work in a field described as {occupation}. '
+            if birthplace:
+                embedding_string += f'They were born in {birthplace}. '
+
+            if note:
+                embedding_string += f'The following ciation note applies to this person: {note}. '
+                if source:
+                    embedding_string += f'This is according to: {source}'
+
+        elif record_type == 'Organization':
+            if name:
+                embedding_string += f'This organization\'s name is {name}. '
 
         if embedding_string == '':
             print(f"Found no content for record with id {count}", file=sys.stderr)
