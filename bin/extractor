@@ -31,11 +31,10 @@ for line in sys.stdin:
         elts = obj['@graph']
         d = dictify(elts)
         name = None
-        occupation = None
+        occupation = []
         birthplace = None
         record_type = None
-        note = None
-        source = None
+        note = []
         for i in d:
             elt = d[i]
             if is_of_type(elt, 'http://id.loc.gov/ontologies/bibframe/Organization'):
@@ -46,15 +45,19 @@ for line in sys.stdin:
                 record_type = 'Person'
                 if 'madsrdf:birthPlace' in elt:
                     birthplace_id = elt['madsrdf:birthPlace']['@id']
-
-                    birthplace = d[birthplace_id]['rdfs:label']
-
+                    birthplace_obj = d[birthplace_id]
+                    if 'madsrdf:authoritativeLabel' in birthplace_obj:
+                        birthplace = birthplace_obj['madsrdf:authoritativeLabel']
+                    elif 'rdfs:label' in birthplace_obj:
+                        birthplace = birthplace_obj['rdfs:label']
                 if 'madsrdf:occupation' in elt:
-                    occupation_id = elt['madsrdf:occupation']['@id']
+                    occupation_objs = lift_to_list(elt['madsrdf:occupation'])
 
-                    occ_obj = d[occupation_id]
-                    if 'madsrdf:authoriativeLabel' in occ_obj:
-                        occupation = occ_obj['madsrdf:authoriativeLabel']
+                    for occupation_obj in occupation_objs:
+                        occupation_id = occupation_obj['@id']
+                        occ_obj = d[occupation_id]
+                        if 'madsrdf:authoriativeLabel' in occ_obj:
+                            occupation.append(occ_obj['madsrdf:authoriativeLabel'])
 
             if is_of_type(elt, 'madsrdf:PersonalName'):
                 if 'madsrdf:authoritativeLabel' in elt:
@@ -66,25 +69,25 @@ for line in sys.stdin:
                         source_id = source_id_obj['@id']
                         source_obj = d[source_id]
                         if 'madsrdf:citationNote' in source_obj:
-                            note = source_obj['madsrdf:citationNote']
-                            if 'madsrdf:citationNote' in source_obj:
-                                source = source_obj['madsrdf:citationSource']
-
+                            if 'madsrdf:citationSource' in source_obj:
+                                note.append((source_obj['madsrdf:citationNote'], source_obj['madsrdf:citationSource']))
+                            else:
+                                note.append((source_obj['madsrdf:citationNote'], None))
 
         embedding_string = ''
 
         if record_type == 'Person':
             if name:
                 embedding_string += f'This person\'s name is {name}. '
-            if occupation:
+            for occ in occupation:
                 embedding_string += f'They work in a field described as {occupation}. '
             if birthplace:
                 embedding_string += f'They were born in {birthplace}. '
 
-            if note:
-                embedding_string += f'The following ciation note applies to this person: {note}. '
+            for (n,source) in note:
+                embedding_string += f'The following ciation note applies to this person: {n}. '
                 if source:
-                    embedding_string += f'This is according to: {source}'
+                    embedding_string += f'This is according to: {source}. '
 
         elif record_type == 'Organization':
             if name:
@@ -96,7 +99,7 @@ for line in sys.stdin:
             output_dict = {'op': 'Inserted', 'id' : count, 'string': embedding_string}
             print(json.dumps(output_dict))
     except Exception as e:
-        print(e)
+        print(e, file=sys.stderr)
 
-    count+=1
+        count+=1
 
