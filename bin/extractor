@@ -85,7 +85,7 @@ for line in sys.stdin:
                 embedding_string += f'They were born in {birthplace}. '
 
             for (n,source) in note:
-                embedding_string += f'The following ciation note applies to this person: {n}. '
+                embedding_string += f'The following citation note applies to this person: {n}. '
                 if source:
                     embedding_string += f'This is according to: {source}. '
 
