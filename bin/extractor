@@ -101,5 +101,5 @@ for line in sys.stdin:
     except Exception as e:
         print(e, file=sys.stderr)
 
-        count+=1
+    count+=1
 
