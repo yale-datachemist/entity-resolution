@@ -4,6 +4,7 @@ See the [project planning document](https://docs.google.com/document/d/1AmMHoyix
 
 Project server: 10.5.38.29
 
+>>>>>>> c6ec4fe (Add changes to README)
 ## Entity Designators
 
 We use the Library of Congress Name Authority as the "ground
