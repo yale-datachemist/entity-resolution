@@ -9,6 +9,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.10"
 pyld = "^2.0.3"
+pymarc = "^5.1.1"
 
 
 [build-system]

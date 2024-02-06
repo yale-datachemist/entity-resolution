@@ -170,7 +170,18 @@ cachetools = ["cachetools"]
 frozendict = ["frozendict"]
 requests = ["requests"]
 
+[[package]]
+name = "pymarc"
+version = "5.1.1"
+description = "Read, write and modify MARC bibliographic data"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "pymarc-5.1.1-py3-none-any.whl", hash = "sha256:e7b0c4f0c7a53208150c1f93229a2c654f1d3c985f6dc465890201aff1e28a62"},
+    {file = "pymarc-5.1.1.tar.gz", hash = "sha256:9fa3d5f80d35d82e7f4ad353809bb8e5325eacd4400dea4323e6fe4cba7484c8"},
+]
+
 [metadata]
 lock-version = "2.0"
-python-versions = "^3.11"
-content-hash = "ec2fb10797c09e574be5c3a42db2ac507ca74d801c4349ef1c48ea976a96b094"
+python-versions = "^3.10"
+content-hash = "b60fde8f26606055654c25332cba2ea1b319cf563147e78343936aa63e78c29f"
