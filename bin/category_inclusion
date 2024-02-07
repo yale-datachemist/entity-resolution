@@ -13,7 +13,7 @@ if __name__ == "__main__":
         api_key = os.environ.get('OPENAI_KEY'),
     )
 
-    prompt = f"Answer with 'Yes' or 'No'. Is there a place called {sys.argv[1]} in {sys.argv[2]}?"
+    prompt = f"Answer with 'Yes' or 'No'. Is there a category called {sys.argv[1]} in {sys.argv[2]}?"
 
     chat_completion = client.chat.completions.create(
         messages=[
