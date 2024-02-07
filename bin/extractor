@@ -35,9 +35,9 @@ for line in sys.stdin:
         birthplace = None
         record_type = None
         note = []
+        ident = None
         for i in d:
             elt = d[i]
-            ident = None
             if is_of_type(elt, 'http://id.loc.gov/ontologies/bibframe/Organization'):
                 ident = elt['@id']
                 record_type = 'Organization'
