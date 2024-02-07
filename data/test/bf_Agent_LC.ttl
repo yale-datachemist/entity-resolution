@@ -1,0 +1,6 @@
+<http://id.loc.gov/authorities/names/no2016089622> <http://id.loc.gov/ontologies/bflc/marcKey> "60010$aHall, John Charles,$d1821-1890.$0http://id.loc.gov/authorities/names/no2016089622" .
+<http://id.loc.gov/authorities/names/no2016089622> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Hall, John Charles, 1821-1890" .
+<http://id.loc.gov/authorities/names/no2016089622> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Agent> .
+<http://id.loc.gov/authorities/names/no2016089622> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Person> .
+<http://id.loc.gov/authorities/names/no2016089622> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+<http://id.loc.gov/authorities/names/no2016089622> <http://www.w3.org/2000/01/rdf-schema#label> "Hall, John Charles, 1821-1890" .
