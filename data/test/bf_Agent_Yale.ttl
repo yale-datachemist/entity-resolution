@@ -1,0 +1,4 @@
+<https://library.yale.edu/data/613672#Agent100-11> <http://id.loc.gov/ontologies/bflc/marcKey> "1001 $aKarrick, David Brewer,$d1893-1960." .
+<https://library.yale.edu/data/613672#Agent100-11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Agent> .
+<https://library.yale.edu/data/613672#Agent100-11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Person> .
+<https://library.yale.edu/data/613672#Agent100-11> <http://www.w3.org/2000/01/rdf-schema#label> "Karrick, David Brewer, 1893-1960" .

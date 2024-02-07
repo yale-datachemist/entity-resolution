@@ -1,0 +1,85 @@
+[
+  {
+    "@metadata": {
+      "DFRNT": {"defaultLabelProperty": "label"}
+    },
+    "@base": "https://library.yale.edu/data/",
+    "@schema": "http://id.loc.gov/ontologies/bibframe/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "tdb": "terminusdb:///schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "madsrdf": "http://www.loc.gov/mads/rdf/v1#",
+    "bflc": "http://id.loc.gov/ontologies/bflc/",
+    "@type": "@context"
+  },
+  {
+    "@documentation": {
+      "@comment": "Work",
+      "@label": "Work"
+    },
+    "@base": "https://library.yale.edu/data/",
+    "@id": "Work",
+    "@key": {
+      "@type": "Random"
+    },
+    "@type": "Class",
+    "contribution": {
+      "@type": "Set",
+      "@class": "Contribution"
+    },
+    "title": {
+      "@type": "Set",
+      "@class": "Title"
+    }
+  },
+  {
+    "@documentation": {
+      "@comment": "Primary Contribution",
+      "@label": "Primary Contribution"
+    },
+    "@subdocument": [],
+    "@inherits": "Contribution",
+    "@id": "PrimaryContribution",
+    "@type": "Class",
+    "@key": {
+      "@type": "Random"
+    }
+  },
+  {
+    "@documentation": {
+      "@comment": "Contribution",
+      "@label": "Contribution"
+    },
+    "@subdocument": [],
+    "@id": "Contribution",
+    "@type": "Class",
+    "@key": {
+      "@type": "Random"
+    },
+    "agent": {
+      "@type": "Foreign",
+      "@id": "Agent"
+    },
+    "role": {
+      "@type": "Set",
+      "@class": "Role"
+    }
+  },
+  {
+    "@id": "Role",
+    "@type": "Enum",
+    "@value": [
+      "http://id.loc.gov/vocabulary/relators/ctb"
+    ]
+  },
+  {
+    "@id": "Title",
+    "@type": "Class",
+    "@subdocument": [],
+    "@key": {
+      "@type": "Random"
+    },
+    "mainTitle": "xsd:string"
+  }
+]

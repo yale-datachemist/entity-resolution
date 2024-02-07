@@ -1,0 +1,69 @@
+[
+  {
+    "@metadata": {
+      "DFRNT": {"defaultLabelProperty": "label"}
+    },
+    "@base": "https://library.yale.edu/data/",
+    "@schema": "http://id.loc.gov/ontologies/bibframe/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "tdb": "terminusdb:///schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "madsrdf": "http://www.loc.gov/mads/rdf/v1#",
+    "bflc": "http://id.loc.gov/ontologies/bflc/",
+    "@type": "@context"
+  },
+  {
+    "@documentation": {
+      "@comment": "LC Agent",
+      "@label": "LC Agent"
+    },
+    "@base": "http://id.loc.gov/authorities/names/",
+    "@id": "Agent",
+    "@key": {
+      "@type": "Hash",
+      "@fields": [
+        "rdfs:label"
+      ]
+    },
+    "@type": "Class",
+    "madsrdf:isIdentifiedByAuthority": {
+      "@type": "Set",
+      "@class": "madsrdf:Authority"
+    },
+    "bflc:marcKey": "xsd:string",
+    "rdfs:label": "xsd:string"
+  },
+  {
+    "@documentation": {
+      "@comment": "LC Person",
+      "@label": "LC Person"
+    },    
+    "@id": "Person",
+    "@key": {
+      "@type": "Hash",
+      "@fields": [
+        "rdfs:label"
+      ]
+    },
+    "@type": "Class",
+    "@inherits": "Agent"
+  },
+  {
+    "@id": "madsrdf:Authority",
+    "@type": "Class",
+    "@abstract": [],
+    "rdfs:label": "xsd:string" 
+  },
+  {
+    "@id": "madsrdf:PersonalName",
+    "@type": "Class",
+    "@inherits": ["madsrdf:Authority", "Agent"],    
+    "@key": {
+      "@type": "Hash",
+      "@fields": [
+        "rdfs:label"
+      ]
+    }       
+  }
+]
