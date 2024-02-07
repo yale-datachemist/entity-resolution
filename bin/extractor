@@ -37,11 +37,14 @@ for line in sys.stdin:
         note = []
         for i in d:
             elt = d[i]
+            ident = None
             if is_of_type(elt, 'http://id.loc.gov/ontologies/bibframe/Organization'):
+                ident = elt['@id']
                 record_type = 'Organization'
                 name = elt["rdfs:label"]
 
             if is_of_type(elt, 'http://id.loc.gov/ontologies/bibframe/Person'):
+                ident = elt['@id']
                 record_type = 'Person'
                 if 'madsrdf:birthPlace' in elt:
                     birthplace_id = elt['madsrdf:birthPlace']['@id']
@@ -96,7 +99,9 @@ for line in sys.stdin:
         if embedding_string == '':
             print(f"Found no content for record with id {count}", file=sys.stderr)
         else:
-            output_dict = {'op': 'Inserted', 'id' : count, 'string': embedding_string}
+            if not ident:
+                ident = f"iri://arbitrary/{count}"
+            output_dict = {'op': 'Inserted', 'id' : ident, 'string': embedding_string}
             print(json.dumps(output_dict))
     except Exception as e:
         print(e, file=sys.stderr)
