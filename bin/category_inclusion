@@ -1,0 +1,28 @@
+#!/usr/bin/env python
+
+import os
+import sys
+from openai import OpenAI, Completion
+
+
+if __name__ == "__main__":
+    if len(sys.argv) != 3:
+        print("Usage: category_inclusion <string1> <string2>")
+        sys.exit(1)
+    client = OpenAI(
+        api_key = os.environ.get('OPENAI_KEY'),
+    )
+
+    prompt = f"Answer with 'Yes' or 'No'. Is there a place called {sys.argv[1]} in {sys.argv[2]}?"
+
+    chat_completion = client.chat.completions.create(
+        messages=[
+            {
+                "role": "user",
+                "content": prompt
+            }
+        ],
+        model="gpt-3.5-turbo",
+    )
+    print(chat_completion.choices[0].message.content)
+
