@@ -11,6 +11,7 @@ python = "^3.10"
 pyld = "^2.0.3"
 pymarc = "^5.1.1"
 openai = "^1.11.1"
+rdflib = "^7.0.0"
 
 
 [build-system]
