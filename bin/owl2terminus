@@ -2,69 +2,91 @@
 from rdflib import RDF, RDFS, SKOS, OWL
 import argparse
 import sys
+import json
 
 CLASS_HIERARCHY = {}
-CLASS_REGISTRY = {}
+CLASS_REGISTRY = { 'http://www.w3.org/2002/07/owl#Thing' : {}}
 PROPERTY_HIERARCHY = {}
 PROPERTY_REGISTRY = {}
 TERMINUS_REGISTRY = {}
 
 def add_class_to_super(cls,sup):
     global CLASS_HIERARCHY
-    if sup in CLASS_HIERARCHY:
-        CLASS_HIERARCHY[sup].append(cls)
+    if str(sup) in CLASS_HIERARCHY:
+        CLASS_HIERARCHY[str(sup)].append(str(cls))
     else:
-        CLASS_HIERARCHY[sup] = [cls]
+        CLASS_HIERARCHY[str(sup)] = [str(cls)]
 
 def add_super_to_prop(prop, sup):
     global PROPERTY_HIERARCHY
-    PROPERTY_HIERARCHY[prop] = sup
+    PROPERTY_HIERARCHY[str(prop)] = str(sup)
 
 def register_classes(g):
     for cls in g.subjects(RDF.type, OWL.Class):
         for sup in g.objects(cls,RDFS.subClassOf):
             add_class_to_super(cls, sup)
-        comment = None
-        comment = g.objects(cls,SKOS.definition,unique=True))
-        label = next(g.objects(cls,RDFS.label,unique=True))
-        CLASS_REGISTRY[cls] = { '@documentation' : { '@description' : comment,
-                                                     '@label' : label },
+        comment_list = []
+        for c in g.objects(cls,SKOS.definition):
+            comment_list.append(str(c))
+
+        documentation_object = {}
+        if comment_list != []:
+            comment = ' '.join(comment_list)
+            documentation_object['@description'] = comment
+
+        label_list = []
+        for l in g.objects(cls,RDFS.label,unique=True):
+            label_list.append(str(l))
+        if label_list != []:
+            label = ' '.join(label_list)
+            documentation_object['@label'] = label
+        CLASS_REGISTRY[cls] = { '@documentation' : documentation_object,
                                 '@type' : "Class",
-                                '@id' : cls
+                                '@id' : str(cls)
                                 }
 
 def register_property_hierarchy(g):
+    eprint("How many properties will I register?")
     for prop in g.subjects(RDF.type, OWL.ObjectProperty):
-        sup = next(g.objects(prop, RDFS.subPropertyOf,unique=True))
-        add_super_to_prop(prop, sup)
+        eprint(f"property {str(prop)}")
+
+        for sup in g.objects(prop, RDFS.subPropertyOf,unique=True):
+            eprint(f"add {prop} and {sup}")
+            add_super_to_prop(prop, sup)
+
+    for prop in g.subjects(RDF.type, OWL.DatatypeProperty):
+        eprint(f"property {str(prop)}")
+
+        for sup in g.objects(prop, RDFS.subPropertyOf,unique=True):
+            eprint(f"add {prop} and {sup}")
+            add_super_to_prop(prop, sup)
 
 def prop_key(p, key):
-    prop_record = PROPERTY_REGISTRY[p]
+    prop_record = PROPERTY_REGISTRY[str(p)]
     domain = None
     while True:
         if key in prop_record:
+            eprint(f"prop_record[{key}]: {prop_record[key]}")
             return prop_record[key]
         else:
-            if prop in PROPERTY_HIERARCHY:
-                sup = PROPERTY_HIERARCHY[prop]
-                prop_record = PROPERTY_REGISTRY[sup]
+            if key in PROPERTY_HIERARCHY:
+                sup = PROPERTY_HIERARCHY[prop.prop.n3(g.namespace_manager)]
+                prop_record = PROPERTY_REGISTRY[str(sup)]
             else:
                 return None
 
 def property_domain(p):
-    prop_key(p, 'domain')
+    return prop_key(p, 'domain')
 
 def property_range(p):
-    prop_key(p, 'range')
+    return prop_key(p, 'range')
 
 def register_properties(g):
     for prop in g.subjects(RDF.type, OWL.ObjectProperty):
         property_record = {}
-        domain = next(g.objects(prop, RDFS.domain, unique=True))
-        if domain:
+        for domain in g.objects(prop, RDFS.domain):
            property_record['domain'] = domain
-        rng = next(g.objects(prop, RDFS.range, unique=True))
-        if rng:
+        for rng in g.objects(prop, RDFS.range, unique=True):
            property_record['range'] = rng
 
         comments = []
@@ -79,17 +101,22 @@ def register_properties(g):
         if label:
             property_record['label'] = label
 
-        PROPERTY_REGISTRY[prop_record]
+        PROPERTY_REGISTRY[prop.n3(g.namespace_manager)] = property_record
+
+def eprint(string):
+    print(string, file=sys.stderr)
 
 def add_properties_to_classes():
     for prop in PROPERTY_REGISTRY:
         domain = property_domain(prop)
+        if domain is None:
+            domain = str(OWL.Thing)
         rng = property_range(prop)
-        if domain and rng:
-            cls = CLASS_REGISTRY[domain]
-            cls[prop] = rng
-        else:
-            print("What the flup {prop}")
+        if rng is None:
+            rng = str(OWL.Thing)
+
+        cls = CLASS_REGISTRY[domain]
+        cls[prop] = rng
 
 if __name__ == '__main__' :
     from rdflib import Graph
@@ -106,4 +133,5 @@ if __name__ == '__main__' :
     register_properties(g)
     add_properties_to_classes()
 
-    print(CLASS_REGISTRY)
+    #print(json.dumps(PROPERTY_HIERARCHY))
+    print(json.dumps(CLASS_REGISTRY))
