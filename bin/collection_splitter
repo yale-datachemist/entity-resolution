@@ -21,6 +21,7 @@ if __name__ == '__main__' :
             records += l
             m = re.match('</record>.*',l)
             if m:
+                print(count)
                 count+=1
             if count > args.number:
                 count = 0
