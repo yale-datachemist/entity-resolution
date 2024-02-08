@@ -1,0 +1,4 @@
+#!/bin/bash
+
+split -n 27 ../names.madsrdf.ttl names.madsrdf. --additional-suffix=.ttl
+for i in `ls data/names_split`; do terminusdb triples load admin/mads/local/branch/main/instance "data/names_split/$i"; done
