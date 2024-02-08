@@ -34,8 +34,6 @@
   "bf": "http://id.loc.gov/ontologies/bibframe/"
 }
 {
-  "@id": "owl:Thing",
-  "@type": "Class",
   "@documentation": {
     "@properties": {
       "bf:absorbed": {
@@ -1498,6 +1496,9 @@
       }
     }
   },
+  "@inherits": [
+    "bf:WorkOrInstance"
+  ],
   "bf:appliedMaterial": {
     "@type": "Set",
     "@class": "bf:AppliedMaterial"
@@ -1802,6 +1803,9 @@
       }
     }
   },
+  "@inherits": [
+    "bf:WorkOrInstanceOrItem"
+  ],
   "bf:electronicLocator": {
     "@type": "Set",
     "@class": "owl:Thing"
@@ -2989,6 +2993,9 @@
       }
     }
   },
+  "@inherits": [
+    "bf:WorkOrInstance"
+  ],
   "bf:content": {
     "@type": "Set",
     "@class": "bf:Content"
@@ -3073,11 +3080,6 @@
 {
   "@id": "bf:WorkOrInstance",
   "@type": "Class",
-  "@inherits": [
-    "bf:Instance",
-    "bf:Work",
-    "bf:Identifier"
-  ],
   "@documentation": {
     "@properties": {
       "bf:acquisitionSource": {
@@ -3242,6 +3244,9 @@
       }
     }
   },
+  "@inherits": [
+    "bf:WorkOrInstanceOrItem"
+  ],
   "bf:acquisitionSource": {
     "@type": "Set",
     "@class": "bf:AcquisitionSource"
@@ -3404,18 +3409,13 @@
   }
 }
 {
-  "@id": "_:ned1b493b810b4038aa9ede328e191173b3",
+  "@id": "_:n324a0f7faf5a41b8a2b3e820091d97c5b3",
   "@type": "Class",
   "@documentation": {}
 }
 {
   "@id": "bf:WorkOrInstanceOrItem",
   "@type": "Class",
-  "@inherits": [
-    "bf:Item",
-    "bf:WorkOrInstance",
-    "bf:Identifier"
-  ],
   "@documentation": {
     "@properties": {
       "bf:classification": {
@@ -3486,7 +3486,7 @@
   }
 }
 {
-  "@id": "_:ned1b493b810b4038aa9ede328e191173b6",
+  "@id": "_:n324a0f7faf5a41b8a2b3e820091d97c5b6",
   "@type": "Class",
   "@documentation": {}
 }
