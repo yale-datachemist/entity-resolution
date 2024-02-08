@@ -4,7 +4,7 @@ import argparse
 import sys
 import json
 
-CLASS_REGISTRY = { 'owl:Thing' : {}}
+CLASS_REGISTRY = { 'owl:Thing' : { '@type' : 'Class', '@id' : 'owl:Thing' }}
 PROPERTY_HIERARCHY = {}
 PROPERTY_REGISTRY = {}
 

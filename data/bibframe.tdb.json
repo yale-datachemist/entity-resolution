@@ -34,6 +34,8 @@
   "bf": "http://id.loc.gov/ontologies/bibframe/"
 }
 {
+  "@type": "Class",
+  "@id": "owl:Thing",
   "@documentation": {
     "@properties": {
       "bf:absorbed": {
@@ -3409,7 +3411,7 @@
   }
 }
 {
-  "@id": "_:n324a0f7faf5a41b8a2b3e820091d97c5b3",
+  "@id": "_:nb1e109e9c91248b19483997761264bfab3",
   "@type": "Class",
   "@documentation": {}
 }
@@ -3486,7 +3488,7 @@
   }
 }
 {
-  "@id": "_:n324a0f7faf5a41b8a2b3e820091d97c5b6",
+  "@id": "_:nb1e109e9c91248b19483997761264bfab6",
   "@type": "Class",
   "@documentation": {}
 }
