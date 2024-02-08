@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import re
+import argparse
 
 def new_file(prefix, suffix, count):
     return f"{prefix}{count}{suffix}"
