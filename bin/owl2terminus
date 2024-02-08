@@ -27,7 +27,7 @@ def register_classes(g):
             add_class_to_super(cls, sup, g)
         comment_list = []
         for c in g.objects(cls,SKOS.definition):
-            comment_list.append(c.n3(g.namespace_manager))
+            comment_list.append(str(c))
 
         documentation_object = {}
         if comment_list != []:
@@ -36,7 +36,7 @@ def register_classes(g):
 
         label_list = []
         for l in g.objects(cls,RDFS.label,unique=True):
-            label_list.append(l.n3(g.namespace_manager))
+            label_list.append(str(l))
         if label_list != []:
             label = ' '.join(label_list)
             documentation_object['@label'] = label
@@ -92,11 +92,11 @@ def register_properties(g):
 
         comments = []
         for skos_comment in g.objects(prop, SKOS.definition):
-            comments.append(skos_comment)
+            comments.append(str(skos_comment))
         for this_comment in g.objects(prop, RDFS.comment):
-            comments.append(this_comment)
+            comments.append(str(this_comment))
         if comments != []:
-            property_record['comment'] = '\n'.join(str(comments))
+            property_record['comment'] = '\n'.join(comments)
 
         label = next(g.objects(prop, RDFS.label, unique=True))
         if label:
@@ -105,7 +105,8 @@ def register_properties(g):
         PROPERTY_REGISTRY[prop.n3(g.namespace_manager)] = property_record
 
 def eprint(string):
-    print(string, file=sys.stderr)
+    pass
+    # print(string, file=sys.stderr)
 
 def add_properties_to_classes(g):
     for prop in PROPERTY_REGISTRY:
@@ -117,6 +118,22 @@ def add_properties_to_classes(g):
             rng = OWL.Thing.n3(g.namespace_manager)
 
         cls = CLASS_REGISTRY[domain]
+        if not '@documentation' in cls:
+            cls['@documentation'] = {}
+        doc_record = cls['@documentation']
+        if not '@properties' in doc_record:
+            doc_record['@properties'] = {}
+        doc_property_record = doc_record['@properties']
+
+        prop_record = PROPERTY_REGISTRY[prop]
+
+        new_doc_record = {}
+        if 'comment' in prop_record:
+            new_doc_record['@comment'] = prop_record['comment']
+        if 'label' in prop_record:
+            new_doc_record['@label'] = prop_record['label']
+        if new_doc_record != {}:
+            doc_property_record[prop] = new_doc_record
         cls[prop] = { '@type' : 'Set', '@class': rng }
 
 if __name__ == '__main__' :
@@ -134,5 +151,12 @@ if __name__ == '__main__' :
     register_properties(g)
     add_properties_to_classes(g)
 
-    #print(json.dumps(PROPERTY_HIERARCHY))
-    print(json.dumps(CLASS_REGISTRY))
+    ctx = {'@type' : '@context',
+           '@base' : 'iri://d/',
+           '@schema' : 'http://id.loc.gov/ontologies/bibframe/'}
+    for (name,iri) in g.namespace_manager.namespaces():
+        ctx[name] = str(iri)
+    print(json.dumps(ctx))
+
+    for cls in CLASS_REGISTRY:
+        print(json.dumps(CLASS_REGISTRY[cls]))
