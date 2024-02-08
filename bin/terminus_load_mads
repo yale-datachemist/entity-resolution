@@ -1,4 +1,5 @@
 #!/bin/bash
 
-split -n 27 ../names.madsrdf.ttl names.madsrdf. --additional-suffix=.ttl
+rapper -i turtle -o ntriples data/names.madsrdf.ttl > data/names.madsrdf.ntriples
+split -n 200 data/names.madsrdf.ntriples data/names_split/names.madsrdf. --additional-suffix=.ntriples
 for i in `ls data/names_split`; do terminusdb triples load admin/mads/local/branch/main/instance "data/names_split/$i"; done
