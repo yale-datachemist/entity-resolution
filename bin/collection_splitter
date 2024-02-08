@@ -1,0 +1,34 @@
+#!/usr/bin/env python3
+import re
+
+def new_file(prefix, suffix, count):
+    return f"{prefix}{count}{suffix}"
+
+if __name__ == '__main__' :
+    parser = argparse.ArgumentParser()
+    parser.add_argument("file", help="input owl file")
+    parser.add_argument("prefix", help="prefix of output file")
+    parser.add_argument("suffix", help="suffix of output file")
+    parser.add_argument("-n", "--number", default=10, help="Number of records per split")
+    args = parser.parse_args()
+
+    file_count = 0
+    with open(args.file, 'r') as f:
+        count = 0
+        records = ''
+        for l in f:
+            records += l
+            m = re.match('</record>.*',l)
+            if m:
+                count+=1
+            if count > args.number:
+                count = 0
+                with open(new_file(args.prefix, args.suffix, file_count), 'wr') as w:
+                    w.write(records)
+                records = ''
+                file_count +=1
+            m = re.match('</collection>.*',l)
+            if m:
+                with open(new_file(args.prefix, args.suffix, file_count), 'wr') as w:
+                    w.write(records)
+                sys.exit(0)
