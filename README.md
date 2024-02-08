@@ -16,3 +16,7 @@ as embeddings and compare their distance to obtain a confidence of a
 match to the existing named entities.
 
 
+## Initialization
+
+We need to convert the BibFrame ontology into a terminus schema
+representation in order to make the GraphQL features available.
