@@ -23,7 +23,6 @@ if __name__ == '__main__' :
             records.append(l)
             m = record_matcher.match(l)
             if m:
-                print(count)
                 count+=1
             else:
                 m = collection_matcher.match(l)
