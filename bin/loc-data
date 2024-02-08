@@ -1,3 +1,5 @@
 #!/usr/bin/bash
 
-wget -P data https://id.loc.gov/download/authorities/names.madsrdf.jsonld.gz
+#wget -P data https://id.loc.gov/download/authorities/names.madsrdf.jsonld.gz
+wget -P data https://id.loc.gov/download/authorities/names.madsrdf.ttl.gz
+gunzip data/names.madsrdf.ttl.gz
