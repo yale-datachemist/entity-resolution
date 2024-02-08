@@ -199,6 +199,26 @@
       "bf:unit": {
         "@comment": "Units in which a value is expressed, such as the physical or logical constituent of a resource (e.g., a volume, audiocassette, film reel, a map, a digital file).\nUsed with Unspecified\nWhere are these values? What are these values? (SES)",
         "@label": "Type of unit"
+      },
+      "bf:code": {
+        "@comment": "String of characters that serves as a code representing information.\nUsed with Unspecified",
+        "@label": "Code"
+      },
+      "bf:count": {
+        "@comment": "Number associated with a measure of units, such as the number of units and/or subunits making up a resource.\nShouldn't the number of units be some number type? (SES)\nUsed with Unspecified",
+        "@label": "Number of units"
+      },
+      "bf:date": {
+        "@comment": "Date designation associated with a resource or element of description, such as date of title variation; year a degree was awarded; date associated with the publication, printing, distribution, issue, release or production of a resource. May be date typed.\nUsed with Unspecified\ndate *may* be date typed? (ses)",
+        "@label": "Date"
+      },
+      "bf:part": {
+        "@comment": "Part of a resource to which information applies.\nUsed with Unspecified\nWhat does this property do? It seems like resource is used elsewhere to refer to  some of subset of Work , Instance and Item?  But this is a data property. What information? (SES)",
+        "@label": "Part"
+      },
+      "bf:qualifier": {
+        "@comment": "Qualifier of information, such as an addition to a title to make it unique or qualifying information associated with an identifier.\nUsed with Unspecified\nVoid for vagueness. Domain Thing, Range Literal, meaning: some sort of extra information associated with some other information? (SES)",
+        "@label": "Qualifier"
       }
     }
   },
@@ -367,6 +387,26 @@
   "bf:unit": {
     "@type": "Set",
     "@class": "bf:Unit"
+  },
+  "bf:code": {
+    "@type": "Set",
+    "@class": "xsd:string"
+  },
+  "bf:count": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:date": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:part": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:qualifier": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
   }
 }
 {
@@ -421,6 +461,22 @@
       "bf:generationProcess": {
         "@comment": "Indication of the program or process used to generate the description by application of a particular transformation.",
         "@label": "Description generation"
+      },
+      "bf:changeDate": {
+        "@comment": "Date or date and time on which the metadata was modified.",
+        "@label": "Description change date"
+      },
+      "bf:creationDate": {
+        "@comment": "Date or date and time on which the original metadata first created.",
+        "@label": "Description creation date"
+      },
+      "bf:derivedFrom": {
+        "@comment": "Link to the metadata that was the source of the data.",
+        "@label": "Source metadata"
+      },
+      "bf:generationDate": {
+        "@comment": "Date of conversion of the metadata from another format.",
+        "@label": "Date generated"
       }
     }
   },
@@ -449,6 +505,22 @@
   "bf:generationProcess": {
     "@type": "Set",
     "@class": "bf:GenerationProcess"
+  },
+  "bf:changeDate": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:creationDate": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:derivedFrom": {
+    "@type": "Set",
+    "@class": "xsd:anyURI"
+  },
+  "bf:generationDate": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
   }
 }
 {
@@ -486,10 +558,36 @@
 {
   "@documentation": {
     "@description": "Information about the organization and arrangement of a collection of items. For instance, for computer files, organization and arrangement information may be the file structure and sort sequence of a file; for visual materials, this information may be how a collection is arranged.",
-    "@label": "Organization of materials information"
+    "@label": "Organization of materials information",
+    "@properties": {
+      "bf:hierarchicalLevel": {
+        "@comment": "Hierarchical position of the described materials relative to other material from the same source.\nThis could be better specified (SES)",
+        "@label": "Hierarchical level of material"
+      },
+      "bf:organization": {
+        "@comment": "Manner in which the resource is divided into smaller units.",
+        "@label": "Organization of material"
+      },
+      "bf:pattern": {
+        "@comment": "Pattern of arrangement of materials within a unit.",
+        "@label": "Arrangement of material"
+      }
+    }
   },
   "@type": "Class",
-  "@id": "bf:Arrangement"
+  "@id": "bf:Arrangement",
+  "bf:hierarchicalLevel": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:organization": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:pattern": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  }
 }
 {
   "@documentation": {
@@ -579,6 +677,26 @@
       "bf:projection": {
         "@comment": "Method or system used to represent the surface of the earth or of a celestial sphere on a plane.",
         "@label": "Cartographic projection"
+      },
+      "bf:ascensionAndDeclination": {
+        "@comment": "System for identifying the location of a celestial object in the sky covered by the cartographic content of a resource using the angles of right ascension and declination.",
+        "@label": "Cartographic ascension and declination"
+      },
+      "bf:coordinates": {
+        "@comment": "Mathematical system for identifying the area covered by the cartographic content of a resource, expressed either by means of longitude and latitude on the surface of planets or by the angles of right ascension and declination for celestial cartographic content.",
+        "@label": "Cartographic coordinates"
+      },
+      "bf:equinox": {
+        "@comment": "One of two points of intersection of the ecliptic and the celestial equator, occupied by the sun when its declination is 0 degrees.\nSounds like this could be an object property with a class with two values? (SES)",
+        "@label": "Cartographic equinox"
+      },
+      "bf:exclusionGRing": {
+        "@comment": "Coordinate pairs that identify the closed non-intersecting boundary of the area contained within the G-polygon outer ring that is excluded.",
+        "@label": "Cartographic G ring area excluded"
+      },
+      "bf:outerGRing": {
+        "@comment": "Coordinate pairs that identify the closed non-intersecting boundary of the area covered.",
+        "@label": "Cartographic outer G ring area covered"
       }
     }
   },
@@ -587,6 +705,26 @@
   "bf:projection": {
     "@type": "Set",
     "@class": "bf:Projection"
+  },
+  "bf:ascensionAndDeclination": {
+    "@type": "Set",
+    "@class": "xsd:string"
+  },
+  "bf:coordinates": {
+    "@type": "Set",
+    "@class": "xsd:string"
+  },
+  "bf:equinox": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:exclusionGRing": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:outerGRing": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
   }
 }
 {
@@ -624,10 +762,68 @@
 {
   "@documentation": {
     "@description": "System of coding and organizing materials according to their subject.",
-    "@label": "Classification entity"
+    "@label": "Classification entity",
+    "@properties": {
+      "bf:classificationPortion": {
+        "@comment": "Classification number (single class number or beginning number of a span) that indicates the subject by applying a formal system of coding and organizing resources.",
+        "@label": "Classification number"
+      },
+      "bf:edition": {
+        "@comment": "Edition of the classification scheme, such as full, abridged or a number, when a classification scheme designates editions.\nThis could be an object property, with a range that is enumerated",
+        "@label": "Classification scheme edition"
+      },
+      "bf:itemPortion": {
+        "@comment": "Number attached to a classification string that indicates a particular item.",
+        "@label": "Classification item number"
+      },
+      "bf:schedulePart": {
+        "@comment": "Designates whether the classification number is from the standard or optional part of a schedule or table.",
+        "@label": "Classification designation"
+      },
+      "bf:spanEnd": {
+        "@comment": "Ending number of classification number span.",
+        "@label": "Classification number span end"
+      },
+      "bf:table": {
+        "@comment": "Number of the table from which the classification number in a subdivision entry is taken, e.g., a DDC table.",
+        "@label": "Classification table identification"
+      },
+      "bf:tableSeq": {
+        "@comment": "Sequence number or other identifier for an internal classification sub arrangement or add in a classification scheme.",
+        "@label": "Classification table sequence number"
+      }
+    }
   },
   "@type": "Class",
-  "@id": "bf:Classification"
+  "@id": "bf:Classification",
+  "bf:classificationPortion": {
+    "@type": "Set",
+    "@class": "xsd:string"
+  },
+  "bf:edition": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:itemPortion": {
+    "@type": "Set",
+    "@class": "xsd:string"
+  },
+  "bf:schedulePart": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:spanEnd": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:table": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:tableSeq": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  }
 }
 {
   "@documentation": {
@@ -791,6 +987,10 @@
       "bf:grantingInstitution": {
         "@comment": "Name of degree granting institution.",
         "@label": "Degree issuing institution"
+      },
+      "bf:degree": {
+        "@comment": "Degree for which author was a candidate.",
+        "@label": "Degree"
       }
     }
   },
@@ -799,6 +999,10 @@
   "bf:grantingInstitution": {
     "@type": "Set",
     "@class": "bf:Agent"
+  },
+  "bf:degree": {
+    "@type": "Set",
+    "@class": "xsd:string"
   }
 }
 {
@@ -1139,6 +1343,42 @@
       "bf:videoCharacteristic": {
         "@comment": "Technical specification relating to the encoding of video images in a resource",
         "@label": "Video characteristic"
+      },
+      "bf:dimensions": {
+        "@comment": "Measurements of the carrier or carriers and/or the container of a resource.",
+        "@label": "Dimensions"
+      },
+      "bf:editionEnumeration": {
+        "@comment": "Enumeration of the edition; usually transcribed.",
+        "@label": "Edition enumeration"
+      },
+      "bf:editionStatement": {
+        "@comment": "Information identifying the edition or version of the resource and associated statements of responsibility for the edition; usually transcribed.",
+        "@label": "Edition statement"
+      },
+      "bf:provisionActivityStatement": {
+        "@comment": "Statement relating to providers of a resource; usually transcribed.",
+        "@label": "Provider statement"
+      },
+      "bf:responsibilityStatement": {
+        "@comment": "Statement relating to any persons, families, or corporate bodies responsible for the creation of, or contributing to the content of a resource; usually transcribed.",
+        "@label": "Creative responsibility statement"
+      },
+      "bf:seriesEnumeration": {
+        "@comment": "Series enumeration of the resource; usually transcribed.",
+        "@label": "Series enumeration"
+      },
+      "bf:seriesStatement": {
+        "@comment": "Statement of the series the resource is in; usually transcribed; includes the ISSN if applicable.",
+        "@label": "Series statement"
+      },
+      "bf:subseriesEnumeration": {
+        "@comment": "Subseries enumeration of the resource; usually transcribed.",
+        "@label": "Subseries enumeration"
+      },
+      "bf:subseriesStatement": {
+        "@comment": "Statement of the subseries the resource is in; usually transcribed; includes the ISSN if applicable.",
+        "@label": "Subseries statement"
       }
     }
   },
@@ -1243,6 +1483,42 @@
   "bf:videoCharacteristic": {
     "@type": "Set",
     "@class": "bf:VideoCharacteristic"
+  },
+  "bf:dimensions": {
+    "@type": "Set",
+    "@class": "xsd:string"
+  },
+  "bf:editionEnumeration": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "bf:editionStatement": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "bf:provisionActivityStatement": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "bf:responsibilityStatement": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "bf:seriesEnumeration": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "bf:seriesStatement": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "bf:subseriesEnumeration": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "bf:subseriesStatement": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
   }
 }
 {
@@ -1373,6 +1649,10 @@
       "bf:sublocation": {
         "@comment": "Specific place within the holding entity where the item is located or made available.",
         "@label": "Held in sublocation"
+      },
+      "bf:physicalLocation": {
+        "@comment": "Location in the holding agency where the item is shelved or stored.",
+        "@label": "Storing or shelving location"
       }
     }
   },
@@ -1405,6 +1685,10 @@
   "bf:sublocation": {
     "@type": "Set",
     "@class": "bf:Sublocation"
+  },
+  "bf:physicalLocation": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
   }
 }
 {
@@ -1554,10 +1838,20 @@
 {
   "@documentation": {
     "@description": "Ensemble for which a musical work is appropriate.",
-    "@label": "Music ensemble"
+    "@label": "Music ensemble",
+    "@properties": {
+      "bf:ensembleType": {
+        "@comment": "Specific type of ensemble, such as orchestra, band, guitar ensemble.\nThis is the sort of property that should be an *Objec*t property, with a range Class that has   Orchestra, band, etc, as Individuals. (SES)",
+        "@label": "Ensemble type"
+      }
+    }
   },
   "@type": "Class",
-  "@id": "bf:MusicEnsemble"
+  "@id": "bf:MusicEnsemble",
+  "bf:ensembleType": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  }
 }
 {
   "@documentation": {
@@ -1570,10 +1864,20 @@
 {
   "@documentation": {
     "@description": "Instrument for which a musical work is appropriate.",
-    "@label": "Musical instrument"
+    "@label": "Musical instrument",
+    "@properties": {
+      "bf:instrumentalType": {
+        "@comment": "Specific role of instrument, such as alternate, doubling, solo, ensemble.",
+        "@label": "Instrument role"
+      }
+    }
   },
   "@type": "Class",
-  "@id": "bf:MusicInstrument"
+  "@id": "bf:MusicInstrument",
+  "bf:instrumentalType": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  }
 }
 {
   "@documentation": {
@@ -1610,10 +1914,20 @@
 {
   "@documentation": {
     "@description": "Voice for which a musical work is appropriate.",
-    "@label": "Music voice"
+    "@label": "Music voice",
+    "@properties": {
+      "bf:voiceType": {
+        "@comment": "Specific type of voice group, such as chorus, solo.",
+        "@label": "Type of voice"
+      }
+    }
   },
   "@type": "Class",
-  "@id": "bf:MusicVoice"
+  "@id": "bf:MusicVoice",
+  "bf:voiceType": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  }
 }
 {
   "@documentation": {
@@ -1650,10 +1964,20 @@
 {
   "@documentation": {
     "@description": "Information, usually in textual form, on attributes of a resource or some aspect of a resource.",
-    "@label": "Note"
+    "@label": "Note",
+    "@properties": {
+      "bf:noteType": {
+        "@comment": "Type of note.\nWhy is the type of note not a type? (SES)",
+        "@label": "Note type"
+      }
+    }
   },
   "@type": "Class",
-  "@id": "bf:Note"
+  "@id": "bf:Note",
+  "bf:noteType": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  }
 }
 {
   "@documentation": {
@@ -2106,10 +2430,44 @@
 {
   "@documentation": {
     "@description": "Title information relating to a resource: work title, preferred title, instance title, transcribed title, translated title, variant form of title, etc.",
-    "@label": "Title entity"
+    "@label": "Title entity",
+    "@properties": {
+      "bf:mainTitle": {
+        "@comment": "Title being addressed. Possible title component.",
+        "@label": "Main title"
+      },
+      "bf:partName": {
+        "@comment": "Part or section name of a title. Possible title component.",
+        "@label": "Part title"
+      },
+      "bf:partNumber": {
+        "@comment": "Part or section enumeration of a title. Possible title component.",
+        "@label": "Part number"
+      },
+      "bf:subtitle": {
+        "@comment": "Word, character, or group of words and/or characters that contains the remainder of the title after the main title. Possible title component.",
+        "@label": "Subtitle"
+      }
+    }
   },
   "@type": "Class",
-  "@id": "bf:Title"
+  "@id": "bf:Title",
+  "bf:mainTitle": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "bf:partName": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "bf:partNumber": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "bf:subtitle": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  }
 }
 {
   "@documentation": {
@@ -2170,10 +2528,20 @@
 {
   "@documentation": {
     "@description": "Title associated with the resource that is different from the Work or Instance title.",
-    "@label": "Title variation"
+    "@label": "Title variation",
+    "@properties": {
+      "bf:variantType": {
+        "@comment": "Type of title variation, e.g., acronym, cover, spine, earlier, later, series version.",
+        "@label": "Variant title type"
+      }
+    }
   },
   "@type": "Class",
-  "@id": "bf:VariantTitle"
+  "@id": "bf:VariantTitle",
+  "bf:variantType": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  }
 }
 {
   "@documentation": {
@@ -2247,6 +2615,42 @@
       "bf:voice": {
         "@comment": "Voice for which a musical work is appropriate, such as soprano, tenor, mixed.",
         "@label": "Voice"
+      },
+      "bf:historyOfWork": {
+        "@comment": "Information about the history of a Work.",
+        "@label": "History of the work"
+      },
+      "bf:legalDate": {
+        "@comment": "Date of legal work, or promulgation of a law, or signing of a treaty.",
+        "@label": "Date of legal work"
+      },
+      "bf:musicKey": {
+        "@comment": "Pitch and mode for music.",
+        "@label": "Music key"
+      },
+      "bf:musicOpusNumber": {
+        "@comment": "Numeric designation of a musical work assigned by a composer, publisher, or a musicologist.",
+        "@label": "Music opus number"
+      },
+      "bf:musicSerialNumber": {
+        "@comment": "Numeric designation for musical works consecutively numbered in music reference sources.\nWhat kind of number? Why not a number type?(SES)",
+        "@label": "Music serial number"
+      },
+      "bf:musicThematicNumber": {
+        "@comment": "Numeric designation for a musical work as found in a thematic index for the composer.",
+        "@label": "Music thematic number"
+      },
+      "bf:originDate": {
+        "@comment": "Date or date range associated with the creation of a Work.",
+        "@label": "Associated title date"
+      },
+      "bf:temporalCoverage": {
+        "@comment": "Time period coverage of the content of the resource.",
+        "@label": "Temporal coverage"
+      },
+      "bf:version": {
+        "@comment": "Term or terms that identify works such as arranged for music, vulgate for religious work, etc.",
+        "@label": "Version"
       }
     }
   },
@@ -2295,6 +2699,42 @@
   "bf:voice": {
     "@type": "Set",
     "@class": "bf:MusicVoice"
+  },
+  "bf:historyOfWork": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "bf:legalDate": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:musicKey": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:musicOpusNumber": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:musicSerialNumber": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:musicThematicNumber": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:originDate": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:temporalCoverage": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:version": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
   }
 }
 {
@@ -2423,6 +2863,42 @@
       "bf:tableOfContents": {
         "@comment": "Table of contents of the described resource.\nUsed with Work or Instance",
         "@label": "Table of contents content"
+      },
+      "bf:acquisitionTerms": {
+        "@comment": "Conditions under which the publisher, distributor, etc., will normally supply a resource, e.g., price of a resource.\nUsed with Work or Instance",
+        "@label": "Terms of acquisition"
+      },
+      "bf:awards": {
+        "@comment": "Information on awards associated with the described resource.\nUsed with Work or Instance",
+        "@label": "Award note"
+      },
+      "bf:copyrightDate": {
+        "@comment": "Date associated with a claim of protection under copyright or a similar regime.\nUsed with Work or Instance",
+        "@label": "Copyright date"
+      },
+      "bf:credits": {
+        "@comment": "Information in note form of credits for persons or organizations who have participated in the creation and/or production of the resource.\nUsed with Work or Instance",
+        "@label": "Credits note"
+      },
+      "bf:duration": {
+        "@comment": "Information about the playing time, running time, etc. of a resource.\nUsed with Work or Instance\nideally this would be an xsd:duration, but that's non-standard(SES)",
+        "@label": "Duration"
+      },
+      "bf:firstIssue": {
+        "@comment": "Beginning date of a resource and/or the sequential designations.\nUsed with Work or Instance",
+        "@label": "Multipart first issue"
+      },
+      "bf:lastIssue": {
+        "@comment": "Ending date of a resource and/or the sequential designations.\nUsed with Work or Instance",
+        "@label": "Multipart last issue"
+      },
+      "bf:natureOfContent": {
+        "@comment": "Characterization that epitomizes the primary content of a resource, e.g., field recording of birdsong; combined time series analysis and graph plotting system.\nAre these all ad-hoc? If not, why isn't this an object property with a range class for the values? Or possibly a class hierarchy? (SES)\nUsed with Work or Instance",
+        "@label": "Content nature"
+      },
+      "bf:preferredCitation": {
+        "@comment": "Citation to the resource preferred by its custodian of the resource.\nUsed with Work or Instance",
+        "@label": "Preferred citation"
       }
     }
   },
@@ -2551,12 +3027,48 @@
   "bf:tableOfContents": {
     "@type": "Set",
     "@class": "bf:TableOfContents"
+  },
+  "bf:acquisitionTerms": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "bf:awards": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "bf:copyrightDate": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:credits": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "bf:duration": {
+    "@type": "Set",
+    "@class": "xsd:string"
+  },
+  "bf:firstIssue": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:lastIssue": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:natureOfContent": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:preferredCitation": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
   }
 }
 {
   "@documentation": {},
   "@type": "Class",
-  "@id": "_:n3aadfcbc906d4bf28e0e5019aab28ad5b3"
+  "@id": "_:n2777978483fe43a1a454bc0fe8355630b3"
 }
 {
   "@documentation": {
@@ -2588,6 +3100,10 @@
       "bf:usageAndAccessPolicy": {
         "@comment": "General statement of allowances and restrictions on access to a resource, including retention, reproduction, access, and lending.\nUsed with Work, Instance or Item",
         "@label": "Use and access condition"
+      },
+      "bf:custodialHistory": {
+        "@comment": "Information about the provenance, such as origin, ownership and custodial history (chain of custody), of a resource.\nUsed with Work, Instance or Item",
+        "@label": "Custodial history"
       }
     }
   },
@@ -2620,12 +3136,16 @@
   "bf:usageAndAccessPolicy": {
     "@type": "Set",
     "@class": "bf:UsageAndAccessPolicy"
+  },
+  "bf:custodialHistory": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
   }
 }
 {
   "@documentation": {},
   "@type": "Class",
-  "@id": "_:n3aadfcbc906d4bf28e0e5019aab28ad5b6"
+  "@id": "_:n2777978483fe43a1a454bc0fe8355630b6"
 }
 {
   "@documentation": {},

@@ -55,12 +55,14 @@ def register_property_hierarchy(g):
             eprint(f"add {prop} and {sup}")
             add_super_to_prop(prop, sup, g)
 
+
     for prop in g.subjects(RDF.type, OWL.DatatypeProperty):
         eprint(f"property {prop.n3(g.namespace_manager)}")
 
         for sup in g.objects(prop, RDFS.subPropertyOf,unique=True):
             eprint(f"add {prop} and {sup}")
             add_super_to_prop(prop, sup ,g)
+
 
 def prop_key(p, key, g):
     prop_record = PROPERTY_REGISTRY[p]
@@ -84,7 +86,28 @@ def property_range(p, g):
 
 def register_properties(g):
     for prop in g.subjects(RDF.type, OWL.ObjectProperty):
-        property_record = {}
+        property_record = {'type' : 'ObjectProperty'}
+        for domain in g.objects(prop, RDFS.domain):
+           property_record['domain'] = domain.n3(g.namespace_manager)
+        for rng in g.objects(prop, RDFS.range, unique=True):
+           property_record['range'] = rng.n3(g.namespace_manager)
+
+        comments = []
+        for skos_comment in g.objects(prop, SKOS.definition):
+            comments.append(str(skos_comment))
+        for this_comment in g.objects(prop, RDFS.comment):
+            comments.append(str(this_comment))
+        if comments != []:
+            property_record['comment'] = '\n'.join(comments)
+
+        label = next(g.objects(prop, RDFS.label, unique=True))
+        if label:
+            property_record['label'] = str(label)
+
+        PROPERTY_REGISTRY[prop.n3(g.namespace_manager)] = property_record
+
+    for prop in g.subjects(RDF.type, OWL.DatatypeProperty):
+        property_record = {'type' : 'DatatypeProperty'}
         for domain in g.objects(prop, RDFS.domain):
            property_record['domain'] = domain.n3(g.namespace_manager)
         for rng in g.objects(prop, RDFS.range, unique=True):
@@ -110,9 +133,12 @@ def eprint(string):
 
 def add_properties_to_classes(g):
     for prop in PROPERTY_REGISTRY:
+        prop_record = PROPERTY_REGISTRY[prop]
+
         domain = property_domain(prop, g)
         if domain is None:
             domain = OWL.Thing.n3(g.namespace_manager)
+
         rng = property_range(prop, g)
         if rng is None:
             rng = OWL.Thing.n3(g.namespace_manager)
@@ -124,8 +150,6 @@ def add_properties_to_classes(g):
         if not '@properties' in doc_record:
             doc_record['@properties'] = {}
         doc_property_record = doc_record['@properties']
-
-        prop_record = PROPERTY_REGISTRY[prop]
 
         new_doc_record = {}
         if 'comment' in prop_record:
