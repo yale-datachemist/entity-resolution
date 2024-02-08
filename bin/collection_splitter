@@ -28,14 +28,14 @@ if __name__ == '__main__' :
             else:
                 m = collection_matcher.match(l)
                 if m:
-                    with open(new_file(args.prefix, args.suffix, file_count), 'wr') as w:
+                    with open(new_file(args.prefix, args.suffix, file_count), 'w') as w:
                         for r in records:
                             w.write(r)
                     sys.exit(0)
 
             if count > args.number:
                 count = 0
-                with open(new_file(args.prefix, args.suffix, file_count), 'wr') as w:
+                with open(new_file(args.prefix, args.suffix, file_count), 'w') as w:
                     for r in records:
                         w.write(r)
                 records = []
