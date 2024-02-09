@@ -180,7 +180,10 @@ def add_properties_to_classes(g):
 
         rng = property_range(prop, g)
         if rng is None:
-            rng = OWL.Thing.n3(g.namespace_manager)
+            if prop_record['type'] == 'DatatypeProperty':
+                rng = RDF.PlainLiteral.n3(g.namespace_manager)
+            else:
+                rng = OWL.Thing.n3(g.namespace_manager)
 
         cls = CLASS_REGISTRY[domain]
         if not '@documentation' in cls:
