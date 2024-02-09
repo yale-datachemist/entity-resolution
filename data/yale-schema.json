@@ -1,0 +1,4736 @@
+{
+  "@type": "@context",
+  "@base": "iri://d/",
+  "@schema": "http://id.loc.gov/ontologies/bibframe/",
+  "brick": "https://brickschema.org/schema/Brick#",
+  "csvw": "http://www.w3.org/ns/csvw#",
+  "dc": "http://purl.org/dc/elements/1.1/",
+  "dcat": "http://www.w3.org/ns/dcat#",
+  "dcmitype": "http://purl.org/dc/dcmitype/",
+  "dcterms": "http://purl.org/dc/terms/",
+  "dcam": "http://purl.org/dc/dcam/",
+  "doap": "http://usefulinc.com/ns/doap#",
+  "foaf": "http://xmlns.com/foaf/0.1/",
+  "geo": "http://www.opengis.net/ont/geosparql#",
+  "odrl": "http://www.w3.org/ns/odrl/2/",
+  "org": "http://www.w3.org/ns/org#",
+  "prof": "http://www.w3.org/ns/dx/prof/",
+  "prov": "http://www.w3.org/ns/prov#",
+  "qb": "http://purl.org/linked-data/cube#",
+  "schema": "https://schema.org/",
+  "sh": "http://www.w3.org/ns/shacl#",
+  "skos": "http://www.w3.org/2004/02/skos/core#",
+  "sosa": "http://www.w3.org/ns/sosa/",
+  "ssn": "http://www.w3.org/ns/ssn/",
+  "time": "http://www.w3.org/2006/time#",
+  "vann": "http://purl.org/vocab/vann/",
+  "void": "http://rdfs.org/ns/void#",
+  "wgs": "https://www.w3.org/2003/01/geo/wgs84_pos#",
+  "owl": "http://www.w3.org/2002/07/owl#",
+  "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+  "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+  "xsd": "http://www.w3.org/2001/XMLSchema#",
+  "xml": "http://www.w3.org/XML/1998/namespace",
+  "bf": "http://id.loc.gov/ontologies/bibframe/",
+  "madsrdf": "http://www.loc.gov/mads/rdf/v1#"
+}
+{
+  "@type": "Class",
+  "@id": "owl:Thing",
+  "@documentation": {
+    "@properties": {
+      "bf:absorbed": {
+        "@comment": "Resource that has been incorporated into another resource.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Absorption of"
+      },
+      "bf:absorbedBy": {
+        "@comment": "Resource that incorporates another resource.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Absorbed by"
+      },
+      "bf:accompaniedBy": {
+        "@comment": "Resource that accompanies the described resource.\nExpected value Work, Instance or Item\nUsed with Work, Instance or Item",
+        "@label": "Accompanied by"
+      },
+      "bf:accompanies": {
+        "@comment": "Resource that adds to or is issued with the described resource.\nExpected value Work, Instance or Item\nUsed with Work, Instance or Item",
+        "@label": "Accompanies"
+      },
+      "bf:adminMetadata": {
+        "@comment": "Metadata about the metadata, especially provenance information.\nUsed with Unspecified\nshould this be an annotation property? SES",
+        "@label": "Administrative metadata"
+      },
+      "bf:agent": {
+        "@comment": "Entity associated with a resource or element of description, such as the name of the entity responsible for the content or of the publication, printing, distribution, issue, release or production of a resource.\nUsed with Unspecified\nWhat *precisely* is an element of description? (SES)",
+        "@label": "Associated agent"
+      },
+      "bf:continuedBy": {
+        "@comment": "Resource whose content continues an earlier resource under a new title.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Continued by"
+      },
+      "bf:continuedInPartBy": {
+        "@comment": "Resource part of whose content separated from an earlier resource to form a new resource.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Continued in part by"
+      },
+      "bf:continues": {
+        "@comment": "Resource that is continued by the content of a later resource under a new title.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Continuation of"
+      },
+      "bf:continuesInPart": {
+        "@comment": "Resource that split into two or more separate resources with new titles.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Continuation in part of"
+      },
+      "bf:derivativeOf": {
+        "@comment": "Source work from which the described resource is derived.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Is derivative of"
+      },
+      "bf:findingAidOf": {
+        "@comment": "Finding aid or similar control materials for archival, visual, and manuscript resources.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Finding aid for"
+      },
+      "bf:hasEquivalent": {
+        "@comment": "Resource embodies the same content as the described resource.\nExpected value Work, Instance or Item\nUsed with Work, Instance or Item",
+        "@label": "Equivalence"
+      },
+      "bf:hasPart": {
+        "@comment": "Resource that is included either physically or logically in the described resource\nExpected value Work, Instance or Item\nUsed with Work, Instance or Item",
+        "@label": "Has part"
+      },
+      "bf:hasSubseries": {
+        "@comment": "series resource that is part of another series.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Subseries"
+      },
+      "bf:identifiedBy": {
+        "@comment": "Character string associated with a resource that serves to differentiate that resource from other resources, i.e., that uniquely identifies an entity.\nUsed with Unspecified",
+        "@label": "Identifier"
+      },
+      "bf:identifies": {
+        "@comment": "Resource that is associated with a character string that serves to differentiate one resource from another.",
+        "@label": "Resouce identified"
+      },
+      "bf:index": {
+        "@comment": "Resource has an accompanying index\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Has index"
+      },
+      "bf:language": {
+        "@comment": "Language associated with a resource or its parts.\nUsed with Unspecified",
+        "@label": "Language information"
+      },
+      "bf:mergedToForm": {
+        "@comment": "One of two or more resources that come together to form a new resource.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Merged to form"
+      },
+      "bf:mergerOf": {
+        "@comment": "One of two or more resources which came together to form a new resource.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Merger of"
+      },
+      "bf:note": {
+        "@comment": "General textual information relating to a resource, such as Information about a specific copy of a resource or information about a particular attribute of a resource.\nUsed with Unspecified",
+        "@label": "Note"
+      },
+      "bf:originalVersion": {
+        "@comment": "Resource is the original version of which this resource is a reproduction.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Original version"
+      },
+      "bf:originalVersionOf": {
+        "@comment": "Original version of a resource.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Original version of"
+      },
+      "bf:otherEdition": {
+        "@comment": "Resource has other available editions, for example simultaneously published language editions or reprints.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Other edition"
+      },
+      "bf:partOf": {
+        "@comment": "Resource in which the described resource is physically or logically contained.\nExpected value Work, Instance or Item\nUsed with Work, Instance or Item",
+        "@label": "Is part of"
+      },
+      "bf:place": {
+        "@comment": "Geographic location or place entity associated with a resource or element of description, such as the place associated with the publication, printing, distribution, issue, release or production of a resource, place of an event.\nUsed with Unspecified",
+        "@label": "Place"
+      },
+      "bf:precededBy": {
+        "@comment": "Resource that precedes the resource being described, e.g., is earlier in time or before in narrative.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Preceded by"
+      },
+      "bf:referencedBy": {
+        "@comment": "Resource that references the described resource\nExpected value Work, Instance or Item\nUsed with Work, Instance or Item",
+        "@label": "Referenced by"
+      },
+      "bf:references": {
+        "@comment": "Resource that is referenced by the described resource.\nExpected value Work, Instance or Item\nUsed with Work, Instance or Item",
+        "@label": "References"
+      },
+      "bf:replacedBy": {
+        "@comment": "Later resource used in place of an earlier resource, usually because the later resource contains updated or new information.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Succeeded by"
+      },
+      "bf:replacementOf": {
+        "@comment": "Earlier resource whose content has been replaced by a later resource, usually because the later resource contains updated or new information.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Preceded by"
+      },
+      "bf:separatedFrom": {
+        "@comment": "Resource that spun off a part of its content to form a new resource.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Separated from"
+      },
+      "bf:seriesOf": {
+        "@comment": "Resource that is a part of a larger resource.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Series container of"
+      },
+      "bf:source": {
+        "@comment": "Resource from which value or label came or was derived, such as the formal source/scheme from which a classification number is taken or derived, list from which an agent name is taken or derived, source within which an identifier is unique.\nUsed with Unspecified\nWhat is meant by value or label here? (SES)",
+        "@label": "Source"
+      },
+      "bf:splitInto": {
+        "@comment": "One of two or more resources resulting from the division of an earlier resource into separate resources.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Split into"
+      },
+      "bf:status": {
+        "@comment": "Designation of the validity or position of something, such as indication that the classification number is canceled or invalid, circulation availability of an item, indication of whether the identifier is canceled or invalid.\nMeaning is almost unspecified too. (SES)\nUsed with Unspecified",
+        "@label": "Status"
+      },
+      "bf:supplement": {
+        "@comment": "Resource that updates or otherwise complements the predominant resource.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Supplement"
+      },
+      "bf:translation": {
+        "@comment": "Resource that translates the text of the source entity into a language different from that of the original.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Translation as"
+      },
+      "bf:translationOf": {
+        "@comment": "Resource that has been translated, i.e., the text is expressed in a language different from that of the original resource.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Translation of"
+      },
+      "bf:unit": {
+        "@comment": "Units in which a value is expressed, such as the physical or logical constituent of a resource (e.g., a volume, audiocassette, film reel, a map, a digital file).\nUsed with Unspecified\nWhere are these values? What are these values? (SES)",
+        "@label": "Type of unit"
+      },
+      "bf:code": {
+        "@comment": "String of characters that serves as a code representing information.\nUsed with Unspecified",
+        "@label": "Code"
+      },
+      "bf:count": {
+        "@comment": "Number associated with a measure of units, such as the number of units and/or subunits making up a resource.\nShouldn't the number of units be some number type? (SES)\nUsed with Unspecified",
+        "@label": "Number of units"
+      },
+      "bf:date": {
+        "@comment": "Date designation associated with a resource or element of description, such as date of title variation; year a degree was awarded; date associated with the publication, printing, distribution, issue, release or production of a resource. May be date typed.\nUsed with Unspecified\ndate *may* be date typed? (ses)",
+        "@label": "Date"
+      },
+      "bf:part": {
+        "@comment": "Part of a resource to which information applies.\nUsed with Unspecified\nWhat does this property do? It seems like resource is used elsewhere to refer to  some of subset of Work , Instance and Item?  But this is a data property. What information? (SES)",
+        "@label": "Part"
+      },
+      "bf:qualifier": {
+        "@comment": "Qualifier of information, such as an addition to a title to make it unique or qualifying information associated with an identifier.\nUsed with Unspecified\nVoid for vagueness. Domain Thing, Range Literal, meaning: some sort of extra information associated with some other information? (SES)",
+        "@label": "Qualifier"
+      },
+      "madsrdf:elementList": {
+        "@comment": "The madsrdf:elementList property is used to organize the various\n      parts of labels.",
+        "@label": "Element List"
+      },
+      "madsrdf:extension": {
+        "@label": "Extension"
+      },
+      "madsrdf:fullerName": {
+        "@comment": "Full form of name needed to\n      distinguish a person from another person with the same preferred name.",
+        "@label": "Fuller Name"
+      },
+      "madsrdf:hasAbbreviationVariant": {
+        "@label": "Has Abbreviation\n      Variant"
+      },
+      "madsrdf:hasAcronymVariant": {
+        "@label": "Has Acronym\n      Variant"
+      },
+      "madsrdf:hasBroaderAuthority": {
+        "@label": "Has Broader\n      Authority"
+      },
+      "madsrdf:hasBroaderExternalAuthority": {
+        "@comment": "Creates a direct\n      relationship between an Authority and a more broadly defined Authority from a different MADS\n      Scheme.",
+        "@label": "Has Broader External\n      Authority"
+      },
+      "madsrdf:hasChararacteristic": {
+        "@comment": "A term that specifies a characteristic that differentiates a work or expression from another one.\n    ",
+        "@label": "Other characteristic"
+      },
+      "madsrdf:hasCloseExternalAuthority": {
+        "@comment": "Records a relationship\n      between an Authority and one that is closely related from a different MADS\n      Scheme.",
+        "@label": "Has Close External\n      Authority"
+      },
+      "madsrdf:hasEarlierEstablishedForm": {
+        "@comment": "Used to reference a resource that was an earlier form. This is\n      Related type='earlier' in MADS XML.",
+        "@label": "Has Earlier Established\n      Form"
+      },
+      "madsrdf:hasExactExternalAuthority": {
+        "@comment": "Records a relationship\n      between an Authority and one to which it matches exactly but from a different MADS\n      Scheme.",
+        "@label": "Has Exact External\n      Authority"
+      },
+      "madsrdf:hasExpansionVariant": {
+        "@label": "Has Expansion\n      Variant"
+      },
+      "madsrdf:hasIdentifier": {
+        "@comment": "Associates a resource with\n      a madsrdf:Identifier.",
+        "@label": "Has Identifier"
+      },
+      "madsrdf:hasLaterEstablishedForm": {
+        "@comment": "Use to reference the later form of a resource. This is Related\n      type='later' in MADS XML.",
+        "@label": "Has Later Established\n      Form"
+      },
+      "madsrdf:hasNarrowerAuthority": {
+        "@comment": "Creates a direct\n      relationship between an Authority and one that is more narrowly defined.",
+        "@label": "Has Narrower\n      Authority"
+      },
+      "madsrdf:hasNarrowerExternalAuthority": {
+        "@comment": "Creates a direct\n      relationship between an Authority and a more narrowly defined Authority from a different MADS\n      Scheme.",
+        "@label": "Has Narrower External\n      Authority"
+      },
+      "madsrdf:hasReciprocalAuthority": {
+        "@comment": "Establishes a relationship between two Authority resources. It is\n      reciprocal, so the relationship must be shared. This is Related type='equivalent' in MADS\n      XML.",
+        "@label": "Has Reciprocal\n      Authority"
+      },
+      "madsrdf:hasReciprocalExternalAuthority": {
+        "@comment": "Establishes a relationship\n      between an Authority and one from a different MADS Scheme. It is reciprocal, so the\n      relationship must be shared.",
+        "@label": "Has Reciprocal External\n      Authority"
+      },
+      "madsrdf:hasSource": {
+        "@comment": "Associates a resource description with its Source.",
+        "@label": "Has Source"
+      },
+      "madsrdf:hasTranslationVariant": {
+        "@comment": "A Variant whose label\n      represents a translation of that of the authoritative label.",
+        "@label": "Has Translation\n      Variant"
+      },
+      "madsrdf:useFor": {
+        "@comment": "\"Use [This Resource] For.\"\n      Traditional \"USE FOR\" reference.",
+        "@label": "Use For"
+      },
+      "madsrdf:useInstead": {
+        "@comment": "\"Use [This Other Resource]\n      Instead.\" Traditional \"USE\" reference.",
+        "@label": "Use Instead"
+      },
+      "madsrdf:workOrigin": {
+        "@comment": "The country or other territorial jurisdiction from which a work originated.",
+        "@label": "Work locale"
+      },
+      "madsrdf:creationDateEnd": {
+        "@comment": "Ending date of the date range for which the beginning date is recorded in madsrdf:creationDateStart."
+      },
+      "madsrdf:creationDateStart": {
+        "@comment": "For a work, earliest date (normally the year) associated with a work; that date may be the date the work was created or first published or released. For an expression, the earliest date (normally the year) associated with an expression; that date may be the date of the earliest known manifestation of that expression. In both cases the date may be the starting date of a range or a single date.",
+        "@label": "Work begun"
+      }
+    }
+  },
+  "bf:absorbed": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "bf:absorbedBy": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "bf:accompaniedBy": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "bf:accompanies": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "bf:adminMetadata": {
+    "@type": "Set",
+    "@class": "bf:AdminMetadata"
+  },
+  "bf:agent": {
+    "@type": "Set",
+    "@class": "bf:Agent"
+  },
+  "bf:continuedBy": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "bf:continuedInPartBy": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "bf:continues": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "bf:continuesInPart": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "bf:derivativeOf": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "bf:findingAidOf": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "bf:hasEquivalent": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "bf:hasPart": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "bf:hasSubseries": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "bf:identifiedBy": {
+    "@type": "Set",
+    "@class": "bf:Identifier"
+  },
+  "bf:identifies": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "bf:index": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "bf:language": {
+    "@type": "Set",
+    "@class": "bf:Language"
+  },
+  "bf:mergedToForm": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "bf:mergerOf": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "bf:note": {
+    "@type": "Set",
+    "@class": "bf:Note"
+  },
+  "bf:originalVersion": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "bf:originalVersionOf": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "bf:otherEdition": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "bf:partOf": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "bf:place": {
+    "@type": "Set",
+    "@class": "bf:Place"
+  },
+  "bf:precededBy": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "bf:referencedBy": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "bf:references": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "bf:replacedBy": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "bf:replacementOf": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "bf:separatedFrom": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "bf:seriesOf": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "bf:source": {
+    "@type": "Set",
+    "@class": "bf:Source"
+  },
+  "bf:splitInto": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "bf:status": {
+    "@type": "Set",
+    "@class": "bf:Status"
+  },
+  "bf:supplement": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "bf:translation": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "bf:translationOf": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "bf:unit": {
+    "@type": "Set",
+    "@class": "bf:Unit"
+  },
+  "bf:code": {
+    "@type": "Set",
+    "@class": "xsd:string"
+  },
+  "bf:count": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:date": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:part": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:qualifier": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+    "madsrdf:elementList": {
+    "@type": "Set",
+    "@class": "_:n65b70a7b6c2a4d74bffd73503b6e9772b16"
+  },
+  "madsrdf:extension": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "madsrdf:fullerName": {
+    "@type": "Set",
+    "@class": "madsrdf:PersonalName"
+  },
+  "madsrdf:hasAbbreviationVariant": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "madsrdf:hasAcronymVariant": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "madsrdf:hasBroaderAuthority": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "madsrdf:hasBroaderExternalAuthority": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "madsrdf:hasChararacteristic": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "madsrdf:hasCloseExternalAuthority": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "madsrdf:hasEarlierEstablishedForm": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "madsrdf:hasExactExternalAuthority": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "madsrdf:hasExpansionVariant": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "madsrdf:hasIdentifier": {
+    "@type": "Set",
+    "@class": "madsrdf:Identifier"
+  },
+  "madsrdf:hasLaterEstablishedForm": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "madsrdf:hasNarrowerAuthority": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "madsrdf:hasNarrowerExternalAuthority": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "madsrdf:hasReciprocalAuthority": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "madsrdf:hasReciprocalExternalAuthority": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "madsrdf:hasSource": {
+    "@type": "Set",
+    "@class": "madsrdf:Source"
+  },
+  "madsrdf:hasTranslationVariant": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "madsrdf:useFor": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "madsrdf:useInstead": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "madsrdf:workOrigin": {
+    "@type": "Set",
+    "@class": "madsrdf:Geographic"
+  },
+  "madsrdf:creationDateEnd": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:creationDateStart": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  }
+}
+{
+  "@id": "bf:AbbreviatedTitle",
+  "@type": "Class",
+  "@inherits": [
+    "bf:VariantTitle"
+  ],
+  "@documentation": {
+    "@description": "Title as abbreviated for citation, indexing, and/or identification.",
+    "@label": "Abbreviated title"
+  }
+}
+{
+  "@id": "bf:AccessPolicy",
+  "@type": "Class",
+  "@inherits": [
+    "bf:UsageAndAccessPolicy"
+  ],
+  "@documentation": {
+    "@description": "Access restrictions and allowances regarding access to a resource, e.g., lending policy, access restrictions, embargos.",
+    "@label": "Access policy"
+  }
+}
+{
+  "@id": "bf:AcquisitionSource",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Information about an organization, person, etc., from which a resource may be obtained.",
+    "@label": "Acquisition source"
+  }
+}
+{
+  "@id": "bf:AdminMetadata",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Metadata about the metadata, especially provenance information.",
+    "@label": "Administrative metadata",
+    "@properties": {
+      "bf:assigner": {
+        "@comment": "Entity that assigned the metadata, such as the entity that assigned a classification number, entity that assigned a name, entity that assigned an identifier.",
+        "@label": "Assigner"
+      },
+      "bf:descriptionAuthentication": {
+        "@comment": "Indication of specific types of reviews that have been carried out on the description information.",
+        "@label": "Description authentication"
+      },
+      "bf:descriptionConventions": {
+        "@comment": "Rules used for the descriptive content of the resource description.",
+        "@label": "Description conventions"
+      },
+      "bf:descriptionLanguage": {
+        "@comment": "Language used for the metadata.",
+        "@label": "Description language"
+      },
+      "bf:descriptionModifier": {
+        "@comment": "Agency that modified a description.",
+        "@label": "Description modifier"
+      },
+      "bf:generationProcess": {
+        "@comment": "Indication of the program or process used to generate the description by application of a particular transformation.",
+        "@label": "Description generation"
+      },
+      "bf:changeDate": {
+        "@comment": "Date or date and time on which the metadata was modified.",
+        "@label": "Description change date"
+      },
+      "bf:creationDate": {
+        "@comment": "Date or date and time on which the original metadata first created.",
+        "@label": "Description creation date"
+      },
+      "bf:derivedFrom": {
+        "@comment": "Link to the metadata that was the source of the data.",
+        "@label": "Source metadata"
+      },
+      "bf:generationDate": {
+        "@comment": "Date of conversion of the metadata from another format.",
+        "@label": "Date generated"
+      }
+    }
+  },
+  "bf:assigner": {
+    "@type": "Set",
+    "@class": "bf:Agent"
+  },
+  "bf:descriptionAuthentication": {
+    "@type": "Set",
+    "@class": "bf:DescriptionAuthentication"
+  },
+  "bf:descriptionConventions": {
+    "@type": "Set",
+    "@class": "bf:DescriptionConventions"
+  },
+  "bf:descriptionLanguage": {
+    "@type": "Set",
+    "@class": "bf:Language"
+  },
+  "bf:descriptionModifier": {
+    "@type": "Set",
+    "@class": "bf:Agent"
+  },
+  "bf:generationProcess": {
+    "@type": "Set",
+    "@class": "bf:GenerationProcess"
+  },
+  "bf:changeDate": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:creationDate": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:derivedFrom": {
+    "@type": "Set",
+    "@class": "xsd:anyURI"
+  },
+  "bf:generationDate": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  }
+}
+{
+  "@id": "bf:Agent",
+  "@type": "Class",
+  "@inherits": [
+    "foaf:Agent"
+  ],
+  "@documentation": {
+    "@description": "Entity having a role in a resource, such as a person or organization.",
+    "@label": "Agent"
+  }
+}
+{
+  "@id": "bf:Ansi",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "American National Standards Institute identifier.",
+    "@label": "ANSI number"
+  }
+}
+{
+  "@id": "bf:AppliedMaterial",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Physical or chemical substance applied to a base material of a resource.",
+    "@label": "Applied material"
+  }
+}
+{
+  "@id": "bf:Archival",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Instance"
+  ],
+  "@documentation": {
+    "@description": "Resources organically created, accumulated, and/or used by a person, family, or organization in the course of conduct of affairs and preserved because of their continuing value.",
+    "@label": "Archival controlled"
+  }
+}
+{
+  "@id": "bf:Arrangement",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Information about the organization and arrangement of a collection of items. For instance, for computer files, organization and arrangement information may be the file structure and sort sequence of a file; for visual materials, this information may be how a collection is arranged.",
+    "@label": "Organization of materials information",
+    "@properties": {
+      "bf:hierarchicalLevel": {
+        "@comment": "Hierarchical position of the described materials relative to other material from the same source.\nThis could be better specified (SES)",
+        "@label": "Hierarchical level of material"
+      },
+      "bf:organization": {
+        "@comment": "Manner in which the resource is divided into smaller units.",
+        "@label": "Organization of material"
+      },
+      "bf:pattern": {
+        "@comment": "Pattern of arrangement of materials within a unit.",
+        "@label": "Arrangement of material"
+      }
+    }
+  },
+  "bf:hierarchicalLevel": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:organization": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:pattern": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  }
+}
+{
+  "@id": "bf:AspectRatio",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Proportional relationship between an image's width and its height.",
+    "@label": "Aspect ratio"
+  }
+}
+{
+  "@id": "bf:Audio",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Work"
+  ],
+  "@documentation": {
+    "@description": "Resources expressed in an audible form, including music or other sounds.",
+    "@label": "Audio"
+  }
+}
+{
+  "@id": "bf:AudioIssueNumber",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "Number assigned by publishers of sound recordings to identify the issue designation, or serial identification, of the resource.",
+    "@label": "Audio issue number"
+  }
+}
+{
+  "@id": "bf:AudioTake",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "Identifier assigned to the smallest identifiable unit of a recording session, e.g., a specific recording of an individual song.",
+    "@label": "Audio recording take"
+  }
+}
+{
+  "@id": "bf:Barcode",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "Optical machine-readable representation of data relating to the item to which it is attached.",
+    "@label": "Barcode"
+  }
+}
+{
+  "@id": "bf:BaseMaterial",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Underlying physical material of a resource.",
+    "@label": "Base material"
+  }
+}
+{
+  "@id": "bf:BookFormat",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Result of folding a printed sheet to form a gathering of leaves.",
+    "@label": "Book format"
+  }
+}
+{
+  "@id": "bf:BroadcastStandard",
+  "@type": "Class",
+  "@inherits": [
+    "bf:VideoCharacteristic"
+  ],
+  "@documentation": {
+    "@description": "System used to format a video resource for television broadcast, e.g., HDTV, PAL.",
+    "@label": "Broadcast standard"
+  }
+}
+{
+  "@id": "bf:Capture",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Information about place and date associated with the capture (i.e., recording, filming, etc.) of the content of a resource.",
+    "@label": "Capture of content"
+  }
+}
+{
+  "@id": "bf:Carrier",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Categorization reflecting the format of the storage medium and housing of a carrier.",
+    "@label": "Carrier type"
+  }
+}
+{
+  "@id": "bf:Cartographic",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Content that represents the whole or part of the earth, any celestial body, or imaginary place at any scale.",
+    "@label": "Cartographic information",
+    "@properties": {
+      "bf:projection": {
+        "@comment": "Method or system used to represent the surface of the earth or of a celestial sphere on a plane.",
+        "@label": "Cartographic projection"
+      },
+      "bf:ascensionAndDeclination": {
+        "@comment": "System for identifying the location of a celestial object in the sky covered by the cartographic content of a resource using the angles of right ascension and declination.",
+        "@label": "Cartographic ascension and declination"
+      },
+      "bf:coordinates": {
+        "@comment": "Mathematical system for identifying the area covered by the cartographic content of a resource, expressed either by means of longitude and latitude on the surface of planets or by the angles of right ascension and declination for celestial cartographic content.",
+        "@label": "Cartographic coordinates"
+      },
+      "bf:equinox": {
+        "@comment": "One of two points of intersection of the ecliptic and the celestial equator, occupied by the sun when its declination is 0 degrees.\nSounds like this could be an object property with a class with two values? (SES)",
+        "@label": "Cartographic equinox"
+      },
+      "bf:exclusionGRing": {
+        "@comment": "Coordinate pairs that identify the closed non-intersecting boundary of the area contained within the G-polygon outer ring that is excluded.",
+        "@label": "Cartographic G ring area excluded"
+      },
+      "bf:outerGRing": {
+        "@comment": "Coordinate pairs that identify the closed non-intersecting boundary of the area covered.",
+        "@label": "Cartographic outer G ring area covered"
+      }
+    }
+  },
+  "bf:projection": {
+    "@type": "Set",
+    "@class": "bf:Projection"
+  },
+  "bf:ascensionAndDeclination": {
+    "@type": "Set",
+    "@class": "xsd:string"
+  },
+  "bf:coordinates": {
+    "@type": "Set",
+    "@class": "xsd:string"
+  },
+  "bf:equinox": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:exclusionGRing": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:outerGRing": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  }
+}
+{
+  "@id": "bf:CartographicDataType",
+  "@type": "Class",
+  "@inherits": [
+    "bf:DigitalCharacteristic"
+  ],
+  "@documentation": {
+    "@description": "Data type for encoding of geospatial information in a cartographic resource, e.g., raster, vector, point.",
+    "@label": "Digital cartographic data type"
+  }
+}
+{
+  "@id": "bf:CartographicObjectType",
+  "@type": "Class",
+  "@inherits": [
+    "bf:DigitalCharacteristic"
+  ],
+  "@documentation": {
+    "@description": "Object type for encoding of geospatial information in a cartographic resource, e.g., point, line, polygon.",
+    "@label": "Digital cartographic object type"
+  }
+}
+{
+  "@id": "bf:Cartography",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Work"
+  ],
+  "@documentation": {
+    "@description": "Resource that shows spatial information, including maps, atlases, globes, digital, and other cartographic resources.",
+    "@label": "Cartography"
+  }
+}
+{
+  "@id": "bf:Chronology",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Dates associated with issues or items held.",
+    "@label": "Chronology"
+  }
+}
+{
+  "@id": "bf:Classification",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "System of coding and organizing materials according to their subject.",
+    "@label": "Classification entity",
+    "@properties": {
+      "bf:classificationPortion": {
+        "@comment": "Classification number (single class number or beginning number of a span) that indicates the subject by applying a formal system of coding and organizing resources.",
+        "@label": "Classification number"
+      },
+      "bf:edition": {
+        "@comment": "Edition of the classification scheme, such as full, abridged or a number, when a classification scheme designates editions.\nThis could be an object property, with a range that is enumerated",
+        "@label": "Classification scheme edition"
+      },
+      "bf:itemPortion": {
+        "@comment": "Number attached to a classification string that indicates a particular item.",
+        "@label": "Classification item number"
+      },
+      "bf:schedulePart": {
+        "@comment": "Designates whether the classification number is from the standard or optional part of a schedule or table.",
+        "@label": "Classification designation"
+      },
+      "bf:spanEnd": {
+        "@comment": "Ending number of classification number span.",
+        "@label": "Classification number span end"
+      },
+      "bf:table": {
+        "@comment": "Number of the table from which the classification number in a subdivision entry is taken, e.g., a DDC table.",
+        "@label": "Classification table identification"
+      },
+      "bf:tableSeq": {
+        "@comment": "Sequence number or other identifier for an internal classification sub arrangement or add in a classification scheme.",
+        "@label": "Classification table sequence number"
+      }
+    }
+  },
+  "bf:classificationPortion": {
+    "@type": "Set",
+    "@class": "xsd:string"
+  },
+  "bf:edition": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:itemPortion": {
+    "@type": "Set",
+    "@class": "xsd:string"
+  },
+  "bf:schedulePart": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:spanEnd": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:table": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:tableSeq": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  }
+}
+{
+  "@id": "bf:ClassificationDdc",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Classification"
+  ],
+  "@documentation": {
+    "@description": "Dewey Decimal Classification number used for subject access.",
+    "@label": "DDC Classification"
+  }
+}
+{
+  "@id": "bf:ClassificationLcc",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Classification"
+  ],
+  "@documentation": {
+    "@description": "Library of Congress Classification number used for subject access.",
+    "@label": "LCC Classification"
+  }
+}
+{
+  "@id": "bf:ClassificationNlm",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Classification"
+  ],
+  "@documentation": {
+    "@description": "National Library of Medicine Classification number used for subject access",
+    "@label": "NLM classification"
+  }
+}
+{
+  "@id": "bf:ClassificationUdc",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Classification"
+  ],
+  "@documentation": {
+    "@description": "Universal Decimal Classification number used for subject access.",
+    "@label": "UDC Classification"
+  }
+}
+{
+  "@id": "bf:Coden",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "Identifier for scientific and technical periodical titles assigned by the International CODEN Section of Chemical Abstracts Service.",
+    "@label": "CODEN"
+  }
+}
+{
+  "@id": "bf:Collection",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Aggregation of resources, generally gathered together artificially.",
+    "@label": "Collection"
+  }
+}
+{
+  "@id": "bf:CollectiveTitle",
+  "@type": "Class",
+  "@inherits": [
+    "bf:VariantTitle"
+  ],
+  "@documentation": {
+    "@description": "Title for a compilation of resources.",
+    "@label": "Collective title"
+  }
+}
+{
+  "@id": "bf:ColorContent",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Color characteristics of a resource, e.g., black and white, multicolored, etc.",
+    "@label": "Color content"
+  }
+}
+{
+  "@id": "bf:Content",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Categorization reflecting the fundamental form of communication in which the content is expressed and the human sense through which it is intended to be perceived.",
+    "@label": "Content type"
+  }
+}
+{
+  "@id": "bf:ContentAccessibility",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Information that assists those with a sensory impairment for greater understanding of content, e.g., captions.",
+    "@label": "Content accessibility information"
+  }
+}
+{
+  "@id": "bf:Contribution",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Agent and role with respect to the resource being described.",
+    "@label": "Contribution",
+    "@properties": {
+      "bf:role": {
+        "@comment": "Function provided by a contributor, e.g., author, illustrator, etc.",
+        "@label": "Contributor role"
+      }
+    }
+  },
+  "bf:role": {
+    "@type": "Set",
+    "@class": "bf:Role"
+  }
+}
+{
+  "@id": "bf:CopyrightNumber",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "Identifier assigned to a copyright registration or legal deposit.",
+    "@label": "Copyright-legal deposit number"
+  }
+}
+{
+  "@id": "bf:CopyrightRegistration",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Copyright or Legal Deposit registration information",
+    "@label": "Copyright registration"
+  }
+}
+{
+  "@id": "bf:CoverArt",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Cover illustration of a resource.",
+    "@label": "Cover art"
+  }
+}
+{
+  "@id": "bf:Dataset",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Work"
+  ],
+  "@documentation": {
+    "@description": "Data encoded in a defined structure. Includes numeric data, environmental data,etc., used by applications software to calculate averages, correlations, etc., or to produce models, etc., but not normally displayed in its raw form.",
+    "@label": "Dataset"
+  }
+}
+{
+  "@id": "bf:DescriptionAuthentication",
+  "@type": "Class",
+  "@inherits": [
+    "bf:AdminMetadata"
+  ],
+  "@documentation": {
+    "@description": "Indication of specific types of reviews that have been carried out on the description information.",
+    "@label": "Metadata authentication"
+  }
+}
+{
+  "@id": "bf:DescriptionConventions",
+  "@type": "Class",
+  "@inherits": [
+    "bf:AdminMetadata"
+  ],
+  "@documentation": {
+    "@description": "Rules used for the descriptive content of the resource description.",
+    "@label": "Description conventions"
+  }
+}
+{
+  "@id": "bf:DigitalCharacteristic",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Technical specification relating to the digital encoding of text, image, audio, video, and other types of data in a resource.",
+    "@label": "Digital characteristic"
+  }
+}
+{
+  "@id": "bf:Dissertation",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Information about a work presented as part of the formal requirements for an academic degree.",
+    "@label": "Dissertation information",
+    "@properties": {
+      "bf:grantingInstitution": {
+        "@comment": "Name of degree granting institution.",
+        "@label": "Degree issuing institution"
+      },
+      "bf:degree": {
+        "@comment": "Degree for which author was a candidate.",
+        "@label": "Degree"
+      }
+    }
+  },
+  "bf:grantingInstitution": {
+    "@type": "Set",
+    "@class": "bf:Agent"
+  },
+  "bf:degree": {
+    "@type": "Set",
+    "@class": "xsd:string"
+  }
+}
+{
+  "@id": "bf:DissertationIdentifier",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "Identifier assigned to a thesis or dissertation for identification purposes .",
+    "@label": "Dissertation Identifier"
+  }
+}
+{
+  "@id": "bf:Distribution",
+  "@type": "Class",
+  "@inherits": [
+    "bf:ProvisionActivity"
+  ],
+  "@documentation": {
+    "@description": "Information relating to distribution of a resource.",
+    "@label": "Distributor"
+  }
+}
+{
+  "@id": "bf:Doi",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "Digital Object Identifier.",
+    "@label": "DOI"
+  }
+}
+{
+  "@id": "bf:Ean",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "International Article Identifier.",
+    "@label": "EAN"
+  }
+}
+{
+  "@id": "bf:Electronic",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Instance"
+  ],
+  "@documentation": {
+    "@description": "Resource that is intended for manipulation by a computer, accessed either directly or remotely.",
+    "@label": "Electronic"
+  }
+}
+{
+  "@id": "bf:Emulsion",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Suspension of light-sensitive chemicals used as a coating on a microfilm or microfiche, e.g., silver halide.",
+    "@label": "Emulsion"
+  }
+}
+{
+  "@id": "bf:EncodedBitrate",
+  "@type": "Class",
+  "@inherits": [
+    "bf:DigitalCharacteristic"
+  ],
+  "@documentation": {
+    "@description": "Speed at which streaming audio, video, etc., is designed to play, e.g., 32 kbps.",
+    "@label": "Encoded bitrate"
+  }
+}
+{
+  "@id": "bf:EncodingFormat",
+  "@type": "Class",
+  "@inherits": [
+    "bf:DigitalCharacteristic"
+  ],
+  "@documentation": {
+    "@description": "Schema, standard, etc., used to encode the digital content of a resource, e.g., MP3, XML, JPEG.",
+    "@label": "Encoding format"
+  }
+}
+{
+  "@id": "bf:Enumeration",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Numbering or other enumeration associated with issues or items held.",
+    "@label": "Enumeration"
+  }
+}
+{
+  "@id": "bf:EnumerationOrChronology",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Numbering or other enumeration and dates associated with issues or items held.",
+    "@label": "Enumeration or chronology"
+  }
+}
+{
+  "@id": "bf:Event",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Something that happens at a certain time and location, such as a performance, speech, or athletic event, that is documented by a resource.",
+    "@label": "Event entity",
+    "@properties": {
+      "bf:eventContent": {
+        "@comment": "Work whose content is the described event.\nThis isn't be  a sub-property of relatedTo (SES)",
+        "@label": "Event content"
+      }
+    }
+  },
+  "bf:eventContent": {
+    "@type": "Set",
+    "@class": "bf:Work"
+  }
+}
+{
+  "@id": "bf:Extent",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Number and type of units and/or subunits making up a resource.",
+    "@label": "Extent"
+  }
+}
+{
+  "@id": "bf:Family",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Agent"
+  ],
+  "@documentation": {
+    "@description": "Two or more persons related by birth, marriage, adoption, civil union, or similar legal status, or who otherwise present themselves as a family.",
+    "@label": "Family"
+  }
+}
+{
+  "@id": "bf:FileSize",
+  "@type": "Class",
+  "@inherits": [
+    "bf:DigitalCharacteristic"
+  ],
+  "@documentation": {
+    "@description": "Number of bytes in a digital file, e.g., 162 KB.",
+    "@label": "File size"
+  }
+}
+{
+  "@id": "bf:FileType",
+  "@type": "Class",
+  "@inherits": [
+    "bf:DigitalCharacteristic"
+  ],
+  "@documentation": {
+    "@description": "General type of data content encoded in a computer file, e.g., text file, audio file.",
+    "@label": "File type"
+  }
+}
+{
+  "@id": "bf:Fingerprint",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "Identifier that is used to assist in the identification of antiquarian books by recording information comprising groups of characters taken from specified positions on specified pages of the book.",
+    "@label": "Fingerprint identifier"
+  }
+}
+{
+  "@id": "bf:FontSize",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Size of the type used to represent the characters and symbols in a resource.",
+    "@label": "Font size"
+  }
+}
+{
+  "@id": "bf:Frequency",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Information about intervals at which the parts of a serially produced resource or the updates to an integrating resource are issued.",
+    "@label": "Frequency"
+  }
+}
+{
+  "@id": "bf:Generation",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Relationship between an original carrier and the carrier of a reproduction made from the original.",
+    "@label": "Generation"
+  }
+}
+{
+  "@id": "bf:GenerationProcess",
+  "@type": "Class",
+  "@inherits": [
+    "bf:AdminMetadata"
+  ],
+  "@documentation": {
+    "@description": "Indication of the program or process used to generate the description by application of a particular transformation.",
+    "@label": "Generation process"
+  }
+}
+{
+  "@id": "bf:GenreForm",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Characteristics of works with similar plots, themes, settings, etc. (e.g., westerns, thrillers), or with a particular format of purpose (e.g., animation, short), or a combination (e.g., horror film where horror is the genre and film is the form).",
+    "@label": "Genre/form"
+  }
+}
+{
+  "@id": "bf:GeographicCoverage",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Geographic coverage of the content of the resource.",
+    "@label": "Geographic coverage"
+  }
+}
+{
+  "@id": "bf:GrooveCharacteristic",
+  "@type": "Class",
+  "@inherits": [
+    "bf:SoundCharacteristic"
+  ],
+  "@documentation": {
+    "@description": "Groove width of an analog disc or the groove pitch of an analog cylinder, e.g., coarse groove, microgroove",
+    "@label": "Groove characteristic"
+  }
+}
+{
+  "@id": "bf:Gtin14Number",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "14 digit number assigned to identify trade items as various packaging levels. GTIN-14 encompasses EAN/UCC-128 and ITF-14.",
+    "@label": "Global Trade Item Number 14"
+  }
+}
+{
+  "@id": "bf:Hdl",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "Unique and persistent identifier for digital objects developed by the Corporation for National Research Initiatives.",
+    "@label": "Handle"
+  }
+}
+{
+  "@id": "bf:Identifier",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Token or name that is associated with a resource, such as a URI or an ISBN.",
+    "@label": "Identifier"
+  }
+}
+{
+  "@id": "bf:Illustration",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Information about content intended to illustrate a resource.",
+    "@label": "Illustrative content"
+  }
+}
+{
+  "@id": "bf:ImmediateAcquisition",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Information about the circumstances, e.g., source, date, method, under which the resource was directly acquired.",
+    "@label": "Immediate acquisition"
+  }
+}
+{
+  "@id": "bf:Instance",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Resource reflecting an individual, material embodiment of a Work.",
+    "@label": "Instance",
+    "@properties": {
+      "bf:appliedMaterial": {
+        "@comment": "Physical or chemical substance applied to a base material of a resource.",
+        "@label": "Applied material"
+      },
+      "bf:baseMaterial": {
+        "@comment": "Underlying physical material of a resource.",
+        "@label": "Base material"
+      },
+      "bf:bookFormat": {
+        "@comment": "Result of folding a printed sheet to form a gathering of leaves.",
+        "@label": "Book format"
+      },
+      "bf:carrier": {
+        "@comment": "Categorization reflecting the format of the storage medium and housing of a carrier.",
+        "@label": "Carrier type"
+      },
+      "bf:digitalCharacteristic": {
+        "@comment": "Technical specification relating to the digital encoding of text, image, audio, video, and other types of data in a resource.",
+        "@label": "Digital characteristic"
+      },
+      "bf:emulsion": {
+        "@comment": "Suspension of light-sensitive chemicals used as a coating on a microfilm or microfiche, e.g., silver halide.",
+        "@label": "Emulsion"
+      },
+      "bf:extent": {
+        "@comment": "Number and type of units and/or subunits making up a resource.",
+        "@label": "Extent"
+      },
+      "bf:fontSize": {
+        "@comment": "Size of the type used to represent the characters and symbols in a resource.",
+        "@label": "Font size"
+      },
+      "bf:generation": {
+        "@comment": "Relationship between an original carrier and the carrier of a reproduction made from the original.",
+        "@label": "Generation"
+      },
+      "bf:hasItem": {
+        "@comment": "Item which is an example of the described Instance.",
+        "@label": "Has holding"
+      },
+      "bf:hasReproduction": {
+        "@comment": "Resource that reproduces another Resource.",
+        "@label": "Reproduced as"
+      },
+      "bf:instanceOf": {
+        "@comment": "Work the Instance described instantiates or manifests. For use to connect Instances to Works in the BIBFRAME structure.",
+        "@label": "Instance of"
+      },
+      "bf:issuedWith": {
+        "@comment": "Resource that is issued on the same carrier as the resource being described.",
+        "@label": "Issued with"
+      },
+      "bf:layout": {
+        "@comment": "Arrangement of text, images, tactile notation, etc., in a resource.",
+        "@label": "Layout"
+      },
+      "bf:mount": {
+        "@comment": "Physical material used for the support or backing to which the base material of a resource has been attached.",
+        "@label": "Mount material"
+      },
+      "bf:otherPhysicalFormat": {
+        "@comment": "Resource that is manifested in another physical carrier.",
+        "@label": "Has other physical format"
+      },
+      "bf:polarity": {
+        "@comment": "Relationship of the colors and tones in an image to the colors and tones of the object reproduced.",
+        "@label": "Polarity"
+      },
+      "bf:productionMethod": {
+        "@comment": "Process used to produce a resource.",
+        "@label": "Production method"
+      },
+      "bf:projectionCharacteristic": {
+        "@comment": "Technical specification relating to the projection of a motion picture film.",
+        "@label": "Projection characteristic"
+      },
+      "bf:provisionActivity": {
+        "@comment": "Place, name, and/or date information relating to the publication, printing, distribution, issue, release, production, etc. of a resource.",
+        "@label": "Provision activity"
+      },
+      "bf:reductionRatio": {
+        "@comment": "Size of a micro-image in relation to the original from which it was produced.",
+        "@label": "Reduction ratio"
+      },
+      "bf:reproductionOf": {
+        "@comment": "Resource that is a reproduction of another Resource.",
+        "@label": "Reproduction of"
+      },
+      "bf:soundCharacteristic": {
+        "@comment": "Technical specification relating to the encoding of sound in a resource.",
+        "@label": "Sound characteristic"
+      },
+      "bf:systemRequirement": {
+        "@comment": "Equipment or system requirement beyond what is normal and obvious for the type of carrier or type of file, such as make and model of equipment or hardware, operating system, amount of memory, programming language, other necessary software, any plug-ins or peripherals required to play, view, or run the resource, etc.",
+        "@label": "Equipment or system requirements"
+      },
+      "bf:videoCharacteristic": {
+        "@comment": "Technical specification relating to the encoding of video images in a resource",
+        "@label": "Video characteristic"
+      },
+      "bf:dimensions": {
+        "@comment": "Measurements of the carrier or carriers and/or the container of a resource.",
+        "@label": "Dimensions"
+      },
+      "bf:editionEnumeration": {
+        "@comment": "Enumeration of the edition; usually transcribed.",
+        "@label": "Edition enumeration"
+      },
+      "bf:editionStatement": {
+        "@comment": "Information identifying the edition or version of the resource and associated statements of responsibility for the edition; usually transcribed.",
+        "@label": "Edition statement"
+      },
+      "bf:provisionActivityStatement": {
+        "@comment": "Statement relating to providers of a resource; usually transcribed.",
+        "@label": "Provider statement"
+      },
+      "bf:responsibilityStatement": {
+        "@comment": "Statement relating to any persons, families, or corporate bodies responsible for the creation of, or contributing to the content of a resource; usually transcribed.",
+        "@label": "Creative responsibility statement"
+      },
+      "bf:seriesEnumeration": {
+        "@comment": "Series enumeration of the resource; usually transcribed.",
+        "@label": "Series enumeration"
+      },
+      "bf:seriesStatement": {
+        "@comment": "Statement of the series the resource is in; usually transcribed; includes the ISSN if applicable.",
+        "@label": "Series statement"
+      },
+      "bf:subseriesEnumeration": {
+        "@comment": "Subseries enumeration of the resource; usually transcribed.",
+        "@label": "Subseries enumeration"
+      },
+      "bf:subseriesStatement": {
+        "@comment": "Statement of the subseries the resource is in; usually transcribed; includes the ISSN if applicable.",
+        "@label": "Subseries statement"
+      }
+    }
+  },
+  "@inherits": [
+    "bf:WorkOrInstance"
+  ],
+  "bf:appliedMaterial": {
+    "@type": "Set",
+    "@class": "bf:AppliedMaterial"
+  },
+  "bf:baseMaterial": {
+    "@type": "Set",
+    "@class": "bf:BaseMaterial"
+  },
+  "bf:bookFormat": {
+    "@type": "Set",
+    "@class": "bf:BookFormat"
+  },
+  "bf:carrier": {
+    "@type": "Set",
+    "@class": "bf:Carrier"
+  },
+  "bf:digitalCharacteristic": {
+    "@type": "Set",
+    "@class": "bf:DigitalCharacteristic"
+  },
+  "bf:emulsion": {
+    "@type": "Set",
+    "@class": "bf:Emulsion"
+  },
+  "bf:extent": {
+    "@type": "Set",
+    "@class": "bf:Extent"
+  },
+  "bf:fontSize": {
+    "@type": "Set",
+    "@class": "bf:FontSize"
+  },
+  "bf:generation": {
+    "@type": "Set",
+    "@class": "bf:Generation"
+  },
+  "bf:hasItem": {
+    "@type": "Set",
+    "@class": "bf:Item"
+  },
+  "bf:hasReproduction": {
+    "@type": "Set",
+    "@class": "bf:Instance"
+  },
+  "bf:instanceOf": {
+    "@type": "Set",
+    "@class": "bf:Work"
+  },
+  "bf:issuedWith": {
+    "@type": "Set",
+    "@class": "bf:Instance"
+  },
+  "bf:layout": {
+    "@type": "Set",
+    "@class": "bf:Layout"
+  },
+  "bf:mount": {
+    "@type": "Set",
+    "@class": "bf:Mount"
+  },
+  "bf:otherPhysicalFormat": {
+    "@type": "Set",
+    "@class": "bf:Instance"
+  },
+  "bf:polarity": {
+    "@type": "Set",
+    "@class": "bf:Polarity"
+  },
+  "bf:productionMethod": {
+    "@type": "Set",
+    "@class": "bf:ProductionMethod"
+  },
+  "bf:projectionCharacteristic": {
+    "@type": "Set",
+    "@class": "bf:ProjectionCharacteristic"
+  },
+  "bf:provisionActivity": {
+    "@type": "Set",
+    "@class": "bf:ProvisionActivity"
+  },
+  "bf:reductionRatio": {
+    "@type": "Set",
+    "@class": "bf:ReductionRatio"
+  },
+  "bf:reproductionOf": {
+    "@type": "Set",
+    "@class": "bf:Instance"
+  },
+  "bf:soundCharacteristic": {
+    "@type": "Set",
+    "@class": "bf:SoundCharacteristic"
+  },
+  "bf:systemRequirement": {
+    "@type": "Set",
+    "@class": "bf:SystemRequirement"
+  },
+  "bf:videoCharacteristic": {
+    "@type": "Set",
+    "@class": "bf:VideoCharacteristic"
+  },
+  "bf:dimensions": {
+    "@type": "Set",
+    "@class": "xsd:string"
+  },
+  "bf:editionEnumeration": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "bf:editionStatement": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "bf:provisionActivityStatement": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "bf:responsibilityStatement": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "bf:seriesEnumeration": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "bf:seriesStatement": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "bf:subseriesEnumeration": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "bf:subseriesStatement": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  }
+}
+{
+  "@id": "bf:IntendedAudience",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Information that identifies the specific intended or target audience or intellectual level for which the content described is considered appropriate. Also used to record interest and motivation levels and special learner characteristics.",
+    "@label": "Intended audience information"
+  }
+}
+{
+  "@id": "bf:Isan",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "International Standard Audiovisual Number.",
+    "@label": "ISAN"
+  }
+}
+{
+  "@id": "bf:Isbn",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "International Standard Book Number.",
+    "@label": "ISBN"
+  }
+}
+{
+  "@id": "bf:Ismn",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "International Standard Music Number.",
+    "@label": "ISMN"
+  }
+}
+{
+  "@id": "bf:Isni",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "International Standard Name Identifier, a unique, persistent reference number for the identities of contributors to creative works.",
+    "@label": "ISNI"
+  }
+}
+{
+  "@id": "bf:Iso",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "International Organization for Standardization standard number.",
+    "@label": "ISO number"
+  }
+}
+{
+  "@id": "bf:Isrc",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "International Standard Recording Code.",
+    "@label": "ISRC"
+  }
+}
+{
+  "@id": "bf:Issn",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "International Standard Serial Number.",
+    "@label": "ISSN"
+  }
+}
+{
+  "@id": "bf:IssnL",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "International Standard Serial Number that links together various media versions of a continuing resource.",
+    "@label": "ISSN-L"
+  }
+}
+{
+  "@id": "bf:Issuance",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Information about whether a resource is issued in one or more parts, the way it is updated, and its intended termination.",
+    "@label": "Mode of issuance"
+  }
+}
+{
+  "@id": "bf:Istc",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "International Standard Text Code, a numbering system developed to enable the unique identification of textual works.",
+    "@label": "ISTC"
+  }
+}
+{
+  "@id": "bf:Iswc",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "International Standard Musical Work Code, a unique, persistent reference number for the identification of musical works.",
+    "@label": "ISWC"
+  }
+}
+{
+  "@id": "bf:Item",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Single example of an Instance.",
+    "@label": "Item",
+    "@properties": {
+      "bf:electronicLocator": {
+        "@comment": "Electronic location from which the resource is available.\nThis should be a data property of type xsd:anyURI (SES)",
+        "@label": "Electronic location"
+      },
+      "bf:enumerationOrChronology": {
+        "@comment": "Numbering and dates of issues or items held.",
+        "@label": "Numbering or other enumeration and dates associated with issues or items held."
+      },
+      "bf:heldBy": {
+        "@comment": "Entity holding the item or from which it is available.",
+        "@label": "Held by"
+      },
+      "bf:immediateAcquisition": {
+        "@comment": "Information about the circumstances, e.g., source, date, method, under which the resource was directly acquired.",
+        "@label": "Immediate acquisition"
+      },
+      "bf:itemOf": {
+        "@comment": "Instance for which the described Item is an example.",
+        "@label": "Holding for"
+      },
+      "bf:shelfMark": {
+        "@comment": "Piece identifier, such as a call or other type of number.",
+        "@label": "Shelf mark"
+      },
+      "bf:sublocation": {
+        "@comment": "Specific place within the holding entity where the item is located or made available.",
+        "@label": "Held in sublocation"
+      },
+      "bf:physicalLocation": {
+        "@comment": "Location in the holding agency where the item is shelved or stored.",
+        "@label": "Storing or shelving location"
+      }
+    }
+  },
+  "@inherits": [
+    "bf:WorkOrInstanceOrItem"
+  ],
+  "bf:electronicLocator": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "bf:enumerationOrChronology": {
+    "@type": "Set",
+    "@class": "bf:EnumerationOrChronology"
+  },
+  "bf:heldBy": {
+    "@type": "Set",
+    "@class": "bf:Agent"
+  },
+  "bf:immediateAcquisition": {
+    "@type": "Set",
+    "@class": "bf:ImmediateAcquisition"
+  },
+  "bf:itemOf": {
+    "@type": "Set",
+    "@class": "bf:Instance"
+  },
+  "bf:shelfMark": {
+    "@type": "Set",
+    "@class": "bf:ShelfMark"
+  },
+  "bf:sublocation": {
+    "@type": "Set",
+    "@class": "bf:Sublocation"
+  },
+  "bf:physicalLocation": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  }
+}
+{
+  "@id": "bf:Jurisdiction",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Agent"
+  ],
+  "@documentation": {
+    "@description": "Legal or political unit administering a geographic area.",
+    "@label": "Jurisdiction"
+  }
+}
+{
+  "@id": "bf:KeyTitle",
+  "@type": "Class",
+  "@inherits": [
+    "bf:VariantTitle"
+  ],
+  "@documentation": {
+    "@description": "Unique title for a continuing resource that is assigned by the ISSN International Center in conjunction with an ISSN.",
+    "@label": "Key title"
+  }
+}
+{
+  "@id": "bf:Language",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Language entity.",
+    "@label": "Language entity"
+  }
+}
+{
+  "@id": "bf:Layout",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Arrangement of text, images, tactile notation, etc., in a resource.",
+    "@label": "Layout"
+  }
+}
+{
+  "@id": "bf:LcOverseasAcq",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "Identification number assigned by the Library of Congress to works acquired through one of its collaborative overseas acquisition programs.",
+    "@label": "LC acquisition program"
+  }
+}
+{
+  "@id": "bf:Lccn",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "Library of Congress Control Number that identifies a resource description.",
+    "@label": "LCCN"
+  }
+}
+{
+  "@id": "bf:Local",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "Identifier established locally and not a standard number.",
+    "@label": "Local identifier"
+  }
+}
+{
+  "@id": "bf:Manufacture",
+  "@type": "Class",
+  "@inherits": [
+    "bf:ProvisionActivity"
+  ],
+  "@documentation": {
+    "@description": "Information relating to manufacture of a resource.",
+    "@label": "Manufacturer"
+  }
+}
+{
+  "@id": "bf:Manuscript",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Instance"
+  ],
+  "@documentation": {
+    "@description": "Resource that is written in handwriting or typescript. These are generally unique resources.",
+    "@label": "Manuscript"
+  }
+}
+{
+  "@id": "bf:MatrixNumber",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "Matrix identifier assigned to the master from which a specific sound recording was pressed.",
+    "@label": "Audio matrix number"
+  }
+}
+{
+  "@id": "bf:Media",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Categorization reflecting the general type of intermediation device required to view, play, run, etc., the content of a resource.",
+    "@label": "Media type"
+  }
+}
+{
+  "@id": "bf:Meeting",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Agent"
+  ],
+  "@documentation": {
+    "@description": "Gathering of individuals or representatives of various bodies for the purpose of discussing and/or acting on topics of common interest.",
+    "@label": "Meeting"
+  }
+}
+{
+  "@id": "bf:MixedMaterial",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Work"
+  ],
+  "@documentation": {
+    "@description": "Resource comprised of multiple types which are not driven by software. This may include materials in two or more forms that are related by virtue of their having been accumulated by or about a person or body., archival fonds.",
+    "@label": "Mixed material"
+  }
+}
+{
+  "@id": "bf:Mount",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Physical material used for the support or backing to which the base material of a resource has been attached.",
+    "@label": "Mount"
+  }
+}
+{
+  "@id": "bf:MovementNotation",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Notation"
+  ],
+  "@documentation": {
+    "@description": "Information on the symbol system used to convey the content of a movement resource.",
+    "@label": "Movement notation used"
+  }
+}
+{
+  "@id": "bf:MovingImage",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Work"
+  ],
+  "@documentation": {
+    "@description": "Images intended to be perceived as moving, including motion pictures (using liveaction and/or animation), video recordings of performances, events,etc.",
+    "@label": "Moving image"
+  }
+}
+{
+  "@id": "bf:Multimedia",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Work"
+  ],
+  "@documentation": {
+    "@description": "Electronic resource that is a computer program (i.e., digitally encoded instructions intended to be processed and performed by a computer) or which consists of multiple media types that are software driven, such as videogames.",
+    "@label": "Software or multimedia"
+  }
+}
+{
+  "@id": "bf:MusicDistributorNumber",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "Identifier appearing on a resource assigned by a distributor to a specific audio recording, notated music publication, music-related publication, or videorecording.",
+    "@label": "Music distributor number"
+  }
+}
+{
+  "@id": "bf:MusicEnsemble",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Ensemble for which a musical work is appropriate.",
+    "@label": "Music ensemble",
+    "@properties": {
+      "bf:ensembleType": {
+        "@comment": "Specific type of ensemble, such as orchestra, band, guitar ensemble.\nThis is the sort of property that should be an *Objec*t property, with a range Class that has   Orchestra, band, etc, as Individuals. (SES)",
+        "@label": "Ensemble type"
+      }
+    }
+  },
+  "bf:ensembleType": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  }
+}
+{
+  "@id": "bf:MusicFormat",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Layout for content of a resource that is presented in the form of musical notation.",
+    "@label": "Notated music format"
+  }
+}
+{
+  "@id": "bf:MusicInstrument",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Instrument for which a musical work is appropriate.",
+    "@label": "Musical instrument",
+    "@properties": {
+      "bf:instrumentalType": {
+        "@comment": "Specific role of instrument, such as alternate, doubling, solo, ensemble.",
+        "@label": "Instrument role"
+      }
+    }
+  },
+  "bf:instrumentalType": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  }
+}
+{
+  "@id": "bf:MusicMedium",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Summary statement of the medium for a musical work.",
+    "@label": "Music medium information"
+  }
+}
+{
+  "@id": "bf:MusicNotation",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Notation"
+  ],
+  "@documentation": {
+    "@description": "Information on the symbol system used to convey the content of a music resource.",
+    "@label": "Music notation used"
+  }
+}
+{
+  "@id": "bf:MusicPlate",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "Identifiers assigned by a music publisher or printer to the printing plates for the notated portion of a notated music publication, or an identifier that emulates the printing plate tradition in contemporary publications.",
+    "@label": "Music plate number"
+  }
+}
+{
+  "@id": "bf:MusicPublisherNumber",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "Identifier assigned to a notated music publication other than an issue, matrix, or plate number.",
+    "@label": "Music publisher number"
+  }
+}
+{
+  "@id": "bf:MusicVoice",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Voice for which a musical work is appropriate.",
+    "@label": "Music voice",
+    "@properties": {
+      "bf:voiceType": {
+        "@comment": "Specific type of voice group, such as chorus, solo.",
+        "@label": "Type of voice"
+      }
+    }
+  },
+  "bf:voiceType": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  }
+}
+{
+  "@id": "bf:Nbn",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "National Bibliography Number that identifies a resource description.",
+    "@label": "NBN"
+  }
+}
+{
+  "@id": "bf:NotatedMovement",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Work"
+  ],
+  "@documentation": {
+    "@description": "Graphic, non-realized representations of movement intended to be perceived visually, e.g. dance.",
+    "@label": "Notated movement"
+  }
+}
+{
+  "@id": "bf:NotatedMusic",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Work"
+  ],
+  "@documentation": {
+    "@description": "Graphic, non-realized representations of musical works intended to be perceived visually.",
+    "@label": "Notated music"
+  }
+}
+{
+  "@id": "bf:Notation",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Information on the alphabet, script, or symbol system used to convey the content of the resource, including specialized scripts, typefaces, tactile notation, movement notation, and musical notation.",
+    "@label": "Notation"
+  }
+}
+{
+  "@id": "bf:Note",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Information, usually in textual form, on attributes of a resource or some aspect of a resource.",
+    "@label": "Note",
+    "@properties": {
+      "bf:noteType": {
+        "@comment": "Type of note.\nWhy is the type of note not a type? (SES)",
+        "@label": "Note type"
+      }
+    }
+  },
+  "bf:noteType": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  }
+}
+{
+  "@id": "bf:Object",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Work"
+  ],
+  "@documentation": {
+    "@description": "Resource in a form intended to be perceived visually in three-dimensions. Includes man-made objects such as models, sculptures, clothing, and toys, as well as naturally occurring objects such as specimens mounted for viewing.",
+    "@label": "Three-dimensional object"
+  }
+}
+{
+  "@id": "bf:ObjectCount",
+  "@type": "Class",
+  "@inherits": [
+    "bf:DigitalCharacteristic"
+  ],
+  "@documentation": {
+    "@description": "Number of objects in encoded geospatial information in a cartographic resource.",
+    "@label": "Digital cartographic object count"
+  }
+}
+{
+  "@id": "bf:Organization",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Agent"
+  ],
+  "@documentation": {
+    "@description": "Corporation or group of persons and/or organizations that acts, or may act, as a unit.",
+    "@label": "Organization"
+  }
+}
+{
+  "@id": "bf:ParallelTitle",
+  "@type": "Class",
+  "@inherits": [
+    "bf:VariantTitle"
+  ],
+  "@documentation": {
+    "@description": "Title in another language and/or script.",
+    "@label": "Parallel title proper"
+  }
+}
+{
+  "@id": "bf:Person",
+  "@type": "Class",
+  "@inherits": [
+    "foaf:Person"
+  ],
+  "@documentation": {
+    "@description": "Individual or identity established by an individual (either alone or in collaboration with one or more other individuals).",
+    "@label": "Person"
+  }
+}
+{
+  "@id": "bf:Place",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Geographic location.",
+    "@label": "Place"
+  }
+}
+{
+  "@id": "bf:PlaybackChannels",
+  "@type": "Class",
+  "@inherits": [
+    "bf:SoundCharacteristic"
+  ],
+  "@documentation": {
+    "@description": "Configuration/number of sound channels used to make a recording, such as one channel for a monophonic recording, e.g., mono, stereo, quadraphonic, surround.",
+    "@label": "Configuration of playback channels"
+  }
+}
+{
+  "@id": "bf:PlaybackCharacteristic",
+  "@type": "Class",
+  "@inherits": [
+    "bf:SoundCharacteristic"
+  ],
+  "@documentation": {
+    "@description": "Equalization system, noise reduction system, etc., used in making an audio recording, e.g., CCIR standard, CX encoded, Dolby.",
+    "@label": "Special playback characteristics"
+  }
+}
+{
+  "@id": "bf:PlayingSpeed",
+  "@type": "Class",
+  "@inherits": [
+    "bf:SoundCharacteristic"
+  ],
+  "@documentation": {
+    "@description": "Speed at which an audio carrier must be operated to produce the sound intended, e.g., 78 rpm, 19 cm/s.",
+    "@label": "Playing speed"
+  }
+}
+{
+  "@id": "bf:Polarity",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Relationship of the colors and tones in an image to the colors and tones of the object reproduced.",
+    "@label": "Polarity"
+  }
+}
+{
+  "@id": "bf:PostalRegistration",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "Number assigned to a publication for which the specified postal service permits the use of a special mailing class privilege.",
+    "@label": "Postal registration number"
+  }
+}
+{
+  "@id": "bf:PresentationFormat",
+  "@type": "Class",
+  "@inherits": [
+    "bf:ProjectionCharacteristic"
+  ],
+  "@documentation": {
+    "@description": "Format used in the production of a projected image, e.g., Cinerama, IMAX.",
+    "@label": "Presentation format"
+  }
+}
+{
+  "@id": "bf:Print",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Instance"
+  ],
+  "@documentation": {
+    "@description": "Resource that is printed.",
+    "@label": "Printed"
+  }
+}
+{
+  "@id": "bf:Production",
+  "@type": "Class",
+  "@inherits": [
+    "bf:ProvisionActivity"
+  ],
+  "@documentation": {
+    "@description": "Information relating to production of a resource.",
+    "@label": "Producer"
+  }
+}
+{
+  "@id": "bf:ProductionMethod",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Process used to produce a resource",
+    "@label": "Production method"
+  }
+}
+{
+  "@id": "bf:Projection",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Method or system used to represent the surface of the earth or of a celestial sphere on a plane.",
+    "@label": "Projection"
+  }
+}
+{
+  "@id": "bf:ProjectionCharacteristic",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Technical specification relating to the projection of a motion picture film.",
+    "@label": "Projection characteristic"
+  }
+}
+{
+  "@id": "bf:ProjectionSpeed",
+  "@type": "Class",
+  "@inherits": [
+    "bf:ProjectionCharacteristic"
+  ],
+  "@documentation": {
+    "@description": "Speed at which a projected carrier must be operated to produce the moving image intended, e.g., 20 fps.",
+    "@label": "Projection speed"
+  }
+}
+{
+  "@id": "bf:ProvisionActivity",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Information about the agent or place relating to the publication, printing, distribution, issue, release, or production of a resource.",
+    "@label": "Provider entity"
+  }
+}
+{
+  "@id": "bf:Publication",
+  "@type": "Class",
+  "@inherits": [
+    "bf:ProvisionActivity"
+  ],
+  "@documentation": {
+    "@description": "Information relating to publication of a resource.",
+    "@label": "Publisher"
+  }
+}
+{
+  "@id": "bf:PublisherNumber",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "Number assigned by a publisher that is not one of the specific defined types.",
+    "@label": "Other publisher number"
+  }
+}
+{
+  "@id": "bf:RecordingMedium",
+  "@type": "Class",
+  "@inherits": [
+    "bf:SoundCharacteristic"
+  ],
+  "@documentation": {
+    "@description": "Type of medium used to record sound on an audio carrier, e.g., magnetic, optical.",
+    "@label": "Recording medium"
+  }
+}
+{
+  "@id": "bf:RecordingMethod",
+  "@type": "Class",
+  "@inherits": [
+    "bf:SoundCharacteristic"
+  ],
+  "@documentation": {
+    "@description": "Method used to encode audio content for playback, e.g., analog, digital.",
+    "@label": "Type of recording"
+  }
+}
+{
+  "@id": "bf:ReductionRatio",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Size of a micro-image in relation to the original from which it was produced.",
+    "@label": "Reduction ratio"
+  }
+}
+{
+  "@id": "bf:RegionalEncoding",
+  "@type": "Class",
+  "@inherits": [
+    "bf:DigitalCharacteristic"
+  ],
+  "@documentation": {
+    "@description": "Identification of the region of the world for which a videodisc has been encoded, e.g., region 4.",
+    "@label": "Regional encoding"
+  }
+}
+{
+  "@id": "bf:ReportNumber",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "Identification number of a technical report that is not a Standard Technical Report Number.",
+    "@label": "Technical report number"
+  }
+}
+{
+  "@id": "bf:Resolution",
+  "@type": "Class",
+  "@inherits": [
+    "bf:DigitalCharacteristic"
+  ],
+  "@documentation": {
+    "@description": "Clarity or fineness of detail in a digital image, expressed by the measurement of the image in pixels, etc., e.g., 3.1 megapixels.",
+    "@label": "Resolution"
+  }
+}
+{
+  "@id": "bf:RetentionPolicy",
+  "@type": "Class",
+  "@inherits": [
+    "bf:UsageAndAccessPolicy"
+  ],
+  "@documentation": {
+    "@description": "Policy of holding institution for retaining resource.",
+    "@label": "Retention policy"
+  }
+}
+{
+  "@id": "bf:Review",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Review of a resource.",
+    "@label": "Review"
+  }
+}
+{
+  "@id": "bf:Role",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Function played or provided by a contributor, e.g., author, illustrator, etc.",
+    "@label": "Role"
+  }
+}
+{
+  "@id": "bf:Scale",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Ratio of the dimensions of a form contained or embodied in a resource to the dimensions of the entity it represents, e.g., for images or cartographic resources.",
+    "@label": "Scale"
+  }
+}
+{
+  "@id": "bf:Script",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Notation"
+  ],
+  "@documentation": {
+    "@description": "Information on the script, or symbol system used to convey the content of a text resource.",
+    "@label": "Script used"
+  }
+}
+{
+  "@id": "bf:ShelfMark",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "Piece/item identifier, such as a call or other type of number.",
+    "@label": "Shelf location"
+  }
+}
+{
+  "@id": "bf:ShelfMarkDdc",
+  "@type": "Class",
+  "@inherits": [
+    "bf:ShelfMark"
+  ],
+  "@documentation": {
+    "@description": "Shelf mark based on Dewey Decimal Classification.",
+    "@label": "DDC call number"
+  }
+}
+{
+  "@id": "bf:ShelfMarkLcc",
+  "@type": "Class",
+  "@inherits": [
+    "bf:ShelfMark"
+  ],
+  "@documentation": {
+    "@description": "Shelf mark based on Library of Congress Classification.",
+    "@label": "LCC call number"
+  }
+}
+{
+  "@id": "bf:ShelfMarkNlm",
+  "@type": "Class",
+  "@inherits": [
+    "bf:ShelfMark"
+  ],
+  "@documentation": {
+    "@description": "Shelf mark based on National Library of Medicine Classification.",
+    "@label": "NLM call number"
+  }
+}
+{
+  "@id": "bf:ShelfMarkUdc",
+  "@type": "Class",
+  "@inherits": [
+    "bf:ShelfMark"
+  ],
+  "@documentation": {
+    "@description": "Shelf mark based on Universal Decimal Classification.",
+    "@label": "UDC call number"
+  }
+}
+{
+  "@id": "bf:Sici",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "Serial Item and Contribution Identifier.",
+    "@label": "SICI"
+  }
+}
+{
+  "@id": "bf:SoundCharacteristic",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Technical specification relating to the encoding of sound in a resource.",
+    "@label": "Sound characteristic"
+  }
+}
+{
+  "@id": "bf:SoundContent",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Indication of whether the production of sound is an integral part of the resource.",
+    "@label": "Sound content"
+  }
+}
+{
+  "@id": "bf:Source",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Resource from which value or label came or was derived.",
+    "@label": "Source"
+  }
+}
+{
+  "@id": "bf:Status",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Designation of the validity or position of something, e.g., whether something is incorrect or available.",
+    "@label": "Status"
+  }
+}
+{
+  "@id": "bf:StillImage",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Work"
+  ],
+  "@documentation": {
+    "@description": "Resource expressed through line, shape, shading, etc., intended to be perceived visually as a still image or images in two dimensions. Includes two-dimensional images and slides and transparencies.",
+    "@label": "Still image"
+  }
+}
+{
+  "@id": "bf:StockNumber",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "Identification number used for stock purposes and assigned by agencies such as distributors, publishers, or vendors.",
+    "@label": "Stock number"
+  }
+}
+{
+  "@id": "bf:Strn",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "Standard Technical Report Number.",
+    "@label": "STRN"
+  }
+}
+{
+  "@id": "bf:StudyNumber",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "Identification number for a computer data file.",
+    "@label": "Study number"
+  }
+}
+{
+  "@id": "bf:Sublocation",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Specific place within the holding entity where the item is located or made available.",
+    "@label": "Sublocation"
+  }
+}
+{
+  "@id": "bf:Summary",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Description of the content of a resource, such as an abstract, summary, etc..",
+    "@label": "Summary"
+  }
+}
+{
+  "@id": "bf:SupplementaryContent",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Index, bibliography, appendix, etc. intended to supplement the primary content of a resource.",
+    "@label": "Supplementary material"
+  }
+}
+{
+  "@id": "bf:SystemRequirement",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Equipment or system requirements beyond what is normal and obvious for the type of carrier or type of file, such as make and model of equipment or hardware, operating system, amount of memory, programming language, other necessary software, any plug-ins or peripherals required to play, view, or run the resource, etc.",
+    "@label": "System Requirement"
+  }
+}
+{
+  "@id": "bf:TableOfContents",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Table of contents of a resource.",
+    "@label": "Table of contents"
+  }
+}
+{
+  "@id": "bf:Tactile",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Instance"
+  ],
+  "@documentation": {
+    "@description": "Resource that is intended to be perceived by touch.",
+    "@label": "Tactile material"
+  }
+}
+{
+  "@id": "bf:TactileNotation",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Notation"
+  ],
+  "@documentation": {
+    "@description": "Information on the symbol system used to convey the content of a tactile resource.",
+    "@label": "Tactile notation used"
+  }
+}
+{
+  "@id": "bf:TapeConfig",
+  "@type": "Class",
+  "@inherits": [
+    "bf:SoundCharacteristic"
+  ],
+  "@documentation": {
+    "@description": "Number of tracks on an audiotape, e.g., 12 track.",
+    "@label": "Tape configuration"
+  }
+}
+{
+  "@id": "bf:Temporal",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Chronological period.",
+    "@label": "Temporal concept"
+  }
+}
+{
+  "@id": "bf:Text",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Work"
+  ],
+  "@documentation": {
+    "@description": "Resource intended to be perceived visually and understood through the use of language in written or spoken form.",
+    "@label": "Text"
+  }
+}
+{
+  "@id": "bf:Title",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Title information relating to a resource: work title, preferred title, instance title, transcribed title, translated title, variant form of title, etc.",
+    "@label": "Title entity",
+    "@properties": {
+      "bf:mainTitle": {
+        "@comment": "Title being addressed. Possible title component.",
+        "@label": "Main title"
+      },
+      "bf:partName": {
+        "@comment": "Part or section name of a title. Possible title component.",
+        "@label": "Part title"
+      },
+      "bf:partNumber": {
+        "@comment": "Part or section enumeration of a title. Possible title component.",
+        "@label": "Part number"
+      },
+      "bf:subtitle": {
+        "@comment": "Word, character, or group of words and/or characters that contains the remainder of the title after the main title. Possible title component.",
+        "@label": "Subtitle"
+      }
+    }
+  },
+  "bf:mainTitle": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "bf:partName": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "bf:partNumber": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "bf:subtitle": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  }
+}
+{
+  "@id": "bf:Topic",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Concept or area of knowledge.",
+    "@label": "Topic"
+  }
+}
+{
+  "@id": "bf:TrackConfig",
+  "@type": "Class",
+  "@inherits": [
+    "bf:SoundCharacteristic"
+  ],
+  "@documentation": {
+    "@description": "Configuration of the audio track on a sound-track film, e.g., center track, edge track.",
+    "@label": "Track configuration"
+  }
+}
+{
+  "@id": "bf:Unit",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Units in which a value is expressed.",
+    "@label": "Unit"
+  }
+}
+{
+  "@id": "bf:Upc",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "Universal Product Code.",
+    "@label": "UPC"
+  }
+}
+{
+  "@id": "bf:Urn",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "Uniform Resource Number.",
+    "@label": "URN"
+  }
+}
+{
+  "@id": "bf:UsageAndAccessPolicy",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "General statement of allowances and restrictions on access to a resource, including retention, reproduction, access, and lending.",
+    "@label": "Use and access conditions"
+  }
+}
+{
+  "@id": "bf:UsePolicy",
+  "@type": "Class",
+  "@inherits": [
+    "bf:UsageAndAccessPolicy"
+  ],
+  "@documentation": {
+    "@description": "Usage limitations placed on a resource with respect to reproduction, publication, exhibition, etc..",
+    "@label": "Use policy"
+  }
+}
+{
+  "@id": "bf:VariantTitle",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Title"
+  ],
+  "@documentation": {
+    "@description": "Title associated with the resource that is different from the Work or Instance title.",
+    "@label": "Title variation",
+    "@properties": {
+      "bf:variantType": {
+        "@comment": "Type of title variation, e.g., acronym, cover, spine, earlier, later, series version.",
+        "@label": "Variant title type"
+      }
+    }
+  },
+  "bf:variantType": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  }
+}
+{
+  "@id": "bf:VideoCharacteristic",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Technical specification relating to the encoding of video images in a resource.",
+    "@label": "Video characteristic"
+  }
+}
+{
+  "@id": "bf:VideoFormat",
+  "@type": "Class",
+  "@inherits": [
+    "bf:VideoCharacteristic"
+  ],
+  "@documentation": {
+    "@description": "Standard, etc., used to encode the analog video content of a resource, e.g., Beta, 8mm.",
+    "@label": "Video format"
+  }
+}
+{
+  "@id": "bf:VideoRecordingNumber",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Identifier"
+  ],
+  "@documentation": {
+    "@description": "Number assigned by a publisher to a video recording.",
+    "@label": "Video recording number"
+  }
+}
+{
+  "@id": "bf:Work",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Resource reflecting a conceptual essence of a cataloging resource.",
+    "@label": "Work",
+    "@properties": {
+      "bf:content": {
+        "@comment": "Categorization reflecting the fundamental form of communication in which the content is expressed and the human sense through which it is intended to be perceived.",
+        "@label": "Content type"
+      },
+      "bf:ensemble": {
+        "@comment": "Ensemble for which a musical work is appropriate.",
+        "@label": "Ensemble"
+      },
+      "bf:eventContentOf": {
+        "@comment": "Event that is the content of the described work.",
+        "@label": "Has event content"
+      },
+      "bf:expressionOf": {
+        "@comment": "Work that the described Work is an expression of. For use to connect Works under FRBR/RDA rules.",
+        "@label": "Expression of"
+      },
+      "bf:geographicCoverage": {
+        "@comment": "Geographic coverage of the content of the resource.",
+        "@label": "Geographic coverage"
+      },
+      "bf:hasExpression": {
+        "@comment": "Work that is an expression of a described Work. For use to relate Works under FRBR/RDA rules.",
+        "@label": "Expressed as"
+      },
+      "bf:hasInstance": {
+        "@comment": "Instance is related to described Work. For use to connect Works to Instances in the BIBFRAME structure.",
+        "@label": "Instance of Work"
+      },
+      "bf:instrument": {
+        "@comment": "Instrument for which a musical Work is appropriate.",
+        "@label": "Instrument"
+      },
+      "bf:musicMedium": {
+        "@comment": "Instrumental, vocal, and/or other medium of performance for which a musical resource was originally conceived, written or performed.",
+        "@label": "Music medium of performance"
+      },
+      "bf:originPlace": {
+        "@comment": "Place from which the creation of the Work originated.",
+        "@label": "Associated title place"
+      },
+      "bf:voice": {
+        "@comment": "Voice for which a musical work is appropriate, such as soprano, tenor, mixed.",
+        "@label": "Voice"
+      },
+      "bf:historyOfWork": {
+        "@comment": "Information about the history of a Work.",
+        "@label": "History of the work"
+      },
+      "bf:legalDate": {
+        "@comment": "Date of legal work, or promulgation of a law, or signing of a treaty.",
+        "@label": "Date of legal work"
+      },
+      "bf:musicKey": {
+        "@comment": "Pitch and mode for music.",
+        "@label": "Music key"
+      },
+      "bf:musicOpusNumber": {
+        "@comment": "Numeric designation of a musical work assigned by a composer, publisher, or a musicologist.",
+        "@label": "Music opus number"
+      },
+      "bf:musicSerialNumber": {
+        "@comment": "Numeric designation for musical works consecutively numbered in music reference sources.\nWhat kind of number? Why not a number type?(SES)",
+        "@label": "Music serial number"
+      },
+      "bf:musicThematicNumber": {
+        "@comment": "Numeric designation for a musical work as found in a thematic index for the composer.",
+        "@label": "Music thematic number"
+      },
+      "bf:originDate": {
+        "@comment": "Date or date range associated with the creation of a Work.",
+        "@label": "Associated title date"
+      },
+      "bf:temporalCoverage": {
+        "@comment": "Time period coverage of the content of the resource.",
+        "@label": "Temporal coverage"
+      },
+      "bf:version": {
+        "@comment": "Term or terms that identify works such as arranged for music, vulgate for religious work, etc.",
+        "@label": "Version"
+      }
+    }
+  },
+  "@inherits": [
+    "bf:WorkOrInstance"
+  ],
+  "bf:content": {
+    "@type": "Set",
+    "@class": "bf:Content"
+  },
+  "bf:ensemble": {
+    "@type": "Set",
+    "@class": "bf:MusicEnsemble"
+  },
+  "bf:eventContentOf": {
+    "@type": "Set",
+    "@class": "bf:Event"
+  },
+  "bf:expressionOf": {
+    "@type": "Set",
+    "@class": "bf:Work"
+  },
+  "bf:geographicCoverage": {
+    "@type": "Set",
+    "@class": "bf:GeographicCoverage"
+  },
+  "bf:hasExpression": {
+    "@type": "Set",
+    "@class": "bf:Work"
+  },
+  "bf:hasInstance": {
+    "@type": "Set",
+    "@class": "bf:Instance"
+  },
+  "bf:instrument": {
+    "@type": "Set",
+    "@class": "bf:MusicInstrument"
+  },
+  "bf:musicMedium": {
+    "@type": "Set",
+    "@class": "bf:MusicMedium"
+  },
+  "bf:originPlace": {
+    "@type": "Set",
+    "@class": "bf:Place"
+  },
+  "bf:voice": {
+    "@type": "Set",
+    "@class": "bf:MusicVoice"
+  },
+  "bf:historyOfWork": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "bf:legalDate": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:musicKey": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:musicOpusNumber": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:musicSerialNumber": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:musicThematicNumber": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:originDate": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:temporalCoverage": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:version": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  }
+}
+{
+  "@id": "bf:WorkOrInstance",
+  "@type": "Class",
+  "@documentation": {
+    "@properties": {
+      "bf:acquisitionSource": {
+        "@comment": "Information about an organization, person, etc., from which a resource may be obtained.\nUsed with Work or Instance",
+        "@label": "Source of acquisition"
+      },
+      "bf:arrangement": {
+        "@comment": "Information about the organization and arrangement of a collection of resources.\nUsed with Work or Instance",
+        "@label": "Organization and arrangement"
+      },
+      "bf:aspectRatio": {
+        "@comment": "Proportional relationship between an image's width and its height.\nUsed with Work or Instance",
+        "@label": "Aspect ratio"
+      },
+      "bf:capture": {
+        "@comment": "Information about place and date associated with the capture (e.g., recording, filming) of the content of a resource.\nUsed with Work or Instance",
+        "@label": "Capture of content"
+      },
+      "bf:cartographicAttributes": {
+        "@comment": "Cartographic data that identifies characteristics of the resource, such as coordinates, projection, etc.\nUsed with Work or Instance",
+        "@label": "Cartographic data"
+      },
+      "bf:colorContent": {
+        "@comment": "Color characteristics, e.g., black and white, multicolored.\nUsed with Work or Instance",
+        "@label": "Color content"
+      },
+      "bf:contentAccessibility": {
+        "@comment": "Information that assists those with a sensory impairment for greater understanding of content, e.g., captions.\nUsed with Work or Instance",
+        "@label": "Content accessibility information"
+      },
+      "bf:copyrightRegistration": {
+        "@comment": "Copyright and Legal Deposit registration information\nUsed with Work or Instance",
+        "@label": "Copyright registration information"
+      },
+      "bf:coverArt": {
+        "@comment": "Cover art image of a resource.\nUsed with Work or Instance",
+        "@label": "Cover art"
+      },
+      "bf:dataSource": {
+        "@comment": "Resource that is a data source to which the described resource is related. It may contain information about other files, printed sources, or collection procedures.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Data source"
+      },
+      "bf:dissertation": {
+        "@comment": "Work presented as part of the formal requirements for an academic degree.\nUsed with Work or Instance",
+        "@label": "Dissertation Information"
+      },
+      "bf:findingAid": {
+        "@comment": "Relationship for archival, visual, and manuscript resources to a finding aid or similar control materials.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Finding aid"
+      },
+      "bf:frequency": {
+        "@comment": "Intervals at which the parts of a serially produced resource or the updates to an integrating resource are issued.\nUsed with Work or Instance",
+        "@label": "Frequency"
+      },
+      "bf:hasDerivative": {
+        "@comment": "Resource that is a modification of the described work.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Has derivative"
+      },
+      "bf:hasSeries": {
+        "@comment": "Resource in which the part has been issued; the title of the larger resource appears on the part.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "In series"
+      },
+      "bf:illustrativeContent": {
+        "@comment": "Information about content intended to illustrate a resource.\nUsed with Work or Instance",
+        "@label": "Illustrative content information"
+      },
+      "bf:indexOf": {
+        "@comment": "Index that accompanies a resource.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Index to"
+      },
+      "bf:intendedAudience": {
+        "@comment": "Information that identifies the specific audience or intellectual level for which the content of the resource is considered appropriate.\nUsed with Work or Instance",
+        "@label": "Intended audience"
+      },
+      "bf:issuance": {
+        "@comment": "Categorization reflecting whether a resource is issued in one or more parts, the way it is updated, and its intended termination.\nUsed with Work or Instance",
+        "@label": "Mode of issuance"
+      },
+      "bf:media": {
+        "@comment": "Categorization reflecting the general type of intermediation device required to view, play, run, etc., the content of a resource.\nUsed with Work or Instance",
+        "@label": "Media type"
+      },
+      "bf:musicFormat": {
+        "@comment": "Layout for content of a resource that is presented in the form of musical notation, such as full score, condensed score, vocal score, etc.\nUsed with Work or Instance",
+        "@label": "Format of notated music"
+      },
+      "bf:notation": {
+        "@comment": "Alphabet, script, or symbol system used to convey the content of the resource, including specialized scripts, typefaces, tactile notation, movement notation, and musical notation.\nUsed with Work or Instance",
+        "@label": "Notation system"
+      },
+      "bf:review": {
+        "@comment": "Review of a resource.\nUsed with Work or Instance",
+        "@label": "Review content"
+      },
+      "bf:scale": {
+        "@comment": "Ratio of the dimensions of a form contained or embodied in a resource to the dimensions of the entity it represents, e.g., for images or cartographic resources.\nUsed with Work or Instance",
+        "@label": "Scale"
+      },
+      "bf:soundContent": {
+        "@comment": "Indication of whether the production of sound is an integral part of the resource.\nUsed with Work or Instance",
+        "@label": "Sound content"
+      },
+      "bf:subseriesOf": {
+        "@comment": "Series resource of which the described resource is a part.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Subseries of"
+      },
+      "bf:succeededBy": {
+        "@comment": "Resource that succeeds the resource being described, e.g., later in time or after in a narrative.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Succeeded by"
+      },
+      "bf:summary": {
+        "@comment": "Summary or abstract of the resource described.\nUsed with Work or Instance",
+        "@label": "Summary content"
+      },
+      "bf:supplementTo": {
+        "@comment": "Resource that is updated or otherwise complemented by the augmenting resource.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Supplement to"
+      },
+      "bf:supplementaryContent": {
+        "@comment": "Material such as an index, bibliography, appendix intended to supplement the primary content of a resource.\nUsed with Work or Instance",
+        "@label": "Supplementary material"
+      },
+      "bf:tableOfContents": {
+        "@comment": "Table of contents of the described resource.\nUsed with Work or Instance",
+        "@label": "Table of contents content"
+      },
+      "bf:acquisitionTerms": {
+        "@comment": "Conditions under which the publisher, distributor, etc., will normally supply a resource, e.g., price of a resource.\nUsed with Work or Instance",
+        "@label": "Terms of acquisition"
+      },
+      "bf:awards": {
+        "@comment": "Information on awards associated with the described resource.\nUsed with Work or Instance",
+        "@label": "Award note"
+      },
+      "bf:copyrightDate": {
+        "@comment": "Date associated with a claim of protection under copyright or a similar regime.\nUsed with Work or Instance",
+        "@label": "Copyright date"
+      },
+      "bf:credits": {
+        "@comment": "Information in note form of credits for persons or organizations who have participated in the creation and/or production of the resource.\nUsed with Work or Instance",
+        "@label": "Credits note"
+      },
+      "bf:duration": {
+        "@comment": "Information about the playing time, running time, etc. of a resource.\nUsed with Work or Instance\nideally this would be an xsd:duration, but that's non-standard(SES)",
+        "@label": "Duration"
+      },
+      "bf:firstIssue": {
+        "@comment": "Beginning date of a resource and/or the sequential designations.\nUsed with Work or Instance",
+        "@label": "Multipart first issue"
+      },
+      "bf:lastIssue": {
+        "@comment": "Ending date of a resource and/or the sequential designations.\nUsed with Work or Instance",
+        "@label": "Multipart last issue"
+      },
+      "bf:natureOfContent": {
+        "@comment": "Characterization that epitomizes the primary content of a resource, e.g., field recording of birdsong; combined time series analysis and graph plotting system.\nAre these all ad-hoc? If not, why isn't this an object property with a range class for the values? Or possibly a class hierarchy? (SES)\nUsed with Work or Instance",
+        "@label": "Content nature"
+      },
+      "bf:preferredCitation": {
+        "@comment": "Citation to the resource preferred by its custodian of the resource.\nUsed with Work or Instance",
+        "@label": "Preferred citation"
+      }
+    }
+  },
+  "@inherits": [
+    "bf:WorkOrInstanceOrItem"
+  ],
+  "bf:acquisitionSource": {
+    "@type": "Set",
+    "@class": "bf:AcquisitionSource"
+  },
+  "bf:arrangement": {
+    "@type": "Set",
+    "@class": "bf:Arrangement"
+  },
+  "bf:aspectRatio": {
+    "@type": "Set",
+    "@class": "bf:AspectRatio"
+  },
+  "bf:capture": {
+    "@type": "Set",
+    "@class": "bf:Capture"
+  },
+  "bf:cartographicAttributes": {
+    "@type": "Set",
+    "@class": "bf:Cartographic"
+  },
+  "bf:colorContent": {
+    "@type": "Set",
+    "@class": "bf:ColorContent"
+  },
+  "bf:contentAccessibility": {
+    "@type": "Set",
+    "@class": "bf:ContentAccessibility"
+  },
+  "bf:copyrightRegistration": {
+    "@type": "Set",
+    "@class": "bf:CopyrightRegistration"
+  },
+  "bf:coverArt": {
+    "@type": "Set",
+    "@class": "bf:CoverArt"
+  },
+  "bf:dataSource": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstance"
+  },
+  "bf:dissertation": {
+    "@type": "Set",
+    "@class": "bf:Dissertation"
+  },
+  "bf:findingAid": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstance"
+  },
+  "bf:frequency": {
+    "@type": "Set",
+    "@class": "bf:Frequency"
+  },
+  "bf:hasDerivative": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstance"
+  },
+  "bf:hasSeries": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstance"
+  },
+  "bf:illustrativeContent": {
+    "@type": "Set",
+    "@class": "bf:Illustration"
+  },
+  "bf:indexOf": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstance"
+  },
+  "bf:intendedAudience": {
+    "@type": "Set",
+    "@class": "bf:IntendedAudience"
+  },
+  "bf:issuance": {
+    "@type": "Set",
+    "@class": "bf:Issuance"
+  },
+  "bf:media": {
+    "@type": "Set",
+    "@class": "bf:Media"
+  },
+  "bf:musicFormat": {
+    "@type": "Set",
+    "@class": "bf:MusicFormat"
+  },
+  "bf:notation": {
+    "@type": "Set",
+    "@class": "bf:Notation"
+  },
+  "bf:review": {
+    "@type": "Set",
+    "@class": "bf:Review"
+  },
+  "bf:scale": {
+    "@type": "Set",
+    "@class": "bf:Scale"
+  },
+  "bf:soundContent": {
+    "@type": "Set",
+    "@class": "bf:SoundContent"
+  },
+  "bf:subseriesOf": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstance"
+  },
+  "bf:succeededBy": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstance"
+  },
+  "bf:summary": {
+    "@type": "Set",
+    "@class": "bf:Summary"
+  },
+  "bf:supplementTo": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstance"
+  },
+  "bf:supplementaryContent": {
+    "@type": "Set",
+    "@class": "bf:SupplementaryContent"
+  },
+  "bf:tableOfContents": {
+    "@type": "Set",
+    "@class": "bf:TableOfContents"
+  },
+  "bf:acquisitionTerms": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "bf:awards": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "bf:copyrightDate": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:credits": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "bf:duration": {
+    "@type": "Set",
+    "@class": "xsd:string"
+  },
+  "bf:firstIssue": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:lastIssue": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:natureOfContent": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bf:preferredCitation": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  }
+}
+{
+  "@id": "_:nb1e109e9c91248b19483997761264bfab3",
+  "@type": "Class",
+  "@documentation": {}
+}
+{
+  "@id": "bf:WorkOrInstanceOrItem",
+  "@type": "Class",
+  "@documentation": {
+    "@properties": {
+      "bf:classification": {
+        "@comment": "Classification number in any scheme.\nUsed with Work, Instance or Item",
+        "@label": "Classification"
+      },
+      "bf:contribution": {
+        "@comment": "Agent and its role in relation to the resource.\nUsed with Work, Instance or Item",
+        "@label": "Contributor and role"
+      },
+      "bf:genreForm": {
+        "@comment": "Form category or genre to which a resource belongs\nUsed with Work, Instance or Item",
+        "@label": "Genre/form"
+      },
+      "bf:relatedTo": {
+        "@comment": "Any relationship between Work, Instance, and Item resources.",
+        "@label": "Related resource"
+      },
+      "bf:subject": {
+        "@comment": "Subject term(s) describing a resource.\nUsed with Work, Instance or Item",
+        "@label": "Subject"
+      },
+      "bf:title": {
+        "@comment": "Name given to a resource.\nUsed with Work, Instance or Item",
+        "@label": "Title resource"
+      },
+      "bf:usageAndAccessPolicy": {
+        "@comment": "General statement of allowances and restrictions on access to a resource, including retention, reproduction, access, and lending.\nUsed with Work, Instance or Item",
+        "@label": "Use and access condition"
+      },
+      "bf:custodialHistory": {
+        "@comment": "Information about the provenance, such as origin, ownership and custodial history (chain of custody), of a resource.\nUsed with Work, Instance or Item",
+        "@label": "Custodial history"
+      }
+    }
+  },
+  "bf:classification": {
+    "@type": "Set",
+    "@class": "bf:Classification"
+  },
+  "bf:contribution": {
+    "@type": "Set",
+    "@class": "bf:Contribution"
+  },
+  "bf:genreForm": {
+    "@type": "Set",
+    "@class": "bf:GenreForm"
+  },
+  "bf:relatedTo": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstanceOrItem"
+  },
+  "bf:subject": {
+    "@type": "Set",
+    "@class": "skos:Concept"
+  },
+  "bf:title": {
+    "@type": "Set",
+    "@class": "bf:Title"
+  },
+  "bf:usageAndAccessPolicy": {
+    "@type": "Set",
+    "@class": "bf:UsageAndAccessPolicy"
+  },
+  "bf:custodialHistory": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  }
+}
+{
+  "@id": "_:nb1e109e9c91248b19483997761264bfab6",
+  "@type": "Class",
+  "@documentation": {}
+}
+{
+  "@id": "skos:Concept",
+  "@type": "Class",
+  "@documentation": {}
+}
+{
+  "@id": "foaf:Agent",
+  "@type": "Class",
+  "@documentation": {}
+}
+{
+  "@id": "foaf:Person",
+  "@type": "Class",
+  "@documentation": {}
+}
+{
+  "@id": "madsrdf:Address",
+  "@type": "Class",
+  "@documentation": {
+    "@label": "Address",
+    "@properties": {
+      "madsrdf:extendedAddress": {
+        "@comment": "The second address line, if\n      needed.",
+        "@label": "Extended Address"
+      },
+      "madsrdf:postcode": {
+        "@label": "Post Code / Zip\n      Code"
+      },
+      "madsrdf:streetAddress": {
+        "@comment": "First line of address. For\n      second line, use madsrdf:extendedAddress.",
+        "@label": "Street Address"
+      }
+    }
+  },
+  "madsrdf:extendedAddress": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:postcode": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:streetAddress": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  }
+}
+{
+  "@id": "madsrdf:Affiliation",
+  "@type": "Class",
+  "@documentation": {
+    "@label": "Affiliation",
+    "@properties": {
+      "madsrdf:hasAffiliationAddress": {
+        "@comment": "The address of the group or\n      organization with which an individual is associated.",
+        "@label": "Has Affiliation\n      Address"
+      },
+      "madsrdf:affiliationEnd": {
+        "@comment": "The date an individual\n      ceased to be affiliated with an organization.",
+        "@label": "Affiliation\n      Ended"
+      },
+      "madsrdf:affiliationStart": {
+        "@comment": "The date an individual\n      established an affiliation with an organization.",
+        "@label": "Affiliation\n      Started"
+      },
+      "madsrdf:email": {
+        "@label": "Email"
+      },
+      "madsrdf:fax": {
+        "@comment": "Fax number",
+        "@label": "Fax"
+      },
+      "madsrdf:hours": {
+        "@label": "Hours"
+      },
+      "madsrdf:phone": {
+        "@label": "Phone"
+      }
+    }
+  },
+  "madsrdf:hasAffiliationAddress": {
+    "@type": "Set",
+    "@class": "madsrdf:Address"
+  },
+  "madsrdf:affiliationEnd": {
+    "@type": "Set",
+    "@class": "xsd:date"
+  },
+  "madsrdf:affiliationStart": {
+    "@type": "Set",
+    "@class": "xsd:date"
+  },
+  "madsrdf:email": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:fax": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:hours": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:phone": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  }
+}
+{
+  "@id": "madsrdf:Area",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Geographic"
+  ],
+  "@documentation": {
+    "@label": "Area Type"
+  }
+}
+{
+  "@id": "madsrdf:Authority",
+  "@type": "Class",
+  "@inherits": [
+    "owl:Thing",
+    "skos:Concept"
+  ],
+  "@documentation": {
+    "@label": "Authority",
+    "@properties": {
+      "madsrdf:hasHiddenVariant": {
+        "@comment": "Use for variants that are searchable, but not necessarily for\n      display.",
+        "@label": "Has Hidden Variant"
+      },
+      "madsrdf:hasRelatedAuthority": {
+        "@comment": "Unless the relationship can be more specifically identified, use\n      'hasRelatedAuthority.'",
+        "@label": "Has Related Authority"
+      },
+      "madsrdf:hasVariant": {
+        "@comment": "Associates a Variant with an Authority or Deprecrated Authority.\n      Unless the variant type can be more specifically identified, use 'hasVariant.'",
+        "@label": "Has Variant"
+      },
+      "madsrdf:identifiesRWO": {
+        "@comment": "Associates a\n      madsrdf:Authority with the Real World Object that is the subject of the authority's\n      label.",
+        "@label": "Identifies RWO"
+      }
+    }
+  },
+  "madsrdf:hasHiddenVariant": {
+    "@type": "Set",
+    "@class": "madsrdf:Variant"
+  },
+  "madsrdf:hasRelatedAuthority": {
+    "@type": "Set",
+    "@class": "madsrdf:Authority"
+  },
+  "madsrdf:hasVariant": {
+    "@type": "Set",
+    "@class": "madsrdf:Variant"
+  },
+  "madsrdf:identifiesRWO": {
+    "@type": "Set",
+    "@class": "madsrdf:RWO"
+  }
+}
+{
+  "@id": "madsrdf:City",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Geographic"
+  ],
+  "@documentation": {
+    "@label": "City Type"
+  }
+}
+{
+  "@id": "madsrdf:CitySection",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Geographic"
+  ],
+  "@documentation": {
+    "@label": "City Section Type"
+  }
+}
+{
+  "@id": "madsrdf:ComplexSubject",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:ComplexType"
+  ],
+  "@documentation": {
+    "@label": "Complex Subject Type"
+  }
+}
+{
+  "@id": "madsrdf:ComplexType",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:MADSType"
+  ],
+  "@documentation": {
+    "@label": "Complex Type",
+    "@properties": {
+      "madsrdf:componentList": {
+        "@comment": "madsrdf:componentList\n      organizes the madsrdf:SimpleType resources whose labels are represented in the label of the\n      associated madsrdf:ComplexType resource.",
+        "@label": "Component List"
+      }
+    }
+  },
+  "madsrdf:componentList": {
+    "@type": "Set",
+    "@class": "_:n65b70a7b6c2a4d74bffd73503b6e9772b13"
+  }
+}
+{
+  "@id": "madsrdf:ConferenceName",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Name"
+  ],
+  "@documentation": {
+    "@label": "Conference Name Type"
+  }
+}
+{
+  "@id": "madsrdf:Continent",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Geographic"
+  ],
+  "@documentation": {
+    "@label": "Continent Type"
+  }
+}
+{
+  "@id": "madsrdf:CorporateName",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Name"
+  ],
+  "@documentation": {
+    "@label": "Corporate Name Type",
+    "@properties": {
+      "madsrdf:hasCorporateParentAuthority": {
+        "@comment": "Establishes a relationship\n      between a CorporateName Authority and one of the same that is more broadly\n      defined.",
+        "@label": "Has Parent\n      Organization"
+      },
+      "madsrdf:hasCorporateSubsidiaryAuthority": {
+        "@comment": "Establishes a relationship\n      between a CorporateName Authority and one of the same that is more narrowly\n      defined.",
+        "@label": "Is Parent Organization\n      Of"
+      }
+    }
+  },
+  "madsrdf:hasCorporateParentAuthority": {
+    "@type": "Set",
+    "@class": "madsrdf:CorporateName"
+  },
+  "madsrdf:hasCorporateSubsidiaryAuthority": {
+    "@type": "Set",
+    "@class": "madsrdf:CorporateName"
+  }
+}
+{
+  "@id": "madsrdf:Country",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Geographic"
+  ],
+  "@documentation": {
+    "@label": "Country Type"
+  }
+}
+{
+  "@id": "madsrdf:County",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Geographic"
+  ],
+  "@documentation": {
+    "@label": "County Type"
+  }
+}
+{
+  "@id": "madsrdf:DateNameElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:NameElement"
+  ],
+  "@documentation": {
+    "@label": "Date Name\n      Element"
+  }
+}
+{
+  "@id": "madsrdf:DeprecatedAuthority",
+  "@type": "Class",
+  "@inherits": [
+    "owl:Thing"
+  ],
+  "@documentation": {
+    "@label": "Deprecated\n      Authority"
+  }
+}
+{
+  "@id": "madsrdf:Element",
+  "@type": "Class",
+  "@documentation": {
+    "@label": "Element",
+    "@properties": {
+      "madsrdf:elementValue": {
+        "@label": "Element Value"
+      }
+    }
+  },
+  "madsrdf:elementValue": {
+    "@type": "Set",
+    "@class": "xsd:string"
+  }
+}
+{
+  "@id": "madsrdf:ExtraterrestrialArea",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Geographic"
+  ],
+  "@documentation": {
+    "@label": "Extraterrestrial Area Type"
+  }
+}
+{
+  "@id": "madsrdf:FamilyName",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Name"
+  ],
+  "@documentation": {
+    "@label": "Family Name Type"
+  }
+}
+{
+  "@id": "madsrdf:FamilyNameElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:NameElement"
+  ],
+  "@documentation": {
+    "@label": "Family Name\n      Element"
+  }
+}
+{
+  "@id": "madsrdf:FullNameElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:NameElement"
+  ],
+  "@documentation": {
+    "@label": "Fullname Element"
+  }
+}
+{
+  "@id": "madsrdf:GenreForm",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:SimpleType"
+  ],
+  "@documentation": {
+    "@label": "Genre/Form Type"
+  }
+}
+{
+  "@id": "madsrdf:GenreFormElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Element"
+  ],
+  "@documentation": {
+    "@label": "Genre/Form Element"
+  }
+}
+{
+  "@id": "madsrdf:Geographic",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:SimpleType"
+  ],
+  "@documentation": {
+    "@label": "Geographic Authority"
+  }
+}
+{
+  "@id": "madsrdf:GeographicElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Element"
+  ],
+  "@documentation": {
+    "@label": "Geographic Element"
+  }
+}
+{
+  "@id": "madsrdf:GivenNameElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:NameElement"
+  ],
+  "@documentation": {
+    "@label": "Given Name\n      Element"
+  }
+}
+{
+  "@id": "madsrdf:HierarchicalGeographic",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:ComplexType"
+  ],
+  "@documentation": {
+    "@label": "Hierarchical Geographic Type"
+  }
+}
+{
+  "@id": "madsrdf:Identifier",
+  "@type": "Class",
+  "@documentation": {
+    "@label": "Other Identifier",
+    "@properties": {
+      "madsrdf:idValue": {
+        "@comment": "The value of the identifier\n      conforming to the Identifier Scheme syntax.",
+        "@label": "Identifier Value"
+      }
+    }
+  },
+  "madsrdf:idValue": {
+    "@type": "Set",
+    "@class": "xsd:string"
+  }
+}
+{
+  "@id": "madsrdf:Island",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Geographic"
+  ],
+  "@documentation": {
+    "@label": "Island Type"
+  }
+}
+{
+  "@id": "madsrdf:Language",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:SimpleType"
+  ],
+  "@documentation": {
+    "@label": "Language Type"
+  }
+}
+{
+  "@id": "madsrdf:LanguageElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Element"
+  ],
+  "@documentation": {
+    "@label": "Language Element"
+  }
+}
+{
+  "@id": "madsrdf:MADSCollection",
+  "@type": "Class",
+  "@documentation": {
+    "@label": "MADS Collection",
+    "@properties": {
+      "madsrdf:hasMADSCollectionMember": {
+        "@comment": "Associates an Authority or other Collection with a\n      madsrdf:MADSCollection.",
+        "@label": "Has MADSCollection Member"
+      }
+    }
+  },
+  "madsrdf:hasMADSCollectionMember": {
+    "@type": "Set",
+    "@class": "_:n65b70a7b6c2a4d74bffd73503b6e9772b19"
+  }
+}
+{
+  "@id": "madsrdf:MADSScheme",
+  "@type": "Class",
+  "@documentation": {
+    "@label": "MADS Scheme",
+    "@properties": {
+      "madsrdf:hasMADSSchemeMember": {
+        "@comment": "Associates an Authority or Collection with a\n      madsrdf:MADSScheme.",
+        "@label": "Has MADS Scheme\n      Member"
+      },
+      "madsrdf:hasTopMemberOfMADSScheme": {
+        "@comment": "Identifies an Authority\n      that is at the top of the hierarchy of authorities within the MADS Scheme.",
+        "@label": "Has Top Member of MADS\n      Scheme"
+      }
+    }
+  },
+  "madsrdf:hasMADSSchemeMember": {
+    "@type": "Set",
+    "@class": "_:n65b70a7b6c2a4d74bffd73503b6e9772b22"
+  },
+  "madsrdf:hasTopMemberOfMADSScheme": {
+    "@type": "Set",
+    "@class": "madsrdf:Authority"
+  }
+}
+{
+  "@id": "madsrdf:MADSType",
+  "@type": "Class",
+  "@documentation": {
+    "@label": "MADS Type"
+  }
+}
+{
+  "@id": "madsrdf:MainTitleElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:TitleElement"
+  ],
+  "@documentation": {
+    "@label": "Main Title\n      Element"
+  }
+}
+{
+  "@id": "madsrdf:Name",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:SimpleType"
+  ],
+  "@documentation": {
+    "@label": "Name Type"
+  }
+}
+{
+  "@id": "madsrdf:NameElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Element"
+  ],
+  "@documentation": {
+    "@label": "Name Element"
+  }
+}
+{
+  "@id": "madsrdf:NameTitle",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:ComplexType"
+  ],
+  "@documentation": {
+    "@label": "Name/Title Type"
+  }
+}
+{
+  "@id": "madsrdf:NonSortElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:TitleElement"
+  ],
+  "@documentation": {
+    "@label": "Non-sort Element"
+  }
+}
+{
+  "@id": "madsrdf:Occupation",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:SimpleType"
+  ],
+  "@documentation": {
+    "@label": "Occupation Type"
+  }
+}
+{
+  "@id": "madsrdf:PartNameElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:TitleElement"
+  ],
+  "@documentation": {
+    "@label": "Part Name\n      Element"
+  }
+}
+{
+  "@id": "madsrdf:PartNumberElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:TitleElement"
+  ],
+  "@documentation": {
+    "@label": "Part Number\n      Element"
+  }
+}
+{
+  "@id": "madsrdf:PersonalName",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Name"
+  ],
+  "@documentation": {
+    "@label": "Personal Name Type"
+  }
+}
+{
+  "@id": "madsrdf:Province",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Geographic"
+  ],
+  "@documentation": {
+    "@label": "Province Type"
+  }
+}
+{
+  "@id": "madsrdf:RWO",
+  "@type": "Class",
+  "@inherits": [
+    "owl:Thing"
+  ],
+  "@documentation": {
+    "@label": "Real World\n      Object",
+    "@properties": {
+      "madsrdf:associatedLanguage": {
+        "@comment": "Language that a person,\n      organization, or family uses for publication, communication, etc., or in which a work is\n      expressed. ",
+        "@label": "Associated\n      Language"
+      },
+      "madsrdf:associatedLocale": {
+        "@comment": "A town, city, province,\n      state, and/or country associated with persons, corporate bodies, families, works, and\n      expressions.",
+        "@label": "Associated Locale"
+      },
+      "madsrdf:birthPlace": {
+        "@comment": "The town, city, province,\n      state, and/or country in which a person was born.",
+        "@label": "Place of Birth"
+      },
+      "madsrdf:deathPlace": {
+        "@comment": "The town, city, province,\n      state, and/or country in which a person died.",
+        "@label": "Place of Death"
+      },
+      "madsrdf:fieldOfActivity": {
+        "@comment": "The field of activity\n      associated with an individual.",
+        "@label": "Field of\n      Activity"
+      },
+      "madsrdf:hasAffiliation": {
+        "@comment": "Property to associate an\n      individual, such as a foaf:Agent, to a group or organization with which an individual is or\n      has been affiliated.",
+        "@label": "Has Affiliation"
+      },
+      "madsrdf:isIdentifiedByAuthority": {
+        "@comment": "Associates a Real World\n      Object with its Authority description.",
+        "@label": "Is Identified By\n      Authority"
+      },
+      "madsrdf:occupation": {
+        "@comment": "A profession or occupation\n      in which the person works or has worked.",
+        "@label": "Occupation"
+      },
+      "madsrdf:activityEndDate": {
+        "@comment": "Latest date in a period of activity.\n    ",
+        "@label": "Activity End"
+      },
+      "madsrdf:activityStartDate": {
+        "@comment": "Earliest date in a period of activity.\n    ",
+        "@label": "Activity Start"
+      },
+      "madsrdf:birthDate": {
+        "@comment": "The year a person was born.\n      Date of birth may also include the month and day of the person’s birth. (RDA\n      9.3.2.1)",
+        "@label": "Birth Date"
+      },
+      "madsrdf:deathDate": {
+        "@comment": "The year a person died.\n      Date of death may also include the month and day of the person’s death. (RDA\n      9.3.3.1)",
+        "@label": "Death Date"
+      },
+      "madsrdf:entityDescriptor": {
+        "@comment": "Any attribute that serves\n      to characterize a person, family or corporate body or that may be needed for differentiation\n      from other persons. families or corporate bodies and for which separate content designation is\n      not already defined.Or ",
+        "@label": "Entity\n      Descriptor"
+      },
+      "madsrdf:establishDate": {
+        "@comment": "The year a corporate body was established. Date of establishment may also include the month and day of the corporate body’s establishment.\n    ",
+        "@label": "Established"
+      },
+      "madsrdf:honoraryTitle": {
+        "@comment": "Designation indicative of\n      royalty, nobility, or ecclesiastical rank or office, or a term of address for a person of\n      religious vocation.",
+        "@label": "Honorary Title"
+      },
+      "madsrdf:prominentFamilyMember": {
+        "@comment": "A well-known individual who\n      is a member of the family.",
+        "@label": "Prominent Family\n      Member"
+      },
+      "madsrdf:terminateDate": {
+        "@comment": "The year a corporate body was terminated. Date of termination may also include the month and day of the corporate body’s termination. \n    ",
+        "@label": "Terminated"
+      }
+    }
+  },
+  "madsrdf:associatedLanguage": {
+    "@type": "Set",
+    "@class": "madsrdf:Language"
+  },
+  "madsrdf:associatedLocale": {
+    "@type": "Set",
+    "@class": "madsrdf:Geographic"
+  },
+  "madsrdf:birthPlace": {
+    "@type": "Set",
+    "@class": "madsrdf:Geographic"
+  },
+  "madsrdf:deathPlace": {
+    "@type": "Set",
+    "@class": "madsrdf:Geographic"
+  },
+  "madsrdf:fieldOfActivity": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "madsrdf:hasAffiliation": {
+    "@type": "Set",
+    "@class": "madsrdf:Affiliation"
+  },
+  "madsrdf:isIdentifiedByAuthority": {
+    "@type": "Set",
+    "@class": "madsrdf:Authority"
+  },
+  "madsrdf:occupation": {
+    "@type": "Set",
+    "@class": "madsrdf:Occupation"
+  },
+  "madsrdf:activityEndDate": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:activityStartDate": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:birthDate": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:deathDate": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:entityDescriptor": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:establishDate": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:honoraryTitle": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:prominentFamilyMember": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:terminateDate": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  }
+}
+{
+  "@id": "madsrdf:Region",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Geographic"
+  ],
+  "@documentation": {
+    "@label": "Region Type"
+  }
+}
+{
+  "@id": "madsrdf:SimpleType",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:MADSType"
+  ],
+  "@documentation": {
+    "@label": "Simple Type"
+  }
+}
+{
+  "@id": "madsrdf:Source",
+  "@type": "Class",
+  "@documentation": {
+    "@label": "Source",
+    "@properties": {
+      "madsrdf:citationStatus": {
+        "@comment": "Should use a standard term - such as 'found' or 'not found' - to\n      indicate whether the cited resource yielded information about the resource related to the\n      madsrdf:Source.",
+        "@label": "Citation Status"
+      }
+    }
+  },
+  "madsrdf:citationStatus": {
+    "@type": "Set",
+    "@class": "xsd:string"
+  }
+}
+{
+  "@id": "madsrdf:State",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Geographic"
+  ],
+  "@documentation": {
+    "@label": "State Type"
+  }
+}
+{
+  "@id": "madsrdf:SubTitleElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:TitleElement"
+  ],
+  "@documentation": {
+    "@label": "Subtitle Element"
+  }
+}
+{
+  "@id": "madsrdf:Temporal",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:SimpleType"
+  ],
+  "@documentation": {
+    "@label": "Temporal Type"
+  }
+}
+{
+  "@id": "madsrdf:TemporalElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Element"
+  ],
+  "@documentation": {
+    "@label": "Temporal Element"
+  }
+}
+{
+  "@id": "madsrdf:TermsOfAddressNameElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:NameElement"
+  ],
+  "@documentation": {
+    "@label": "Terms of Address\n      Element"
+  }
+}
+{
+  "@id": "madsrdf:Territory",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Geographic"
+  ],
+  "@documentation": {
+    "@label": "Territory Type"
+  }
+}
+{
+  "@id": "madsrdf:Title",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:SimpleType"
+  ],
+  "@documentation": {
+    "@label": "Title Type"
+  }
+}
+{
+  "@id": "madsrdf:TitleElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Element"
+  ],
+  "@documentation": {
+    "@label": "Title Element"
+  }
+}
+{
+  "@id": "madsrdf:Topic",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:SimpleType"
+  ],
+  "@documentation": {
+    "@label": "Topic Type"
+  }
+}
+{
+  "@id": "madsrdf:TopicElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Element"
+  ],
+  "@documentation": {
+    "@label": "Topic Element"
+  }
+}
+{
+  "@id": "madsrdf:Variant",
+  "@type": "Class",
+  "@inherits": [
+    "owl:Thing"
+  ],
+  "@documentation": {
+    "@label": "Variant",
+    "@properties": {
+      "madsrdf:hiddenLabel": {
+        "@comment": "A label entered for\n      discovery purposes but not shown.",
+        "@label": "Hidden Label"
+      },
+      "madsrdf:variantLabel": {
+        "@comment": "The lexical, variant form\n      of an authoritative label.",
+        "@label": "Variant Label"
+      }
+    }
+  },
+  "madsrdf:hiddenLabel": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:variantLabel": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  }
+}
+{
+  "@id": "_:n65b70a7b6c2a4d74bffd73503b6e9772b6",
+  "@type": "Class",
+  "@documentation": {
+    "@properties": {
+      "madsrdf:adminMetadata": {
+        "@comment": "This relates an Authority or Variant to its administrative metadata,\n      which is, minimimally, a Class defined outside of the MADS/RDF namespace. The RecordInfo Class\n      from the RecordInfo ontology is recommended.",
+        "@label": "Administrative Metadata"
+      }
+    }
+  },
+  "madsrdf:adminMetadata": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  }
+}
+{
+  "@id": "_:n65b70a7b6c2a4d74bffd73503b6e9772b10",
+  "@type": "Class",
+  "@documentation": {
+    "@properties": {
+      "madsrdf:code": {
+        "@comment": "A code is a string of\n      characters associated with a the authoritative or deprecated label. It may record an\n      historical notation once used to uniquely identify a concept.",
+        "@label": "Code"
+      }
+    }
+  },
+  "madsrdf:code": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  }
+}
+{
+  "@id": "_:n65b70a7b6c2a4d74bffd73503b6e9772b13",
+  "@type": "Class",
+  "@documentation": {}
+}
+{
+  "@id": "_:n65b70a7b6c2a4d74bffd73503b6e9772b16",
+  "@type": "Class",
+  "@documentation": {}
+}
+{
+  "@id": "_:n65b70a7b6c2a4d74bffd73503b6e9772b19",
+  "@type": "Class",
+  "@documentation": {}
+}
+{
+  "@id": "_:n65b70a7b6c2a4d74bffd73503b6e9772b22",
+  "@type": "Class",
+  "@documentation": {}
+}
+{
+  "@id": "_:n65b70a7b6c2a4d74bffd73503b6e9772b25",
+  "@type": "Class",
+  "@documentation": {
+    "@properties": {
+      "madsrdf:isMemberOfMADSCollection": {
+        "@comment": "Associates a Collection with a madsrdf:Authority or another\n      madsrdf:MADSCollection.",
+        "@label": "Is Member Of MADSCollection"
+      }
+    }
+  },
+  "madsrdf:isMemberOfMADSCollection": {
+    "@type": "Set",
+    "@class": "madsrdf:MADSCollection"
+  }
+}
+{
+  "@id": "_:n65b70a7b6c2a4d74bffd73503b6e9772b28",
+  "@type": "Class",
+  "@documentation": {
+    "@properties": {
+      "madsrdf:isMemberOfMADSScheme": {
+        "@label": "Is Member of MADS\n      Scheme"
+      }
+    }
+  },
+  "madsrdf:isMemberOfMADSScheme": {
+    "@type": "Set",
+    "@class": "madsrdf:MADSScheme"
+  }
+}
+{
+  "@id": "_:n65b70a7b6c2a4d74bffd73503b6e9772b31",
+  "@type": "Class",
+  "@documentation": {
+    "@properties": {
+      "madsrdf:isTopMemberOfMADSScheme": {
+        "@comment": "Identifies a MADS Scheme in\n      which the Authority is at the top of the hierarchy.",
+        "@label": "Is Top Member of MADS\n      Scheme"
+      }
+    }
+  },
+  "madsrdf:isTopMemberOfMADSScheme": {
+    "@type": "Set",
+    "@class": "madsrdf:MADSScheme"
+  }
+}
+{
+  "@id": "_:n65b70a7b6c2a4d74bffd73503b6e9772b34",
+  "@type": "Class",
+  "@documentation": {
+    "@properties": {
+      "madsrdf:see": {
+        "@comment": "Denotes a relationship\n      between an Authority and/or DeprecatedAuthority. The relationship may or may or may not be\n      reciprocated and there is no certainty that the related resource will further illuminate the\n      original resource.",
+        "@label": "See Also"
+      }
+    }
+  },
+  "madsrdf:see": {
+    "@type": "Set",
+    "@class": "_:n65b70a7b6c2a4d74bffd73503b6e9772b37"
+  }
+}
+{
+  "@id": "_:n65b70a7b6c2a4d74bffd73503b6e9772b37",
+  "@type": "Class",
+  "@documentation": {}
+}
