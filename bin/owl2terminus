@@ -6,6 +6,7 @@ import json
 
 CLASS_REGISTRY = { 'owl:Thing' : { '@type' : 'Class', '@id' : 'owl:Thing' }}
 PROPERTY_HIERARCHY = {}
+INVERSE_PROPERTIES = {}
 PROPERTY_REGISTRY = {}
 
 def rdfList2list(node, g):
@@ -17,16 +18,12 @@ def rdfList2list(node, g):
         node = g.objects(node,RDF.rest, unique=True).__next__()
     return lst
 
-def add_class_to_super(cls,sup,g):
-    global CLASS_HIERARCHY
-    if sup.n3(g.namespace_manager) in CLASS_HIERARCHY:
-        CLASS_HIERARCHY[sup.n3(g.namespace_manager)].append(cls.n3(g.namespace_manager))
-    else:
-        CLASS_HIERARCHY[sup.n3(g.namespace_manager)] = [cls.n3(g.namespace_manager)]
-
 def add_super_to_prop(prop,sup,g):
     global PROPERTY_HIERARCHY
-    PROPERTY_HIERARCHY[prop.n3(g.namespace_manager)] = sup.n3(g.namespace_manager)
+    if prop.n3(g.namespace_manager) in PROPERTY_HIERARCHY:
+        PROPERTY_HIERARCHY[prop.n3(g.namespace_manager)] += [sup.n3(g.namespace_manager)]
+    else:
+        PROPERTY_HIERARCHY[prop.n3(g.namespace_manager)] = [sup.n3(g.namespace_manager)]
 
 def register_subclass(sub, class_name):
     if sub in CLASS_REGISTRY:
@@ -85,43 +82,72 @@ def register_classes(g):
         class_document['@documentation'] = documentation_object
         CLASS_REGISTRY[class_name] = class_document
 
+def add_inverse_property(inv, prop, g):
+    global INVERSE_PROPERTIES
+    inv_name = inv.n3(g.namespace_manager)
+    prop_name = prop.n3(g.namespace_manager)
+    INVERSE_PROPERTIES[inv_name] = prop_name
+    INVERSE_PROPERTIES[prop_name] = inv_name
+
 def register_property_hierarchy(g):
-    eprint("How many properties will I register?")
     for prop in g.subjects(RDF.type, OWL.ObjectProperty):
-        eprint(f"property {prop.n3(g.namespace_manager)}")
+        #eprint(f"property {prop.n3(g.namespace_manager)}")
 
         for sup in g.objects(prop, RDFS.subPropertyOf,unique=True):
-            eprint(f"add {prop} and {sup}")
+            #eprint(f"add {prop} and {sup}")
             add_super_to_prop(prop, sup, g)
 
+        for inv in g.objects(prop, OWL.inverseOf):
+            add_inverse_property(inv, prop, g)
 
     for prop in g.subjects(RDF.type, OWL.DatatypeProperty):
-        eprint(f"property {prop.n3(g.namespace_manager)}")
+        #eprint(f"property {prop.n3(g.namespace_manager)}")
 
         for sup in g.objects(prop, RDFS.subPropertyOf,unique=True):
-            eprint(f"add {prop} and {sup}")
-            add_super_to_prop(prop, sup ,g)
+            #eprint(f"add {prop} and {sup}")
+            add_super_to_prop(prop, sup, g)
 
+        for inv in g.objects(prop, OWL.inverseOf):
+            add_inverse_property(inv, prop, g)
 
-def prop_key(p, key, g):
-    prop_record = PROPERTY_REGISTRY[p]
-    domain = None
-    while True:
-        if key in prop_record:
-            eprint(f"prop_record[{key}]: {prop_record[key]}")
-            return prop_record[key]
+def flip_key(key):
+    if key == 'domain':
+        return 'range'
+    else:
+        return 'domain'
+
+def prop_key(p, key, g, original):
+    if p in PROPERTY_REGISTRY:
+        record = PROPERTY_REGISTRY[p]
+        if key in record:
+            return record[key]
         else:
-            if key in PROPERTY_HIERARCHY:
-                sup = PROPERTY_HIERARCHY[key]
-                prop_record = PROPERTY_REGISTRY[sup]
-            else:
-                return None
+            # Can we obtain it from our supers?
+            if p in PROPERTY_HIERARCHY:
+                for sup in PROPERTY_HIERARCHY[p]:
+                    result = prop_key(sup, key, g, original)
+                    if result:
+                        return result
+            if original and key in INVERSE_PROPERTIES:
+                new_key = flip_key(key)
+                new_prop = INVERSE_PROPERTIES[key]
+                # we don't want to flounder, so we only flip once
+                result = prop_key(new_prop, new_key, g, False)
+                if result:
+                    return result
+            return None
 
 def property_domain(p, g):
-    return prop_key(p, 'domain', g)
+    result = prop_key(p, 'domain', g, True)
+    if p == 'madsrdf:hasBroaderAuthority':
+        eprint(f"result of property_domain({p}): {result}")
+    return result
 
 def property_range(p, g):
-    return prop_key(p, 'range', g)
+    result = prop_key(p, 'range', g, True)
+    if p == 'madsrdf:hasBroaderAuthority':
+        eprint(f"result of property_range({p}): {result}")
+    return result
 
 def register_properties(g):
     for prop in g.subjects(RDF.type, OWL.ObjectProperty):
@@ -167,8 +193,7 @@ def register_properties(g):
         PROPERTY_REGISTRY[prop.n3(g.namespace_manager)] = property_record
 
 def eprint(string):
-    pass
-    #print(string, file=sys.stderr)
+    print(string, file=sys.stderr)
 
 def add_properties_to_classes(g):
     for prop in PROPERTY_REGISTRY:
@@ -184,6 +209,11 @@ def add_properties_to_classes(g):
                 rng = RDF.PlainLiteral.n3(g.namespace_manager)
             else:
                 rng = OWL.Thing.n3(g.namespace_manager)
+        # memoize results (should speed up lookup)
+        if domain:
+            prop_record['domain'] = domain
+        if rng:
+            prop_record['range'] = rng
 
         cls = CLASS_REGISTRY[domain]
         if not '@documentation' in cls:

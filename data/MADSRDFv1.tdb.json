@@ -1,0 +1,1277 @@
+{
+  "@type": "@context",
+  "@base": "iri://d/",
+  "@schema": "http://id.loc.gov/ontologies/bibframe/",
+  "brick": "https://brickschema.org/schema/Brick#",
+  "csvw": "http://www.w3.org/ns/csvw#",
+  "dc": "http://purl.org/dc/elements/1.1/",
+  "dcat": "http://www.w3.org/ns/dcat#",
+  "dcmitype": "http://purl.org/dc/dcmitype/",
+  "dcterms": "http://purl.org/dc/terms/",
+  "dcam": "http://purl.org/dc/dcam/",
+  "doap": "http://usefulinc.com/ns/doap#",
+  "foaf": "http://xmlns.com/foaf/0.1/",
+  "geo": "http://www.opengis.net/ont/geosparql#",
+  "odrl": "http://www.w3.org/ns/odrl/2/",
+  "org": "http://www.w3.org/ns/org#",
+  "prof": "http://www.w3.org/ns/dx/prof/",
+  "prov": "http://www.w3.org/ns/prov#",
+  "qb": "http://purl.org/linked-data/cube#",
+  "schema": "https://schema.org/",
+  "sh": "http://www.w3.org/ns/shacl#",
+  "skos": "http://www.w3.org/2004/02/skos/core#",
+  "sosa": "http://www.w3.org/ns/sosa/",
+  "ssn": "http://www.w3.org/ns/ssn/",
+  "time": "http://www.w3.org/2006/time#",
+  "vann": "http://purl.org/vocab/vann/",
+  "void": "http://rdfs.org/ns/void#",
+  "wgs": "https://www.w3.org/2003/01/geo/wgs84_pos#",
+  "owl": "http://www.w3.org/2002/07/owl#",
+  "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+  "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+  "xsd": "http://www.w3.org/2001/XMLSchema#",
+  "xml": "http://www.w3.org/XML/1998/namespace",
+  "madsrdf": "http://www.loc.gov/mads/rdf/v1#",
+  "": "http://www.loc.gov/standards/mads/rdf/v1.rdf#"
+}
+{
+  "@type": "Class",
+  "@id": "owl:Thing",
+  "@documentation": {
+    "@properties": {
+      "madsrdf:elementList": {
+        "@comment": "The madsrdf:elementList property is used to organize the various\n      parts of labels.",
+        "@label": "Element List"
+      },
+      "madsrdf:extension": {
+        "@label": "Extension"
+      },
+      "madsrdf:fullerName": {
+        "@comment": "Full form of name needed to\n      distinguish a person from another person with the same preferred name.",
+        "@label": "Fuller Name"
+      },
+      "madsrdf:hasChararacteristic": {
+        "@comment": "A term that specifies a characteristic that differentiates a work or expression from another one.\n    ",
+        "@label": "Other characteristic"
+      },
+      "madsrdf:hasIdentifier": {
+        "@comment": "Associates a resource with\n      a madsrdf:Identifier.",
+        "@label": "Has Identifier"
+      },
+      "madsrdf:hasSource": {
+        "@comment": "Associates a resource description with its Source.",
+        "@label": "Has Source"
+      },
+      "madsrdf:workOrigin": {
+        "@comment": "The country or other territorial jurisdiction from which a work originated.",
+        "@label": "Work locale"
+      },
+      "madsrdf:creationDateEnd": {
+        "@comment": "Ending date of the date range for which the beginning date is recorded in madsrdf:creationDateStart."
+      },
+      "madsrdf:creationDateStart": {
+        "@comment": "For a work, earliest date (normally the year) associated with a work; that date may be the date the work was created or first published or released. For an expression, the earliest date (normally the year) associated with an expression; that date may be the date of the earliest known manifestation of that expression. In both cases the date may be the starting date of a range or a single date.",
+        "@label": "Work begun"
+      }
+    }
+  },
+  "madsrdf:elementList": {
+    "@type": "Set",
+    "@class": "_:n924306fc8497400c88c7eee24e406c61b16"
+  },
+  "madsrdf:extension": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "madsrdf:fullerName": {
+    "@type": "Set",
+    "@class": "madsrdf:PersonalName"
+  },
+  "madsrdf:hasChararacteristic": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "madsrdf:hasIdentifier": {
+    "@type": "Set",
+    "@class": "madsrdf:Identifier"
+  },
+  "madsrdf:hasSource": {
+    "@type": "Set",
+    "@class": "madsrdf:Source"
+  },
+  "madsrdf:workOrigin": {
+    "@type": "Set",
+    "@class": "madsrdf:Geographic"
+  },
+  "madsrdf:creationDateEnd": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:creationDateStart": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  }
+}
+{
+  "@id": "madsrdf:Address",
+  "@type": "Class",
+  "@documentation": {
+    "@label": "Address",
+    "@properties": {
+      "madsrdf:extendedAddress": {
+        "@comment": "The second address line, if\n      needed.",
+        "@label": "Extended Address"
+      },
+      "madsrdf:postcode": {
+        "@label": "Post Code / Zip\n      Code"
+      },
+      "madsrdf:streetAddress": {
+        "@comment": "First line of address. For\n      second line, use madsrdf:extendedAddress.",
+        "@label": "Street Address"
+      }
+    }
+  },
+  "madsrdf:extendedAddress": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:postcode": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:streetAddress": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  }
+}
+{
+  "@id": "madsrdf:Affiliation",
+  "@type": "Class",
+  "@documentation": {
+    "@label": "Affiliation",
+    "@properties": {
+      "madsrdf:hasAffiliationAddress": {
+        "@comment": "The address of the group or\n      organization with which an individual is associated.",
+        "@label": "Has Affiliation\n      Address"
+      },
+      "madsrdf:affiliationEnd": {
+        "@comment": "The date an individual\n      ceased to be affiliated with an organization.",
+        "@label": "Affiliation\n      Ended"
+      },
+      "madsrdf:affiliationStart": {
+        "@comment": "The date an individual\n      established an affiliation with an organization.",
+        "@label": "Affiliation\n      Started"
+      },
+      "madsrdf:email": {
+        "@label": "Email"
+      },
+      "madsrdf:fax": {
+        "@comment": "Fax number",
+        "@label": "Fax"
+      },
+      "madsrdf:hours": {
+        "@label": "Hours"
+      },
+      "madsrdf:phone": {
+        "@label": "Phone"
+      }
+    }
+  },
+  "madsrdf:hasAffiliationAddress": {
+    "@type": "Set",
+    "@class": "madsrdf:Address"
+  },
+  "madsrdf:affiliationEnd": {
+    "@type": "Set",
+    "@class": "xsd:date"
+  },
+  "madsrdf:affiliationStart": {
+    "@type": "Set",
+    "@class": "xsd:date"
+  },
+  "madsrdf:email": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:fax": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:hours": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:phone": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  }
+}
+{
+  "@id": "madsrdf:Area",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Geographic"
+  ],
+  "@documentation": {
+    "@label": "Area Type"
+  }
+}
+{
+  "@id": "madsrdf:Authority",
+  "@type": "Class",
+  "@inherits": [
+    "owl:Thing",
+    "skos:Concept"
+  ],
+  "@documentation": {
+    "@label": "Authority",
+    "@properties": {
+      "madsrdf:hasAbbreviationVariant": {
+        "@label": "Has Abbreviation\n      Variant"
+      },
+      "madsrdf:hasAcronymVariant": {
+        "@label": "Has Acronym\n      Variant"
+      },
+      "madsrdf:hasBroaderAuthority": {
+        "@label": "Has Broader\n      Authority"
+      },
+      "madsrdf:hasBroaderExternalAuthority": {
+        "@comment": "Creates a direct\n      relationship between an Authority and a more broadly defined Authority from a different MADS\n      Scheme.",
+        "@label": "Has Broader External\n      Authority"
+      },
+      "madsrdf:hasCloseExternalAuthority": {
+        "@comment": "Records a relationship\n      between an Authority and one that is closely related from a different MADS\n      Scheme.",
+        "@label": "Has Close External\n      Authority"
+      },
+      "madsrdf:hasExactExternalAuthority": {
+        "@comment": "Records a relationship\n      between an Authority and one to which it matches exactly but from a different MADS\n      Scheme.",
+        "@label": "Has Exact External\n      Authority"
+      },
+      "madsrdf:hasExpansionVariant": {
+        "@label": "Has Expansion\n      Variant"
+      },
+      "madsrdf:hasHiddenVariant": {
+        "@comment": "Use for variants that are searchable, but not necessarily for\n      display.",
+        "@label": "Has Hidden Variant"
+      },
+      "madsrdf:hasNarrowerAuthority": {
+        "@comment": "Creates a direct\n      relationship between an Authority and one that is more narrowly defined.",
+        "@label": "Has Narrower\n      Authority"
+      },
+      "madsrdf:hasNarrowerExternalAuthority": {
+        "@comment": "Creates a direct\n      relationship between an Authority and a more narrowly defined Authority from a different MADS\n      Scheme.",
+        "@label": "Has Narrower External\n      Authority"
+      },
+      "madsrdf:hasReciprocalAuthority": {
+        "@comment": "Establishes a relationship between two Authority resources. It is\n      reciprocal, so the relationship must be shared. This is Related type='equivalent' in MADS\n      XML.",
+        "@label": "Has Reciprocal\n      Authority"
+      },
+      "madsrdf:hasReciprocalExternalAuthority": {
+        "@comment": "Establishes a relationship\n      between an Authority and one from a different MADS Scheme. It is reciprocal, so the\n      relationship must be shared.",
+        "@label": "Has Reciprocal External\n      Authority"
+      },
+      "madsrdf:hasRelatedAuthority": {
+        "@comment": "Unless the relationship can be more specifically identified, use\n      'hasRelatedAuthority.'",
+        "@label": "Has Related Authority"
+      },
+      "madsrdf:hasTranslationVariant": {
+        "@comment": "A Variant whose label\n      represents a translation of that of the authoritative label.",
+        "@label": "Has Translation\n      Variant"
+      },
+      "madsrdf:hasVariant": {
+        "@comment": "Associates a Variant with an Authority or Deprecrated Authority.\n      Unless the variant type can be more specifically identified, use 'hasVariant.'",
+        "@label": "Has Variant"
+      },
+      "madsrdf:identifiesRWO": {
+        "@comment": "Associates a\n      madsrdf:Authority with the Real World Object that is the subject of the authority's\n      label.",
+        "@label": "Identifies RWO"
+      }
+    }
+  },
+  "madsrdf:hasAbbreviationVariant": {
+    "@type": "Set",
+    "@class": "madsrdf:Variant"
+  },
+  "madsrdf:hasAcronymVariant": {
+    "@type": "Set",
+    "@class": "madsrdf:Variant"
+  },
+  "madsrdf:hasBroaderAuthority": {
+    "@type": "Set",
+    "@class": "madsrdf:Authority"
+  },
+  "madsrdf:hasBroaderExternalAuthority": {
+    "@type": "Set",
+    "@class": "madsrdf:Authority"
+  },
+  "madsrdf:hasCloseExternalAuthority": {
+    "@type": "Set",
+    "@class": "madsrdf:Authority"
+  },
+  "madsrdf:hasExactExternalAuthority": {
+    "@type": "Set",
+    "@class": "madsrdf:Authority"
+  },
+  "madsrdf:hasExpansionVariant": {
+    "@type": "Set",
+    "@class": "madsrdf:Variant"
+  },
+  "madsrdf:hasHiddenVariant": {
+    "@type": "Set",
+    "@class": "madsrdf:Variant"
+  },
+  "madsrdf:hasNarrowerAuthority": {
+    "@type": "Set",
+    "@class": "madsrdf:Authority"
+  },
+  "madsrdf:hasNarrowerExternalAuthority": {
+    "@type": "Set",
+    "@class": "madsrdf:Authority"
+  },
+  "madsrdf:hasReciprocalAuthority": {
+    "@type": "Set",
+    "@class": "madsrdf:Authority"
+  },
+  "madsrdf:hasReciprocalExternalAuthority": {
+    "@type": "Set",
+    "@class": "madsrdf:Authority"
+  },
+  "madsrdf:hasRelatedAuthority": {
+    "@type": "Set",
+    "@class": "madsrdf:Authority"
+  },
+  "madsrdf:hasTranslationVariant": {
+    "@type": "Set",
+    "@class": "madsrdf:Variant"
+  },
+  "madsrdf:hasVariant": {
+    "@type": "Set",
+    "@class": "madsrdf:Variant"
+  },
+  "madsrdf:identifiesRWO": {
+    "@type": "Set",
+    "@class": "madsrdf:RWO"
+  }
+}
+{
+  "@id": "madsrdf:City",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Geographic"
+  ],
+  "@documentation": {
+    "@label": "City Type"
+  }
+}
+{
+  "@id": "madsrdf:CitySection",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Geographic"
+  ],
+  "@documentation": {
+    "@label": "City Section Type"
+  }
+}
+{
+  "@id": "madsrdf:ComplexSubject",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:ComplexType"
+  ],
+  "@documentation": {
+    "@label": "Complex Subject Type"
+  }
+}
+{
+  "@id": "madsrdf:ComplexType",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:MADSType"
+  ],
+  "@documentation": {
+    "@label": "Complex Type",
+    "@properties": {
+      "madsrdf:componentList": {
+        "@comment": "madsrdf:componentList\n      organizes the madsrdf:SimpleType resources whose labels are represented in the label of the\n      associated madsrdf:ComplexType resource.",
+        "@label": "Component List"
+      }
+    }
+  },
+  "madsrdf:componentList": {
+    "@type": "Set",
+    "@class": "_:n924306fc8497400c88c7eee24e406c61b13"
+  }
+}
+{
+  "@id": "madsrdf:ConferenceName",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Name"
+  ],
+  "@documentation": {
+    "@label": "Conference Name Type"
+  }
+}
+{
+  "@id": "madsrdf:Continent",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Geographic"
+  ],
+  "@documentation": {
+    "@label": "Continent Type"
+  }
+}
+{
+  "@id": "madsrdf:CorporateName",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Name"
+  ],
+  "@documentation": {
+    "@label": "Corporate Name Type",
+    "@properties": {
+      "madsrdf:hasCorporateParentAuthority": {
+        "@comment": "Establishes a relationship\n      between a CorporateName Authority and one of the same that is more broadly\n      defined.",
+        "@label": "Has Parent\n      Organization"
+      },
+      "madsrdf:hasCorporateSubsidiaryAuthority": {
+        "@comment": "Establishes a relationship\n      between a CorporateName Authority and one of the same that is more narrowly\n      defined.",
+        "@label": "Is Parent Organization\n      Of"
+      }
+    }
+  },
+  "madsrdf:hasCorporateParentAuthority": {
+    "@type": "Set",
+    "@class": "madsrdf:CorporateName"
+  },
+  "madsrdf:hasCorporateSubsidiaryAuthority": {
+    "@type": "Set",
+    "@class": "madsrdf:CorporateName"
+  }
+}
+{
+  "@id": "madsrdf:Country",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Geographic"
+  ],
+  "@documentation": {
+    "@label": "Country Type"
+  }
+}
+{
+  "@id": "madsrdf:County",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Geographic"
+  ],
+  "@documentation": {
+    "@label": "County Type"
+  }
+}
+{
+  "@id": "madsrdf:DateNameElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:NameElement"
+  ],
+  "@documentation": {
+    "@label": "Date Name\n      Element"
+  }
+}
+{
+  "@id": "madsrdf:DeprecatedAuthority",
+  "@type": "Class",
+  "@inherits": [
+    "owl:Thing"
+  ],
+  "@documentation": {
+    "@label": "Deprecated\n      Authority"
+  }
+}
+{
+  "@id": "madsrdf:Element",
+  "@type": "Class",
+  "@documentation": {
+    "@label": "Element",
+    "@properties": {
+      "madsrdf:elementValue": {
+        "@label": "Element Value"
+      }
+    }
+  },
+  "madsrdf:elementValue": {
+    "@type": "Set",
+    "@class": "xsd:string"
+  }
+}
+{
+  "@id": "madsrdf:ExtraterrestrialArea",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Geographic"
+  ],
+  "@documentation": {
+    "@label": "Extraterrestrial Area Type"
+  }
+}
+{
+  "@id": "madsrdf:FamilyName",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Name"
+  ],
+  "@documentation": {
+    "@label": "Family Name Type"
+  }
+}
+{
+  "@id": "madsrdf:FamilyNameElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:NameElement"
+  ],
+  "@documentation": {
+    "@label": "Family Name\n      Element"
+  }
+}
+{
+  "@id": "madsrdf:FullNameElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:NameElement"
+  ],
+  "@documentation": {
+    "@label": "Fullname Element"
+  }
+}
+{
+  "@id": "madsrdf:GenreForm",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:SimpleType"
+  ],
+  "@documentation": {
+    "@label": "Genre/Form Type"
+  }
+}
+{
+  "@id": "madsrdf:GenreFormElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Element"
+  ],
+  "@documentation": {
+    "@label": "Genre/Form Element"
+  }
+}
+{
+  "@id": "madsrdf:Geographic",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:SimpleType"
+  ],
+  "@documentation": {
+    "@label": "Geographic Authority"
+  }
+}
+{
+  "@id": "madsrdf:GeographicElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Element"
+  ],
+  "@documentation": {
+    "@label": "Geographic Element"
+  }
+}
+{
+  "@id": "madsrdf:GivenNameElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:NameElement"
+  ],
+  "@documentation": {
+    "@label": "Given Name\n      Element"
+  }
+}
+{
+  "@id": "madsrdf:HierarchicalGeographic",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:ComplexType"
+  ],
+  "@documentation": {
+    "@label": "Hierarchical Geographic Type"
+  }
+}
+{
+  "@id": "madsrdf:Identifier",
+  "@type": "Class",
+  "@documentation": {
+    "@label": "Other Identifier",
+    "@properties": {
+      "madsrdf:idValue": {
+        "@comment": "The value of the identifier\n      conforming to the Identifier Scheme syntax.",
+        "@label": "Identifier Value"
+      }
+    }
+  },
+  "madsrdf:idValue": {
+    "@type": "Set",
+    "@class": "xsd:string"
+  }
+}
+{
+  "@id": "madsrdf:Island",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Geographic"
+  ],
+  "@documentation": {
+    "@label": "Island Type"
+  }
+}
+{
+  "@id": "madsrdf:Language",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:SimpleType"
+  ],
+  "@documentation": {
+    "@label": "Language Type"
+  }
+}
+{
+  "@id": "madsrdf:LanguageElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Element"
+  ],
+  "@documentation": {
+    "@label": "Language Element"
+  }
+}
+{
+  "@id": "madsrdf:MADSCollection",
+  "@type": "Class",
+  "@inherits": [
+    "skos:Collection"
+  ],
+  "@documentation": {
+    "@label": "MADS Collection",
+    "@properties": {
+      "madsrdf:hasMADSCollectionMember": {
+        "@comment": "Associates an Authority or other Collection with a\n      madsrdf:MADSCollection.",
+        "@label": "Has MADSCollection Member"
+      }
+    }
+  },
+  "madsrdf:hasMADSCollectionMember": {
+    "@type": "Set",
+    "@class": "_:n924306fc8497400c88c7eee24e406c61b19"
+  }
+}
+{
+  "@id": "madsrdf:MADSScheme",
+  "@type": "Class",
+  "@inherits": [
+    "skos:ConceptScheme"
+  ],
+  "@documentation": {
+    "@label": "MADS Scheme",
+    "@properties": {
+      "madsrdf:hasMADSSchemeMember": {
+        "@comment": "Associates an Authority or Collection with a\n      madsrdf:MADSScheme.",
+        "@label": "Has MADS Scheme\n      Member"
+      },
+      "madsrdf:hasTopMemberOfMADSScheme": {
+        "@comment": "Identifies an Authority\n      that is at the top of the hierarchy of authorities within the MADS Scheme.",
+        "@label": "Has Top Member of MADS\n      Scheme"
+      }
+    }
+  },
+  "madsrdf:hasMADSSchemeMember": {
+    "@type": "Set",
+    "@class": "_:n924306fc8497400c88c7eee24e406c61b22"
+  },
+  "madsrdf:hasTopMemberOfMADSScheme": {
+    "@type": "Set",
+    "@class": "madsrdf:Authority"
+  }
+}
+{
+  "@id": "madsrdf:MADSType",
+  "@type": "Class",
+  "@documentation": {
+    "@label": "MADS Type"
+  }
+}
+{
+  "@id": "madsrdf:MainTitleElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:TitleElement"
+  ],
+  "@documentation": {
+    "@label": "Main Title\n      Element"
+  }
+}
+{
+  "@id": "madsrdf:Name",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:SimpleType"
+  ],
+  "@documentation": {
+    "@label": "Name Type"
+  }
+}
+{
+  "@id": "madsrdf:NameElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Element"
+  ],
+  "@documentation": {
+    "@label": "Name Element"
+  }
+}
+{
+  "@id": "madsrdf:NameTitle",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:ComplexType"
+  ],
+  "@documentation": {
+    "@label": "Name/Title Type"
+  }
+}
+{
+  "@id": "madsrdf:NonSortElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:TitleElement"
+  ],
+  "@documentation": {
+    "@label": "Non-sort Element"
+  }
+}
+{
+  "@id": "madsrdf:Occupation",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:SimpleType"
+  ],
+  "@documentation": {
+    "@label": "Occupation Type"
+  }
+}
+{
+  "@id": "madsrdf:PartNameElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:TitleElement"
+  ],
+  "@documentation": {
+    "@label": "Part Name\n      Element"
+  }
+}
+{
+  "@id": "madsrdf:PartNumberElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:TitleElement"
+  ],
+  "@documentation": {
+    "@label": "Part Number\n      Element"
+  }
+}
+{
+  "@id": "madsrdf:PersonalName",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Name"
+  ],
+  "@documentation": {
+    "@label": "Personal Name Type"
+  }
+}
+{
+  "@id": "madsrdf:Province",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Geographic"
+  ],
+  "@documentation": {
+    "@label": "Province Type"
+  }
+}
+{
+  "@id": "madsrdf:RWO",
+  "@type": "Class",
+  "@inherits": [
+    "owl:Thing"
+  ],
+  "@documentation": {
+    "@label": "Real World\n      Object",
+    "@properties": {
+      "madsrdf:associatedLanguage": {
+        "@comment": "Language that a person,\n      organization, or family uses for publication, communication, etc., or in which a work is\n      expressed. ",
+        "@label": "Associated\n      Language"
+      },
+      "madsrdf:associatedLocale": {
+        "@comment": "A town, city, province,\n      state, and/or country associated with persons, corporate bodies, families, works, and\n      expressions.",
+        "@label": "Associated Locale"
+      },
+      "madsrdf:birthPlace": {
+        "@comment": "The town, city, province,\n      state, and/or country in which a person was born.",
+        "@label": "Place of Birth"
+      },
+      "madsrdf:deathPlace": {
+        "@comment": "The town, city, province,\n      state, and/or country in which a person died.",
+        "@label": "Place of Death"
+      },
+      "madsrdf:fieldOfActivity": {
+        "@comment": "The field of activity\n      associated with an individual.",
+        "@label": "Field of\n      Activity"
+      },
+      "madsrdf:hasAffiliation": {
+        "@comment": "Property to associate an\n      individual, such as a foaf:Agent, to a group or organization with which an individual is or\n      has been affiliated.",
+        "@label": "Has Affiliation"
+      },
+      "madsrdf:isIdentifiedByAuthority": {
+        "@comment": "Associates a Real World\n      Object with its Authority description.",
+        "@label": "Is Identified By\n      Authority"
+      },
+      "madsrdf:occupation": {
+        "@comment": "A profession or occupation\n      in which the person works or has worked.",
+        "@label": "Occupation"
+      },
+      "madsrdf:activityEndDate": {
+        "@comment": "Latest date in a period of activity.\n    ",
+        "@label": "Activity End"
+      },
+      "madsrdf:activityStartDate": {
+        "@comment": "Earliest date in a period of activity.\n    ",
+        "@label": "Activity Start"
+      },
+      "madsrdf:birthDate": {
+        "@comment": "The year a person was born.\n      Date of birth may also include the month and day of the person’s birth. (RDA\n      9.3.2.1)",
+        "@label": "Birth Date"
+      },
+      "madsrdf:deathDate": {
+        "@comment": "The year a person died.\n      Date of death may also include the month and day of the person’s death. (RDA\n      9.3.3.1)",
+        "@label": "Death Date"
+      },
+      "madsrdf:entityDescriptor": {
+        "@comment": "Any attribute that serves\n      to characterize a person, family or corporate body or that may be needed for differentiation\n      from other persons. families or corporate bodies and for which separate content designation is\n      not already defined.Or ",
+        "@label": "Entity\n      Descriptor"
+      },
+      "madsrdf:establishDate": {
+        "@comment": "The year a corporate body was established. Date of establishment may also include the month and day of the corporate body’s establishment.\n    ",
+        "@label": "Established"
+      },
+      "madsrdf:honoraryTitle": {
+        "@comment": "Designation indicative of\n      royalty, nobility, or ecclesiastical rank or office, or a term of address for a person of\n      religious vocation.",
+        "@label": "Honorary Title"
+      },
+      "madsrdf:prominentFamilyMember": {
+        "@comment": "A well-known individual who\n      is a member of the family.",
+        "@label": "Prominent Family\n      Member"
+      },
+      "madsrdf:terminateDate": {
+        "@comment": "The year a corporate body was terminated. Date of termination may also include the month and day of the corporate body’s termination. \n    ",
+        "@label": "Terminated"
+      }
+    }
+  },
+  "madsrdf:associatedLanguage": {
+    "@type": "Set",
+    "@class": "madsrdf:Language"
+  },
+  "madsrdf:associatedLocale": {
+    "@type": "Set",
+    "@class": "madsrdf:Geographic"
+  },
+  "madsrdf:birthPlace": {
+    "@type": "Set",
+    "@class": "madsrdf:Geographic"
+  },
+  "madsrdf:deathPlace": {
+    "@type": "Set",
+    "@class": "madsrdf:Geographic"
+  },
+  "madsrdf:fieldOfActivity": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "madsrdf:hasAffiliation": {
+    "@type": "Set",
+    "@class": "madsrdf:Affiliation"
+  },
+  "madsrdf:isIdentifiedByAuthority": {
+    "@type": "Set",
+    "@class": "madsrdf:Authority"
+  },
+  "madsrdf:occupation": {
+    "@type": "Set",
+    "@class": "madsrdf:Occupation"
+  },
+  "madsrdf:activityEndDate": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:activityStartDate": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:birthDate": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:deathDate": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:entityDescriptor": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:establishDate": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:honoraryTitle": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:prominentFamilyMember": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:terminateDate": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  }
+}
+{
+  "@id": "madsrdf:Region",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Geographic"
+  ],
+  "@documentation": {
+    "@label": "Region Type"
+  }
+}
+{
+  "@id": "madsrdf:SimpleType",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:MADSType"
+  ],
+  "@documentation": {
+    "@label": "Simple Type"
+  }
+}
+{
+  "@id": "madsrdf:Source",
+  "@type": "Class",
+  "@documentation": {
+    "@label": "Source",
+    "@properties": {
+      "madsrdf:citationStatus": {
+        "@comment": "Should use a standard term - such as 'found' or 'not found' - to\n      indicate whether the cited resource yielded information about the resource related to the\n      madsrdf:Source.",
+        "@label": "Citation Status"
+      }
+    }
+  },
+  "madsrdf:citationStatus": {
+    "@type": "Set",
+    "@class": "xsd:string"
+  }
+}
+{
+  "@id": "madsrdf:State",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Geographic"
+  ],
+  "@documentation": {
+    "@label": "State Type"
+  }
+}
+{
+  "@id": "madsrdf:SubTitleElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:TitleElement"
+  ],
+  "@documentation": {
+    "@label": "Subtitle Element"
+  }
+}
+{
+  "@id": "madsrdf:Temporal",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:SimpleType"
+  ],
+  "@documentation": {
+    "@label": "Temporal Type"
+  }
+}
+{
+  "@id": "madsrdf:TemporalElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Element"
+  ],
+  "@documentation": {
+    "@label": "Temporal Element"
+  }
+}
+{
+  "@id": "madsrdf:TermsOfAddressNameElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:NameElement"
+  ],
+  "@documentation": {
+    "@label": "Terms of Address\n      Element"
+  }
+}
+{
+  "@id": "madsrdf:Territory",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Geographic"
+  ],
+  "@documentation": {
+    "@label": "Territory Type"
+  }
+}
+{
+  "@id": "madsrdf:Title",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:SimpleType"
+  ],
+  "@documentation": {
+    "@label": "Title Type"
+  }
+}
+{
+  "@id": "madsrdf:TitleElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Element"
+  ],
+  "@documentation": {
+    "@label": "Title Element"
+  }
+}
+{
+  "@id": "madsrdf:Topic",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:SimpleType"
+  ],
+  "@documentation": {
+    "@label": "Topic Type"
+  }
+}
+{
+  "@id": "madsrdf:TopicElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Element"
+  ],
+  "@documentation": {
+    "@label": "Topic Element"
+  }
+}
+{
+  "@id": "madsrdf:Variant",
+  "@type": "Class",
+  "@inherits": [
+    "owl:Thing",
+    "<http://www.w3.org/2008/05/skos-xl#Label>"
+  ],
+  "@documentation": {
+    "@label": "Variant",
+    "@properties": {
+      "madsrdf:hiddenLabel": {
+        "@comment": "A label entered for\n      discovery purposes but not shown.",
+        "@label": "Hidden Label"
+      },
+      "madsrdf:variantLabel": {
+        "@comment": "The lexical, variant form\n      of an authoritative label.",
+        "@label": "Variant Label"
+      }
+    }
+  },
+  "madsrdf:hiddenLabel": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:variantLabel": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  }
+}
+{
+  "@id": "_:n924306fc8497400c88c7eee24e406c61b6",
+  "@type": "Class",
+  "@documentation": {
+    "@properties": {
+      "madsrdf:adminMetadata": {
+        "@comment": "This relates an Authority or Variant to its administrative metadata,\n      which is, minimimally, a Class defined outside of the MADS/RDF namespace. The RecordInfo Class\n      from the RecordInfo ontology is recommended.",
+        "@label": "Administrative Metadata"
+      }
+    }
+  },
+  "madsrdf:adminMetadata": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  }
+}
+{
+  "@id": "_:n924306fc8497400c88c7eee24e406c61b10",
+  "@type": "Class",
+  "@documentation": {
+    "@properties": {
+      "madsrdf:code": {
+        "@comment": "A code is a string of\n      characters associated with a the authoritative or deprecated label. It may record an\n      historical notation once used to uniquely identify a concept.",
+        "@label": "Code"
+      }
+    }
+  },
+  "madsrdf:code": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  }
+}
+{
+  "@id": "_:n924306fc8497400c88c7eee24e406c61b13",
+  "@type": "Class",
+  "@documentation": {}
+}
+{
+  "@id": "_:n924306fc8497400c88c7eee24e406c61b16",
+  "@type": "Class",
+  "@documentation": {}
+}
+{
+  "@id": "_:n924306fc8497400c88c7eee24e406c61b19",
+  "@type": "Class",
+  "@documentation": {}
+}
+{
+  "@id": "_:n924306fc8497400c88c7eee24e406c61b22",
+  "@type": "Class",
+  "@documentation": {}
+}
+{
+  "@id": "_:n924306fc8497400c88c7eee24e406c61b25",
+  "@type": "Class",
+  "@documentation": {
+    "@properties": {
+      "madsrdf:isMemberOfMADSCollection": {
+        "@comment": "Associates a Collection with a madsrdf:Authority or another\n      madsrdf:MADSCollection.",
+        "@label": "Is Member Of MADSCollection"
+      }
+    }
+  },
+  "madsrdf:isMemberOfMADSCollection": {
+    "@type": "Set",
+    "@class": "madsrdf:MADSCollection"
+  }
+}
+{
+  "@id": "_:n924306fc8497400c88c7eee24e406c61b28",
+  "@type": "Class",
+  "@documentation": {
+    "@properties": {
+      "madsrdf:isMemberOfMADSScheme": {
+        "@label": "Is Member of MADS\n      Scheme"
+      }
+    }
+  },
+  "madsrdf:isMemberOfMADSScheme": {
+    "@type": "Set",
+    "@class": "madsrdf:MADSScheme"
+  }
+}
+{
+  "@id": "_:n924306fc8497400c88c7eee24e406c61b31",
+  "@type": "Class",
+  "@documentation": {
+    "@properties": {
+      "madsrdf:isTopMemberOfMADSScheme": {
+        "@comment": "Identifies a MADS Scheme in\n      which the Authority is at the top of the hierarchy.",
+        "@label": "Is Top Member of MADS\n      Scheme"
+      }
+    }
+  },
+  "madsrdf:isTopMemberOfMADSScheme": {
+    "@type": "Set",
+    "@class": "madsrdf:MADSScheme"
+  }
+}
+{
+  "@id": "_:n924306fc8497400c88c7eee24e406c61b34",
+  "@type": "Class",
+  "@documentation": {
+    "@properties": {
+      "madsrdf:hasEarlierEstablishedForm": {
+        "@comment": "Used to reference a resource that was an earlier form. This is\n      Related type='earlier' in MADS XML.",
+        "@label": "Has Earlier Established\n      Form"
+      },
+      "madsrdf:hasLaterEstablishedForm": {
+        "@comment": "Use to reference the later form of a resource. This is Related\n      type='later' in MADS XML.",
+        "@label": "Has Later Established\n      Form"
+      },
+      "madsrdf:see": {
+        "@comment": "Denotes a relationship\n      between an Authority and/or DeprecatedAuthority. The relationship may or may or may not be\n      reciprocated and there is no certainty that the related resource will further illuminate the\n      original resource.",
+        "@label": "See Also"
+      },
+      "madsrdf:useFor": {
+        "@comment": "\"Use [This Resource] For.\"\n      Traditional \"USE FOR\" reference.",
+        "@label": "Use For"
+      },
+      "madsrdf:useInstead": {
+        "@comment": "\"Use [This Other Resource]\n      Instead.\" Traditional \"USE\" reference.",
+        "@label": "Use Instead"
+      }
+    }
+  },
+  "madsrdf:hasEarlierEstablishedForm": {
+    "@type": "Set",
+    "@class": "_:n924306fc8497400c88c7eee24e406c61b37"
+  },
+  "madsrdf:hasLaterEstablishedForm": {
+    "@type": "Set",
+    "@class": "_:n924306fc8497400c88c7eee24e406c61b37"
+  },
+  "madsrdf:see": {
+    "@type": "Set",
+    "@class": "_:n924306fc8497400c88c7eee24e406c61b37"
+  },
+  "madsrdf:useFor": {
+    "@type": "Set",
+    "@class": "_:n924306fc8497400c88c7eee24e406c61b37"
+  },
+  "madsrdf:useInstead": {
+    "@type": "Set",
+    "@class": "_:n924306fc8497400c88c7eee24e406c61b37"
+  }
+}
+{
+  "@id": "_:n924306fc8497400c88c7eee24e406c61b37",
+  "@type": "Class",
+  "@documentation": {}
+}
