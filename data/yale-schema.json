@@ -233,6 +233,10 @@
   "bf:qualifier": {
     "@type": "Set",
     "@class": "rdfs:Literal"
+  },
+  "rdfs:label": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
   }
 }
 {
@@ -1419,7 +1423,9 @@
   "@id": "bf:Agent",
   "@type": "Class",
   "@inherits": [
-    "foaf:Agent"
+    "owl:Thing",
+    "foaf:Agent",
+    "madsrdf:Authority"
   ],
   "@documentation": {
     "@description": "Entity having a role in a resource, such as a person or organization.",
@@ -1855,11 +1861,19 @@
     "@description": "Agent and role with respect to the resource being described.",
     "@label": "Contribution",
     "@properties": {
+      "bf:agent": {
+        "@label": "Associated agent",
+        "@comment": "Entity associated with a resource or element of description, such as the name of the entity responsible for the content or of the publication, printing, distribution, issue, release or production of a resource."
+      },
       "bf:role": {
         "@comment": "Function provided by a contributor, e.g., author, illustrator, etc.",
         "@label": "Contributor role"
       }
     }
+  },
+  "bf:agent": {
+    "@type": "Set",
+    "@class": "bf:Agent"
   },
   "bf:role": {
     "@type": "Set",
@@ -3261,6 +3275,7 @@
 {
   "@id": "bf:ProvisionActivity",
   "@type": "Class",
+  "@inherits": ["bf:WorkOrInstanceOrItem"],
   "@documentation": {
     "@description": "Information about the agent or place relating to the publication, printing, distribution, issue, release, or production of a resource.",
     "@label": "Provider entity"
@@ -4765,7 +4780,7 @@
   },
   "bf:subject": {
     "@type": "Set",
-    "@class": "owl:Thing"
+    "@class": "madsrdf:ComplexSubject"
   },
   "bf:supplement": {
     "@type": "Set",
