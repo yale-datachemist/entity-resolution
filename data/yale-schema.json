@@ -31,29 +31,43 @@
   "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
   "xsd": "http://www.w3.org/2001/XMLSchema#",
   "xml": "http://www.w3.org/XML/1998/namespace",
+  "tdb": "https://terminusdb.com/schema#",
+  "madsrdf": "http://www.loc.gov/mads/rdf/v1#",
   "bf": "http://id.loc.gov/ontologies/bibframe/",
-  "madsrdf": "http://www.loc.gov/mads/rdf/v1#"
+  "bflc": "http://id.loc.gov/ontologies/bflc/",
+  "cc": "http://creativecommons.org/ns#"
 }
 {
   "@type": "Class",
   "@id": "owl:Thing",
   "@documentation": {
     "@properties": {
-      "bf:absorbed": {
-        "@comment": "Resource that has been incorporated into another resource.\nExpected value Work or Instance\nUsed with Work or Instance",
-        "@label": "Absorption of"
+      "madsrdf:elementList": {
+        "@comment": "The madsrdf:elementList property is used to organize the various\n      parts of labels.",
+        "@label": "Element List"
       },
-      "bf:absorbedBy": {
-        "@comment": "Resource that incorporates another resource.\nExpected value Work or Instance\nUsed with Work or Instance",
-        "@label": "Absorbed by"
+      "madsrdf:extension": {
+        "@label": "Extension"
       },
-      "bf:accompaniedBy": {
-        "@comment": "Resource that accompanies the described resource.\nExpected value Work, Instance or Item\nUsed with Work, Instance or Item",
-        "@label": "Accompanied by"
+      "madsrdf:fullerName": {
+        "@comment": "Full form of name needed to\n      distinguish a person from another person with the same preferred name.",
+        "@label": "Fuller Name"
       },
-      "bf:accompanies": {
-        "@comment": "Resource that adds to or is issued with the described resource.\nExpected value Work, Instance or Item\nUsed with Work, Instance or Item",
-        "@label": "Accompanies"
+      "madsrdf:hasChararacteristic": {
+        "@comment": "A term that specifies a characteristic that differentiates a work or expression from another one.\n    ",
+        "@label": "Other characteristic"
+      },
+      "madsrdf:hasIdentifier": {
+        "@comment": "Associates a resource with\n      a madsrdf:Identifier.",
+        "@label": "Has Identifier"
+      },
+      "madsrdf:hasSource": {
+        "@comment": "Associates a resource description with its Source.",
+        "@label": "Has Source"
+      },
+      "madsrdf:workOrigin": {
+        "@comment": "The country or other territorial jurisdiction from which a work originated.",
+        "@label": "Work locale"
       },
       "bf:adminMetadata": {
         "@comment": "Metadata about the metadata, especially provenance information.\nUsed with Unspecified\nshould this be an annotation property? SES",
@@ -63,42 +77,6 @@
         "@comment": "Entity associated with a resource or element of description, such as the name of the entity responsible for the content or of the publication, printing, distribution, issue, release or production of a resource.\nUsed with Unspecified\nWhat *precisely* is an element of description? (SES)",
         "@label": "Associated agent"
       },
-      "bf:continuedBy": {
-        "@comment": "Resource whose content continues an earlier resource under a new title.\nExpected value Work or Instance\nUsed with Work or Instance",
-        "@label": "Continued by"
-      },
-      "bf:continuedInPartBy": {
-        "@comment": "Resource part of whose content separated from an earlier resource to form a new resource.\nExpected value Work or Instance\nUsed with Work or Instance",
-        "@label": "Continued in part by"
-      },
-      "bf:continues": {
-        "@comment": "Resource that is continued by the content of a later resource under a new title.\nExpected value Work or Instance\nUsed with Work or Instance",
-        "@label": "Continuation of"
-      },
-      "bf:continuesInPart": {
-        "@comment": "Resource that split into two or more separate resources with new titles.\nExpected value Work or Instance\nUsed with Work or Instance",
-        "@label": "Continuation in part of"
-      },
-      "bf:derivativeOf": {
-        "@comment": "Source work from which the described resource is derived.\nExpected value Work or Instance\nUsed with Work or Instance",
-        "@label": "Is derivative of"
-      },
-      "bf:findingAidOf": {
-        "@comment": "Finding aid or similar control materials for archival, visual, and manuscript resources.\nExpected value Work or Instance\nUsed with Work or Instance",
-        "@label": "Finding aid for"
-      },
-      "bf:hasEquivalent": {
-        "@comment": "Resource embodies the same content as the described resource.\nExpected value Work, Instance or Item\nUsed with Work, Instance or Item",
-        "@label": "Equivalence"
-      },
-      "bf:hasPart": {
-        "@comment": "Resource that is included either physically or logically in the described resource\nExpected value Work, Instance or Item\nUsed with Work, Instance or Item",
-        "@label": "Has part"
-      },
-      "bf:hasSubseries": {
-        "@comment": "series resource that is part of another series.\nExpected value Work or Instance\nUsed with Work or Instance",
-        "@label": "Subseries"
-      },
       "bf:identifiedBy": {
         "@comment": "Character string associated with a resource that serves to differentiate that resource from other resources, i.e., that uniquely identifies an entity.\nUsed with Unspecified",
         "@label": "Identifier"
@@ -107,101 +85,92 @@
         "@comment": "Resource that is associated with a character string that serves to differentiate one resource from another.",
         "@label": "Resouce identified"
       },
-      "bf:index": {
-        "@comment": "Resource has an accompanying index\nExpected value Work or Instance\nUsed with Work or Instance",
-        "@label": "Has index"
-      },
       "bf:language": {
         "@comment": "Language associated with a resource or its parts.\nUsed with Unspecified",
         "@label": "Language information"
-      },
-      "bf:mergedToForm": {
-        "@comment": "One of two or more resources that come together to form a new resource.\nExpected value Work or Instance\nUsed with Work or Instance",
-        "@label": "Merged to form"
-      },
-      "bf:mergerOf": {
-        "@comment": "One of two or more resources which came together to form a new resource.\nExpected value Work or Instance\nUsed with Work or Instance",
-        "@label": "Merger of"
       },
       "bf:note": {
         "@comment": "General textual information relating to a resource, such as Information about a specific copy of a resource or information about a particular attribute of a resource.\nUsed with Unspecified",
         "@label": "Note"
       },
-      "bf:originalVersion": {
-        "@comment": "Resource is the original version of which this resource is a reproduction.\nExpected value Work or Instance\nUsed with Work or Instance",
-        "@label": "Original version"
-      },
-      "bf:originalVersionOf": {
-        "@comment": "Original version of a resource.\nExpected value Work or Instance\nUsed with Work or Instance",
-        "@label": "Original version of"
-      },
-      "bf:otherEdition": {
-        "@comment": "Resource has other available editions, for example simultaneously published language editions or reprints.\nExpected value Work or Instance\nUsed with Work or Instance",
-        "@label": "Other edition"
-      },
-      "bf:partOf": {
-        "@comment": "Resource in which the described resource is physically or logically contained.\nExpected value Work, Instance or Item\nUsed with Work, Instance or Item",
-        "@label": "Is part of"
-      },
       "bf:place": {
         "@comment": "Geographic location or place entity associated with a resource or element of description, such as the place associated with the publication, printing, distribution, issue, release or production of a resource, place of an event.\nUsed with Unspecified",
         "@label": "Place"
-      },
-      "bf:precededBy": {
-        "@comment": "Resource that precedes the resource being described, e.g., is earlier in time or before in narrative.\nExpected value Work or Instance\nUsed with Work or Instance",
-        "@label": "Preceded by"
-      },
-      "bf:referencedBy": {
-        "@comment": "Resource that references the described resource\nExpected value Work, Instance or Item\nUsed with Work, Instance or Item",
-        "@label": "Referenced by"
-      },
-      "bf:references": {
-        "@comment": "Resource that is referenced by the described resource.\nExpected value Work, Instance or Item\nUsed with Work, Instance or Item",
-        "@label": "References"
-      },
-      "bf:replacedBy": {
-        "@comment": "Later resource used in place of an earlier resource, usually because the later resource contains updated or new information.\nExpected value Work or Instance\nUsed with Work or Instance",
-        "@label": "Succeeded by"
-      },
-      "bf:replacementOf": {
-        "@comment": "Earlier resource whose content has been replaced by a later resource, usually because the later resource contains updated or new information.\nExpected value Work or Instance\nUsed with Work or Instance",
-        "@label": "Preceded by"
-      },
-      "bf:separatedFrom": {
-        "@comment": "Resource that spun off a part of its content to form a new resource.\nExpected value Work or Instance\nUsed with Work or Instance",
-        "@label": "Separated from"
-      },
-      "bf:seriesOf": {
-        "@comment": "Resource that is a part of a larger resource.\nExpected value Work or Instance\nUsed with Work or Instance",
-        "@label": "Series container of"
       },
       "bf:source": {
         "@comment": "Resource from which value or label came or was derived, such as the formal source/scheme from which a classification number is taken or derived, list from which an agent name is taken or derived, source within which an identifier is unique.\nUsed with Unspecified\nWhat is meant by value or label here? (SES)",
         "@label": "Source"
       },
-      "bf:splitInto": {
-        "@comment": "One of two or more resources resulting from the division of an earlier resource into separate resources.\nExpected value Work or Instance\nUsed with Work or Instance",
-        "@label": "Split into"
-      },
       "bf:status": {
         "@comment": "Designation of the validity or position of something, such as indication that the classification number is canceled or invalid, circulation availability of an item, indication of whether the identifier is canceled or invalid.\nMeaning is almost unspecified too. (SES)\nUsed with Unspecified",
         "@label": "Status"
       },
-      "bf:supplement": {
-        "@comment": "Resource that updates or otherwise complements the predominant resource.\nExpected value Work or Instance\nUsed with Work or Instance",
-        "@label": "Supplement"
-      },
-      "bf:translation": {
-        "@comment": "Resource that translates the text of the source entity into a language different from that of the original.\nExpected value Work or Instance\nUsed with Work or Instance",
-        "@label": "Translation as"
-      },
-      "bf:translationOf": {
-        "@comment": "Resource that has been translated, i.e., the text is expressed in a language different from that of the original resource.\nExpected value Work or Instance\nUsed with Work or Instance",
-        "@label": "Translation of"
-      },
       "bf:unit": {
         "@comment": "Units in which a value is expressed, such as the physical or logical constituent of a resource (e.g., a volume, audiocassette, film reel, a map, a digital file).\nUsed with Unspecified\nWhere are these values? What are these values? (SES)",
         "@label": "Type of unit"
+      },
+      "bflc:applicableInstitution": {
+        "@comment": "Institutional location of a resource to which a particular piece of description applies.\nUsed with Work, Instance or Item",
+        "@label": "Applicable institution"
+      },
+      "bflc:appliesTo": {
+        "@comment": "The component of a resource to which a characteristic applies.\nUsed with Work, Instance or Item",
+        "@label": "Applies to"
+      },
+      "bflc:creatorCharacteristic": {
+        "@comment": "Category to which the creators of the resource belong.\nUsed with Work, Instance or Item",
+        "@label": "Creator characteristic"
+      },
+      "bflc:demographicGroup": {
+        "@comment": "Characteristics of a group of agents.\nUsed with Work, Instance or Item",
+        "@label": "Demographic group"
+      },
+      "bflc:governmentPubType": {
+        "@comment": "Information recording that the resource is published or produced by or for an international, national, state, provincial, or local government agency, or by any subdivision of such a body.\nUsed with Work, Instance or Item",
+        "@label": "Government publication type"
+      },
+      "bflc:indexedIn": {
+        "@comment": "Citation to the resource where the material being described is indexed.\nUsed with Work, Instance or Item",
+        "@label": "Indexed in"
+      },
+      "bflc:movingImageTechnique": {
+        "@comment": "Information recording the technique used in creating motion in motion pictures or videorecordings.\nUsed with Work, Instance or Item",
+        "@label": "Moving Image Technique"
+      },
+      "bflc:projectedProvisionDate": {
+        "@comment": "Projected date of publication of the resource.\nUsed with Work, Instance or Item",
+        "@label": "Projected publication date"
+      },
+      "bflc:readMarc382": {
+        "@comment": "String representing the medium of performance information located in the 382 field of the original MARC record\nUsed with Work, Instance or Item",
+        "@label": "Read-only 382 field"
+      },
+      "bflc:relation": {
+        "@comment": "Connection between resources.\nUsed with Work, Instance or Item",
+        "@label": "Specific relationship"
+      },
+      "bflc:relationship": {
+        "@comment": "Resource and its connection to another resource.\nUsed with Work, Instance or Item",
+        "@label": "Related resource and relationship"
+      },
+      "bflc:relief": {
+        "@comment": "Relief term specified on a cartographic resource\nUsed with Work, Instance or Item",
+        "@label": "Relief"
+      },
+      "bflc:serialPubType": {
+        "@comment": "Information recording the type of continuing resource.\nUsed with Work, Instance or Item",
+        "@label": "Serial publication type"
+      },
+      "bflc:seriesTreatment": {
+        "@comment": "Information concerning the treatment of a series in a resource\nUsed with Work, Instance or Item",
+        "@label": "Series treatment"
+      },
+      "madsrdf:creationDateEnd": {
+        "@comment": "Ending date of the date range for which the beginning date is recorded in madsrdf:creationDateStart."
+      },
+      "madsrdf:creationDateStart": {
+        "@comment": "For a work, earliest date (normally the year) associated with a work; that date may be the date the work was created or first published or released. For an expression, the earliest date (normally the year) associated with an expression; that date may be the date of the earliest known manifestation of that expression. In both cases the date may be the starting date of a range or a single date.",
+        "@label": "Work begun"
       },
       "bf:code": {
         "@comment": "String of characters that serves as a code representing information.\nUsed with Unspecified",
@@ -223,117 +192,151 @@
         "@comment": "Qualifier of information, such as an addition to a title to make it unique or qualifying information associated with an identifier.\nUsed with Unspecified\nVoid for vagueness. Domain Thing, Range Literal, meaning: some sort of extra information associated with some other information? (SES)",
         "@label": "Qualifier"
       },
-      "madsrdf:elementList": {
-        "@comment": "The madsrdf:elementList property is used to organize the various\n      parts of labels.",
-        "@label": "Element List"
+      "bflc:aap": {
+        "@comment": "A text string that represents the label of the resource. It could be a name/title combination, but could also include additional fields to make it unique within the catalog.\nUsed with Work, Instance or Item",
+        "@label": "Authorized access point"
       },
-      "madsrdf:extension": {
-        "@label": "Extension"
+      "bflc:aap-normalized": {
+        "@comment": "Normalized version of the authorized access point with spaces, capitalization, and punctuation removed.\nUsed with Work, Instance or Item",
+        "@label": "Normalized authorized access point"
       },
-      "madsrdf:fullerName": {
-        "@comment": "Full form of name needed to\n      distinguish a person from another person with the same preferred name.",
-        "@label": "Fuller Name"
+      "bflc:distributionStatement": {
+        "@comment": "Statement related to the distribution of the resource; usually transcribed.\nUsed with Work, Instance or Item",
+        "@label": "Distribution statement"
       },
-      "madsrdf:hasAbbreviationVariant": {
-        "@label": "Has Abbreviation\n      Variant"
+      "bflc:manufactureStatement": {
+        "@comment": "Statement related to the manufacture of the resource; usually transcribed.\nUsed with Work, Instance or Item",
+        "@label": "Manufacture statement"
       },
-      "madsrdf:hasAcronymVariant": {
-        "@label": "Has Acronym\n      Variant"
+      "bflc:marcKey": {
+        "@comment": "String to store MARC data\nUsed with Work, Instance or Item",
+        "@label": "MARC key for headings"
       },
-      "madsrdf:hasBroaderAuthority": {
-        "@label": "Has Broader\n      Authority"
+      "bflc:name00MarcKey": {
+        "@comment": "String for personal name matching.\nUsed with Work, Instance or Item",
+        "@label": "MARC key for X00 Names"
       },
-      "madsrdf:hasBroaderExternalAuthority": {
-        "@comment": "Creates a direct\n      relationship between an Authority and a more broadly defined Authority from a different MADS\n      Scheme.",
-        "@label": "Has Broader External\n      Authority"
+      "bflc:name00MatchKey": {
+        "@comment": "String for name matching.\nUsed with Work, Instance or Item",
+        "@label": "Match key for X00 Name"
       },
-      "madsrdf:hasChararacteristic": {
-        "@comment": "A term that specifies a characteristic that differentiates a work or expression from another one.\n    ",
-        "@label": "Other characteristic"
+      "bflc:name10MarcKey": {
+        "@comment": "String for name matching.\nUsed with Work, Instance or Item",
+        "@label": "MARC key for X10 Names"
       },
-      "madsrdf:hasCloseExternalAuthority": {
-        "@comment": "Records a relationship\n      between an Authority and one that is closely related from a different MADS\n      Scheme.",
-        "@label": "Has Close External\n      Authority"
+      "bflc:name10MatchKey": {
+        "@comment": "String for name matching.\nUsed with Work, Instance or Item",
+        "@label": "Match key for X10 Name"
       },
-      "madsrdf:hasEarlierEstablishedForm": {
-        "@comment": "Used to reference a resource that was an earlier form. This is\n      Related type='earlier' in MADS XML.",
-        "@label": "Has Earlier Established\n      Form"
+      "bflc:name11MarcKey": {
+        "@comment": "String for name matching.\nUsed with Work, Instance or Item",
+        "@label": "MARC key for X11 Names"
       },
-      "madsrdf:hasExactExternalAuthority": {
-        "@comment": "Records a relationship\n      between an Authority and one to which it matches exactly but from a different MADS\n      Scheme.",
-        "@label": "Has Exact External\n      Authority"
+      "bflc:name11MatchKey": {
+        "@comment": "String for name matching.\nUsed with Work, Instance or Item",
+        "@label": "Match key for X11 Name"
       },
-      "madsrdf:hasExpansionVariant": {
-        "@label": "Has Expansion\n      Variant"
+      "bflc:nonSortNum": {
+        "@comment": "Number of characters at the start of a label that should be skipped for indexing and sorting.\nUsed with Work, Instance or Item",
+        "@label": "Non-sort character count"
       },
-      "madsrdf:hasIdentifier": {
-        "@comment": "Associates a resource with\n      a madsrdf:Identifier.",
-        "@label": "Has Identifier"
+      "bflc:primaryContributorName00MatchKey": {
+        "@comment": "String for entry name matching.\nUsed with Work, Instance or Item",
+        "@label": "Primary X00 Name Match key"
       },
-      "madsrdf:hasLaterEstablishedForm": {
-        "@comment": "Use to reference the later form of a resource. This is Related\n      type='later' in MADS XML.",
-        "@label": "Has Later Established\n      Form"
+      "bflc:primaryContributorName10MatchKey": {
+        "@comment": "String for entry name matching.\nUsed with Work, Instance or Item",
+        "@label": "Primary X10 Name Match key"
       },
-      "madsrdf:hasNarrowerAuthority": {
-        "@comment": "Creates a direct\n      relationship between an Authority and one that is more narrowly defined.",
-        "@label": "Has Narrower\n      Authority"
+      "bflc:primaryContributorName11MatchKey": {
+        "@comment": "String for entry name matching.\nUsed with Work, Instance or Item",
+        "@label": "Primary X11 Name Match key"
       },
-      "madsrdf:hasNarrowerExternalAuthority": {
-        "@comment": "Creates a direct\n      relationship between an Authority and a more narrowly defined Authority from a different MADS\n      Scheme.",
-        "@label": "Has Narrower External\n      Authority"
+      "bflc:productionStatement": {
+        "@comment": "Statement related to the production of the resource; usually transcribed.\nUsed with Work, Instance or Item",
+        "@label": "Production statement"
       },
-      "madsrdf:hasReciprocalAuthority": {
-        "@comment": "Establishes a relationship between two Authority resources. It is\n      reciprocal, so the relationship must be shared. This is Related type='equivalent' in MADS\n      XML.",
-        "@label": "Has Reciprocal\n      Authority"
+      "bflc:publicationStatement": {
+        "@comment": "Statement related to the publication of the resource; ususally transcribed.\nUsed with Work, Instance or Item",
+        "@label": "Publication statement"
       },
-      "madsrdf:hasReciprocalExternalAuthority": {
-        "@comment": "Establishes a relationship\n      between an Authority and one from a different MADS Scheme. It is reciprocal, so the\n      relationship must be shared.",
-        "@label": "Has Reciprocal External\n      Authority"
+      "bflc:simpleAgent": {
+        "@comment": "Name of publisher, distributor, manufacturer or producer as transcribed from the resource\nUsed with Work, Instance or Item",
+        "@label": "Agent"
       },
-      "madsrdf:hasSource": {
-        "@comment": "Associates a resource description with its Source.",
-        "@label": "Has Source"
+      "bflc:simpleDate": {
+        "@comment": "Date of publication, distribution, manufacture or production as transcribed from the resource\nUsed with Work, Instance or Item",
+        "@label": "Date"
       },
-      "madsrdf:hasTranslationVariant": {
-        "@comment": "A Variant whose label\n      represents a translation of that of the authoritative label.",
-        "@label": "Has Translation\n      Variant"
+      "bflc:simplePlace": {
+        "@comment": "Location of publication, distribution, manufacture or production as transcribed from the resource\nUsed with Work, Instance or Item",
+        "@label": "Place"
       },
-      "madsrdf:useFor": {
-        "@comment": "\"Use [This Resource] For.\"\n      Traditional \"USE FOR\" reference.",
-        "@label": "Use For"
+      "bflc:title00MarcKey": {
+        "@comment": "String for title matching.\nUsed with Work, Instance or Item",
+        "@label": "title00MarcKey"
       },
-      "madsrdf:useInstead": {
-        "@comment": "\"Use [This Other Resource]\n      Instead.\" Traditional \"USE\" reference.",
-        "@label": "Use Instead"
+      "bflc:title00MatchKey": {
+        "@comment": "String for title matching.\nUsed with Work, Instance or Item",
+        "@label": "Match key for Title X00"
       },
-      "madsrdf:workOrigin": {
-        "@comment": "The country or other territorial jurisdiction from which a work originated.",
-        "@label": "Work locale"
+      "bflc:title10MarcKey": {
+        "@comment": "String for title matching.\nUsed with Work, Instance or Item",
+        "@label": "title10MarcKey"
       },
-      "madsrdf:creationDateEnd": {
-        "@comment": "Ending date of the date range for which the beginning date is recorded in madsrdf:creationDateStart."
+      "bflc:title10MatchKey": {
+        "@comment": "String for title matching.\nUsed with Work, Instance or Item",
+        "@label": "Match key for Title X10"
       },
-      "madsrdf:creationDateStart": {
-        "@comment": "For a work, earliest date (normally the year) associated with a work; that date may be the date the work was created or first published or released. For an expression, the earliest date (normally the year) associated with an expression; that date may be the date of the earliest known manifestation of that expression. In both cases the date may be the starting date of a range or a single date.",
-        "@label": "Work begun"
+      "bflc:title11MarcKey": {
+        "@comment": "String for title matching.\nUsed with Work, Instance or Item",
+        "@label": "title11MarcKey"
+      },
+      "bflc:title11MatchKey": {
+        "@comment": "String for title matching.\nUsed with Work, Instance or Item",
+        "@label": "Match key for Title X11"
+      },
+      "bflc:title30MarcKey": {
+        "@comment": "String for title matching.\nUsed with Work, Instance or Item",
+        "@label": "title30MarcKey"
+      },
+      "bflc:title30MatchKey": {
+        "@comment": "String for title matching.\nUsed with Work, Instance or Item",
+        "@label": "title30MatchKey"
+      },
+      "bflc:title40MatchKey": {
+        "@comment": "String for title matching.\nUsed with Work, Instance or Item",
+        "@label": "title40MatchKey"
       }
     }
   },
-  "bf:absorbed": {
+  "madsrdf:elementList": {
+    "@type": "List",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:extension": {
     "@type": "Set",
     "@class": "owl:Thing"
   },
-  "bf:absorbedBy": {
+  "madsrdf:fullerName": {
+    "@type": "Set",
+    "@class": "madsrdf:PersonalName"
+  },
+  "madsrdf:hasChararacteristic": {
     "@type": "Set",
     "@class": "owl:Thing"
   },
-  "bf:accompaniedBy": {
+  "madsrdf:hasIdentifier": {
     "@type": "Set",
-    "@class": "owl:Thing"
+    "@class": "madsrdf:Identifier"
   },
-  "bf:accompanies": {
+  "madsrdf:hasSource": {
     "@type": "Set",
-    "@class": "owl:Thing"
+    "@class": "madsrdf:Source"
+  },
+  "madsrdf:workOrigin": {
+    "@type": "Set",
+    "@class": "madsrdf:Geographic"
   },
   "bf:adminMetadata": {
     "@type": "Set",
@@ -343,42 +346,6 @@
     "@type": "Set",
     "@class": "bf:Agent"
   },
-  "bf:continuedBy": {
-    "@type": "Set",
-    "@class": "owl:Thing"
-  },
-  "bf:continuedInPartBy": {
-    "@type": "Set",
-    "@class": "owl:Thing"
-  },
-  "bf:continues": {
-    "@type": "Set",
-    "@class": "owl:Thing"
-  },
-  "bf:continuesInPart": {
-    "@type": "Set",
-    "@class": "owl:Thing"
-  },
-  "bf:derivativeOf": {
-    "@type": "Set",
-    "@class": "owl:Thing"
-  },
-  "bf:findingAidOf": {
-    "@type": "Set",
-    "@class": "owl:Thing"
-  },
-  "bf:hasEquivalent": {
-    "@type": "Set",
-    "@class": "owl:Thing"
-  },
-  "bf:hasPart": {
-    "@type": "Set",
-    "@class": "owl:Thing"
-  },
-  "bf:hasSubseries": {
-    "@type": "Set",
-    "@class": "owl:Thing"
-  },
   "bf:identifiedBy": {
     "@type": "Set",
     "@class": "bf:Identifier"
@@ -387,101 +354,93 @@
     "@type": "Set",
     "@class": "owl:Thing"
   },
-  "bf:index": {
-    "@type": "Set",
-    "@class": "owl:Thing"
-  },
   "bf:language": {
     "@type": "Set",
     "@class": "bf:Language"
-  },
-  "bf:mergedToForm": {
-    "@type": "Set",
-    "@class": "owl:Thing"
-  },
-  "bf:mergerOf": {
-    "@type": "Set",
-    "@class": "owl:Thing"
   },
   "bf:note": {
     "@type": "Set",
     "@class": "bf:Note"
   },
-  "bf:originalVersion": {
-    "@type": "Set",
-    "@class": "owl:Thing"
-  },
-  "bf:originalVersionOf": {
-    "@type": "Set",
-    "@class": "owl:Thing"
-  },
-  "bf:otherEdition": {
-    "@type": "Set",
-    "@class": "owl:Thing"
-  },
-  "bf:partOf": {
-    "@type": "Set",
-    "@class": "owl:Thing"
-  },
   "bf:place": {
     "@type": "Set",
     "@class": "bf:Place"
-  },
-  "bf:precededBy": {
-    "@type": "Set",
-    "@class": "owl:Thing"
-  },
-  "bf:referencedBy": {
-    "@type": "Set",
-    "@class": "owl:Thing"
-  },
-  "bf:references": {
-    "@type": "Set",
-    "@class": "owl:Thing"
-  },
-  "bf:replacedBy": {
-    "@type": "Set",
-    "@class": "owl:Thing"
-  },
-  "bf:replacementOf": {
-    "@type": "Set",
-    "@class": "owl:Thing"
-  },
-  "bf:separatedFrom": {
-    "@type": "Set",
-    "@class": "owl:Thing"
-  },
-  "bf:seriesOf": {
-    "@type": "Set",
-    "@class": "owl:Thing"
   },
   "bf:source": {
     "@type": "Set",
     "@class": "bf:Source"
   },
-  "bf:splitInto": {
-    "@type": "Set",
-    "@class": "owl:Thing"
-  },
   "bf:status": {
     "@type": "Set",
     "@class": "bf:Status"
   },
-  "bf:supplement": {
-    "@type": "Set",
-    "@class": "owl:Thing"
-  },
-  "bf:translation": {
-    "@type": "Set",
-    "@class": "owl:Thing"
-  },
-  "bf:translationOf": {
-    "@type": "Set",
-    "@class": "owl:Thing"
-  },
   "bf:unit": {
     "@type": "Set",
     "@class": "bf:Unit"
+  },
+  "bflc:applicableInstitution": {
+    "@type": "Set",
+    "@class": "bf:Agent"
+  },
+  "bflc:appliesTo": {
+    "@type": "Set",
+    "@class": "bflc:AppliesTo"
+  },
+  "bflc:creatorCharacteristic": {
+    "@type": "Set",
+    "@class": "bflc:CreatorCharacteristic"
+  },
+  "bflc:demographicGroup": {
+    "@type": "Set",
+    "@class": "bflc:DemographicGroup"
+  },
+  "bflc:governmentPubType": {
+    "@type": "Set",
+    "@class": "bflc:GovernmentPubType"
+  },
+  "bflc:indexedIn": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "bflc:movingImageTechnique": {
+    "@type": "Set",
+    "@class": "bflc:MovingImageTechnique"
+  },
+  "bflc:projectedProvisionDate": {
+    "@type": "Set",
+    "@class": "bflc:date"
+  },
+  "bflc:readMarc382": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "bflc:relation": {
+    "@type": "Set",
+    "@class": "bflc:Relation"
+  },
+  "bflc:relationship": {
+    "@type": "Set",
+    "@class": "bflc:Relationship"
+  },
+  "bflc:relief": {
+    "@type": "Set",
+    "@class": "bflc:Relief"
+  },
+  "bflc:serialPubType": {
+    "@type": "Set",
+    "@class": "bflc:SerialPubType"
+  },
+  "bflc:seriesTreatment": {
+    "@type": "Set",
+    "@class": "bflc:SeriesTreatment"
+  },
+  "madsrdf:creationDateEnd": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:creationDateStart": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
   },
   "bf:code": {
     "@type": "Set",
@@ -503,106 +462,1216 @@
     "@type": "Set",
     "@class": "rdfs:Literal"
   },
-    "madsrdf:elementList": {
+  "bflc:aap": {
     "@type": "Set",
-    "@class": "_:n65b70a7b6c2a4d74bffd73503b6e9772b16"
+    "@class": "rdfs:Literal"
   },
-  "madsrdf:extension": {
+  "bflc:aap-normalized": {
     "@type": "Set",
-    "@class": "owl:Thing"
+    "@class": "rdfs:Literal"
   },
-  "madsrdf:fullerName": {
+  "bflc:distributionStatement": {
     "@type": "Set",
-    "@class": "madsrdf:PersonalName"
+    "@class": "rdfs:Literal"
   },
-  "madsrdf:hasAbbreviationVariant": {
+  "bflc:manufactureStatement": {
     "@type": "Set",
-    "@class": "owl:Thing"
+    "@class": "rdfs:Literal"
   },
-  "madsrdf:hasAcronymVariant": {
+  "bflc:marcKey": {
     "@type": "Set",
-    "@class": "owl:Thing"
+    "@class": "rdfs:Literal"
   },
-  "madsrdf:hasBroaderAuthority": {
+  "bflc:name00MarcKey": {
     "@type": "Set",
-    "@class": "owl:Thing"
+    "@class": "rdfs:Literal"
   },
-  "madsrdf:hasBroaderExternalAuthority": {
+  "bflc:name00MatchKey": {
     "@type": "Set",
-    "@class": "owl:Thing"
+    "@class": "rdfs:Literal"
   },
-  "madsrdf:hasChararacteristic": {
+  "bflc:name10MarcKey": {
     "@type": "Set",
-    "@class": "owl:Thing"
+    "@class": "rdfs:Literal"
   },
-  "madsrdf:hasCloseExternalAuthority": {
+  "bflc:name10MatchKey": {
     "@type": "Set",
-    "@class": "owl:Thing"
+    "@class": "rdfs:Literal"
   },
-  "madsrdf:hasEarlierEstablishedForm": {
+  "bflc:name11MarcKey": {
     "@type": "Set",
-    "@class": "owl:Thing"
+    "@class": "rdfs:Literal"
   },
-  "madsrdf:hasExactExternalAuthority": {
+  "bflc:name11MatchKey": {
     "@type": "Set",
-    "@class": "owl:Thing"
+    "@class": "rdfs:Literal"
   },
-  "madsrdf:hasExpansionVariant": {
+  "bflc:nonSortNum": {
     "@type": "Set",
-    "@class": "owl:Thing"
+    "@class": "rdfs:Literal"
   },
-  "madsrdf:hasIdentifier": {
+  "bflc:primaryContributorName00MatchKey": {
     "@type": "Set",
-    "@class": "madsrdf:Identifier"
+    "@class": "rdfs:Literal"
   },
-  "madsrdf:hasLaterEstablishedForm": {
+  "bflc:primaryContributorName10MatchKey": {
     "@type": "Set",
-    "@class": "owl:Thing"
+    "@class": "rdfs:Literal"
   },
-  "madsrdf:hasNarrowerAuthority": {
+  "bflc:primaryContributorName11MatchKey": {
     "@type": "Set",
-    "@class": "owl:Thing"
+    "@class": "rdfs:Literal"
   },
-  "madsrdf:hasNarrowerExternalAuthority": {
+  "bflc:productionStatement": {
     "@type": "Set",
-    "@class": "owl:Thing"
+    "@class": "rdfs:Literal"
   },
-  "madsrdf:hasReciprocalAuthority": {
+  "bflc:publicationStatement": {
     "@type": "Set",
-    "@class": "owl:Thing"
+    "@class": "rdfs:Literal"
   },
-  "madsrdf:hasReciprocalExternalAuthority": {
+  "bflc:simpleAgent": {
     "@type": "Set",
-    "@class": "owl:Thing"
+    "@class": "rdfs:Literal"
   },
-  "madsrdf:hasSource": {
+  "bflc:simpleDate": {
     "@type": "Set",
-    "@class": "madsrdf:Source"
+    "@class": "rdfs:Literal"
   },
-  "madsrdf:hasTranslationVariant": {
+  "bflc:simplePlace": {
     "@type": "Set",
-    "@class": "owl:Thing"
+    "@class": "rdfs:Literal"
   },
-  "madsrdf:useFor": {
+  "bflc:title00MarcKey": {
     "@type": "Set",
-    "@class": "owl:Thing"
+    "@class": "rdfs:Literal"
   },
-  "madsrdf:useInstead": {
+  "bflc:title00MatchKey": {
     "@type": "Set",
-    "@class": "owl:Thing"
+    "@class": "rdfs:Literal"
   },
-  "madsrdf:workOrigin": {
+  "bflc:title10MarcKey": {
     "@type": "Set",
-    "@class": "madsrdf:Geographic"
+    "@class": "rdfs:Literal"
   },
-  "madsrdf:creationDateEnd": {
+  "bflc:title10MatchKey": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bflc:title11MarcKey": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bflc:title11MatchKey": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bflc:title30MarcKey": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bflc:title30MatchKey": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bflc:title40MatchKey": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  }
+}
+{
+  "@id": "madsrdf:Address",
+  "@type": "Class",
+  "@documentation": {
+    "@label": "Address",
+    "@properties": {
+      "madsrdf:extendedAddress": {
+        "@comment": "The second address line, if\n      needed.",
+        "@label": "Extended Address"
+      },
+      "madsrdf:postcode": {
+        "@label": "Post Code / Zip\n      Code"
+      },
+      "madsrdf:streetAddress": {
+        "@comment": "First line of address. For\n      second line, use madsrdf:extendedAddress.",
+        "@label": "Street Address"
+      }
+    }
+  },
+  "madsrdf:extendedAddress": {
     "@type": "Set",
     "@class": "rdf:PlainLiteral"
   },
-  "madsrdf:creationDateStart": {
+  "madsrdf:postcode": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:streetAddress": {
     "@type": "Set",
     "@class": "rdf:PlainLiteral"
   }
+}
+{
+  "@id": "madsrdf:Affiliation",
+  "@type": "Class",
+  "@documentation": {
+    "@label": "Affiliation",
+    "@properties": {
+      "madsrdf:hasAffiliationAddress": {
+        "@comment": "The address of the group or\n      organization with which an individual is associated.",
+        "@label": "Has Affiliation\n      Address"
+      },
+      "madsrdf:affiliationEnd": {
+        "@comment": "The date an individual\n      ceased to be affiliated with an organization.",
+        "@label": "Affiliation\n      Ended"
+      },
+      "madsrdf:affiliationStart": {
+        "@comment": "The date an individual\n      established an affiliation with an organization.",
+        "@label": "Affiliation\n      Started"
+      },
+      "madsrdf:email": {
+        "@label": "Email"
+      },
+      "madsrdf:fax": {
+        "@comment": "Fax number",
+        "@label": "Fax"
+      },
+      "madsrdf:hours": {
+        "@label": "Hours"
+      },
+      "madsrdf:phone": {
+        "@label": "Phone"
+      }
+    }
+  },
+  "madsrdf:hasAffiliationAddress": {
+    "@type": "Set",
+    "@class": "madsrdf:Address"
+  },
+  "madsrdf:affiliationEnd": {
+    "@type": "Set",
+    "@class": "xsd:date"
+  },
+  "madsrdf:affiliationStart": {
+    "@type": "Set",
+    "@class": "xsd:date"
+  },
+  "madsrdf:email": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:fax": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:hours": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:phone": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  }
+}
+{
+  "@id": "madsrdf:Area",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Geographic"
+  ],
+  "@documentation": {
+    "@label": "Area Type"
+  }
+}
+{
+  "@id": "madsrdf:Authority",
+  "@type": "Class",
+  "@inherits": [
+    "owl:Thing",
+    "skos:Concept",
+    "tdb:AuthorityOrDeprecatedAuthorityOrVariant",
+    "tdb:AuthorityOrMADSCollection",
+    "tdb:AuthorityOrMADSCollection",
+    "tdb:AuthorityOrMADSCollection",
+    "tdb:AuthorityOrMADSCollection",
+    "tdb:AuthorityOrMADSCollection",
+    "tdb:AuthorityOrDeprecatedAuthority",
+    "tdb:AuthorityOrDeprecatedAuthority"
+  ],
+  "@documentation": {
+    "@label": "Authority",
+    "@properties": {
+      "madsrdf:hasAbbreviationVariant": {
+        "@label": "Has Abbreviation\n      Variant"
+      },
+      "madsrdf:hasAcronymVariant": {
+        "@label": "Has Acronym\n      Variant"
+      },
+      "madsrdf:hasBroaderAuthority": {
+        "@label": "Has Broader\n      Authority"
+      },
+      "madsrdf:hasBroaderExternalAuthority": {
+        "@comment": "Creates a direct\n      relationship between an Authority and a more broadly defined Authority from a different MADS\n      Scheme.",
+        "@label": "Has Broader External\n      Authority"
+      },
+      "madsrdf:hasCloseExternalAuthority": {
+        "@comment": "Records a relationship\n      between an Authority and one that is closely related from a different MADS\n      Scheme.",
+        "@label": "Has Close External\n      Authority"
+      },
+      "madsrdf:hasExactExternalAuthority": {
+        "@comment": "Records a relationship\n      between an Authority and one to which it matches exactly but from a different MADS\n      Scheme.",
+        "@label": "Has Exact External\n      Authority"
+      },
+      "madsrdf:hasExpansionVariant": {
+        "@label": "Has Expansion\n      Variant"
+      },
+      "madsrdf:hasHiddenVariant": {
+        "@comment": "Use for variants that are searchable, but not necessarily for\n      display.",
+        "@label": "Has Hidden Variant"
+      },
+      "madsrdf:hasNarrowerAuthority": {
+        "@comment": "Creates a direct\n      relationship between an Authority and one that is more narrowly defined.",
+        "@label": "Has Narrower\n      Authority"
+      },
+      "madsrdf:hasNarrowerExternalAuthority": {
+        "@comment": "Creates a direct\n      relationship between an Authority and a more narrowly defined Authority from a different MADS\n      Scheme.",
+        "@label": "Has Narrower External\n      Authority"
+      },
+      "madsrdf:hasReciprocalAuthority": {
+        "@comment": "Establishes a relationship between two Authority resources. It is\n      reciprocal, so the relationship must be shared. This is Related type='equivalent' in MADS\n      XML.",
+        "@label": "Has Reciprocal\n      Authority"
+      },
+      "madsrdf:hasReciprocalExternalAuthority": {
+        "@comment": "Establishes a relationship\n      between an Authority and one from a different MADS Scheme. It is reciprocal, so the\n      relationship must be shared.",
+        "@label": "Has Reciprocal External\n      Authority"
+      },
+      "madsrdf:hasRelatedAuthority": {
+        "@comment": "Unless the relationship can be more specifically identified, use\n      'hasRelatedAuthority.'",
+        "@label": "Has Related Authority"
+      },
+      "madsrdf:hasTranslationVariant": {
+        "@comment": "A Variant whose label\n      represents a translation of that of the authoritative label.",
+        "@label": "Has Translation\n      Variant"
+      },
+      "madsrdf:hasVariant": {
+        "@comment": "Associates a Variant with an Authority or Deprecrated Authority.\n      Unless the variant type can be more specifically identified, use 'hasVariant.'",
+        "@label": "Has Variant"
+      },
+      "madsrdf:identifiesRWO": {
+        "@comment": "Associates a\n      madsrdf:Authority with the Real World Object that is the subject of the authority's\n      label.",
+        "@label": "Identifies RWO"
+      }
+    }
+  },
+  "madsrdf:hasAbbreviationVariant": {
+    "@type": "Set",
+    "@class": "madsrdf:Variant"
+  },
+  "madsrdf:hasAcronymVariant": {
+    "@type": "Set",
+    "@class": "madsrdf:Variant"
+  },
+  "madsrdf:hasBroaderAuthority": {
+    "@type": "Set",
+    "@class": "madsrdf:Authority"
+  },
+  "madsrdf:hasBroaderExternalAuthority": {
+    "@type": "Set",
+    "@class": "madsrdf:Authority"
+  },
+  "madsrdf:hasCloseExternalAuthority": {
+    "@type": "Set",
+    "@class": "madsrdf:Authority"
+  },
+  "madsrdf:hasExactExternalAuthority": {
+    "@type": "Set",
+    "@class": "madsrdf:Authority"
+  },
+  "madsrdf:hasExpansionVariant": {
+    "@type": "Set",
+    "@class": "madsrdf:Variant"
+  },
+  "madsrdf:hasHiddenVariant": {
+    "@type": "Set",
+    "@class": "madsrdf:Variant"
+  },
+  "madsrdf:hasNarrowerAuthority": {
+    "@type": "Set",
+    "@class": "madsrdf:Authority"
+  },
+  "madsrdf:hasNarrowerExternalAuthority": {
+    "@type": "Set",
+    "@class": "madsrdf:Authority"
+  },
+  "madsrdf:hasReciprocalAuthority": {
+    "@type": "Set",
+    "@class": "madsrdf:Authority"
+  },
+  "madsrdf:hasReciprocalExternalAuthority": {
+    "@type": "Set",
+    "@class": "madsrdf:Authority"
+  },
+  "madsrdf:hasRelatedAuthority": {
+    "@type": "Set",
+    "@class": "madsrdf:Authority"
+  },
+  "madsrdf:hasTranslationVariant": {
+    "@type": "Set",
+    "@class": "madsrdf:Variant"
+  },
+  "madsrdf:hasVariant": {
+    "@type": "Set",
+    "@class": "madsrdf:Variant"
+  },
+  "madsrdf:identifiesRWO": {
+    "@type": "Set",
+    "@class": "madsrdf:RWO"
+  }
+}
+{
+  "@id": "madsrdf:City",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Geographic"
+  ],
+  "@documentation": {
+    "@label": "City Type"
+  }
+}
+{
+  "@id": "madsrdf:CitySection",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Geographic"
+  ],
+  "@documentation": {
+    "@label": "City Section Type"
+  }
+}
+{
+  "@id": "madsrdf:ComplexSubject",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:ComplexType"
+  ],
+  "@documentation": {
+    "@label": "Complex Subject Type"
+  }
+}
+{
+  "@id": "madsrdf:ComplexType",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:MADSType"
+  ],
+  "@documentation": {
+    "@label": "Complex Type",
+    "@properties": {
+      "madsrdf:componentList": {
+        "@comment": "madsrdf:componentList\n      organizes the madsrdf:SimpleType resources whose labels are represented in the label of the\n      associated madsrdf:ComplexType resource.",
+        "@label": "Component List"
+      }
+    }
+  },
+  "madsrdf:componentList": {
+    "@type": "List",
+    "@class": "rdf:PlainLiteral"
+  }
+}
+{
+  "@id": "madsrdf:ConferenceName",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Name"
+  ],
+  "@documentation": {
+    "@label": "Conference Name Type"
+  }
+}
+{
+  "@id": "madsrdf:Continent",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Geographic"
+  ],
+  "@documentation": {
+    "@label": "Continent Type"
+  }
+}
+{
+  "@id": "madsrdf:CorporateName",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Name"
+  ],
+  "@documentation": {
+    "@label": "Corporate Name Type",
+    "@properties": {
+      "madsrdf:hasCorporateParentAuthority": {
+        "@comment": "Establishes a relationship\n      between a CorporateName Authority and one of the same that is more broadly\n      defined.",
+        "@label": "Has Parent\n      Organization"
+      },
+      "madsrdf:hasCorporateSubsidiaryAuthority": {
+        "@comment": "Establishes a relationship\n      between a CorporateName Authority and one of the same that is more narrowly\n      defined.",
+        "@label": "Is Parent Organization\n      Of"
+      }
+    }
+  },
+  "madsrdf:hasCorporateParentAuthority": {
+    "@type": "Set",
+    "@class": "madsrdf:CorporateName"
+  },
+  "madsrdf:hasCorporateSubsidiaryAuthority": {
+    "@type": "Set",
+    "@class": "madsrdf:CorporateName"
+  }
+}
+{
+  "@id": "madsrdf:Country",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Geographic"
+  ],
+  "@documentation": {
+    "@label": "Country Type"
+  }
+}
+{
+  "@id": "madsrdf:County",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Geographic"
+  ],
+  "@documentation": {
+    "@label": "County Type"
+  }
+}
+{
+  "@id": "madsrdf:DateNameElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:NameElement"
+  ],
+  "@documentation": {
+    "@label": "Date Name\n      Element"
+  }
+}
+{
+  "@id": "madsrdf:DeprecatedAuthority",
+  "@type": "Class",
+  "@inherits": [
+    "owl:Thing",
+    "tdb:AuthorityOrDeprecatedAuthorityOrVariant",
+    "tdb:AuthorityOrDeprecatedAuthority",
+    "tdb:AuthorityOrDeprecatedAuthority"
+  ],
+  "@documentation": {
+    "@label": "Deprecated\n      Authority"
+  }
+}
+{
+  "@id": "madsrdf:Element",
+  "@type": "Class",
+  "@documentation": {
+    "@label": "Element",
+    "@properties": {
+      "madsrdf:elementValue": {
+        "@label": "Element Value"
+      }
+    }
+  },
+  "madsrdf:elementValue": {
+    "@type": "Set",
+    "@class": "xsd:string"
+  }
+}
+{
+  "@id": "madsrdf:ExtraterrestrialArea",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Geographic"
+  ],
+  "@documentation": {
+    "@label": "Extraterrestrial Area Type"
+  }
+}
+{
+  "@id": "madsrdf:FamilyName",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Name"
+  ],
+  "@documentation": {
+    "@label": "Family Name Type"
+  }
+}
+{
+  "@id": "madsrdf:FamilyNameElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:NameElement"
+  ],
+  "@documentation": {
+    "@label": "Family Name\n      Element"
+  }
+}
+{
+  "@id": "madsrdf:FullNameElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:NameElement"
+  ],
+  "@documentation": {
+    "@label": "Fullname Element"
+  }
+}
+{
+  "@id": "madsrdf:GenreForm",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:SimpleType"
+  ],
+  "@documentation": {
+    "@label": "Genre/Form Type"
+  }
+}
+{
+  "@id": "madsrdf:GenreFormElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Element"
+  ],
+  "@documentation": {
+    "@label": "Genre/Form Element"
+  }
+}
+{
+  "@id": "madsrdf:Geographic",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:SimpleType"
+  ],
+  "@documentation": {
+    "@label": "Geographic Authority"
+  }
+}
+{
+  "@id": "madsrdf:GeographicElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Element"
+  ],
+  "@documentation": {
+    "@label": "Geographic Element"
+  }
+}
+{
+  "@id": "madsrdf:GivenNameElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:NameElement"
+  ],
+  "@documentation": {
+    "@label": "Given Name\n      Element"
+  }
+}
+{
+  "@id": "madsrdf:HierarchicalGeographic",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:ComplexType"
+  ],
+  "@documentation": {
+    "@label": "Hierarchical Geographic Type"
+  }
+}
+{
+  "@id": "madsrdf:Identifier",
+  "@type": "Class",
+  "@documentation": {
+    "@label": "Other Identifier",
+    "@properties": {
+      "madsrdf:idValue": {
+        "@comment": "The value of the identifier\n      conforming to the Identifier Scheme syntax.",
+        "@label": "Identifier Value"
+      }
+    }
+  },
+  "madsrdf:idValue": {
+    "@type": "Set",
+    "@class": "xsd:string"
+  }
+}
+{
+  "@id": "madsrdf:Island",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Geographic"
+  ],
+  "@documentation": {
+    "@label": "Island Type"
+  }
+}
+{
+  "@id": "madsrdf:Language",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:SimpleType"
+  ],
+  "@documentation": {
+    "@label": "Language Type"
+  }
+}
+{
+  "@id": "madsrdf:LanguageElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Element"
+  ],
+  "@documentation": {
+    "@label": "Language Element"
+  }
+}
+{
+  "@id": "madsrdf:MADSCollection",
+  "@type": "Class",
+  "@inherits": [
+    "skos:Collection",
+    "tdb:AuthorityOrMADSCollection",
+    "tdb:AuthorityOrMADSCollection",
+    "tdb:AuthorityOrMADSCollection",
+    "tdb:AuthorityOrMADSCollection",
+    "tdb:AuthorityOrMADSCollection"
+  ],
+  "@documentation": {
+    "@label": "MADS Collection",
+    "@properties": {
+      "madsrdf:hasMADSCollectionMember": {
+        "@comment": "Associates an Authority or other Collection with a\n      madsrdf:MADSCollection.",
+        "@label": "Has MADSCollection Member"
+      }
+    }
+  },
+  "madsrdf:hasMADSCollectionMember": {
+    "@type": "Set",
+    "@class": "tdb:AuthorityOrMADSCollection"
+  }
+}
+{
+  "@id": "madsrdf:MADSScheme",
+  "@type": "Class",
+  "@inherits": [
+    "skos:ConceptScheme"
+  ],
+  "@documentation": {
+    "@label": "MADS Scheme",
+    "@properties": {
+      "madsrdf:hasMADSSchemeMember": {
+        "@comment": "Associates an Authority or Collection with a\n      madsrdf:MADSScheme.",
+        "@label": "Has MADS Scheme\n      Member"
+      },
+      "madsrdf:hasTopMemberOfMADSScheme": {
+        "@comment": "Identifies an Authority\n      that is at the top of the hierarchy of authorities within the MADS Scheme.",
+        "@label": "Has Top Member of MADS\n      Scheme"
+      }
+    }
+  },
+  "madsrdf:hasMADSSchemeMember": {
+    "@type": "Set",
+    "@class": "tdb:AuthorityOrMADSCollection"
+  },
+  "madsrdf:hasTopMemberOfMADSScheme": {
+    "@type": "Set",
+    "@class": "madsrdf:Authority"
+  }
+}
+{
+  "@id": "madsrdf:MADSType",
+  "@type": "Class",
+  "@documentation": {
+    "@label": "MADS Type"
+  }
+}
+{
+  "@id": "madsrdf:MainTitleElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:TitleElement"
+  ],
+  "@documentation": {
+    "@label": "Main Title\n      Element"
+  }
+}
+{
+  "@id": "madsrdf:Name",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:SimpleType"
+  ],
+  "@documentation": {
+    "@label": "Name Type"
+  }
+}
+{
+  "@id": "madsrdf:NameElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Element"
+  ],
+  "@documentation": {
+    "@label": "Name Element"
+  }
+}
+{
+  "@id": "madsrdf:NameTitle",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:ComplexType"
+  ],
+  "@documentation": {
+    "@label": "Name/Title Type"
+  }
+}
+{
+  "@id": "madsrdf:NonSortElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:TitleElement"
+  ],
+  "@documentation": {
+    "@label": "Non-sort Element"
+  }
+}
+{
+  "@id": "madsrdf:Occupation",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:SimpleType"
+  ],
+  "@documentation": {
+    "@label": "Occupation Type"
+  }
+}
+{
+  "@id": "madsrdf:PartNameElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:TitleElement"
+  ],
+  "@documentation": {
+    "@label": "Part Name\n      Element"
+  }
+}
+{
+  "@id": "madsrdf:PartNumberElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:TitleElement"
+  ],
+  "@documentation": {
+    "@label": "Part Number\n      Element"
+  }
+}
+{
+  "@id": "madsrdf:PersonalName",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Name"
+  ],
+  "@documentation": {
+    "@label": "Personal Name Type"
+  }
+}
+{
+  "@id": "madsrdf:Province",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Geographic"
+  ],
+  "@documentation": {
+    "@label": "Province Type"
+  }
+}
+{
+  "@id": "madsrdf:RWO",
+  "@type": "Class",
+  "@inherits": [
+    "owl:Thing"
+  ],
+  "@documentation": {
+    "@label": "Real World\n      Object",
+    "@properties": {
+      "madsrdf:associatedLanguage": {
+        "@comment": "Language that a person,\n      organization, or family uses for publication, communication, etc., or in which a work is\n      expressed. ",
+        "@label": "Associated\n      Language"
+      },
+      "madsrdf:associatedLocale": {
+        "@comment": "A town, city, province,\n      state, and/or country associated with persons, corporate bodies, families, works, and\n      expressions.",
+        "@label": "Associated Locale"
+      },
+      "madsrdf:birthPlace": {
+        "@comment": "The town, city, province,\n      state, and/or country in which a person was born.",
+        "@label": "Place of Birth"
+      },
+      "madsrdf:deathPlace": {
+        "@comment": "The town, city, province,\n      state, and/or country in which a person died.",
+        "@label": "Place of Death"
+      },
+      "madsrdf:fieldOfActivity": {
+        "@comment": "The field of activity\n      associated with an individual.",
+        "@label": "Field of\n      Activity"
+      },
+      "madsrdf:hasAffiliation": {
+        "@comment": "Property to associate an\n      individual, such as a foaf:Agent, to a group or organization with which an individual is or\n      has been affiliated.",
+        "@label": "Has Affiliation"
+      },
+      "madsrdf:isIdentifiedByAuthority": {
+        "@comment": "Associates a Real World\n      Object with its Authority description.",
+        "@label": "Is Identified By\n      Authority"
+      },
+      "madsrdf:occupation": {
+        "@comment": "A profession or occupation\n      in which the person works or has worked.",
+        "@label": "Occupation"
+      },
+      "madsrdf:activityEndDate": {
+        "@comment": "Latest date in a period of activity.\n    ",
+        "@label": "Activity End"
+      },
+      "madsrdf:activityStartDate": {
+        "@comment": "Earliest date in a period of activity.\n    ",
+        "@label": "Activity Start"
+      },
+      "madsrdf:birthDate": {
+        "@comment": "The year a person was born.\n      Date of birth may also include the month and day of the person’s birth. (RDA\n      9.3.2.1)",
+        "@label": "Birth Date"
+      },
+      "madsrdf:deathDate": {
+        "@comment": "The year a person died.\n      Date of death may also include the month and day of the person’s death. (RDA\n      9.3.3.1)",
+        "@label": "Death Date"
+      },
+      "madsrdf:entityDescriptor": {
+        "@comment": "Any attribute that serves\n      to characterize a person, family or corporate body or that may be needed for differentiation\n      from other persons. families or corporate bodies and for which separate content designation is\n      not already defined.Or ",
+        "@label": "Entity\n      Descriptor"
+      },
+      "madsrdf:establishDate": {
+        "@comment": "The year a corporate body was established. Date of establishment may also include the month and day of the corporate body’s establishment.\n    ",
+        "@label": "Established"
+      },
+      "madsrdf:honoraryTitle": {
+        "@comment": "Designation indicative of\n      royalty, nobility, or ecclesiastical rank or office, or a term of address for a person of\n      religious vocation.",
+        "@label": "Honorary Title"
+      },
+      "madsrdf:prominentFamilyMember": {
+        "@comment": "A well-known individual who\n      is a member of the family.",
+        "@label": "Prominent Family\n      Member"
+      },
+      "madsrdf:terminateDate": {
+        "@comment": "The year a corporate body was terminated. Date of termination may also include the month and day of the corporate body’s termination. \n    ",
+        "@label": "Terminated"
+      }
+    }
+  },
+  "madsrdf:associatedLanguage": {
+    "@type": "Set",
+    "@class": "madsrdf:Language"
+  },
+  "madsrdf:associatedLocale": {
+    "@type": "Set",
+    "@class": "madsrdf:Geographic"
+  },
+  "madsrdf:birthPlace": {
+    "@type": "Set",
+    "@class": "madsrdf:Geographic"
+  },
+  "madsrdf:deathPlace": {
+    "@type": "Set",
+    "@class": "madsrdf:Geographic"
+  },
+  "madsrdf:fieldOfActivity": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "madsrdf:hasAffiliation": {
+    "@type": "Set",
+    "@class": "madsrdf:Affiliation"
+  },
+  "madsrdf:isIdentifiedByAuthority": {
+    "@type": "Set",
+    "@class": "madsrdf:Authority"
+  },
+  "madsrdf:occupation": {
+    "@type": "Set",
+    "@class": "madsrdf:Occupation"
+  },
+  "madsrdf:activityEndDate": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:activityStartDate": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:birthDate": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:deathDate": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:entityDescriptor": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:establishDate": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:honoraryTitle": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:prominentFamilyMember": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:terminateDate": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  }
+}
+{
+  "@id": "madsrdf:Region",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Geographic"
+  ],
+  "@documentation": {
+    "@label": "Region Type"
+  }
+}
+{
+  "@id": "madsrdf:SimpleType",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:MADSType"
+  ],
+  "@documentation": {
+    "@label": "Simple Type"
+  }
+}
+{
+  "@id": "madsrdf:Source",
+  "@type": "Class",
+  "@documentation": {
+    "@label": "Source",
+    "@properties": {
+      "madsrdf:citationStatus": {
+        "@comment": "Should use a standard term - such as 'found' or 'not found' - to\n      indicate whether the cited resource yielded information about the resource related to the\n      madsrdf:Source.",
+        "@label": "Citation Status"
+      }
+    }
+  },
+  "madsrdf:citationStatus": {
+    "@type": "Set",
+    "@class": "xsd:string"
+  }
+}
+{
+  "@id": "madsrdf:State",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Geographic"
+  ],
+  "@documentation": {
+    "@label": "State Type"
+  }
+}
+{
+  "@id": "madsrdf:SubTitleElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:TitleElement"
+  ],
+  "@documentation": {
+    "@label": "Subtitle Element"
+  }
+}
+{
+  "@id": "madsrdf:Temporal",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:SimpleType"
+  ],
+  "@documentation": {
+    "@label": "Temporal Type"
+  }
+}
+{
+  "@id": "madsrdf:TemporalElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Element"
+  ],
+  "@documentation": {
+    "@label": "Temporal Element"
+  }
+}
+{
+  "@id": "madsrdf:TermsOfAddressNameElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:NameElement"
+  ],
+  "@documentation": {
+    "@label": "Terms of Address\n      Element"
+  }
+}
+{
+  "@id": "madsrdf:Territory",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Geographic"
+  ],
+  "@documentation": {
+    "@label": "Territory Type"
+  }
+}
+{
+  "@id": "madsrdf:Title",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:SimpleType"
+  ],
+  "@documentation": {
+    "@label": "Title Type"
+  }
+}
+{
+  "@id": "madsrdf:TitleElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Element"
+  ],
+  "@documentation": {
+    "@label": "Title Element"
+  }
+}
+{
+  "@id": "madsrdf:Topic",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:SimpleType"
+  ],
+  "@documentation": {
+    "@label": "Topic Type"
+  }
+}
+{
+  "@id": "madsrdf:TopicElement",
+  "@type": "Class",
+  "@inherits": [
+    "madsrdf:Element"
+  ],
+  "@documentation": {
+    "@label": "Topic Element"
+  }
+}
+{
+  "@id": "madsrdf:Variant",
+  "@type": "Class",
+  "@inherits": [
+    "owl:Thing",
+    "<http://www.w3.org/2008/05/skos-xl#Label>",
+    "tdb:AuthorityOrDeprecatedAuthorityOrVariant"
+  ],
+  "@documentation": {
+    "@label": "Variant",
+    "@properties": {
+      "madsrdf:hiddenLabel": {
+        "@comment": "A label entered for\n      discovery purposes but not shown.",
+        "@label": "Hidden Label"
+      },
+      "madsrdf:variantLabel": {
+        "@comment": "The lexical, variant form\n      of an authoritative label.",
+        "@label": "Variant Label"
+      }
+    }
+  },
+  "madsrdf:hiddenLabel": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:variantLabel": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  }
+}
+{
+  "@id": "_:n2d218851208543298b1f078176672ee6b6",
+  "@type": "Class",
+  "@documentation": {}
+}
+{
+  "@id": "_:n2d218851208543298b1f078176672ee6b10",
+  "@type": "Class",
+  "@documentation": {
+    "@properties": {
+      "madsrdf:code": {
+        "@comment": "A code is a string of\n      characters associated with a the authoritative or deprecated label. It may record an\n      historical notation once used to uniquely identify a concept.",
+        "@label": "Code"
+      }
+    }
+  },
+  "madsrdf:code": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
+  }
+}
+{
+  "@id": "_:n2d218851208543298b1f078176672ee6b13",
+  "@type": "Class",
+  "@documentation": {}
+}
+{
+  "@id": "_:n2d218851208543298b1f078176672ee6b16",
+  "@type": "Class",
+  "@documentation": {}
+}
+{
+  "@id": "_:n2d218851208543298b1f078176672ee6b19",
+  "@type": "Class",
+  "@documentation": {}
+}
+{
+  "@id": "_:n2d218851208543298b1f078176672ee6b22",
+  "@type": "Class",
+  "@documentation": {}
+}
+{
+  "@id": "_:n2d218851208543298b1f078176672ee6b25",
+  "@type": "Class",
+  "@documentation": {}
+}
+{
+  "@id": "_:n2d218851208543298b1f078176672ee6b28",
+  "@type": "Class",
+  "@documentation": {}
+}
+{
+  "@id": "_:n2d218851208543298b1f078176672ee6b31",
+  "@type": "Class",
+  "@documentation": {}
+}
+{
+  "@id": "_:n2d218851208543298b1f078176672ee6b34",
+  "@type": "Class",
+  "@documentation": {}
+}
+{
+  "@id": "_:n2d218851208543298b1f078176672ee6b37",
+  "@type": "Class",
+  "@documentation": {}
 }
 {
   "@id": "bf:AbbreviatedTitle",
@@ -665,6 +1734,14 @@
         "@comment": "Indication of the program or process used to generate the description by application of a particular transformation.",
         "@label": "Description generation"
       },
+      "bflc:encodingLevel": {
+        "@comment": "Designation of the fullness of the bibliographic description.",
+        "@label": "Encoding level"
+      },
+      "bflc:metadataLicensor": {
+        "@comment": "Organization that licenses the intellectual property rights to the data contained in the description.",
+        "@label": "Metadata licensor"
+      },
       "bf:changeDate": {
         "@comment": "Date or date and time on which the metadata was modified.",
         "@label": "Description change date"
@@ -680,6 +1757,18 @@
       "bf:generationDate": {
         "@comment": "Date of conversion of the metadata from another format.",
         "@label": "Date generated"
+      },
+      "bflc:catalogerId": {
+        "@comment": "ID of the cataloger who created or edited the description.",
+        "@label": "Cataloger ID"
+      },
+      "bflc:procInfo": {
+        "@comment": "System-supplied processing information for the BIBFRAME description (e.g. \"ibc update\").",
+        "@label": "Processing Info"
+      },
+      "bflc:profile": {
+        "@comment": "Name of the BIBFRAME editor profile used to create or edit the description.",
+        "@label": "LC Editor profile"
       }
     }
   },
@@ -707,6 +1796,14 @@
     "@type": "Set",
     "@class": "bf:GenerationProcess"
   },
+  "bflc:encodingLevel": {
+    "@type": "Set",
+    "@class": "bflc:EncodingLevel"
+  },
+  "bflc:metadataLicensor": {
+    "@type": "Set",
+    "@class": "bflc:MetadataLicensor"
+  },
   "bf:changeDate": {
     "@type": "Set",
     "@class": "rdfs:Literal"
@@ -720,6 +1817,18 @@
     "@class": "xsd:anyURI"
   },
   "bf:generationDate": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bflc:catalogerId": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bflc:procInfo": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bflc:profile": {
     "@type": "Set",
     "@class": "rdfs:Literal"
   }
@@ -3279,6 +4388,10 @@
   "@type": "Class",
   "@documentation": {
     "@properties": {
+      "bf:absorbedBy": {
+        "@comment": "Resource that incorporates another resource.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Absorbed by"
+      },
       "bf:acquisitionSource": {
         "@comment": "Information about an organization, person, etc., from which a resource may be obtained.\nUsed with Work or Instance",
         "@label": "Source of acquisition"
@@ -3306,6 +4419,14 @@
       "bf:contentAccessibility": {
         "@comment": "Information that assists those with a sensory impairment for greater understanding of content, e.g., captions.\nUsed with Work or Instance",
         "@label": "Content accessibility information"
+      },
+      "bf:continuedBy": {
+        "@comment": "Resource whose content continues an earlier resource under a new title.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Continued by"
+      },
+      "bf:continuedInPartBy": {
+        "@comment": "Resource part of whose content separated from an earlier resource to form a new resource.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Continued in part by"
       },
       "bf:copyrightRegistration": {
         "@comment": "Copyright and Legal Deposit registration information\nUsed with Work or Instance",
@@ -3359,6 +4480,10 @@
         "@comment": "Categorization reflecting the general type of intermediation device required to view, play, run, etc., the content of a resource.\nUsed with Work or Instance",
         "@label": "Media type"
       },
+      "bf:mergedToForm": {
+        "@comment": "One of two or more resources that come together to form a new resource.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Merged to form"
+      },
       "bf:musicFormat": {
         "@comment": "Layout for content of a resource that is presented in the form of musical notation, such as full score, condensed score, vocal score, etc.\nUsed with Work or Instance",
         "@label": "Format of notated music"
@@ -3366,6 +4491,14 @@
       "bf:notation": {
         "@comment": "Alphabet, script, or symbol system used to convey the content of the resource, including specialized scripts, typefaces, tactile notation, movement notation, and musical notation.\nUsed with Work or Instance",
         "@label": "Notation system"
+      },
+      "bf:originalVersionOf": {
+        "@comment": "Original version of a resource.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Original version of"
+      },
+      "bf:replacedBy": {
+        "@comment": "Later resource used in place of an earlier resource, usually because the later resource contains updated or new information.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Succeeded by"
       },
       "bf:review": {
         "@comment": "Review of a resource.\nUsed with Work or Instance",
@@ -3378,6 +4511,10 @@
       "bf:soundContent": {
         "@comment": "Indication of whether the production of sound is an integral part of the resource.\nUsed with Work or Instance",
         "@label": "Sound content"
+      },
+      "bf:splitInto": {
+        "@comment": "One of two or more resources resulting from the division of an earlier resource into separate resources.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Split into"
       },
       "bf:subseriesOf": {
         "@comment": "Series resource of which the described resource is a part.\nExpected value Work or Instance\nUsed with Work or Instance",
@@ -3402,6 +4539,10 @@
       "bf:tableOfContents": {
         "@comment": "Table of contents of the described resource.\nUsed with Work or Instance",
         "@label": "Table of contents content"
+      },
+      "bf:translation": {
+        "@comment": "Resource that translates the text of the source entity into a language different from that of the original.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Translation as"
       },
       "bf:acquisitionTerms": {
         "@comment": "Conditions under which the publisher, distributor, etc., will normally supply a resource, e.g., price of a resource.\nUsed with Work or Instance",
@@ -3444,6 +4585,10 @@
   "@inherits": [
     "bf:WorkOrInstanceOrItem"
   ],
+  "bf:absorbedBy": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstance"
+  },
   "bf:acquisitionSource": {
     "@type": "Set",
     "@class": "bf:AcquisitionSource"
@@ -3471,6 +4616,14 @@
   "bf:contentAccessibility": {
     "@type": "Set",
     "@class": "bf:ContentAccessibility"
+  },
+  "bf:continuedBy": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstance"
+  },
+  "bf:continuedInPartBy": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstance"
   },
   "bf:copyrightRegistration": {
     "@type": "Set",
@@ -3524,6 +4677,10 @@
     "@type": "Set",
     "@class": "bf:Media"
   },
+  "bf:mergedToForm": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstance"
+  },
   "bf:musicFormat": {
     "@type": "Set",
     "@class": "bf:MusicFormat"
@@ -3531,6 +4688,14 @@
   "bf:notation": {
     "@type": "Set",
     "@class": "bf:Notation"
+  },
+  "bf:originalVersionOf": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstance"
+  },
+  "bf:replacedBy": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstance"
   },
   "bf:review": {
     "@type": "Set",
@@ -3543,6 +4708,10 @@
   "bf:soundContent": {
     "@type": "Set",
     "@class": "bf:SoundContent"
+  },
+  "bf:splitInto": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstance"
   },
   "bf:subseriesOf": {
     "@type": "Set",
@@ -3567,6 +4736,10 @@
   "bf:tableOfContents": {
     "@type": "Set",
     "@class": "bf:TableOfContents"
+  },
+  "bf:translation": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstance"
   },
   "bf:acquisitionTerms": {
     "@type": "Set",
@@ -3606,7 +4779,7 @@
   }
 }
 {
-  "@id": "_:nb1e109e9c91248b19483997761264bfab3",
+  "@id": "_:n2d218851208543298b1f078176672ee6b42",
   "@type": "Class",
   "@documentation": {}
 }
@@ -3615,29 +4788,121 @@
   "@type": "Class",
   "@documentation": {
     "@properties": {
+      "bf:absorbed": {
+        "@comment": "Resource that has been incorporated into another resource.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Absorption of"
+      },
+      "bf:accompaniedBy": {
+        "@comment": "Resource that accompanies the described resource.\nExpected value Work, Instance or Item\nUsed with Work, Instance or Item",
+        "@label": "Accompanied by"
+      },
+      "bf:accompanies": {
+        "@comment": "Resource that adds to or is issued with the described resource.\nExpected value Work, Instance or Item\nUsed with Work, Instance or Item",
+        "@label": "Accompanies"
+      },
       "bf:classification": {
         "@comment": "Classification number in any scheme.\nUsed with Work, Instance or Item",
         "@label": "Classification"
+      },
+      "bf:continues": {
+        "@comment": "Resource that is continued by the content of a later resource under a new title.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Continuation of"
+      },
+      "bf:continuesInPart": {
+        "@comment": "Resource that split into two or more separate resources with new titles.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Continuation in part of"
       },
       "bf:contribution": {
         "@comment": "Agent and its role in relation to the resource.\nUsed with Work, Instance or Item",
         "@label": "Contributor and role"
       },
+      "bf:derivativeOf": {
+        "@comment": "Source work from which the described resource is derived.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Is derivative of"
+      },
+      "bf:findingAidOf": {
+        "@comment": "Finding aid or similar control materials for archival, visual, and manuscript resources.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Finding aid for"
+      },
       "bf:genreForm": {
         "@comment": "Form category or genre to which a resource belongs\nUsed with Work, Instance or Item",
         "@label": "Genre/form"
+      },
+      "bf:hasEquivalent": {
+        "@comment": "Resource embodies the same content as the described resource.\nExpected value Work, Instance or Item\nUsed with Work, Instance or Item",
+        "@label": "Equivalence"
+      },
+      "bf:hasPart": {
+        "@comment": "Resource that is included either physically or logically in the described resource\nExpected value Work, Instance or Item\nUsed with Work, Instance or Item",
+        "@label": "Has part"
+      },
+      "bf:hasSubseries": {
+        "@comment": "series resource that is part of another series.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Subseries"
+      },
+      "bf:index": {
+        "@comment": "Resource has an accompanying index\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Has index"
+      },
+      "bf:mergerOf": {
+        "@comment": "One of two or more resources which came together to form a new resource.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Merger of"
+      },
+      "bf:originalVersion": {
+        "@comment": "Resource is the original version of which this resource is a reproduction.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Original version"
+      },
+      "bf:otherEdition": {
+        "@comment": "Resource has other available editions, for example simultaneously published language editions or reprints.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Other edition"
+      },
+      "bf:partOf": {
+        "@comment": "Resource in which the described resource is physically or logically contained.\nExpected value Work, Instance or Item\nUsed with Work, Instance or Item",
+        "@label": "Is part of"
+      },
+      "bf:precededBy": {
+        "@comment": "Resource that precedes the resource being described, e.g., is earlier in time or before in narrative.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Preceded by"
+      },
+      "bf:referencedBy": {
+        "@comment": "Resource that references the described resource\nExpected value Work, Instance or Item\nUsed with Work, Instance or Item",
+        "@label": "Referenced by"
+      },
+      "bf:references": {
+        "@comment": "Resource that is referenced by the described resource.\nExpected value Work, Instance or Item\nUsed with Work, Instance or Item",
+        "@label": "References"
       },
       "bf:relatedTo": {
         "@comment": "Any relationship between Work, Instance, and Item resources.",
         "@label": "Related resource"
       },
+      "bf:replacementOf": {
+        "@comment": "Earlier resource whose content has been replaced by a later resource, usually because the later resource contains updated or new information.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Preceded by"
+      },
+      "bf:separatedFrom": {
+        "@comment": "Resource that spun off a part of its content to form a new resource.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Separated from"
+      },
+      "bf:seriesOf": {
+        "@comment": "Resource that is a part of a larger resource.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Series container of"
+      },
       "bf:subject": {
         "@comment": "Subject term(s) describing a resource.\nUsed with Work, Instance or Item",
         "@label": "Subject"
       },
+      "bf:supplement": {
+        "@comment": "Resource that updates or otherwise complements the predominant resource.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Supplement"
+      },
       "bf:title": {
         "@comment": "Name given to a resource.\nUsed with Work, Instance or Item",
         "@label": "Title resource"
+      },
+      "bf:translationOf": {
+        "@comment": "Resource that has been translated, i.e., the text is expressed in a language different from that of the original resource.\nExpected value Work or Instance\nUsed with Work or Instance",
+        "@label": "Translation of"
       },
       "bf:usageAndAccessPolicy": {
         "@comment": "General statement of allowances and restrictions on access to a resource, including retention, reproduction, access, and lending.\nUsed with Work, Instance or Item",
@@ -3649,19 +4914,103 @@
       }
     }
   },
+  "bf:absorbed": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstanceOrItem"
+  },
+  "bf:accompaniedBy": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstanceOrItem"
+  },
+  "bf:accompanies": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstanceOrItem"
+  },
   "bf:classification": {
     "@type": "Set",
     "@class": "bf:Classification"
+  },
+  "bf:continues": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstanceOrItem"
+  },
+  "bf:continuesInPart": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstanceOrItem"
   },
   "bf:contribution": {
     "@type": "Set",
     "@class": "bf:Contribution"
   },
+  "bf:derivativeOf": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstanceOrItem"
+  },
+  "bf:findingAidOf": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstanceOrItem"
+  },
   "bf:genreForm": {
     "@type": "Set",
     "@class": "bf:GenreForm"
   },
+  "bf:hasEquivalent": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstanceOrItem"
+  },
+  "bf:hasPart": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstanceOrItem"
+  },
+  "bf:hasSubseries": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstanceOrItem"
+  },
+  "bf:index": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstanceOrItem"
+  },
+  "bf:mergerOf": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstanceOrItem"
+  },
+  "bf:originalVersion": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstanceOrItem"
+  },
+  "bf:otherEdition": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstanceOrItem"
+  },
+  "bf:partOf": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstanceOrItem"
+  },
+  "bf:precededBy": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstanceOrItem"
+  },
+  "bf:referencedBy": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstanceOrItem"
+  },
+  "bf:references": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstanceOrItem"
+  },
   "bf:relatedTo": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstanceOrItem"
+  },
+  "bf:replacementOf": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstanceOrItem"
+  },
+  "bf:separatedFrom": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstanceOrItem"
+  },
+  "bf:seriesOf": {
     "@type": "Set",
     "@class": "bf:WorkOrInstanceOrItem"
   },
@@ -3669,9 +5018,17 @@
     "@type": "Set",
     "@class": "skos:Concept"
   },
+  "bf:supplement": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstanceOrItem"
+  },
   "bf:title": {
     "@type": "Set",
     "@class": "bf:Title"
+  },
+  "bf:translationOf": {
+    "@type": "Set",
+    "@class": "bf:WorkOrInstanceOrItem"
   },
   "bf:usageAndAccessPolicy": {
     "@type": "Set",
@@ -3683,7 +5040,7 @@
   }
 }
 {
-  "@id": "_:nb1e109e9c91248b19483997761264bfab6",
+  "@id": "_:n2d218851208543298b1f078176672ee6b45",
   "@type": "Class",
   "@documentation": {}
 }
@@ -3703,920 +5060,295 @@
   "@documentation": {}
 }
 {
-  "@id": "madsrdf:Address",
+  "@id": "bflc:AppliesTo",
   "@type": "Class",
   "@documentation": {
-    "@label": "Address",
-    "@properties": {
-      "madsrdf:extendedAddress": {
-        "@comment": "The second address line, if\n      needed.",
-        "@label": "Extended Address"
-      },
-      "madsrdf:postcode": {
-        "@label": "Post Code / Zip\n      Code"
-      },
-      "madsrdf:streetAddress": {
-        "@comment": "First line of address. For\n      second line, use madsrdf:extendedAddress.",
-        "@label": "Street Address"
+    "@description": "The component of a resource to which a characteristic applies.",
+    "@label": "Applies to"
+  }
+}
+{
+  "@id": "bflc:CaptureStorage",
+  "@type": "Class",
+  "@inherits": [
+    "bf:SoundCharacteristic"
+  ],
+  "@documentation": {
+    "@description": "Specifies the sound capture and storage technique used on a sound recording resource.",
+    "@label": "Capture and Storage Technique"
+  }
+}
+{
+  "@id": "bflc:CreatorCharacteristic",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Category to which the creators of the resource belong.",
+    "@label": "Creator characteristic"
+  }
+}
+{
+  "@id": "bflc:DemographicGroup",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Characteristics of a group of agents.",
+    "@label": "Demographic group"
+  }
+}
+{
+  "@id": "bflc:Deprecated",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "The resource has been deprecated",
+    "@label": "Deprecated"
+  }
+}
+{
+  "@id": "bflc:EncodingLevel",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Designation of the fullness of the bibliographic description.",
+    "@label": "Encoding level"
+  }
+}
+{
+  "@id": "bflc:GovernmentPubType",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Information recording that the resource is published or produced by or for an international, national, state, provincial, or local government agency, or by any subdivision of such a body.",
+    "@label": "Government Publication Type"
+  }
+}
+{
+  "@id": "bflc:GrooveCutting",
+  "@type": "Class",
+  "@inherits": [
+    "bf:SoundCharacteristic"
+  ],
+  "@documentation": {
+    "@description": "Kind of cutting of the grooves used on a disc whose sound reproduction process involves a cutting head inscribing a modulated groove into the surface of a rotating cylinder or disc.",
+    "@label": "Groove cutting"
+  }
+}
+{
+  "@id": "bflc:ImageBitDepth",
+  "@type": "Class",
+  "@inherits": [
+    "bf:DigitalCharacteristic"
+  ],
+  "@documentation": {
+    "@description": "The number of bits used to represent each pixel in an image.",
+    "@label": "Image bit depth"
+  }
+}
+{
+  "@id": "bflc:MachineModel",
+  "@type": "Class",
+  "@inherits": [
+    "bf:SystemRequirement"
+  ],
+  "@documentation": {
+    "@description": "Model of the computing device on which the resource operates.",
+    "@label": "Model"
+  }
+}
+{
+  "@id": "bflc:MetadataLicensor",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Agent"
+  ],
+  "@documentation": {
+    "@description": "Organization that licenses the intellectual property rights to the data contained in the description.",
+    "@label": "Metadata licensor"
+  }
+}
+{
+  "@id": "bflc:MovingImageTechnique",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Specifies the technique used in creating motion in motion pictures or videorecordings.",
+    "@label": "Moving Image Technique"
+  }
+}
+{
+  "@id": "bflc:OperatingSystem",
+  "@type": "Class",
+  "@inherits": [
+    "bf:SystemRequirement"
+  ],
+  "@documentation": {
+    "@description": "Software that directly operates a system's hardware and serves as a platform for applications.",
+    "@label": "Operating system"
+  }
+}
+{
+  "@id": "bflc:PrimaryContribution",
+  "@type": "Class",
+  "@inherits": [
+    "bf:Contribution"
+  ],
+  "@documentation": {
+    "@description": "Contribution for which the agent is the name chosen as the name part of the name and title access point.",
+    "@label": "Primary contribution"
+  }
+}
+{
+  "@id": "bflc:ProgrammingLanguage",
+  "@type": "Class",
+  "@inherits": [
+    "bf:SystemRequirement"
+  ],
+  "@documentation": {
+    "@description": "Name of the programming language associated with the data comprising the resource.",
+    "@label": "Programming language"
+  }
+}
+{
+  "@id": "bflc:Relation",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Connection between resources.",
+    "@label": "Relation"
+  }
+}
+{
+  "@id": "bflc:Relationship",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Resource and its connection to another resource.",
+    "@label": "Relationship"
+  }
+}
+{
+  "@id": "bflc:Relief",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Relief term specified on a cartographic resource",
+    "@label": "Relief"
+  }
+}
+{
+  "@id": "bflc:SerialPubType",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Information recording the type of continuing resource.",
+    "@label": "Serial Publication Type"
+  }
+}
+{
+  "@id": "bflc:SeriesAnalysis",
+  "@type": "Class",
+  "@inherits": [
+    "bflc:SeriesTreatment"
+  ],
+  "@documentation": {
+    "@description": "A specific organization's analysis practice for a series named in the bf:title field for a work. May also contain the volumes/dates and/or the institution/copy identification to which the practice applies.",
+    "@label": "Series analysis"
+  }
+}
+{
+  "@id": "bflc:SeriesClassification",
+  "@type": "Class",
+  "@inherits": [
+    "bflc:SeriesTreatment"
+  ],
+  "@documentation": {
+    "@description": "A specific organization's classification practice for a series named in the bf:title field for a work. May also contain the volumes/dates and/or the institution/copy identification to which the practice applies.",
+    "@label": "Series classification"
+  }
+}
+{
+  "@id": "bflc:SeriesNumbering",
+  "@type": "Class",
+  "@inherits": [
+    "bflc:SeriesTreatment"
+  ],
+  "@documentation": {
+    "@description": "Sequential designation or numbering used in the bf:title field for a work.",
+    "@label": "Series numbering"
+  }
+}
+{
+  "@id": "bflc:SeriesNumberingPeculiarities",
+  "@type": "Class",
+  "@inherits": [
+    "bflc:SeriesTreatment"
+  ],
+  "@documentation": {
+    "@description": "Listing of irregularities in the report year coverage and/or numbering used in the bf:title field for a work. May also include a citation for the source of information.",
+    "@label": "Series numbering peculiarities"
+  }
+}
+{
+  "@id": "bflc:SeriesProvider",
+  "@type": "Class",
+  "@inherits": [
+    "bflc:SeriesTreatment"
+  ],
+  "@documentation": {
+    "@description": "Place of publication and the name of the publisher/issuing body used in the bf:title field for a work.",
+    "@label": "Series provider"
+  }
+}
+{
+  "@id": "bflc:SeriesSequentialDesignation",
+  "@type": "Class",
+  "@inherits": [
+    "bflc:SeriesTreatment"
+  ],
+  "@documentation": {
+    "@description": "Beginning/ending date(s) of publication and/or sequential designations used in the bf:title field for a work. May also include a citation for the source of information.",
+    "@label": "Series sequential designation"
+  }
+}
+{
+  "@id": "bflc:SeriesTracing",
+  "@type": "Class",
+  "@inherits": [
+    "bflc:SeriesTreatment"
+  ],
+  "@documentation": {
+    "@description": "A specific organization's tracing practice for a series named in the bf:title field for a work. May also contain the volumes/dates and/or the institution/copy identification to which the practice applies.",
+    "@label": "Series tracing"
+  }
+}
+{
+  "@id": "bflc:SeriesTreatment",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Technical specification relating to the encoding of series data in a resource",
+    "@label": "Series treatment"
+  }
+}
+{
+  "@id": "bflc:TransliteratedTitle",
+  "@type": "Class",
+  "@inherits": [
+    "bf:VariantTitle"
+  ],
+  "@documentation": {
+    "@description": "Title transliterated from one script to another.",
+    "@label": "Transliterated title"
+  }
+}
+{
+  "@id": "bflc:Uncontrolled",
+  "@type": "Class",
+  "@documentation": {
+    "@description": "Component of the resource that is not under authority control",
+    "@label": "Uncontrolled"
+  }
+}
+{
+  "@type": "Class",
+  "@id": "tdb:AuthorityOrDeprecatedAuthorityOrVariant",
+  "@metadata": {
+    "https://terminusdb.com": {
+      "owl2terminus": {
+        "derived_class": true
       }
     }
   },
-  "madsrdf:extendedAddress": {
-    "@type": "Set",
-    "@class": "rdf:PlainLiteral"
-  },
-  "madsrdf:postcode": {
-    "@type": "Set",
-    "@class": "rdf:PlainLiteral"
-  },
-  "madsrdf:streetAddress": {
-    "@type": "Set",
-    "@class": "rdf:PlainLiteral"
-  }
-}
-{
-  "@id": "madsrdf:Affiliation",
-  "@type": "Class",
-  "@documentation": {
-    "@label": "Affiliation",
-    "@properties": {
-      "madsrdf:hasAffiliationAddress": {
-        "@comment": "The address of the group or\n      organization with which an individual is associated.",
-        "@label": "Has Affiliation\n      Address"
-      },
-      "madsrdf:affiliationEnd": {
-        "@comment": "The date an individual\n      ceased to be affiliated with an organization.",
-        "@label": "Affiliation\n      Ended"
-      },
-      "madsrdf:affiliationStart": {
-        "@comment": "The date an individual\n      established an affiliation with an organization.",
-        "@label": "Affiliation\n      Started"
-      },
-      "madsrdf:email": {
-        "@label": "Email"
-      },
-      "madsrdf:fax": {
-        "@comment": "Fax number",
-        "@label": "Fax"
-      },
-      "madsrdf:hours": {
-        "@label": "Hours"
-      },
-      "madsrdf:phone": {
-        "@label": "Phone"
-      }
-    }
-  },
-  "madsrdf:hasAffiliationAddress": {
-    "@type": "Set",
-    "@class": "madsrdf:Address"
-  },
-  "madsrdf:affiliationEnd": {
-    "@type": "Set",
-    "@class": "xsd:date"
-  },
-  "madsrdf:affiliationStart": {
-    "@type": "Set",
-    "@class": "xsd:date"
-  },
-  "madsrdf:email": {
-    "@type": "Set",
-    "@class": "rdf:PlainLiteral"
-  },
-  "madsrdf:fax": {
-    "@type": "Set",
-    "@class": "rdf:PlainLiteral"
-  },
-  "madsrdf:hours": {
-    "@type": "Set",
-    "@class": "rdf:PlainLiteral"
-  },
-  "madsrdf:phone": {
-    "@type": "Set",
-    "@class": "rdf:PlainLiteral"
-  }
-}
-{
-  "@id": "madsrdf:Area",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:Geographic"
-  ],
-  "@documentation": {
-    "@label": "Area Type"
-  }
-}
-{
-  "@id": "madsrdf:Authority",
-  "@type": "Class",
-  "@inherits": [
-    "owl:Thing",
-    "skos:Concept"
-  ],
-  "@documentation": {
-    "@label": "Authority",
-    "@properties": {
-      "madsrdf:hasHiddenVariant": {
-        "@comment": "Use for variants that are searchable, but not necessarily for\n      display.",
-        "@label": "Has Hidden Variant"
-      },
-      "madsrdf:hasRelatedAuthority": {
-        "@comment": "Unless the relationship can be more specifically identified, use\n      'hasRelatedAuthority.'",
-        "@label": "Has Related Authority"
-      },
-      "madsrdf:hasVariant": {
-        "@comment": "Associates a Variant with an Authority or Deprecrated Authority.\n      Unless the variant type can be more specifically identified, use 'hasVariant.'",
-        "@label": "Has Variant"
-      },
-      "madsrdf:identifiesRWO": {
-        "@comment": "Associates a\n      madsrdf:Authority with the Real World Object that is the subject of the authority's\n      label.",
-        "@label": "Identifies RWO"
-      }
-    }
-  },
-  "madsrdf:hasHiddenVariant": {
-    "@type": "Set",
-    "@class": "madsrdf:Variant"
-  },
-  "madsrdf:hasRelatedAuthority": {
-    "@type": "Set",
-    "@class": "madsrdf:Authority"
-  },
-  "madsrdf:hasVariant": {
-    "@type": "Set",
-    "@class": "madsrdf:Variant"
-  },
-  "madsrdf:identifiesRWO": {
-    "@type": "Set",
-    "@class": "madsrdf:RWO"
-  }
-}
-{
-  "@id": "madsrdf:City",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:Geographic"
-  ],
-  "@documentation": {
-    "@label": "City Type"
-  }
-}
-{
-  "@id": "madsrdf:CitySection",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:Geographic"
-  ],
-  "@documentation": {
-    "@label": "City Section Type"
-  }
-}
-{
-  "@id": "madsrdf:ComplexSubject",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:ComplexType"
-  ],
-  "@documentation": {
-    "@label": "Complex Subject Type"
-  }
-}
-{
-  "@id": "madsrdf:ComplexType",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:MADSType"
-  ],
-  "@documentation": {
-    "@label": "Complex Type",
-    "@properties": {
-      "madsrdf:componentList": {
-        "@comment": "madsrdf:componentList\n      organizes the madsrdf:SimpleType resources whose labels are represented in the label of the\n      associated madsrdf:ComplexType resource.",
-        "@label": "Component List"
-      }
-    }
-  },
-  "madsrdf:componentList": {
-    "@type": "Set",
-    "@class": "_:n65b70a7b6c2a4d74bffd73503b6e9772b13"
-  }
-}
-{
-  "@id": "madsrdf:ConferenceName",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:Name"
-  ],
-  "@documentation": {
-    "@label": "Conference Name Type"
-  }
-}
-{
-  "@id": "madsrdf:Continent",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:Geographic"
-  ],
-  "@documentation": {
-    "@label": "Continent Type"
-  }
-}
-{
-  "@id": "madsrdf:CorporateName",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:Name"
-  ],
-  "@documentation": {
-    "@label": "Corporate Name Type",
-    "@properties": {
-      "madsrdf:hasCorporateParentAuthority": {
-        "@comment": "Establishes a relationship\n      between a CorporateName Authority and one of the same that is more broadly\n      defined.",
-        "@label": "Has Parent\n      Organization"
-      },
-      "madsrdf:hasCorporateSubsidiaryAuthority": {
-        "@comment": "Establishes a relationship\n      between a CorporateName Authority and one of the same that is more narrowly\n      defined.",
-        "@label": "Is Parent Organization\n      Of"
-      }
-    }
-  },
-  "madsrdf:hasCorporateParentAuthority": {
-    "@type": "Set",
-    "@class": "madsrdf:CorporateName"
-  },
-  "madsrdf:hasCorporateSubsidiaryAuthority": {
-    "@type": "Set",
-    "@class": "madsrdf:CorporateName"
-  }
-}
-{
-  "@id": "madsrdf:Country",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:Geographic"
-  ],
-  "@documentation": {
-    "@label": "Country Type"
-  }
-}
-{
-  "@id": "madsrdf:County",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:Geographic"
-  ],
-  "@documentation": {
-    "@label": "County Type"
-  }
-}
-{
-  "@id": "madsrdf:DateNameElement",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:NameElement"
-  ],
-  "@documentation": {
-    "@label": "Date Name\n      Element"
-  }
-}
-{
-  "@id": "madsrdf:DeprecatedAuthority",
-  "@type": "Class",
-  "@inherits": [
-    "owl:Thing"
-  ],
-  "@documentation": {
-    "@label": "Deprecated\n      Authority"
-  }
-}
-{
-  "@id": "madsrdf:Element",
-  "@type": "Class",
-  "@documentation": {
-    "@label": "Element",
-    "@properties": {
-      "madsrdf:elementValue": {
-        "@label": "Element Value"
-      }
-    }
-  },
-  "madsrdf:elementValue": {
-    "@type": "Set",
-    "@class": "xsd:string"
-  }
-}
-{
-  "@id": "madsrdf:ExtraterrestrialArea",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:Geographic"
-  ],
-  "@documentation": {
-    "@label": "Extraterrestrial Area Type"
-  }
-}
-{
-  "@id": "madsrdf:FamilyName",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:Name"
-  ],
-  "@documentation": {
-    "@label": "Family Name Type"
-  }
-}
-{
-  "@id": "madsrdf:FamilyNameElement",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:NameElement"
-  ],
-  "@documentation": {
-    "@label": "Family Name\n      Element"
-  }
-}
-{
-  "@id": "madsrdf:FullNameElement",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:NameElement"
-  ],
-  "@documentation": {
-    "@label": "Fullname Element"
-  }
-}
-{
-  "@id": "madsrdf:GenreForm",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:SimpleType"
-  ],
-  "@documentation": {
-    "@label": "Genre/Form Type"
-  }
-}
-{
-  "@id": "madsrdf:GenreFormElement",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:Element"
-  ],
-  "@documentation": {
-    "@label": "Genre/Form Element"
-  }
-}
-{
-  "@id": "madsrdf:Geographic",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:SimpleType"
-  ],
-  "@documentation": {
-    "@label": "Geographic Authority"
-  }
-}
-{
-  "@id": "madsrdf:GeographicElement",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:Element"
-  ],
-  "@documentation": {
-    "@label": "Geographic Element"
-  }
-}
-{
-  "@id": "madsrdf:GivenNameElement",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:NameElement"
-  ],
-  "@documentation": {
-    "@label": "Given Name\n      Element"
-  }
-}
-{
-  "@id": "madsrdf:HierarchicalGeographic",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:ComplexType"
-  ],
-  "@documentation": {
-    "@label": "Hierarchical Geographic Type"
-  }
-}
-{
-  "@id": "madsrdf:Identifier",
-  "@type": "Class",
-  "@documentation": {
-    "@label": "Other Identifier",
-    "@properties": {
-      "madsrdf:idValue": {
-        "@comment": "The value of the identifier\n      conforming to the Identifier Scheme syntax.",
-        "@label": "Identifier Value"
-      }
-    }
-  },
-  "madsrdf:idValue": {
-    "@type": "Set",
-    "@class": "xsd:string"
-  }
-}
-{
-  "@id": "madsrdf:Island",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:Geographic"
-  ],
-  "@documentation": {
-    "@label": "Island Type"
-  }
-}
-{
-  "@id": "madsrdf:Language",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:SimpleType"
-  ],
-  "@documentation": {
-    "@label": "Language Type"
-  }
-}
-{
-  "@id": "madsrdf:LanguageElement",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:Element"
-  ],
-  "@documentation": {
-    "@label": "Language Element"
-  }
-}
-{
-  "@id": "madsrdf:MADSCollection",
-  "@type": "Class",
-  "@documentation": {
-    "@label": "MADS Collection",
-    "@properties": {
-      "madsrdf:hasMADSCollectionMember": {
-        "@comment": "Associates an Authority or other Collection with a\n      madsrdf:MADSCollection.",
-        "@label": "Has MADSCollection Member"
-      }
-    }
-  },
-  "madsrdf:hasMADSCollectionMember": {
-    "@type": "Set",
-    "@class": "_:n65b70a7b6c2a4d74bffd73503b6e9772b19"
-  }
-}
-{
-  "@id": "madsrdf:MADSScheme",
-  "@type": "Class",
-  "@documentation": {
-    "@label": "MADS Scheme",
-    "@properties": {
-      "madsrdf:hasMADSSchemeMember": {
-        "@comment": "Associates an Authority or Collection with a\n      madsrdf:MADSScheme.",
-        "@label": "Has MADS Scheme\n      Member"
-      },
-      "madsrdf:hasTopMemberOfMADSScheme": {
-        "@comment": "Identifies an Authority\n      that is at the top of the hierarchy of authorities within the MADS Scheme.",
-        "@label": "Has Top Member of MADS\n      Scheme"
-      }
-    }
-  },
-  "madsrdf:hasMADSSchemeMember": {
-    "@type": "Set",
-    "@class": "_:n65b70a7b6c2a4d74bffd73503b6e9772b22"
-  },
-  "madsrdf:hasTopMemberOfMADSScheme": {
-    "@type": "Set",
-    "@class": "madsrdf:Authority"
-  }
-}
-{
-  "@id": "madsrdf:MADSType",
-  "@type": "Class",
-  "@documentation": {
-    "@label": "MADS Type"
-  }
-}
-{
-  "@id": "madsrdf:MainTitleElement",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:TitleElement"
-  ],
-  "@documentation": {
-    "@label": "Main Title\n      Element"
-  }
-}
-{
-  "@id": "madsrdf:Name",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:SimpleType"
-  ],
-  "@documentation": {
-    "@label": "Name Type"
-  }
-}
-{
-  "@id": "madsrdf:NameElement",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:Element"
-  ],
-  "@documentation": {
-    "@label": "Name Element"
-  }
-}
-{
-  "@id": "madsrdf:NameTitle",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:ComplexType"
-  ],
-  "@documentation": {
-    "@label": "Name/Title Type"
-  }
-}
-{
-  "@id": "madsrdf:NonSortElement",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:TitleElement"
-  ],
-  "@documentation": {
-    "@label": "Non-sort Element"
-  }
-}
-{
-  "@id": "madsrdf:Occupation",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:SimpleType"
-  ],
-  "@documentation": {
-    "@label": "Occupation Type"
-  }
-}
-{
-  "@id": "madsrdf:PartNameElement",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:TitleElement"
-  ],
-  "@documentation": {
-    "@label": "Part Name\n      Element"
-  }
-}
-{
-  "@id": "madsrdf:PartNumberElement",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:TitleElement"
-  ],
-  "@documentation": {
-    "@label": "Part Number\n      Element"
-  }
-}
-{
-  "@id": "madsrdf:PersonalName",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:Name"
-  ],
-  "@documentation": {
-    "@label": "Personal Name Type"
-  }
-}
-{
-  "@id": "madsrdf:Province",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:Geographic"
-  ],
-  "@documentation": {
-    "@label": "Province Type"
-  }
-}
-{
-  "@id": "madsrdf:RWO",
-  "@type": "Class",
-  "@inherits": [
-    "owl:Thing"
-  ],
-  "@documentation": {
-    "@label": "Real World\n      Object",
-    "@properties": {
-      "madsrdf:associatedLanguage": {
-        "@comment": "Language that a person,\n      organization, or family uses for publication, communication, etc., or in which a work is\n      expressed. ",
-        "@label": "Associated\n      Language"
-      },
-      "madsrdf:associatedLocale": {
-        "@comment": "A town, city, province,\n      state, and/or country associated with persons, corporate bodies, families, works, and\n      expressions.",
-        "@label": "Associated Locale"
-      },
-      "madsrdf:birthPlace": {
-        "@comment": "The town, city, province,\n      state, and/or country in which a person was born.",
-        "@label": "Place of Birth"
-      },
-      "madsrdf:deathPlace": {
-        "@comment": "The town, city, province,\n      state, and/or country in which a person died.",
-        "@label": "Place of Death"
-      },
-      "madsrdf:fieldOfActivity": {
-        "@comment": "The field of activity\n      associated with an individual.",
-        "@label": "Field of\n      Activity"
-      },
-      "madsrdf:hasAffiliation": {
-        "@comment": "Property to associate an\n      individual, such as a foaf:Agent, to a group or organization with which an individual is or\n      has been affiliated.",
-        "@label": "Has Affiliation"
-      },
-      "madsrdf:isIdentifiedByAuthority": {
-        "@comment": "Associates a Real World\n      Object with its Authority description.",
-        "@label": "Is Identified By\n      Authority"
-      },
-      "madsrdf:occupation": {
-        "@comment": "A profession or occupation\n      in which the person works or has worked.",
-        "@label": "Occupation"
-      },
-      "madsrdf:activityEndDate": {
-        "@comment": "Latest date in a period of activity.\n    ",
-        "@label": "Activity End"
-      },
-      "madsrdf:activityStartDate": {
-        "@comment": "Earliest date in a period of activity.\n    ",
-        "@label": "Activity Start"
-      },
-      "madsrdf:birthDate": {
-        "@comment": "The year a person was born.\n      Date of birth may also include the month and day of the person’s birth. (RDA\n      9.3.2.1)",
-        "@label": "Birth Date"
-      },
-      "madsrdf:deathDate": {
-        "@comment": "The year a person died.\n      Date of death may also include the month and day of the person’s death. (RDA\n      9.3.3.1)",
-        "@label": "Death Date"
-      },
-      "madsrdf:entityDescriptor": {
-        "@comment": "Any attribute that serves\n      to characterize a person, family or corporate body or that may be needed for differentiation\n      from other persons. families or corporate bodies and for which separate content designation is\n      not already defined.Or ",
-        "@label": "Entity\n      Descriptor"
-      },
-      "madsrdf:establishDate": {
-        "@comment": "The year a corporate body was established. Date of establishment may also include the month and day of the corporate body’s establishment.\n    ",
-        "@label": "Established"
-      },
-      "madsrdf:honoraryTitle": {
-        "@comment": "Designation indicative of\n      royalty, nobility, or ecclesiastical rank or office, or a term of address for a person of\n      religious vocation.",
-        "@label": "Honorary Title"
-      },
-      "madsrdf:prominentFamilyMember": {
-        "@comment": "A well-known individual who\n      is a member of the family.",
-        "@label": "Prominent Family\n      Member"
-      },
-      "madsrdf:terminateDate": {
-        "@comment": "The year a corporate body was terminated. Date of termination may also include the month and day of the corporate body’s termination. \n    ",
-        "@label": "Terminated"
-      }
-    }
-  },
-  "madsrdf:associatedLanguage": {
-    "@type": "Set",
-    "@class": "madsrdf:Language"
-  },
-  "madsrdf:associatedLocale": {
-    "@type": "Set",
-    "@class": "madsrdf:Geographic"
-  },
-  "madsrdf:birthPlace": {
-    "@type": "Set",
-    "@class": "madsrdf:Geographic"
-  },
-  "madsrdf:deathPlace": {
-    "@type": "Set",
-    "@class": "madsrdf:Geographic"
-  },
-  "madsrdf:fieldOfActivity": {
-    "@type": "Set",
-    "@class": "owl:Thing"
-  },
-  "madsrdf:hasAffiliation": {
-    "@type": "Set",
-    "@class": "madsrdf:Affiliation"
-  },
-  "madsrdf:isIdentifiedByAuthority": {
-    "@type": "Set",
-    "@class": "madsrdf:Authority"
-  },
-  "madsrdf:occupation": {
-    "@type": "Set",
-    "@class": "madsrdf:Occupation"
-  },
-  "madsrdf:activityEndDate": {
-    "@type": "Set",
-    "@class": "rdf:PlainLiteral"
-  },
-  "madsrdf:activityStartDate": {
-    "@type": "Set",
-    "@class": "rdf:PlainLiteral"
-  },
-  "madsrdf:birthDate": {
-    "@type": "Set",
-    "@class": "rdf:PlainLiteral"
-  },
-  "madsrdf:deathDate": {
-    "@type": "Set",
-    "@class": "rdf:PlainLiteral"
-  },
-  "madsrdf:entityDescriptor": {
-    "@type": "Set",
-    "@class": "rdf:PlainLiteral"
-  },
-  "madsrdf:establishDate": {
-    "@type": "Set",
-    "@class": "rdf:PlainLiteral"
-  },
-  "madsrdf:honoraryTitle": {
-    "@type": "Set",
-    "@class": "rdf:PlainLiteral"
-  },
-  "madsrdf:prominentFamilyMember": {
-    "@type": "Set",
-    "@class": "rdf:PlainLiteral"
-  },
-  "madsrdf:terminateDate": {
-    "@type": "Set",
-    "@class": "rdf:PlainLiteral"
-  }
-}
-{
-  "@id": "madsrdf:Region",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:Geographic"
-  ],
-  "@documentation": {
-    "@label": "Region Type"
-  }
-}
-{
-  "@id": "madsrdf:SimpleType",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:MADSType"
-  ],
-  "@documentation": {
-    "@label": "Simple Type"
-  }
-}
-{
-  "@id": "madsrdf:Source",
-  "@type": "Class",
-  "@documentation": {
-    "@label": "Source",
-    "@properties": {
-      "madsrdf:citationStatus": {
-        "@comment": "Should use a standard term - such as 'found' or 'not found' - to\n      indicate whether the cited resource yielded information about the resource related to the\n      madsrdf:Source.",
-        "@label": "Citation Status"
-      }
-    }
-  },
-  "madsrdf:citationStatus": {
-    "@type": "Set",
-    "@class": "xsd:string"
-  }
-}
-{
-  "@id": "madsrdf:State",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:Geographic"
-  ],
-  "@documentation": {
-    "@label": "State Type"
-  }
-}
-{
-  "@id": "madsrdf:SubTitleElement",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:TitleElement"
-  ],
-  "@documentation": {
-    "@label": "Subtitle Element"
-  }
-}
-{
-  "@id": "madsrdf:Temporal",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:SimpleType"
-  ],
-  "@documentation": {
-    "@label": "Temporal Type"
-  }
-}
-{
-  "@id": "madsrdf:TemporalElement",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:Element"
-  ],
-  "@documentation": {
-    "@label": "Temporal Element"
-  }
-}
-{
-  "@id": "madsrdf:TermsOfAddressNameElement",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:NameElement"
-  ],
-  "@documentation": {
-    "@label": "Terms of Address\n      Element"
-  }
-}
-{
-  "@id": "madsrdf:Territory",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:Geographic"
-  ],
-  "@documentation": {
-    "@label": "Territory Type"
-  }
-}
-{
-  "@id": "madsrdf:Title",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:SimpleType"
-  ],
-  "@documentation": {
-    "@label": "Title Type"
-  }
-}
-{
-  "@id": "madsrdf:TitleElement",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:Element"
-  ],
-  "@documentation": {
-    "@label": "Title Element"
-  }
-}
-{
-  "@id": "madsrdf:Topic",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:SimpleType"
-  ],
-  "@documentation": {
-    "@label": "Topic Type"
-  }
-}
-{
-  "@id": "madsrdf:TopicElement",
-  "@type": "Class",
-  "@inherits": [
-    "madsrdf:Element"
-  ],
-  "@documentation": {
-    "@label": "Topic Element"
-  }
-}
-{
-  "@id": "madsrdf:Variant",
-  "@type": "Class",
-  "@inherits": [
-    "owl:Thing"
-  ],
-  "@documentation": {
-    "@label": "Variant",
-    "@properties": {
-      "madsrdf:hiddenLabel": {
-        "@comment": "A label entered for\n      discovery purposes but not shown.",
-        "@label": "Hidden Label"
-      },
-      "madsrdf:variantLabel": {
-        "@comment": "The lexical, variant form\n      of an authoritative label.",
-        "@label": "Variant Label"
-      }
-    }
-  },
-  "madsrdf:hiddenLabel": {
-    "@type": "Set",
-    "@class": "rdf:PlainLiteral"
-  },
-  "madsrdf:variantLabel": {
-    "@type": "Set",
-    "@class": "rdf:PlainLiteral"
-  }
-}
-{
-  "@id": "_:n65b70a7b6c2a4d74bffd73503b6e9772b6",
-  "@type": "Class",
   "@documentation": {
     "@properties": {
       "madsrdf:adminMetadata": {
@@ -4631,82 +5363,37 @@
   }
 }
 {
-  "@id": "_:n65b70a7b6c2a4d74bffd73503b6e9772b10",
   "@type": "Class",
-  "@documentation": {
-    "@properties": {
-      "madsrdf:code": {
-        "@comment": "A code is a string of\n      characters associated with a the authoritative or deprecated label. It may record an\n      historical notation once used to uniquely identify a concept.",
-        "@label": "Code"
+  "@id": "tdb:AuthorityOrMADSCollection",
+  "@metadata": {
+    "https://terminusdb.com": {
+      "owl2terminus": {
+        "derived_class": true
       }
     }
   },
-  "madsrdf:code": {
-    "@type": "Set",
-    "@class": "rdf:PlainLiteral"
-  }
-}
-{
-  "@id": "_:n65b70a7b6c2a4d74bffd73503b6e9772b13",
-  "@type": "Class",
-  "@documentation": {}
-}
-{
-  "@id": "_:n65b70a7b6c2a4d74bffd73503b6e9772b16",
-  "@type": "Class",
-  "@documentation": {}
-}
-{
-  "@id": "_:n65b70a7b6c2a4d74bffd73503b6e9772b19",
-  "@type": "Class",
-  "@documentation": {}
-}
-{
-  "@id": "_:n65b70a7b6c2a4d74bffd73503b6e9772b22",
-  "@type": "Class",
-  "@documentation": {}
-}
-{
-  "@id": "_:n65b70a7b6c2a4d74bffd73503b6e9772b25",
-  "@type": "Class",
   "@documentation": {
     "@properties": {
       "madsrdf:isMemberOfMADSCollection": {
         "@comment": "Associates a Collection with a madsrdf:Authority or another\n      madsrdf:MADSCollection.",
         "@label": "Is Member Of MADSCollection"
+      },
+      "madsrdf:isMemberOfMADSScheme": {
+        "@label": "Is Member of MADS\n      Scheme"
+      },
+      "madsrdf:isTopMemberOfMADSScheme": {
+        "@comment": "Identifies a MADS Scheme in\n      which the Authority is at the top of the hierarchy.",
+        "@label": "Is Top Member of MADS\n      Scheme"
       }
     }
   },
   "madsrdf:isMemberOfMADSCollection": {
     "@type": "Set",
     "@class": "madsrdf:MADSCollection"
-  }
-}
-{
-  "@id": "_:n65b70a7b6c2a4d74bffd73503b6e9772b28",
-  "@type": "Class",
-  "@documentation": {
-    "@properties": {
-      "madsrdf:isMemberOfMADSScheme": {
-        "@label": "Is Member of MADS\n      Scheme"
-      }
-    }
   },
   "madsrdf:isMemberOfMADSScheme": {
     "@type": "Set",
     "@class": "madsrdf:MADSScheme"
-  }
-}
-{
-  "@id": "_:n65b70a7b6c2a4d74bffd73503b6e9772b31",
-  "@type": "Class",
-  "@documentation": {
-    "@properties": {
-      "madsrdf:isTopMemberOfMADSScheme": {
-        "@comment": "Identifies a MADS Scheme in\n      which the Authority is at the top of the hierarchy.",
-        "@label": "Is Top Member of MADS\n      Scheme"
-      }
-    }
   },
   "madsrdf:isTopMemberOfMADSScheme": {
     "@type": "Set",
@@ -4714,23 +5401,57 @@
   }
 }
 {
-  "@id": "_:n65b70a7b6c2a4d74bffd73503b6e9772b34",
   "@type": "Class",
-  "@documentation": {
-    "@properties": {
-      "madsrdf:see": {
-        "@comment": "Denotes a relationship\n      between an Authority and/or DeprecatedAuthority. The relationship may or may or may not be\n      reciprocated and there is no certainty that the related resource will further illuminate the\n      original resource.",
-        "@label": "See Also"
+  "@id": "tdb:AuthorityOrDeprecatedAuthority",
+  "@metadata": {
+    "https://terminusdb.com": {
+      "owl2terminus": {
+        "derived_class": true
       }
     }
   },
+  "@documentation": {
+    "@properties": {
+      "madsrdf:hasEarlierEstablishedForm": {
+        "@comment": "Used to reference a resource that was an earlier form. This is\n      Related type='earlier' in MADS XML.",
+        "@label": "Has Earlier Established\n      Form"
+      },
+      "madsrdf:hasLaterEstablishedForm": {
+        "@comment": "Use to reference the later form of a resource. This is Related\n      type='later' in MADS XML.",
+        "@label": "Has Later Established\n      Form"
+      },
+      "madsrdf:see": {
+        "@comment": "Denotes a relationship\n      between an Authority and/or DeprecatedAuthority. The relationship may or may or may not be\n      reciprocated and there is no certainty that the related resource will further illuminate the\n      original resource.",
+        "@label": "See Also"
+      },
+      "madsrdf:useFor": {
+        "@comment": "\"Use [This Resource] For.\"\n      Traditional \"USE FOR\" reference.",
+        "@label": "Use For"
+      },
+      "madsrdf:useInstead": {
+        "@comment": "\"Use [This Other Resource]\n      Instead.\" Traditional \"USE\" reference.",
+        "@label": "Use Instead"
+      }
+    }
+  },
+  "madsrdf:hasEarlierEstablishedForm": {
+    "@type": "Set",
+    "@class": "tdb:AuthorityOrDeprecatedAuthority"
+  },
+  "madsrdf:hasLaterEstablishedForm": {
+    "@type": "Set",
+    "@class": "tdb:AuthorityOrDeprecatedAuthority"
+  },
   "madsrdf:see": {
     "@type": "Set",
-    "@class": "_:n65b70a7b6c2a4d74bffd73503b6e9772b37"
+    "@class": "tdb:AuthorityOrDeprecatedAuthority"
+  },
+  "madsrdf:useFor": {
+    "@type": "Set",
+    "@class": "tdb:AuthorityOrDeprecatedAuthority"
+  },
+  "madsrdf:useInstead": {
+    "@type": "Set",
+    "@class": "tdb:AuthorityOrDeprecatedAuthority"
   }
-}
-{
-  "@id": "_:n65b70a7b6c2a4d74bffd73503b6e9772b37",
-  "@type": "Class",
-  "@documentation": {}
 }
