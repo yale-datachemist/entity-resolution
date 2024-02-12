@@ -11,7 +11,11 @@ do
     echo "Dumping MARC as xml $f..."
     # take action on each file. $f stores current file name
     SUBSTR=$(echo $f | cut -d"/" -f 6)
-    yaz-marcdump -f MARC-8 -t UTF-8 -i marc -o marcxml $f > /home/DataChemist/data/marcxml/$SUBSTR.xml
+    g="$MARC_XML_DIR/$SUBSTR.xml"
+    if ! [ -f $g ]
+    then
+        yaz-marcdump -f MARC-8 -t UTF-8 -i marc -o marcxml $f > $g
+    fi
 done
 
 for f in $MARC_XML_DIR/*
@@ -19,7 +23,10 @@ do
     echo "Splitting XML file $f..."
     SUBSTR=$(echo $f | cut -d"/" -f 6)
     g="$SPLIT_MARC_XML_DIR/${SUBSTR%.xml}."
-    ~/src/entity-resolution/bin/collection_splitter $f --prefix=$g
+    if ! [ -f $g ]
+    then
+        ~/src/entity-resolution/bin/collection_splitter $f --prefix=$g -n 20000
+    fi
 done
 
 for f in $SPLIT_MARC_XML_DIR/*
@@ -27,7 +34,10 @@ do
     echo "XSLT tranformation of $f..."
     SUBSTR=$(echo $f | cut -d"/" -f 6)
     g="$BIBFRAME_XML_DIR/${SUBSTR%.xml}.xml"
-    xsltproc --stringparam baseuri iri://d/ ~/marc2bibframe2/xsl/marc2bibframe2.xsl $f > $g
+    if ! [ -f $g ]
+    then
+        xsltproc --stringparam baseuri iri://d/ ~/marc2bibframe2/xsl/marc2bibframe2.xsl $f > $g
+    fi
 done
 
 for f in $BIBFRAME_XML_DIR/*
@@ -35,5 +45,8 @@ do
     echo "Transforming bibframe xml to ttl for $f..."
     SUBSTR=$(echo $f | cut -d"/" -f 6)
     g="$BIBFRAME_XML_DIR/${SUBSTR%.xml}.ttl"
-    rapper -i rdfxml -o turtle $f > $g
+    if ! [ -f $g ]
+    then
+        rapper -i rdfxml -o turtle $f > $g
+    fi
 done
