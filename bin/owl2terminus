@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
-from rdflib import RDF, RDFS, SKOS, OWL
+from rdflib import RDF, RDFS, SKOS, OWL, BNode, Graph, term, Namespace
+from rdflib.util import from_n3
 import argparse
 import sys
 import json
+import re
 
 CLASS_REGISTRY = { 'owl:Thing' : { '@type' : 'Class', '@id' : 'owl:Thing' }}
 PROPERTY_HIERARCHY = {}
@@ -89,6 +91,34 @@ def add_inverse_property(inv, prop, g):
     INVERSE_PROPERTIES[inv_name] = prop_name
     INVERSE_PROPERTIES[prop_name] = inv_name
 
+def is_anonymous_class(cls):
+    if isinstance(cls, BNode):
+        return True
+    else:
+        return False
+
+def register_anonymous_class(cls, g):
+    union_of = []
+    for u in g.objects(cls,OWL.unionOf):
+        lst = [x.n3(g.namespace_manager) for x in rdfList2list(u,g)]
+        for sub in lst:
+            union_of.append(sub)
+    union_of.sort()
+    union_name = 'tdb:' + 'Or'.join([re.sub('[^:]*:', "", sub) for sub in union_of])
+
+    for c in union_of + [union_name]:
+        if not c in CLASS_REGISTRY:
+            CLASS_REGISTRY[c] = { '@type' : 'Class', '@id' : c ,
+                                  '@metadata' : { 'https://terminusdb.com':
+                                                  { 'owl2terminus' :
+                                                    { 'derived_class' : True }}}}
+    for sub in union_of:
+        if '@inherits' in CLASS_REGISTRY[sub]:
+            CLASS_REGISTRY[sub]['@inherits'] += [union_name]
+        else:
+            CLASS_REGISTRY[sub]['@inherits'] = [union_name]
+    return from_n3(union_name, nsm=g.namespace_manager)
+
 def register_property_hierarchy(g):
     for prop in g.subjects(RDF.type, OWL.ObjectProperty):
         #eprint(f"property {prop.n3(g.namespace_manager)}")
@@ -139,23 +169,23 @@ def prop_key(p, key, g, original):
 
 def property_domain(p, g):
     result = prop_key(p, 'domain', g, True)
-    if p == 'madsrdf:hasBroaderAuthority':
-        eprint(f"result of property_domain({p}): {result}")
     return result
 
 def property_range(p, g):
     result = prop_key(p, 'range', g, True)
-    if p == 'madsrdf:hasBroaderAuthority':
-        eprint(f"result of property_range({p}): {result}")
     return result
 
 def register_properties(g):
     for prop in g.subjects(RDF.type, OWL.ObjectProperty):
         property_record = {'type' : 'ObjectProperty'}
         for domain in g.objects(prop, RDFS.domain):
-           property_record['domain'] = domain.n3(g.namespace_manager)
+            if is_anonymous_class(domain):
+                domain = register_anonymous_class(domain, g)
+            property_record['domain'] = domain.n3(g.namespace_manager)
         for rng in g.objects(prop, RDFS.range, unique=True):
-           property_record['range'] = rng.n3(g.namespace_manager)
+            if is_anonymous_class(rng):
+                rng = register_anonymous_class(rng, g)
+            property_record['range'] = rng.n3(g.namespace_manager)
 
         comments = []
         for skos_comment in g.objects(prop, SKOS.definition):
@@ -233,13 +263,15 @@ def add_properties_to_classes(g):
         cls[prop] = { '@type' : 'Set', '@class': rng }
 
 if __name__ == '__main__' :
-    from rdflib import Graph
 
     parser = argparse.ArgumentParser()
     parser.add_argument("file", help="input owl file")
     parser.add_argument("-f", "--format", default="turtle", help="input format of OWL file")
     args = parser.parse_args()
+
+    TDB = Namespace("https://terminusdb.com/schema#")
     g = Graph()
+    g.bind("tdb", TDB)
     g.parse(args.file, args.format)
 
     register_classes(g)
