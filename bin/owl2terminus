@@ -33,7 +33,7 @@ def register_subclass(sub, class_name):
     else:
         class_document = { '@type' : 'Class', '@id' : sub }
 
-    if '@inherits' in class_document:
+    if '@inherits' in class_document and class_name not in class_document['@inherits']:
         class_document['@inherits'].append(class_name)
     else:
         class_document['@inherits'] = [class_name]
@@ -55,7 +55,9 @@ def register_classes(g):
             supers.append(sup.n3(g.namespace_manager))
         if supers != []:
             if '@inherits' in class_document:
-                class_document['@inherits'] += supers
+                for sup in supers:
+                    if sup not in class_document['@inherits']:
+                        class_document['@inherits'].append(sup)
             else:
                 class_document['@inherits'] = supers
 
@@ -114,7 +116,8 @@ def register_anonymous_class(cls, g):
                                                     { 'derived_class' : True }}}}
     for sub in union_of:
         if '@inherits' in CLASS_REGISTRY[sub]:
-            CLASS_REGISTRY[sub]['@inherits'] += [union_name]
+            if not union_name in CLASS_REGISTRY[sub]['@inherits']:
+                CLASS_REGISTRY[sub]['@inherits'].append(union_name)
         else:
             CLASS_REGISTRY[sub]['@inherits'] = [union_name]
     return from_n3(union_name, nsm=g.namespace_manager)

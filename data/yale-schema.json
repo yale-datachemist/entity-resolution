@@ -109,62 +109,6 @@
         "@comment": "Units in which a value is expressed, such as the physical or logical constituent of a resource (e.g., a volume, audiocassette, film reel, a map, a digital file).\nUsed with Unspecified\nWhere are these values? What are these values? (SES)",
         "@label": "Type of unit"
       },
-      "bflc:applicableInstitution": {
-        "@comment": "Institutional location of a resource to which a particular piece of description applies.\nUsed with Work, Instance or Item",
-        "@label": "Applicable institution"
-      },
-      "bflc:appliesTo": {
-        "@comment": "The component of a resource to which a characteristic applies.\nUsed with Work, Instance or Item",
-        "@label": "Applies to"
-      },
-      "bflc:creatorCharacteristic": {
-        "@comment": "Category to which the creators of the resource belong.\nUsed with Work, Instance or Item",
-        "@label": "Creator characteristic"
-      },
-      "bflc:demographicGroup": {
-        "@comment": "Characteristics of a group of agents.\nUsed with Work, Instance or Item",
-        "@label": "Demographic group"
-      },
-      "bflc:governmentPubType": {
-        "@comment": "Information recording that the resource is published or produced by or for an international, national, state, provincial, or local government agency, or by any subdivision of such a body.\nUsed with Work, Instance or Item",
-        "@label": "Government publication type"
-      },
-      "bflc:indexedIn": {
-        "@comment": "Citation to the resource where the material being described is indexed.\nUsed with Work, Instance or Item",
-        "@label": "Indexed in"
-      },
-      "bflc:movingImageTechnique": {
-        "@comment": "Information recording the technique used in creating motion in motion pictures or videorecordings.\nUsed with Work, Instance or Item",
-        "@label": "Moving Image Technique"
-      },
-      "bflc:projectedProvisionDate": {
-        "@comment": "Projected date of publication of the resource.\nUsed with Work, Instance or Item",
-        "@label": "Projected publication date"
-      },
-      "bflc:readMarc382": {
-        "@comment": "String representing the medium of performance information located in the 382 field of the original MARC record\nUsed with Work, Instance or Item",
-        "@label": "Read-only 382 field"
-      },
-      "bflc:relation": {
-        "@comment": "Connection between resources.\nUsed with Work, Instance or Item",
-        "@label": "Specific relationship"
-      },
-      "bflc:relationship": {
-        "@comment": "Resource and its connection to another resource.\nUsed with Work, Instance or Item",
-        "@label": "Related resource and relationship"
-      },
-      "bflc:relief": {
-        "@comment": "Relief term specified on a cartographic resource\nUsed with Work, Instance or Item",
-        "@label": "Relief"
-      },
-      "bflc:serialPubType": {
-        "@comment": "Information recording the type of continuing resource.\nUsed with Work, Instance or Item",
-        "@label": "Serial publication type"
-      },
-      "bflc:seriesTreatment": {
-        "@comment": "Information concerning the treatment of a series in a resource\nUsed with Work, Instance or Item",
-        "@label": "Series treatment"
-      },
       "madsrdf:creationDateEnd": {
         "@comment": "Ending date of the date range for which the beginning date is recorded in madsrdf:creationDateStart."
       },
@@ -191,128 +135,12 @@
       "bf:qualifier": {
         "@comment": "Qualifier of information, such as an addition to a title to make it unique or qualifying information associated with an identifier.\nUsed with Unspecified\nVoid for vagueness. Domain Thing, Range Literal, meaning: some sort of extra information associated with some other information? (SES)",
         "@label": "Qualifier"
-      },
-      "bflc:aap": {
-        "@comment": "A text string that represents the label of the resource. It could be a name/title combination, but could also include additional fields to make it unique within the catalog.\nUsed with Work, Instance or Item",
-        "@label": "Authorized access point"
-      },
-      "bflc:aap-normalized": {
-        "@comment": "Normalized version of the authorized access point with spaces, capitalization, and punctuation removed.\nUsed with Work, Instance or Item",
-        "@label": "Normalized authorized access point"
-      },
-      "bflc:distributionStatement": {
-        "@comment": "Statement related to the distribution of the resource; usually transcribed.\nUsed with Work, Instance or Item",
-        "@label": "Distribution statement"
-      },
-      "bflc:manufactureStatement": {
-        "@comment": "Statement related to the manufacture of the resource; usually transcribed.\nUsed with Work, Instance or Item",
-        "@label": "Manufacture statement"
-      },
-      "bflc:marcKey": {
-        "@comment": "String to store MARC data\nUsed with Work, Instance or Item",
-        "@label": "MARC key for headings"
-      },
-      "bflc:name00MarcKey": {
-        "@comment": "String for personal name matching.\nUsed with Work, Instance or Item",
-        "@label": "MARC key for X00 Names"
-      },
-      "bflc:name00MatchKey": {
-        "@comment": "String for name matching.\nUsed with Work, Instance or Item",
-        "@label": "Match key for X00 Name"
-      },
-      "bflc:name10MarcKey": {
-        "@comment": "String for name matching.\nUsed with Work, Instance or Item",
-        "@label": "MARC key for X10 Names"
-      },
-      "bflc:name10MatchKey": {
-        "@comment": "String for name matching.\nUsed with Work, Instance or Item",
-        "@label": "Match key for X10 Name"
-      },
-      "bflc:name11MarcKey": {
-        "@comment": "String for name matching.\nUsed with Work, Instance or Item",
-        "@label": "MARC key for X11 Names"
-      },
-      "bflc:name11MatchKey": {
-        "@comment": "String for name matching.\nUsed with Work, Instance or Item",
-        "@label": "Match key for X11 Name"
-      },
-      "bflc:nonSortNum": {
-        "@comment": "Number of characters at the start of a label that should be skipped for indexing and sorting.\nUsed with Work, Instance or Item",
-        "@label": "Non-sort character count"
-      },
-      "bflc:primaryContributorName00MatchKey": {
-        "@comment": "String for entry name matching.\nUsed with Work, Instance or Item",
-        "@label": "Primary X00 Name Match key"
-      },
-      "bflc:primaryContributorName10MatchKey": {
-        "@comment": "String for entry name matching.\nUsed with Work, Instance or Item",
-        "@label": "Primary X10 Name Match key"
-      },
-      "bflc:primaryContributorName11MatchKey": {
-        "@comment": "String for entry name matching.\nUsed with Work, Instance or Item",
-        "@label": "Primary X11 Name Match key"
-      },
-      "bflc:productionStatement": {
-        "@comment": "Statement related to the production of the resource; usually transcribed.\nUsed with Work, Instance or Item",
-        "@label": "Production statement"
-      },
-      "bflc:publicationStatement": {
-        "@comment": "Statement related to the publication of the resource; ususally transcribed.\nUsed with Work, Instance or Item",
-        "@label": "Publication statement"
-      },
-      "bflc:simpleAgent": {
-        "@comment": "Name of publisher, distributor, manufacturer or producer as transcribed from the resource\nUsed with Work, Instance or Item",
-        "@label": "Agent"
-      },
-      "bflc:simpleDate": {
-        "@comment": "Date of publication, distribution, manufacture or production as transcribed from the resource\nUsed with Work, Instance or Item",
-        "@label": "Date"
-      },
-      "bflc:simplePlace": {
-        "@comment": "Location of publication, distribution, manufacture or production as transcribed from the resource\nUsed with Work, Instance or Item",
-        "@label": "Place"
-      },
-      "bflc:title00MarcKey": {
-        "@comment": "String for title matching.\nUsed with Work, Instance or Item",
-        "@label": "title00MarcKey"
-      },
-      "bflc:title00MatchKey": {
-        "@comment": "String for title matching.\nUsed with Work, Instance or Item",
-        "@label": "Match key for Title X00"
-      },
-      "bflc:title10MarcKey": {
-        "@comment": "String for title matching.\nUsed with Work, Instance or Item",
-        "@label": "title10MarcKey"
-      },
-      "bflc:title10MatchKey": {
-        "@comment": "String for title matching.\nUsed with Work, Instance or Item",
-        "@label": "Match key for Title X10"
-      },
-      "bflc:title11MarcKey": {
-        "@comment": "String for title matching.\nUsed with Work, Instance or Item",
-        "@label": "title11MarcKey"
-      },
-      "bflc:title11MatchKey": {
-        "@comment": "String for title matching.\nUsed with Work, Instance or Item",
-        "@label": "Match key for Title X11"
-      },
-      "bflc:title30MarcKey": {
-        "@comment": "String for title matching.\nUsed with Work, Instance or Item",
-        "@label": "title30MarcKey"
-      },
-      "bflc:title30MatchKey": {
-        "@comment": "String for title matching.\nUsed with Work, Instance or Item",
-        "@label": "title30MatchKey"
-      },
-      "bflc:title40MatchKey": {
-        "@comment": "String for title matching.\nUsed with Work, Instance or Item",
-        "@label": "title40MatchKey"
       }
     }
   },
   "madsrdf:elementList": {
     "@type": "List",
-    "@class": "rdf:PlainLiteral"
+    "@class": "madsrdf:Authority"
   },
   "madsrdf:extension": {
     "@type": "Set",
@@ -378,62 +206,6 @@
     "@type": "Set",
     "@class": "bf:Unit"
   },
-  "bflc:applicableInstitution": {
-    "@type": "Set",
-    "@class": "bf:Agent"
-  },
-  "bflc:appliesTo": {
-    "@type": "Set",
-    "@class": "bflc:AppliesTo"
-  },
-  "bflc:creatorCharacteristic": {
-    "@type": "Set",
-    "@class": "bflc:CreatorCharacteristic"
-  },
-  "bflc:demographicGroup": {
-    "@type": "Set",
-    "@class": "bflc:DemographicGroup"
-  },
-  "bflc:governmentPubType": {
-    "@type": "Set",
-    "@class": "bflc:GovernmentPubType"
-  },
-  "bflc:indexedIn": {
-    "@type": "Set",
-    "@class": "owl:Thing"
-  },
-  "bflc:movingImageTechnique": {
-    "@type": "Set",
-    "@class": "bflc:MovingImageTechnique"
-  },
-  "bflc:projectedProvisionDate": {
-    "@type": "Set",
-    "@class": "xsd:date"
-  },
-  "bflc:readMarc382": {
-    "@type": "Set",
-    "@class": "owl:Thing"
-  },
-  "bflc:relation": {
-    "@type": "Set",
-    "@class": "bflc:Relation"
-  },
-  "bflc:relationship": {
-    "@type": "Set",
-    "@class": "bflc:Relationship"
-  },
-  "bflc:relief": {
-    "@type": "Set",
-    "@class": "bflc:Relief"
-  },
-  "bflc:serialPubType": {
-    "@type": "Set",
-    "@class": "bflc:SerialPubType"
-  },
-  "bflc:seriesTreatment": {
-    "@type": "Set",
-    "@class": "bflc:SeriesTreatment"
-  },
   "madsrdf:creationDateEnd": {
     "@type": "Set",
     "@class": "rdf:PlainLiteral"
@@ -459,122 +231,6 @@
     "@class": "rdfs:Literal"
   },
   "bf:qualifier": {
-    "@type": "Set",
-    "@class": "rdfs:Literal"
-  },
-  "bflc:aap": {
-    "@type": "Set",
-    "@class": "rdfs:Literal"
-  },
-  "bflc:aap-normalized": {
-    "@type": "Set",
-    "@class": "rdfs:Literal"
-  },
-  "bflc:distributionStatement": {
-    "@type": "Set",
-    "@class": "rdfs:Literal"
-  },
-  "bflc:manufactureStatement": {
-    "@type": "Set",
-    "@class": "rdfs:Literal"
-  },
-  "bflc:marcKey": {
-    "@type": "Set",
-    "@class": "rdfs:Literal"
-  },
-  "bflc:name00MarcKey": {
-    "@type": "Set",
-    "@class": "rdfs:Literal"
-  },
-  "bflc:name00MatchKey": {
-    "@type": "Set",
-    "@class": "rdfs:Literal"
-  },
-  "bflc:name10MarcKey": {
-    "@type": "Set",
-    "@class": "rdfs:Literal"
-  },
-  "bflc:name10MatchKey": {
-    "@type": "Set",
-    "@class": "rdfs:Literal"
-  },
-  "bflc:name11MarcKey": {
-    "@type": "Set",
-    "@class": "rdfs:Literal"
-  },
-  "bflc:name11MatchKey": {
-    "@type": "Set",
-    "@class": "rdfs:Literal"
-  },
-  "bflc:nonSortNum": {
-    "@type": "Set",
-    "@class": "rdfs:Literal"
-  },
-  "bflc:primaryContributorName00MatchKey": {
-    "@type": "Set",
-    "@class": "rdfs:Literal"
-  },
-  "bflc:primaryContributorName10MatchKey": {
-    "@type": "Set",
-    "@class": "rdfs:Literal"
-  },
-  "bflc:primaryContributorName11MatchKey": {
-    "@type": "Set",
-    "@class": "rdfs:Literal"
-  },
-  "bflc:productionStatement": {
-    "@type": "Set",
-    "@class": "rdfs:Literal"
-  },
-  "bflc:publicationStatement": {
-    "@type": "Set",
-    "@class": "rdfs:Literal"
-  },
-  "bflc:simpleAgent": {
-    "@type": "Set",
-    "@class": "rdfs:Literal"
-  },
-  "bflc:simpleDate": {
-    "@type": "Set",
-    "@class": "rdfs:Literal"
-  },
-  "bflc:simplePlace": {
-    "@type": "Set",
-    "@class": "rdfs:Literal"
-  },
-  "bflc:title00MarcKey": {
-    "@type": "Set",
-    "@class": "rdfs:Literal"
-  },
-  "bflc:title00MatchKey": {
-    "@type": "Set",
-    "@class": "rdfs:Literal"
-  },
-  "bflc:title10MarcKey": {
-    "@type": "Set",
-    "@class": "rdfs:Literal"
-  },
-  "bflc:title10MatchKey": {
-    "@type": "Set",
-    "@class": "rdfs:Literal"
-  },
-  "bflc:title11MarcKey": {
-    "@type": "Set",
-    "@class": "rdfs:Literal"
-  },
-  "bflc:title11MatchKey": {
-    "@type": "Set",
-    "@class": "rdfs:Literal"
-  },
-  "bflc:title30MarcKey": {
-    "@type": "Set",
-    "@class": "rdfs:Literal"
-  },
-  "bflc:title30MatchKey": {
-    "@type": "Set",
-    "@class": "rdfs:Literal"
-  },
-  "bflc:title40MatchKey": {
     "@type": "Set",
     "@class": "rdfs:Literal"
   }
@@ -688,19 +344,17 @@
   "@type": "Class",
   "@inherits": [
     "owl:Thing",
-    "skos:Concept",
     "tdb:AuthorityOrDeprecatedAuthorityOrVariant",
     "tdb:AuthorityOrMADSCollection",
-    "tdb:AuthorityOrMADSCollection",
-    "tdb:AuthorityOrMADSCollection",
-    "tdb:AuthorityOrMADSCollection",
-    "tdb:AuthorityOrMADSCollection",
-    "tdb:AuthorityOrDeprecatedAuthority",
     "tdb:AuthorityOrDeprecatedAuthority"
   ],
   "@documentation": {
     "@label": "Authority",
     "@properties": {
+      "madsrdf:authoritativeLabel": {
+        "@label": "Authoritative Label",
+        "@comment": "A lexical string representing a controlled, curated label for the Authority."
+      },
       "madsrdf:hasAbbreviationVariant": {
         "@label": "Has Abbreviation\n      Variant"
       },
@@ -762,6 +416,10 @@
         "@label": "Identifies RWO"
       }
     }
+  },
+  "madsrdf:authoritativeLabel": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
   },
   "madsrdf:hasAbbreviationVariant": {
     "@type": "Set",
@@ -962,7 +620,6 @@
   "@inherits": [
     "owl:Thing",
     "tdb:AuthorityOrDeprecatedAuthorityOrVariant",
-    "tdb:AuthorityOrDeprecatedAuthority",
     "tdb:AuthorityOrDeprecatedAuthority"
   ],
   "@documentation": {
@@ -4828,9 +4485,181 @@
         "@comment": "General statement of allowances and restrictions on access to a resource, including retention, reproduction, access, and lending.\nUsed with Work, Instance or Item",
         "@label": "Use and access condition"
       },
+      "bflc:applicableInstitution": {
+        "@comment": "Institutional location of a resource to which a particular piece of description applies.\nUsed with Work, Instance or Item",
+        "@label": "Applicable institution"
+      },
+      "bflc:appliesTo": {
+        "@comment": "The component of a resource to which a characteristic applies.\nUsed with Work, Instance or Item",
+        "@label": "Applies to"
+      },
+      "bflc:creatorCharacteristic": {
+        "@comment": "Category to which the creators of the resource belong.\nUsed with Work, Instance or Item",
+        "@label": "Creator characteristic"
+      },
+      "bflc:demographicGroup": {
+        "@comment": "Characteristics of a group of agents.\nUsed with Work, Instance or Item",
+        "@label": "Demographic group"
+      },
+      "bflc:governmentPubType": {
+        "@comment": "Information recording that the resource is published or produced by or for an international, national, state, provincial, or local government agency, or by any subdivision of such a body.\nUsed with Work, Instance or Item",
+        "@label": "Government publication type"
+      },
+      "bflc:indexedIn": {
+        "@comment": "Citation to the resource where the material being described is indexed.\nUsed with Work, Instance or Item",
+        "@label": "Indexed in"
+      },
+      "bflc:movingImageTechnique": {
+        "@comment": "Information recording the technique used in creating motion in motion pictures or videorecordings.\nUsed with Work, Instance or Item",
+        "@label": "Moving Image Technique"
+      },
+      "bflc:projectedProvisionDate": {
+        "@comment": "Projected date of publication of the resource.\nUsed with Work, Instance or Item",
+        "@label": "Projected publication date"
+      },
+      "bflc:readMarc382": {
+        "@comment": "String representing the medium of performance information located in the 382 field of the original MARC record\nUsed with Work, Instance or Item",
+        "@label": "Read-only 382 field"
+      },
+      "bflc:relation": {
+        "@comment": "Connection between resources.\nUsed with Work, Instance or Item",
+        "@label": "Specific relationship"
+      },
+      "bflc:relationship": {
+        "@comment": "Resource and its connection to another resource.\nUsed with Work, Instance or Item",
+        "@label": "Related resource and relationship"
+      },
+      "bflc:relief": {
+        "@comment": "Relief term specified on a cartographic resource\nUsed with Work, Instance or Item",
+        "@label": "Relief"
+      },
+      "bflc:serialPubType": {
+        "@comment": "Information recording the type of continuing resource.\nUsed with Work, Instance or Item",
+        "@label": "Serial publication type"
+      },
+      "bflc:seriesTreatment": {
+        "@comment": "Information concerning the treatment of a series in a resource\nUsed with Work, Instance or Item",
+        "@label": "Series treatment"
+      },
       "bf:custodialHistory": {
         "@comment": "Information about the provenance, such as origin, ownership and custodial history (chain of custody), of a resource.\nUsed with Work, Instance or Item",
         "@label": "Custodial history"
+      },
+      "bflc:aap": {
+        "@comment": "A text string that represents the label of the resource. It could be a name/title combination, but could also include additional fields to make it unique within the catalog.\nUsed with Work, Instance or Item",
+        "@label": "Authorized access point"
+      },
+      "bflc:aap-normalized": {
+        "@comment": "Normalized version of the authorized access point with spaces, capitalization, and punctuation removed.\nUsed with Work, Instance or Item",
+        "@label": "Normalized authorized access point"
+      },
+      "bflc:distributionStatement": {
+        "@comment": "Statement related to the distribution of the resource; usually transcribed.\nUsed with Work, Instance or Item",
+        "@label": "Distribution statement"
+      },
+      "bflc:manufactureStatement": {
+        "@comment": "Statement related to the manufacture of the resource; usually transcribed.\nUsed with Work, Instance or Item",
+        "@label": "Manufacture statement"
+      },
+      "bflc:marcKey": {
+        "@comment": "String to store MARC data\nUsed with Work, Instance or Item",
+        "@label": "MARC key for headings"
+      },
+      "bflc:name00MarcKey": {
+        "@comment": "String for personal name matching.\nUsed with Work, Instance or Item",
+        "@label": "MARC key for X00 Names"
+      },
+      "bflc:name00MatchKey": {
+        "@comment": "String for name matching.\nUsed with Work, Instance or Item",
+        "@label": "Match key for X00 Name"
+      },
+      "bflc:name10MarcKey": {
+        "@comment": "String for name matching.\nUsed with Work, Instance or Item",
+        "@label": "MARC key for X10 Names"
+      },
+      "bflc:name10MatchKey": {
+        "@comment": "String for name matching.\nUsed with Work, Instance or Item",
+        "@label": "Match key for X10 Name"
+      },
+      "bflc:name11MarcKey": {
+        "@comment": "String for name matching.\nUsed with Work, Instance or Item",
+        "@label": "MARC key for X11 Names"
+      },
+      "bflc:name11MatchKey": {
+        "@comment": "String for name matching.\nUsed with Work, Instance or Item",
+        "@label": "Match key for X11 Name"
+      },
+      "bflc:nonSortNum": {
+        "@comment": "Number of characters at the start of a label that should be skipped for indexing and sorting.\nUsed with Work, Instance or Item",
+        "@label": "Non-sort character count"
+      },
+      "bflc:primaryContributorName00MatchKey": {
+        "@comment": "String for entry name matching.\nUsed with Work, Instance or Item",
+        "@label": "Primary X00 Name Match key"
+      },
+      "bflc:primaryContributorName10MatchKey": {
+        "@comment": "String for entry name matching.\nUsed with Work, Instance or Item",
+        "@label": "Primary X10 Name Match key"
+      },
+      "bflc:primaryContributorName11MatchKey": {
+        "@comment": "String for entry name matching.\nUsed with Work, Instance or Item",
+        "@label": "Primary X11 Name Match key"
+      },
+      "bflc:productionStatement": {
+        "@comment": "Statement related to the production of the resource; usually transcribed.\nUsed with Work, Instance or Item",
+        "@label": "Production statement"
+      },
+      "bflc:publicationStatement": {
+        "@comment": "Statement related to the publication of the resource; ususally transcribed.\nUsed with Work, Instance or Item",
+        "@label": "Publication statement"
+      },
+      "bflc:simpleAgent": {
+        "@comment": "Name of publisher, distributor, manufacturer or producer as transcribed from the resource\nUsed with Work, Instance or Item",
+        "@label": "Agent"
+      },
+      "bflc:simpleDate": {
+        "@comment": "Date of publication, distribution, manufacture or production as transcribed from the resource\nUsed with Work, Instance or Item",
+        "@label": "Date"
+      },
+      "bflc:simplePlace": {
+        "@comment": "Location of publication, distribution, manufacture or production as transcribed from the resource\nUsed with Work, Instance or Item",
+        "@label": "Place"
+      },
+      "bflc:title00MarcKey": {
+        "@comment": "String for title matching.\nUsed with Work, Instance or Item",
+        "@label": "title00MarcKey"
+      },
+      "bflc:title00MatchKey": {
+        "@comment": "String for title matching.\nUsed with Work, Instance or Item",
+        "@label": "Match key for Title X00"
+      },
+      "bflc:title10MarcKey": {
+        "@comment": "String for title matching.\nUsed with Work, Instance or Item",
+        "@label": "title10MarcKey"
+      },
+      "bflc:title10MatchKey": {
+        "@comment": "String for title matching.\nUsed with Work, Instance or Item",
+        "@label": "Match key for Title X10"
+      },
+      "bflc:title11MarcKey": {
+        "@comment": "String for title matching.\nUsed with Work, Instance or Item",
+        "@label": "title11MarcKey"
+      },
+      "bflc:title11MatchKey": {
+        "@comment": "String for title matching.\nUsed with Work, Instance or Item",
+        "@label": "Match key for Title X11"
+      },
+      "bflc:title30MarcKey": {
+        "@comment": "String for title matching.\nUsed with Work, Instance or Item",
+        "@label": "title30MarcKey"
+      },
+      "bflc:title30MatchKey": {
+        "@comment": "String for title matching.\nUsed with Work, Instance or Item",
+        "@label": "title30MatchKey"
+      },
+      "bflc:title40MatchKey": {
+        "@comment": "String for title matching.\nUsed with Work, Instance or Item",
+        "@label": "title40MatchKey"
       }
     }
   },
@@ -4936,7 +4765,7 @@
   },
   "bf:subject": {
     "@type": "Set",
-    "@class": "skos:Concept"
+    "@class": "owl:Thing"
   },
   "bf:supplement": {
     "@type": "Set",
@@ -4954,9 +4783,181 @@
     "@type": "Set",
     "@class": "bf:UsageAndAccessPolicy"
   },
+  "bflc:applicableInstitution": {
+    "@type": "Set",
+    "@class": "bf:Agent"
+  },
+  "bflc:appliesTo": {
+    "@type": "Set",
+    "@class": "bflc:AppliesTo"
+  },
+  "bflc:creatorCharacteristic": {
+    "@type": "Set",
+    "@class": "bflc:CreatorCharacteristic"
+  },
+  "bflc:demographicGroup": {
+    "@type": "Set",
+    "@class": "bflc:DemographicGroup"
+  },
+  "bflc:governmentPubType": {
+    "@type": "Set",
+    "@class": "bflc:GovernmentPubType"
+  },
+  "bflc:indexedIn": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "bflc:movingImageTechnique": {
+    "@type": "Set",
+    "@class": "bflc:MovingImageTechnique"
+  },
+  "bflc:projectedProvisionDate": {
+    "@type": "Set",
+    "@class": "xsd:date"
+  },
+  "bflc:readMarc382": {
+    "@type": "Set",
+    "@class": "owl:Thing"
+  },
+  "bflc:relation": {
+    "@type": "Set",
+    "@class": "bflc:Relation"
+  },
+  "bflc:relationship": {
+    "@type": "Set",
+    "@class": "bflc:Relationship"
+  },
+  "bflc:relief": {
+    "@type": "Set",
+    "@class": "bflc:Relief"
+  },
+  "bflc:serialPubType": {
+    "@type": "Set",
+    "@class": "bflc:SerialPubType"
+  },
+  "bflc:seriesTreatment": {
+    "@type": "Set",
+    "@class": "bflc:SeriesTreatment"
+  },
   "bf:custodialHistory": {
     "@type": "Set",
     "@class": "rdf:PlainLiteral"
+  },
+  "bflc:aap": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bflc:aap-normalized": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bflc:distributionStatement": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bflc:manufactureStatement": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bflc:marcKey": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bflc:name00MarcKey": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bflc:name00MatchKey": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bflc:name10MarcKey": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bflc:name10MatchKey": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bflc:name11MarcKey": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bflc:name11MatchKey": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bflc:nonSortNum": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bflc:primaryContributorName00MatchKey": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bflc:primaryContributorName10MatchKey": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bflc:primaryContributorName11MatchKey": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bflc:productionStatement": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bflc:publicationStatement": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bflc:simpleAgent": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bflc:simpleDate": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bflc:simplePlace": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bflc:title00MarcKey": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bflc:title00MatchKey": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bflc:title10MarcKey": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bflc:title10MatchKey": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bflc:title11MarcKey": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bflc:title11MatchKey": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bflc:title30MarcKey": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bflc:title30MatchKey": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
+  },
+  "bflc:title40MatchKey": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
   }
 }
 {
