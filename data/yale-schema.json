@@ -408,7 +408,7 @@
   },
   "bflc:projectedProvisionDate": {
     "@type": "Set",
-    "@class": "bflc:date"
+    "@class": "xsd:date"
   },
   "bflc:readMarc382": {
     "@type": "Set",
@@ -1136,11 +1136,6 @@
   "@id": "madsrdf:MADSCollection",
   "@type": "Class",
   "@inherits": [
-    "skos:Collection",
-    "tdb:AuthorityOrMADSCollection",
-    "tdb:AuthorityOrMADSCollection",
-    "tdb:AuthorityOrMADSCollection",
-    "tdb:AuthorityOrMADSCollection",
     "tdb:AuthorityOrMADSCollection"
   ],
   "@documentation": {
@@ -1160,9 +1155,6 @@
 {
   "@id": "madsrdf:MADSScheme",
   "@type": "Class",
-  "@inherits": [
-    "skos:ConceptScheme"
-  ],
   "@documentation": {
     "@label": "MADS Scheme",
     "@properties": {
@@ -1582,7 +1574,6 @@
   "@type": "Class",
   "@inherits": [
     "owl:Thing",
-    "<http://www.w3.org/2008/05/skos-xl#Label>",
     "tdb:AuthorityOrDeprecatedAuthorityOrVariant"
   ],
   "@documentation": {
@@ -1606,72 +1597,6 @@
     "@type": "Set",
     "@class": "rdf:PlainLiteral"
   }
-}
-{
-  "@id": "_:n2d218851208543298b1f078176672ee6b6",
-  "@type": "Class",
-  "@documentation": {}
-}
-{
-  "@id": "_:n2d218851208543298b1f078176672ee6b10",
-  "@type": "Class",
-  "@documentation": {
-    "@properties": {
-      "madsrdf:code": {
-        "@comment": "A code is a string of\n      characters associated with a the authoritative or deprecated label. It may record an\n      historical notation once used to uniquely identify a concept.",
-        "@label": "Code"
-      }
-    }
-  },
-  "madsrdf:code": {
-    "@type": "Set",
-    "@class": "rdf:PlainLiteral"
-  }
-}
-{
-  "@id": "_:n2d218851208543298b1f078176672ee6b13",
-  "@type": "Class",
-  "@documentation": {}
-}
-{
-  "@id": "_:n2d218851208543298b1f078176672ee6b16",
-  "@type": "Class",
-  "@documentation": {}
-}
-{
-  "@id": "_:n2d218851208543298b1f078176672ee6b19",
-  "@type": "Class",
-  "@documentation": {}
-}
-{
-  "@id": "_:n2d218851208543298b1f078176672ee6b22",
-  "@type": "Class",
-  "@documentation": {}
-}
-{
-  "@id": "_:n2d218851208543298b1f078176672ee6b25",
-  "@type": "Class",
-  "@documentation": {}
-}
-{
-  "@id": "_:n2d218851208543298b1f078176672ee6b28",
-  "@type": "Class",
-  "@documentation": {}
-}
-{
-  "@id": "_:n2d218851208543298b1f078176672ee6b31",
-  "@type": "Class",
-  "@documentation": {}
-}
-{
-  "@id": "_:n2d218851208543298b1f078176672ee6b34",
-  "@type": "Class",
-  "@documentation": {}
-}
-{
-  "@id": "_:n2d218851208543298b1f078176672ee6b37",
-  "@type": "Class",
-  "@documentation": {}
 }
 {
   "@id": "bf:AbbreviatedTitle",
@@ -4779,11 +4704,6 @@
   }
 }
 {
-  "@id": "_:n2d218851208543298b1f078176672ee6b42",
-  "@type": "Class",
-  "@documentation": {}
-}
-{
   "@id": "bf:WorkOrInstanceOrItem",
   "@type": "Class",
   "@documentation": {
@@ -5038,11 +4958,6 @@
     "@type": "Set",
     "@class": "rdf:PlainLiteral"
   }
-}
-{
-  "@id": "_:n2d218851208543298b1f078176672ee6b45",
-  "@type": "Class",
-  "@documentation": {}
 }
 {
   "@id": "skos:Concept",
