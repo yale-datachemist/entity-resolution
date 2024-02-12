@@ -20,3 +20,35 @@ match to the existing named entities.
 
 We need to convert the BibFrame ontology into a terminus schema
 representation in order to make the GraphQL features available.
+
+
+## Data pipeline
+
+We have a data pipeline that transforms Marc into ttl files which are
+loadable into TerminusDB
+
+Schematically the process is like this:
+
+Marc => Marc XML => Bibframe => Triples => add rdf:List to lists.
+
+From the command line, one can initiate the process of tranformation by envoking `terminus_load_marc` starting in the `~DataChemist/data` folder.
+
+```shell
+terminus_load_marc
+```
+
+
+## Generate embeddings from Data
+
+GraphQL query + template
+
+## Obtain results
+
+Best match results.
+
+stand alone web api?
+
+
+{ "@type" : "Class",
+  "@id" : "Document",
+  "vector_id" : "xsd:unsignedLong" }
