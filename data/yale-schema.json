@@ -875,7 +875,7 @@
   },
   "madsrdf:componentList": {
     "@type": "List",
-    "@class": "rdf:PlainLiteral"
+    "@class": "madsrdf:Authority"
   }
 }
 {
