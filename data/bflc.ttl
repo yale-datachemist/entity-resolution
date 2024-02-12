@@ -221,6 +221,7 @@ bflc:aap
     dcterms:modified "2021-11-02 (New [GH2])" ;
     a owl:DatatypeProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "Authorized access point" ;
     rdfs:range rdfs:Literal ;
     skos:definition "A text string that represents the label of the resource. It could be a name/title combination, but could also include additional fields to make it unique within the catalog." .
@@ -229,6 +230,7 @@ bflc:aap-normalized
     dcterms:modified "2021-11-02 (New [GH2])" ;
     a owl:DatatypeProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "Normalized authorized access point" ;
     rdfs:range rdfs:Literal ;
     skos:definition "Normalized version of the authorized access point with spaces, capitalization, and punctuation removed." .
@@ -237,6 +239,7 @@ bflc:applicableInstitution
     dcterms:modified "2017-02-02 (New)" ;
     a owl:ObjectProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "Applicable institution" ;
     rdfs:range bf:Agent ;
     skos:definition "Institutional location of a resource to which a particular piece of description applies." .
@@ -245,6 +248,7 @@ bflc:appliesTo
     dcterms:modified "2017-02-02 (New)" ;
     a owl:ObjectProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "Applies to" ;
     rdfs:range bflc:AppliesTo ;
     skos:definition "The component of a resource to which a characteristic applies." .
@@ -252,7 +256,7 @@ bflc:appliesTo
 bflc:catalogerId
     dcterms:modified "2018-07-12 (New)" ;
     a owl:DatatypeProperty ;
-    rdfs:domain <http://id.loc.gov/ontologies/bflc/bf:AdminMetadata> ;
+    rdfs:domain bf:AdminMetadata ;
     rdfs:label "Cataloger ID" ;
     rdfs:range rdfs:Literal ;
     skos:definition "ID of the cataloger who created or edited the description." .
@@ -261,6 +265,7 @@ bflc:creatorCharacteristic
     dcterms:modified "2017-02-02 (New)" ;
     a owl:ObjectProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "Creator characteristic" ;
     rdfs:range bflc:CreatorCharacteristic ;
     skos:definition "Category to which the creators of the resource belong." .
@@ -269,6 +274,7 @@ bflc:demographicGroup
     dcterms:modified "2017-02-02 (New)" ;
     a owl:ObjectProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "Demographic group" ;
     rdfs:range bflc:DemographicGroup ;
     skos:definition "Characteristics of a group of agents." .
@@ -277,6 +283,7 @@ bflc:distributionStatement
     dcterms:modified "2022-10-04 (New [GH18])" ;
     a owl:DatatypeProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "Distribution statement" ;
     rdfs:range rdfs:Literal ;
     rdfs:subPropertyOf bflc:provisionActivityStatement ;
@@ -285,7 +292,7 @@ bflc:distributionStatement
 bflc:encodingLevel
     dcterms:modified "2017-02-02 (New)" ;
     a owl:ObjectProperty ;
-    rdfs:domain <http://id.loc.gov/ontologies/bflc/bf:AdminMetadata> ;
+    rdfs:domain bf:AdminMetadata ;
     rdfs:label "Encoding level" ;
     rdfs:range bflc:EncodingLevel ;
     skos:definition "Designation of the fullness of the bibliographic description." .
@@ -294,6 +301,7 @@ bflc:governmentPubType
     dcterms:modified "2020-03-09 (New [GH10])" ;
     a owl:ObjectProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "Government publication type" ;
     rdfs:range bflc:GovernmentPubType ;
     skos:definition "Information recording that the resource is published or produced by or for an international, national, state, provincial, or local government agency, or by any subdivision of such a body." .
@@ -302,6 +310,7 @@ bflc:indexedIn
     dcterms:modified "2018-07-12 (New)" ;
     a owl:ObjectProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "Indexed in" ;
     skos:definition "Citation to the resource where the material being described is indexed." .
 
@@ -309,6 +318,7 @@ bflc:manufactureStatement
     dcterms:modified "2022-10-04 (New [GH18])" ;
     a owl:DatatypeProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "Manufacture statement" ;
     rdfs:range rdfs:Literal ;
     rdfs:subPropertyOf bflc:provisionActivityStatement ;
@@ -318,6 +328,7 @@ bflc:marcKey
     dcterms:modified "2022-10-03 (New [GH7])" ;
     a owl:DatatypeProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "MARC key for headings" ;
     rdfs:range rdfs:Literal ;
     skos:definition "String to store MARC data" .
@@ -325,7 +336,7 @@ bflc:marcKey
 bflc:metadataLicensor
     dcterms:modified "2017-02-02 (New)" ;
     a owl:ObjectProperty ;
-    rdfs:domain <http://id.loc.gov/ontologies/bflc/bf:AdminMetadata> ;
+    rdfs:domain bf:AdminMetadata ;
     rdfs:label "Metadata licensor" ;
     rdfs:range bflc:MetadataLicensor ;
     skos:definition "Organization that licenses the intellectual property rights to the data contained in the description." .
@@ -334,6 +345,7 @@ bflc:movingImageTechnique
     dcterms:modified "2020-02-13 (New [GH9])" ;
     a owl:ObjectProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "Moving Image Technique" ;
     rdfs:range bflc:MovingImageTechnique ;
     skos:definition "Information recording the technique used in creating motion in motion pictures or videorecordings." .
@@ -342,6 +354,7 @@ bflc:name00MarcKey
     dcterms:modified "2017-02-02 (New)" ;
     a owl:DatatypeProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "MARC key for X00 Names" ;
     rdfs:range rdfs:Literal ;
     skos:definition "String for personal name matching." .
@@ -350,6 +363,7 @@ bflc:name00MatchKey
     dcterms:modified "2017-02-02 (New)" ;
     a owl:DatatypeProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "Match key for X00 Name" ;
     rdfs:range rdfs:Literal ;
     skos:definition "String for name matching." .
@@ -358,6 +372,7 @@ bflc:name10MarcKey
     dcterms:modified "2017-02-02 (New)" ;
     a owl:DatatypeProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "MARC key for X10 Names" ;
     rdfs:range rdfs:Literal ;
     skos:definition "String for name matching." .
@@ -366,6 +381,7 @@ bflc:name10MatchKey
     dcterms:modified "2017-02-02 (New)" ;
     a owl:DatatypeProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "Match key for X10 Name" ;
     rdfs:range rdfs:Literal ;
     skos:definition "String for name matching." .
@@ -374,6 +390,7 @@ bflc:name11MarcKey
     dcterms:modified "2017-02-02 (New)" ;
     a owl:DatatypeProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "MARC key for X11 Names" ;
     rdfs:range rdfs:Literal ;
     skos:definition "String for name matching." .
@@ -382,6 +399,7 @@ bflc:name11MatchKey
     dcterms:modified "2017-02-02 (New)" ;
     a owl:DatatypeProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "Match key for X11 Name" ;
     rdfs:range rdfs:Literal ;
     skos:definition "String for name matching." .
@@ -390,6 +408,7 @@ bflc:nonSortNum
     dcterms:modified "2022-10-04 (New [GH17])" ;
     a owl:DatatypeProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "Non-sort character count" ;
     rdfs:range rdfs:Literal ;
     skos:definition "Number of characters at the start of a label that should be skipped for indexing and sorting." .
@@ -398,6 +417,7 @@ bflc:primaryContributorName00MatchKey
     dcterms:modified "2017-02-02 (New)" ;
     a owl:DatatypeProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "Primary X00 Name Match key" ;
     rdfs:range rdfs:Literal ;
     skos:definition "String for entry name matching." .
@@ -406,6 +426,7 @@ bflc:primaryContributorName10MatchKey
     dcterms:modified "2017-02-02 (New)" ;
     a owl:DatatypeProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "Primary X10 Name Match key" ;
     rdfs:range rdfs:Literal ;
     skos:definition "String for entry name matching." .
@@ -414,6 +435,7 @@ bflc:primaryContributorName11MatchKey
     dcterms:modified "2017-02-02 (New)" ;
     a owl:DatatypeProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "Primary X11 Name Match key" ;
     rdfs:range rdfs:Literal ;
     skos:definition "String for entry name matching." .
@@ -421,7 +443,7 @@ bflc:primaryContributorName11MatchKey
 bflc:procInfo
     dcterms:modified "2018-07-12 (New)" ;
     a owl:DatatypeProperty ;
-    rdfs:domain <http://id.loc.gov/ontologies/bflc/bf:AdminMetadata> ;
+    rdfs:domain bf:AdminMetadata ;
     rdfs:label "Processing Info" ;
     rdfs:range rdfs:Literal ;
     skos:definition "System-supplied processing information for the BIBFRAME description (e.g. \"ibc update\")." .
@@ -430,6 +452,7 @@ bflc:productionStatement
     dcterms:modified "2022-10-04 (New [GH18])" ;
     a owl:DatatypeProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "Production statement" ;
     rdfs:range rdfs:Literal ;
     rdfs:subPropertyOf bflc:provisionActivityStatement ;
@@ -438,7 +461,7 @@ bflc:productionStatement
 bflc:profile
     dcterms:modified "2018-07-12 (New)" ;
     a owl:DatatypeProperty ;
-    rdfs:domain <http://id.loc.gov/ontologies/bflc/bf:AdminMetadata> ;
+    rdfs:domain bf:AdminMetadata ;
     rdfs:label "LC Editor profile" ;
     rdfs:range rdfs:Literal ;
     skos:definition "Name of the BIBFRAME editor profile used to create or edit the description." .
@@ -447,6 +470,7 @@ bflc:projectedProvisionDate
     dcterms:modified "2017-02-02 (New)" ;
     a owl:ObjectProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "Projected publication date" ;
     rdfs:range bflc:date ;
     skos:definition "Projected date of publication of the resource." .
@@ -455,6 +479,7 @@ bflc:publicationStatement
     dcterms:modified "2022-10-04 (New [GH18])" ;
     a owl:DatatypeProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "Publication statement" ;
     rdfs:range rdfs:Literal ;
     rdfs:subPropertyOf bflc:provisionActivityStatement ;
@@ -464,6 +489,7 @@ bflc:readMarc382
     dcterms:modified "2021-11-02 (New [GH12])" ;
     a owl:ObjectProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "Read-only 382 field" ;
     skos:definition "String representing the medium of performance information located in the 382 field of the original MARC record" .
 
@@ -471,6 +497,7 @@ bflc:relation
     dcterms:modified "2017-02-02 (New)" ;
     a owl:ObjectProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "Specific relationship" ;
     rdfs:range bflc:Relation ;
     skos:definition "Connection between resources." .
@@ -479,6 +506,7 @@ bflc:relationship
     dcterms:modified "2017-02-02 (New)" ;
     a owl:ObjectProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "Related resource and relationship" ;
     rdfs:range bflc:Relationship ;
     skos:definition "Resource and its connection to another resource." .
@@ -487,6 +515,7 @@ bflc:relief
     dcterms:modified "2019-05-07 (New [GH13])" ;
     a owl:ObjectProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "Relief" ;
     rdfs:range bflc:Relief ;
     skos:definition "Relief term specified on a cartographic resource" .
@@ -495,6 +524,7 @@ bflc:serialPubType
     dcterms:modified "2020-03-18 (New [GH11])" ;
     a owl:ObjectProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "Serial publication type" ;
     rdfs:range bflc:SerialPubType ;
     skos:definition "Information recording the type of continuing resource." .
@@ -503,6 +533,7 @@ bflc:seriesTreatment
     dcterms:modified "2018-10-12 (New)" ;
     a owl:ObjectProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "Series treatment" ;
     rdfs:range bflc:SeriesTreatment ;
     skos:definition "Information concerning the treatment of a series in a resource" .
@@ -511,6 +542,7 @@ bflc:simpleAgent
     dcterms:modified "2022-10-03 (New [GH14])" ;
     a owl:DatatypeProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "Agent" ;
     rdfs:range rdfs:Literal ;
     skos:definition "Name of publisher, distributor, manufacturer or producer as transcribed from the resource" .
@@ -519,6 +551,7 @@ bflc:simpleDate
     dcterms:modified "2022-10-03 (New [GH14])" ;
     a owl:DatatypeProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "Date" ;
     rdfs:range rdfs:Literal ;
     skos:definition "Date of publication, distribution, manufacture or production as transcribed from the resource" .
@@ -527,6 +560,7 @@ bflc:simplePlace
     dcterms:modified "2022-10-03 (New [GH14])" ;
     a owl:DatatypeProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "Place" ;
     rdfs:range rdfs:Literal ;
     skos:definition "Location of publication, distribution, manufacture or production as transcribed from the resource" .
@@ -535,6 +569,7 @@ bflc:title00MarcKey
     dcterms:modified "2017-02-02 (New)" ;
     a owl:DatatypeProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "title00MarcKey" ;
     rdfs:range rdfs:Literal ;
     skos:definition "String for title matching." .
@@ -543,6 +578,7 @@ bflc:title00MatchKey
     dcterms:modified "2017-02-02 (New)" ;
     a owl:DatatypeProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "Match key for Title X00" ;
     rdfs:range rdfs:Literal ;
     skos:definition "String for title matching." .
@@ -551,6 +587,7 @@ bflc:title10MarcKey
     dcterms:modified "2017-02-02 (New)" ;
     a owl:DatatypeProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "title10MarcKey" ;
     rdfs:range rdfs:Literal ;
     skos:definition "String for title matching." .
@@ -559,6 +596,7 @@ bflc:title10MatchKey
     dcterms:modified "2017-02-02 (New)" ;
     a owl:DatatypeProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "Match key for Title X10" ;
     rdfs:range rdfs:Literal ;
     skos:definition "String for title matching." .
@@ -567,6 +605,7 @@ bflc:title11MarcKey
     dcterms:modified "2017-02-02 (New)" ;
     a owl:DatatypeProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "title11MarcKey" ;
     rdfs:range rdfs:Literal ;
     skos:definition "String for title matching." .
@@ -575,6 +614,7 @@ bflc:title11MatchKey
     dcterms:modified "2017-02-02 (New)" ;
     a owl:DatatypeProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "Match key for Title X11" ;
     rdfs:range rdfs:Literal ;
     skos:definition "String for title matching." .
@@ -583,6 +623,7 @@ bflc:title30MarcKey
     dcterms:modified "2017-02-02 (New)" ;
     a owl:DatatypeProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "title30MarcKey" ;
     rdfs:range rdfs:Literal ;
     skos:definition "String for title matching." .
@@ -591,6 +632,7 @@ bflc:title30MatchKey
     dcterms:modified "2017-02-02 (New)" ;
     a owl:DatatypeProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "title30MatchKey" ;
     rdfs:range rdfs:Literal ;
     skos:definition "String for title matching." .
@@ -599,6 +641,7 @@ bflc:title40MatchKey
     dcterms:modified "2017-02-02 (New)" ;
     a owl:DatatypeProperty ;
     rdfs:comment "Used with Work, Instance or Item" ;
+    rdfs:domain bf:WorkOrInstanceOrItem ;
     rdfs:label "title40MatchKey" ;
     rdfs:range rdfs:Literal ;
     skos:definition "String for title matching." .
