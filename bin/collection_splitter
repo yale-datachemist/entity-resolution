@@ -38,7 +38,7 @@ if __name__ == '__main__' :
                 with open(new_file(args.prefix, args.suffix, file_count), 'w') as w:
                     for r in records:
                         w.write(r)
-                    w.write('</collection>')
+                    w.write('</collection>\n')
                 records = ['<collection xmlns="http://www.loc.gov/MARC21/slim">\n']
                 file_count +=1
 
