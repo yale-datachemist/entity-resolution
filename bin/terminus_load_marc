@@ -18,7 +18,7 @@ for f in $MARC_XML_DIR/*
 do
     echo "Splitting XML file $f..."
     SUBSTR=$(echo $f | cut -d"/" -f 6)
-    g="$SPLIT_MARC_XML_DIR/${f%.xml}."
+    g="$SPLIT_MARC_XML_DIR/${SUBSTR%.xml}."
     ~/src/entity-resolution/bin/collection_splitter $f --prefix=$g
 done
 
