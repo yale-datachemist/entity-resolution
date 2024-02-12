@@ -39,6 +39,6 @@ if __name__ == '__main__' :
                     for r in records:
                         w.write(r)
                     w.write('</collection>')
-                records = ['<collection>']
+                records = ['<collection xmlns="http://www.loc.gov/MARC21/slim">']
                 file_count +=1
 
