@@ -22,7 +22,7 @@ do
     echo "Splitting XML file $f..."
     SUBSTR=$(echo $f | cut -d"/" -f 6)
     g="$SPLIT_MARC_XML_DIR/${SUBSTR%.xml}."
-    if ! [ -f $g ]; then
+    if ! [ -f "$g0.xml" ]; then
         ~/src/entity-resolution/bin/collection_splitter $f --prefix=$g -n 20000
     fi
 done
@@ -33,7 +33,7 @@ do
     SUBSTR=$(echo $f | cut -d"/" -f 6)
     g="$BIBFRAME_XML_DIR/${SUBSTR%.xml}.xml"
     if ! [ -f $g ]; then
-        xsltproc --stringparam baseuri iri://d/ ~/marc2bibframe2/xsl/marc2bibframe2.xsl $f > $g
+        xsltproc --stringparam baseuri iri://d/ ~/src/marc2bibframe2/xsl/marc2bibframe2.xsl $f > $g
     fi
 done
 
@@ -41,7 +41,7 @@ for f in $BIBFRAME_XML_DIR/*
 do
     echo "Transforming bibframe xml to ttl for $f..."
     SUBSTR=$(echo $f | cut -d"/" -f 6)
-    g="$BIBFRAME_XML_DIR/${SUBSTR%.xml}.ttl"
+    g="$BIBFRAME_TTL_DIR/${SUBSTR%.xml}.ttl"
     if ! [ -f $g ]; then
         rapper -i rdfxml -o turtle $f > $g
     fi
