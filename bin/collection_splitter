@@ -38,6 +38,7 @@ if __name__ == '__main__' :
                 with open(new_file(args.prefix, args.suffix, file_count), 'w') as w:
                     for r in records:
                         w.write(r)
-                records = []
+                    w.write('</collection>')
+                records = ['<collection>']
                 file_count +=1
 
