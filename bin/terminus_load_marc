@@ -26,7 +26,7 @@ for f in $SPLIT_MARC_XML_DIR/*
 do
     echo "XSLT tranformation of $f..."
     SUBSTR=$(echo $f | cut -d"/" -f 6)
-    g="$BIBFRAME_XML_DIR/${f%.xml}.xml"
+    g="$BIBFRAME_XML_DIR/${SUBSTR%.xml}.xml"
     xsltproc --stringparam baseuri iri://d/ ~/marc2bibframe2/xsl/marc2bibframe2.xsl $f > $g
 done
 
@@ -34,6 +34,6 @@ for f in $BIBFRAME_XML_DIR/*
 do
     echo "Transforming bibframe xml to ttl for $f..."
     SUBSTR=$(echo $f | cut -d"/" -f 6)
-    g="$BIBFRAME_XML_DIR/${f%.xml}.ttl"
+    g="$BIBFRAME_XML_DIR/${SUBSTR%.xml}.ttl"
     rapper -i rdfxml -o turtle $f > $g
 done
