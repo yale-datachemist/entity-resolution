@@ -21,22 +21,33 @@ match to the existing named entities.
 We need to convert the BibFrame ontology into a terminus schema
 representation in order to make the GraphQL features available.
 
+This process was done with a mixture of the tool `bin/owl2terminus`
+and some hand modification of input TTL files and the final Schema.
+
+The final, TerminusDB ingestable schema is at
+`data/yale-schema.json`. This schema merges MADS and BIBFRAME and
+BIBFRAME-LC extensions and should be useable with all three, or a
+mixture.
 
 ## Data pipeline
 
 We have a data pipeline that transforms Marc into ttl files which are
 loadable into TerminusDB
 
-Schematically the process is like this:
+Schematically the process is something like this:
 
 Marc => Marc XML => Bibframe => Triples => add rdf:List to lists.
 
-From the command line, one can initiate the process of tranformation by envoking `terminus_load_marc` starting in the `~DataChemist/data` folder.
+From the command line, one can initiate the process of tranformation
+by envoking `terminus_load_marc` starting in the `~DataChemist/data`
+folder.
 
 ```shell
 terminus_load_marc
 ```
 
+This command will attempt to process all files in the marc/ folder in
+parallel and finally merge them into TerminusDB
 
 ## Generate embeddings from Data
 
@@ -44,11 +55,10 @@ GraphQL query + template
 
 ## Obtain results
 
-Best match results.
+Get the data out of Terminusdb as embedding records
 
-stand alone web api?
+## Run indexing
 
+## Obtain all matches as result file
 
-{ "@type" : "Class",
-  "@id" : "Document",
-  "vector_id" : "xsd:unsignedLong" }
+## Use Web API to obtain "on-the-fly" results
