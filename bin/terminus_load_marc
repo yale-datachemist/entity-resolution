@@ -28,7 +28,7 @@ parallel "rapper -i rdfxml -o turtle {} > $BIBFRAME_TTL_DIR/{/.}.ttl" ::: $BIBFR
 echo "Creating DBs for merge load"
 for f in `ls $BIBFRAME_TTL_DIR/`
 do
-    echo terminusb db create admin/${f##*/} --schema=false
+    echo terminusdb db create admin/${f##*/} --schema=false
 done
 
 echo "Loading into TerminusDB"
