@@ -40,7 +40,7 @@ parallel --halt-on-error 2 "sed -i 's|http://www.w3.org/2001/XMLSchema#stringTim
 echo "Creating DBs for merge load"
 for f in `ls $BIBFRAME_TTL_DIR/`
 do
-    echo terminusdb db create admin/${f##*/} --schema=false
+    terminusdb db create admin/${f##*/} --schema=false
 done
 
 echo "Loading into TerminusDB"
