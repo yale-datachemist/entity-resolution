@@ -28,8 +28,14 @@ parallel "rapper -i rdfxml -o turtle {} > $BIBFRAME_TTL_DIR/{/.}.ttl" ::: $BIBFR
 echo "Translating EDTF"
 parallel --halt-on-error 2 "sed -i 's|http://id.loc.gov/datatypes/edtf|http://www.w3.org/2001/XMLSchema#string|g' {}" ::: $BIBFRAME_TTL_DIR/*
 
-echo "Translating Durations"
+echo "Translating Durations to Strings"
 parallel --halt-on-error 2 "sed -i 's|http://www.w3.org/2001/XMLSchema#duration|http://www.w3.org/2001/XMLSchema#string|g' {}" ::: $BIBFRAME_TTL_DIR/*
+
+echo "Translating Dates to Strings"
+parallel --halt-on-error 2 "sed -i 's|http://www.w3.org/2001/XMLSchema#date|http://www.w3.org/2001/XMLSchema#string|g' {}" ::: $BIBFRAME_TTL_DIR/*
+
+echo "Translating stringTime to dateTime"
+parallel --halt-on-error 2 "sed -i 's|http://www.w3.org/2001/XMLSchema#stringTime|http://www.w3.org/2001/XMLSchema#dateTime|g' {}" ::: $BIBFRAME_TTL_DIR/*
 
 echo "Creating DBs for merge load"
 for f in `ls $BIBFRAME_TTL_DIR/`
@@ -40,7 +46,8 @@ done
 echo "Loading into TerminusDB"
 parallel "terminusdb triples load admin/{/}/local/branch/main/instance {}" ::: $BIBFRAME_TTL_DIR/*
 
+echo "Squashing input"
+parallel "terminusdb reset admin/{} $(terminusdb squash --json {} | jq '."api:commit"')" ::: $BIBFRAME_TTL_DIR/*
 
-http://id.loc.gov/datatypes/edtf
-
-http://www.w3.org/2001/XMLSchema#string
+terminusdb db create admin/yale --schema=false
+ls $BIBFRAME_TTL_DIR | awk '{print "admin/"$1}' | terminusdb concat admin/yale
