@@ -1,0 +1,2088 @@
+Select,XPath,Examples
+T,/rdf:RDF/madsrdf:Authority/rdf:type,"http://www.loc.gov/mads/rdf/v1#PersonalName
+http://www.loc.gov/mads/rdf/v1#Title"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:authoritativeLabel,"Shields, Joyce D.
+Pop and play (Kingfisher Publications)
+Risse, Stefanie (Lawyer)"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasSource/madsrdf:Source/madsrdf:citationNote,"CIP t.p. (Joyce D. Shields, R.N., M.S., C.S.)
+                                            galley (private practice in psychiatr. resource
+                                            consultation & psychother., Belmont, MA; dir. of
+                                            R&D at Wild Acre Inns Community Residence Programs,
+                                            Boston)
+front cover (Pop and play)
+t.p. (Rechtsanwältin Stefanie Risse, M.D.C.,
+                                            Münster)"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasSource/madsrdf:Source/madsrdf:citationSource,"Peer consultation in a group context,
+                                            c1985:
+Abbott, Simon. Zoo animals, c2013 :
+Das neue Reiserecht 2018, 2018:"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Person/rdf:type,"http://www.loc.gov/mads/rdf/v1#RWO
+http://xmlns.com/foaf/0.1/Person"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Person/madsrdf:occupation/madsrdf:Occupation/rdfs:label,"Songwriter
+Gŭdulka player
+College president"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Person/madsrdf:associatedLocale/madsrdf:Geographic/rdfs:label,"Jamaica
+United States
+Havelock, N.Z."
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Person/madsrdf:birthDate/skos:Concept/rdfs:label,"19410424
+1931
+19750416"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Person/madsrdf:birthPlace/madsrdf:Geographic/rdfs:label,"Lucea, Jamaica
+Saint John, N.B.
+Peru"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Person/madsrdf:fieldOfActivity/skos:Concept/rdfs:label,"(mesh) Counseling
+History
+(fast) Art"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Person/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:organization/madsrdf:Organization/rdfs:label,"State University of New York at Oswego
+Abundant Sun
+Universidad Autónoma de Aguascalientes. Centro
+                                            de las Artes y la Cultura"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Person/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasAffiliationAddress/madsrdf:Address/madsrdf:city,"Depok
+London
+Lyon"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Person/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasAffiliationAddress/madsrdf:Address/madsrdf:country,"Indonesia
+England
+France"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Person/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasAffiliationAddress/madsrdf:Address/madsrdf:state,"Maryland
+Estado de México
+Dorset"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Person/madsrdf:associatedLanguage/madsrdf:Language/rdfs:label,"Veps
+kurdish
+Seychellois French Creole"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Person/madsrdf:deathDate/skos:Concept/rdfs:label,"1975
+(edtf) 1970-08-01
+(edtf) 2009-02-28"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Person/madsrdf:gender/skos:Concept/rdfs:label,male
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Person/madsrdf:deathPlace/madsrdf:Geographic/rdfs:label,"Greenville, S.C.
+Paris, France
+Portland, Or."
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Person/madsrdf:entityDescriptor/skos:Concept/rdfs:label,"Saint
+Christians
+Genovese"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Organization/rdf:type,"http://www.loc.gov/mads/rdf/v1#RWO
+http://xmlns.com/foaf/0.1/Organization"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Organization/madsrdf:associatedLocale/madsrdf:Geographic/rdfs:label,"Middlebury, Vt.
+Vladikavkaz (Russia)
+Japan"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Organization/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:organization/madsrdf:Organization/rdfs:label,"University of Chicago. Law School. If/When/How:
+                                            Lawyering for Reproductive Justice
+(naf) Highlights for Children, Inc.
+Cadets de l'Académie"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Organization/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasAffiliationAddress/madsrdf:Address/madsrdf:city,"Amman
+Price
+New Delhi"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Organization/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasAffiliationAddress/madsrdf:Address/madsrdf:country,"Jordan
+Italy
+India"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Organization/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasAffiliationAddress/madsrdf:Address/madsrdf:state,"Utah
+Assam
+New York (State)"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Organization/madsrdf:fieldOfActivity/skos:Concept/rdfs:label,"(lcsh) Africa--Study and teaching
+(lcsh) Food security--Ethiopia
+(lcsh) Ethiopia--Social policy"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Organization/madsrdf:entityDescriptor/skos:Concept/rdfs:label,"Business enterprises
+Programme
+Research network"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Organization/madsrdf:birthPlace/madsrdf:Geographic/rdfs:label,"Malang (Indonesia)
+Urussanga (Santa Catarina, Brazil)"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Meeting/rdf:type,http://www.loc.gov/mads/rdf/v1#RWO
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Meeting/madsrdf:associatedLocale/madsrdf:Geographic/rdfs:label,"Kraków (Poland)
+Seaside, Calif.
+Warwick, England"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Meeting/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:organization/madsrdf:Organization/rdfs:label,"Villa Monastero
+Movimento Democrático Português
+Native Industrial Art Committee (Simla,
+                                            India)"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Meeting/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasAffiliationAddress/madsrdf:Address/madsrdf:city,London
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Meeting/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasAffiliationAddress/madsrdf:Address/madsrdf:country,United States
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Meeting/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasAffiliationAddress/madsrdf:Address/madsrdf:state,D.C.
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Meeting/madsrdf:entityDescriptor/skos:Concept/rdfs:label,"Congresses and conventions
+Conference
+Seminar"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Meeting/madsrdf:fieldOfActivity/skos:Concept/rdfs:label,"(lcsh) Materials Science
+(lcsh) Arts--Mongolia
+(fast) Employee rights"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Meeting/madsrdf:birthPlace/madsrdf:Geographic/rdfs:label,"Singapore
+Ulaanbaatar (Mongolia)
+Baltimore (Md.)"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/madsrdf:RWO/rdf:type,http://www.loc.gov/standards/mads/rdf/v1#Geographic
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/madsrdf:RWO/madsrdf:associatedLocale/madsrdf:Geographic/rdfs:label,"Ukraine
+United States
+Fairfax County (Va.)"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/madsrdf:RWO/madsrdf:entityDescriptor/skos:Concept/rdfs:label,"Cities and towns
+Military bases
+City"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/madsrdf:RWO/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasAffiliationAddress/madsrdf:Address/madsrdf:city,"International Falls
+Aroland
+Shawnee"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/madsrdf:RWO/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasAffiliationAddress/madsrdf:Address/madsrdf:state,"MN
+Ontario
+Okla."
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/madsrdf:RWO/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasAffiliationAddress/madsrdf:Address/madsrdf:country,Canada
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/madsrdf:RWO/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:organization/madsrdf:Organization/rdfs:label,"Matawa First Nations Management
+Federal and Provincial Governments
+Northwest Professional Service Corp."
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/madsrdf:RWO/madsrdf:fieldOfActivity/skos:Concept/rdfs:label,Politics and government
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Family/rdf:type,"http://www.loc.gov/mads/rdf/v1#RWO
+http://xmlns.com/foaf/0.1/Group"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Family/madsrdf:associatedLocale/madsrdf:Geographic/rdfs:label,Cumberland County (Va.)
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Family/madsrdf:entityDescriptor/skos:Concept/rdfs:label,"Family
+Enslavers"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Family/madsrdf:birthPlace/madsrdf:Geographic/rdfs:label,Durham (N.C.)
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Family/madsrdf:birthDate,1842-04-13
+T,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Family/madsrdf:deathDate,1922-07-22
+T,/rdf:RDF/madsrdf:Authority/madsrdf:creationDateStart/skos:Concept/rdfs:label,"2013
+20131002
+(edtf) 1953"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:workOrigin/madsrdf:Geographic/rdfs:label,"London (England)
+(lcsh) Saint Petersburg (Russia)
+(lcsh) Moscow (Russia)"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:PersonalName/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:PersonalName/madsrdf:variantLabel,"Hall, Kenneth, 1941-
+López, Abelino Beltrán
+中村麟子, 1916-2009"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:CorporateName/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:CorporateName/madsrdf:variantLabel,"United States.
+Društvo hrvatskih književnika."
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:variantLabel,"United States. Act to Support Revitalization
+                                            and Reform of the Organization of American States, and
+                                            for Other Purposes
+United States. Public Law 113-41
+Hernández, Miguel, 1910-1942. Unceasing
+                                            lightning"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:Geographic/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:Geographic/madsrdf:variantLabel,"Dogo (Gabon)
+Weimar/Lahn (Germany)
+Kasagake-mura (Japan)"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:Title/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:Title/madsrdf:variantLabel,"Main rouge (Motion picture)
+Empreinte ou La main rouge (Motion picture)
+Incriminating evidence (Motion picture)"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:CorporateName/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:CorporateName/madsrdf:variantLabel,"Universidade Positivo. Mestrado Profissional em
+                                            Odontologia Clínica
+Universidade Positivo. Pós-Graduação em
+                                            Odontologia
+Young Men's Christian Association (Middlebury
+                                            College)"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:ConferenceName/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:ConferenceName/madsrdf:variantLabel,"إنتاج الثقافي العماني والترجمة (Conference)
+                                            (2016 : Muscat, Oman)
+Symposium in Economics, Nobel
+Workshop on Structural Biology and Functional
+                                            Genomics, NATO Advanced Research"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:FamilyName/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Authority/madsrdf:classification/ns2:ClassNumber/madsrdf:code,"PG5438.S64
+PQ8098.14.I12
+PS8609.D848"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:authoritativeLabel,"Voss, Richard
+Church of the Province of South Africa. Diocese
+                                            of Kaffraria (1901-1922 : Williams)
+Huang, Shan"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:hasSource/madsrdf:Source/madsrdf:citationNote,"t.p. (new photography and radiographic overlays
+                                            by Jim Winters)
+v. 1, t.p. (Im Yu-jin)
+1:226 (ابن الهائم؛ أحمد بن محمد بن عماد الدين
+                                            بن علي، أبو العباس، شهاب الدين، ابن الهائم؛
+                                            753-815/1352-1412؛ من تصانفه ... التحفة القدسية في
+                                            اختصار الرحبية ... = Ibn al-Hāʼim; Aḥmad ibn Muḥammad
+                                            ibn ʻImād al-Dīn ibn ʻAlī, Abū al-ʻAbbās, Shihāb al-Dīn,
+                                            Ibn al-Hāʼim; 753-815/1352-1412; min taṣānifihi ...
+                                            al-Tuḥfah al-Qudsīyah fī ikhtiṣār al-Raḥbīyah ...)"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:hasSource/madsrdf:Source/madsrdf:citationSource,"Bontrager, Kenneth L. Textbook of radiographic
+                                            positioning and related anatomy, c2010 :
+Hanʼgugin ŭi yumŏ, 1998- :
+Ziriklī"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:PersonalName/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:CorporateName/madsrdf:variantLabel,"Québec (Province). Agriculture, Ministère de
+                                            l'
+Trinitarios Descalzos
+Pace University. Lubin School of Business"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/rdf:type,http://www.loc.gov/mads/rdf/v1#CorporateName
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:authoritativeLabel,"Québec (Province). Département de l'agriculture
+                                            et de l'alimentation"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:CorporateName/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:CorporateName/madsrdf:variantLabel,Lubin Schools of Business
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Geographic/rdf:type,http://www.loc.gov/mads/rdf/v1#Authority
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Geographic/madsrdf:authoritativeLabel,"Ahmadnagar (India : District)
+Hakodate-shi (Japan)
+Rome (Italy)"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Organization/rdf:type,"http://www.loc.gov/mads/rdf/v1#Authority
+http://www.loc.gov/mads/rdf/v1#CorporateName"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Organization/madsrdf:authoritativeLabel,"United Kingdom Atomic Energy Authority
+Bucknell University
+Freemasons"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Organization/madsrdf:identifiesRWO,http://id.loc.gov/rwo/agents/no94004246
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:NameTitle/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:NameTitle/madsrdf:variantLabel,"Guillaume, de Machaut, ca. 1300-1377. Fons
+                                            tocius/O livoris/Fera pessima
+Byrd, William, 1539 or 40-1623. Gradualia,
+                                            liber 1. Gaude Maria
+Griebling, Stephen T. Sonatas, violoncello,
+                                            piano"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:CorporateName/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:CorporateName/madsrdf:variantLabel,"Society for Clinical Ecology (U.S.)
+Bulgaria. Arkhiven otdel
+Ti i chi hsieh kung yeh pu Shang-hai tsʻai liao
+                                            yen chiu so"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:Title/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:Title/madsrdf:variantLabel,"ORACLS (Computer program)
+Technical report (Saskatchewan. Dept. of
+                                            Highways and Transportation)
+Bible. N.T. Ghale. 1992"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:PersonalName/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:PersonalName/madsrdf:variantLabel,"Megee, Mary Catherine
+Akbarī, Ṣiddīqah, 1979 or 80-
+Abū Ṭālib, Muḥsin ibn al-Ḥasan, 18th cent."
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:Geographic/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:Geographic/madsrdf:variantLabel,"Kasakake-mura, Japan
+Roannais, France
+Greater Accra Region, Ghana"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:ConferenceName/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:ConferenceName/madsrdf:variantLabel,"International Symposium on the Harmonization of
+                                            Internal Quality Assurance Schemes for Analytical
+                                            Laboratories
+Mezhdunarodnai︠a︡ letni︠a︡i︠a︡ varnenskai︠a︡
+                                            shkola marksistsko-leninskoĭ filosofii.
+Symposium on the Age of Parent Materials and
+                                            Soils, Amsterdam, 1970"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/rdf:type,"http://www.loc.gov/mads/rdf/v1#PersonalName
+http://www.loc.gov/mads/rdf/v1#CorporateName"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:authoritativeLabel,"Higgins, Eddie, 1932-2009
+Scott, Shannon (Actress)
+University of Otago. Centre for the Study of
+                                            Agriculture, Food and Environment"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasSource/madsrdf:Source/madsrdf:citationNote,"(Joe Barrett; actor/audiobook narrator; J.D.,
+                                            New York Law School (2005); B.A. English and Drama,
+                                            University of Rochester (1972); RL Thomas High School,
+                                            Webster, New York (1968); professional actor since
+                                            around 1975; practicing attorney March 2005-September
+                                            2009; primary professional focus is on narrating
+                                            audiobooks; lives in Danbury, Conn.)
+label (Joe Barrett, reader)
+insert (Joe Barrett)"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasSource/madsrdf:Source/madsrdf:citationSource,"Facebook, 28 December 2012
+The bone house, 2011:
+Solly, B. Boy meets boy [SR] 1994?, p1978:"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/rdf:type,"http://www.loc.gov/mads/rdf/v1#PersonalName
+http://www.loc.gov/mads/rdf/v1#Title"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:CorporateName/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:CorporateName/madsrdf:variantLabel,"Gothenburg, Sweden. Chalmers tekniska
+                                            högskola
+Tulsa, Okla. University.
+Bologna. Università"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:PersonalName/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:PersonalName/madsrdf:variantLabel,"Roche, Paul, 1927-"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:CorporateName/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:CorporateName/madsrdf:variantLabel,"Göteborg (Sweden). Chalmers tekniska
+                                            högskola
+C.T.H.
+CTH"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:PersonalName/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:PersonalName/madsrdf:variantLabel,"林南山
+Corrich, Johannes, 1457?-1527
+Corysius, Janus, 1457?-1527"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:Title/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:Title/madsrdf:variantLabel,"ScriptaAntiqua
+Ausonius publications. Scripta antiqua
+SA (Series : Ausonius (Institute))"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:variantLabel,"Ausonius (Institute). Scripta antiqua
+Dreiser, Theodore, 1871-1945. Titán
+Willis, Connie. Sidon en el espejo"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:classification/ns2:ClassNumber/madsrdf:code,"PA8485.C7715
+ML410.H3
+ML419.M79"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/rdf:type,"http://www.loc.gov/mads/rdf/v1#CorporateName
+http://www.loc.gov/mads/rdf/v1#NameTitle
+http://www.loc.gov/mads/rdf/v1#PersonalName"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:authoritativeLabel,"Graduate Women Waikato
+Dreiser, Theodore, 1871-1945. Trilogy of
+                                            desire. Spanish (Martín Pinto)
+Dreiser, Theodore, 1871-1945."
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:note,"[A group of paper-machine tenders in Holyoke,
+                                            Massachusetts formed Eagle Lodge as a social club. May
+                                            19, 1893, the American Federation of Labor issued a
+                                            charter for the United Brotherhood of Paper Makers. Only
+                                            paper machine tenders and beater engineers were
+                                            included. In 1897, the organization asked AFL to widen
+                                            their group to everyone in the papermaking trade.
+                                            However, the paper machine tenders kept the new groups
+                                            in separate lodges and did not allow them to vote. The
+                                            name was changed in 1902 to the International
+                                            Brotherhood of Paper Makers. At this time the federal
+                                            labor unions for mechanics, firemen, pulp workers and
+                                            laborers petitioned AFL for their own charter but it was
+                                            denied. In 1903 these groups were transferred without
+                                            their consent to the International Brotherhoood of Paper
+                                            Makers. There was a period of unrest and in 1906 the
+                                            pulp and paper mill workers established a separate
+                                            group, the International Brotherhood of Pulp, Sulphite,
+                                            and Paper Mill Workers. This group was not recognized by
+                                            the AFL until 1909.] Information taken from Gross, James
+                                            A., (1964). The Making and Shaping of Unionism in the
+                                            Pulp and Paper Industry, Labor History, vol. 5, issue
+                                            2"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:creationDateStart/skos:Concept/rdfs:label,"(edtf) 1999
+(edtf) 2007
+(edtf) 1566"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasCharacteristic/skos:Concept/rdfs:label,"Brafman
+Martín Pinto
+Zsámboki"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:workOrigin/madsrdf:Geographic/rdfs:label,(naf) Raʻananah (Israel)
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Organization/madsrdf:authoritativeLabel,"Universität zu Köln
+Franklin and Marshall College
+Catholic University of America"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Organization/madsrdf:hasEarlierEstablishedForm/madsrdf:CorporateName/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Organization/madsrdf:hasEarlierEstablishedForm/madsrdf:CorporateName/madsrdf:variantLabel,North Dakota. University.
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Organization/madsrdf:hasSource/madsrdf:Source/madsrdf:citationNote,"(name not given; Wesley College, Grand Forks,
+                                            N.D.)
+(Est. Feb. 23, 1883)
+(Wesley College property acquired 1965 by Univ.
+                                            of N.D.)"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Organization/madsrdf:hasSource/madsrdf:Source/madsrdf:citationSource,"NUCMC data from North Dakota Instit. for
+                                            Regional Studies, N.D. St. Univ. Libr., Fargo for North
+                                            Dakota School of Religion. Records, 1921-1977
+Information from 678 converted Dec. 16,
+                                            2014
+Public colleges and universities, c1986"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Organization/madsrdf:hasVariant/madsrdf:CorporateName/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Organization/madsrdf:hasVariant/madsrdf:CorporateName/madsrdf:variantLabel,"North Dakota. University.
+UND"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Geographic/rdf:type,"http://www.loc.gov/mads/rdf/v1#Authority
+http://www.loc.gov/mads/rdf/v1#CorporateName"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Geographic/madsrdf:authoritativeLabel,"La Plata (Argentina)
+Prussia (Germany)
+South Bend (Ind.)"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasCharacteristic/skos:Concept/rdfs:label,"Scott
+Sin
+Barrett"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/rdf:type,http://www.loc.gov/mads/rdf/v1#CorporateName
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:authoritativeLabel,"Bulgaria. Upravlenie na arkhivite
+Prince Edward Island. Office of the Auditor
+                                            General
+YWCA Scotland"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/rdf:type,http://www.loc.gov/mads/rdf/v1#CorporateName
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:authoritativeLabel,"United States. Joint Army-Navy Board of
+                                            Aeronautics"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasSource/madsrdf:Source/madsrdf:citationNote,"t.p. (United States Aeronautical Board)
+p. 33, etc. (Aeronautical Board originally
+                                            created as Joint Army and Navy Board on Aeronautic
+                                            Cognizance, pursuant to a proposal by Sect. of War in
+                                            Oct. 1916; name chgd. in 1919 to Joint Army-Navy Board
+                                            on Aeronautics, and Board was directed by Secretaries of
+                                            War and Navy Depts.; name later chgd. to Aeronautical
+                                            Board. After 1939 Aeronautical Board under the direction
+                                            and supervision of the President)
+(Aeronautical Board organized in 1916)"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasSource/madsrdf:Source/madsrdf:citationSource,"Its Outline of policy ... 1938:
+Society of Automotive Engineers. Journal, Nov.
+                                            1942;
+U.S. govt. manual, 1937:"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:CorporateName/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:CorporateName/madsrdf:variantLabel,"American Studies Association. Midcontinent
+                                            Chapter
+Baldwin University (Saint Paul, Minn.)
+Macalester College, St. Paul, Minn."
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:ConferenceName/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:ConferenceName/madsrdf:variantLabel,"North-West European Conference on the
+                                            Psychology of Work and Organization"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:Title/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:Title/madsrdf:variantLabel,"Occasional paper series (Chung-hua ching chi
+                                            yen chiu yüan)
+Occasional paper (Zhonghua jing ji yan jiu
+                                            yuan)
+Transforming American politics series"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:Geographic/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:Geographic/madsrdf:variantLabel,"Wei-fang shih (China)
+Weifang Diqu (China)"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasVariant/madsrdf:CorporateName/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasVariant/madsrdf:CorporateName/madsrdf:variantLabel,"Macalaster College
+Macalester College, St. Paul, Minn.
+Macalestri Collegium"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasVariant/madsrdf:ConferenceName/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasVariant/madsrdf:ConferenceName/madsrdf:variantLabel,"Conference on the Psychology of Work and
+                                            Organization, West European"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasVariant/madsrdf:Title/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasVariant/madsrdf:Title/madsrdf:variantLabel,"Occasional paper series (Chung-hua ching chi
+                                            yen chiu yüan)
+Einzelschrift (Saarland (Germany).
+                                            Statistisches Landesamt)
+Verhandelingen in-8o (Académie royale des
+                                            sciences coloniales (Belgium). Classe des sciences
+                                            techniques)"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:CorporateName/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:variantLabel,"Zhonghua jing ji yan jiu yuan. Occasional paper
+                                            series
+Saarland (Germany). Statistisches Landesamt.
+                                            Einzelschriften
+Académie royale des sciences coloniales
+                                            (Belgium). Classe des sciences techniques. Mémoires
+                                            in-8o"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasVariant/madsrdf:Geographic/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasVariant/madsrdf:Geographic/madsrdf:variantLabel,"Weifang City (China)
+潍坊市 (China)
+Wei-fang shih (China)"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:note,[created 1955]
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Organization/rdf:type,"http://www.loc.gov/mads/rdf/v1#Authority
+http://www.loc.gov/mads/rdf/v1#CorporateName"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Organization/madsrdf:authoritativeLabel,"Pakistan. Supreme Court
+International Water Association
+Long Island University. C.W. Post Campus"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Geographic/rdf:type,http://www.loc.gov/mads/rdf/v1#Authority
+T,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Geographic/madsrdf:authoritativeLabel,"Wałbrzych (Poland)
+Fuzhou Shi (China)
+Tasmania"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:see/madsrdf:Authority/rdf:type,http://www.loc.gov/mads/rdf/v1#PersonalName
+T,/rdf:RDF/madsrdf:Authority/madsrdf:see/madsrdf:Authority/madsrdf:authoritativeLabel,"Lazarus, Greg
+Lewis, Henry Harrison, 1863-1947
+Zoe, Bobby"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:see/madsrdf:Authority/madsrdf:classification/ns2:ClassNumber/madsrdf:code,PR9619.3.G727
+T,/rdf:RDF/madsrdf:Authority/madsrdf:see/madsrdf:Authority/madsrdf:hasSource/madsrdf:Source/madsrdf:citationNote,"(Greig, Maysie, 1902-1971: pseuds: Jennifer
+                                            Ames, Ann Barclay, Mary Douglas Warren)"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:see/madsrdf:Authority/madsrdf:hasSource/madsrdf:Source/madsrdf:citationSource,"Contemp. au., v. 104"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:note,"[Henricus de Segusio began his Lectura super
+                                            Decretales in 1262, almost ten years after his more
+                                            famous Summa super titulis Decretalium was finished.
+                                            Cardinal Henricus entitled the work the Commentum super
+                                            Decretalibus in his last will and testament, but the
+                                            work is commonly known as the Lectura. The work was
+                                            completed in two versions, the first completed circa
+                                            1265, which exists in one manuscript in Oxford, New
+                                            College MS 207. The second, longer version was finished
+                                            near his death.]
+[The Caribbean Philosophical Association was
+                                            launched at the University of the West Indies (Jamaica)
+                                            on June 14, 2003 to examine and contribute to the ideas
+                                            informing Caribbean life.]
+[Artist and filmmaker born in the
+                                            Netherlands.]"
+T,/rdf:RDF/madsrdf:Authority/madsrdf:creationDateEnd/skos:Concept/rdfs:label,"(edtf) 1978
+1982
+(edtf) 2011"
+T,/rdf:RDF/madsrdf:CorporateName/madsrdf:identifiesRWO/bf:Organization/rdf:type,"http://www.loc.gov/mads/rdf/v1#RWO
+http://xmlns.com/foaf/0.1/Organization"
+T,/rdf:RDF/madsrdf:CorporateName/madsrdf:identifiesRWO/bf:Organization/madsrdf:associatedLocale/madsrdf:Geographic/rdfs:label,"Uzbekistan
+Pisa (Italy)"
+T,/rdf:RDF/madsrdf:CorporateName/madsrdf:identifiesRWO/bf:Organization/madsrdf:entityDescriptor/skos:Concept/rdfs:label,"Art foundation
+Federal agency
+University"
+T,/rdf:RDF/madsrdf:CorporateName/madsrdf:variantLabel,"Culturespaces (Firm)
+Bundesamt fur Seeschifffahrt und
+                                            Hydrographie
+Instituto Universitario de Investigación Ortega
+                                            y Gasset"
+T,/rdf:RDF/madsrdf:ConferenceName/madsrdf:identifiesRWO/bf:Meeting/rdf:type,http://www.loc.gov/mads/rdf/v1#RWO
+T,/rdf:RDF/madsrdf:ConferenceName/madsrdf:identifiesRWO/bf:Meeting/madsrdf:associatedLocale/madsrdf:Geographic/rdfs:label,Wuhan (China)
+T,/rdf:RDF/madsrdf:ConferenceName/madsrdf:identifiesRWO/bf:Meeting/madsrdf:entityDescriptor/skos:Concept/rdfs:label,"(naf) Congresses and conventions
+Congresses and conventions"
+T,/rdf:RDF/madsrdf:ConferenceName/madsrdf:identifiesRWO/bf:Meeting/madsrdf:fieldOfActivity/skos:Concept/rdfs:label,Materials science
+T,/rdf:RDF/madsrdf:ConferenceName/madsrdf:variantLabel,"Nanostructures, Thin Films and Bulk
+                                            Oxides-Synthesis, Characterization and Applications
+                                            (Symposim) (2014 : San Francisco, Calif.)
+Arte e impresa: omaggio a Marco Rivetti
+                                            (Conference) (2016 : Rivoli, Italy)
+Congreso Nacional de Violencia
+                                            Filio-Parental"
+T,/rdf:RDF/madsrdf:ComplexSubject/madsrdf:variantLabel,"Wolkers, Jan, 1925-2007.--Diaries
+Kirrweiler (Germany)--Genealogy"
+T,/rdf:RDF/madsrdf:ComplexSubject/madsrdf:identifiesRWO/madsrdf:RWO/rdf:type,http://www.loc.gov/standards/mads/rdf/v1#Geographic
+T,/rdf:RDF/madsrdf:ComplexSubject/madsrdf:identifiesRWO/madsrdf:RWO/rdfs:label,Kirrweiler (Germany) Genealogy
+T,/rdf:RDF/madsrdf:Organization/rdf:type,"http://www.loc.gov/mads/rdf/v1#Authority
+http://www.loc.gov/mads/rdf/v1#CorporateName"
+T,/rdf:RDF/madsrdf:Organization/madsrdf:hasRelatedAuthority/madsrdf:Authority/rdf:type,http://www.loc.gov/mads/rdf/v1#CorporateName
+T,/rdf:RDF/madsrdf:Organization/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:authoritativeLabel,"Akademia Sztuk Pięknych im. Eugeniusza Gepperta
+                                            we Wrocławiu
+Université de Caen Basse-Normandie
+International Association of Rotary Clubs"
+T,/rdf:RDF/madsrdf:Organization/madsrdf:hasRelatedAuthority/madsrdf:Organization/rdf:type,"http://www.loc.gov/mads/rdf/v1#Authority
+http://www.loc.gov/mads/rdf/v1#CorporateName"
+T,/rdf:RDF/madsrdf:Organization/madsrdf:hasRelatedAuthority/madsrdf:Organization/madsrdf:authoritativeLabel,"Institut zhivopisi, skulʹptury i arkhitektury
+                                            imeni I.E. Repina
+University of Manchester
+Katholieke Universiteit Brabant"
+T,/rdf:RDF/madsrdf:Organization/madsrdf:hasSource/madsrdf:Source/madsrdf:citationNote,"(Eugeniusz Geppert Academy of Fine Arts;
+                                            Akademia Sztuk Pięknych im. Eugeniusza Gepperta we
+                                            Wrocławiu; a public institution of higher learning
+                                            established in 1946; College of Fine Arts (1946-1949),
+                                            State College of Fine Arts (1949-1996), Academy of Fine
+                                            Arts in Wrocław (1996-2008) and since 2008, the
+                                            Eugeniusz Geppert Academy of Fine Arts)
+p. 1 (ASP we Wrocławiu); nr. 1-2/2001: p. 1
+                                            (Akademia Sztuk Pięknych we Wrocławiu)
+t.p. (Dept. of Adivasi Theology & Cultural
+                                            Research, GTC, Ranchi) t.p. verso (Dept. of Adivasi
+                                            Theology & Cultural Research (ATCR, Gossner
+                                            Theological College, Ranchi, Jharkhand)"
+T,/rdf:RDF/madsrdf:Organization/madsrdf:hasSource/madsrdf:Source/madsrdf:citationSource,"Wikipedia, April 17, 2017
+Format (Wrocław, Poland), nr. 4/2000:
+Adivasi theology, 2009:"
+T,/rdf:RDF/madsrdf:Organization/madsrdf:hasVariant/madsrdf:CorporateName/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Organization/madsrdf:hasVariant/madsrdf:CorporateName/madsrdf:variantLabel,"ASP we Wrocławiu
+Academy of Fine Arts in Wrocław
+Gossner Theological College. Department of
+                                            Adivasi Theology & Cultural Research"
+T,/rdf:RDF/madsrdf:Organization/madsrdf:identifiesRWO/bf:Organization/rdf:type,"http://www.loc.gov/mads/rdf/v1#RWO
+http://xmlns.com/foaf/0.1/Organization"
+T,/rdf:RDF/madsrdf:Organization/madsrdf:identifiesRWO/bf:Organization/madsrdf:associatedLocale/madsrdf:Geographic/rdfs:label,"Washington (D.C.)
+Indianapolis (Ind.)
+Caen (France)"
+T,/rdf:RDF/madsrdf:Organization/madsrdf:identifiesRWO/bf:Organization/madsrdf:entityDescriptor/skos:Concept/rdfs:label,"Public universities and colleges
+Public university
+Technical institutes"
+T,/rdf:RDF/madsrdf:Organization/madsrdf:identifiesRWO/bf:Organization/madsrdf:fieldOfActivity/skos:Concept/rdfs:label,(aat) Administration
+T,/rdf:RDF/madsrdf:Organization/madsrdf:identifiesRWO/bf:Organization/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasAffiliationAddress/madsrdf:Address/madsrdf:city,"Saint-Paul-Lez-Durance
+Rohtak
+Beirut"
+T,/rdf:RDF/madsrdf:Organization/madsrdf:identifiesRWO/bf:Organization/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasAffiliationAddress/madsrdf:Address/madsrdf:country,"France
+India
+Lebanon"
+T,/rdf:RDF/madsrdf:Organization/madsrdf:identifiesRWO/bf:Organization/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasAffiliationAddress/madsrdf:Address/madsrdf:state,"Haryana
+Cambridgeshire"
+T,/rdf:RDF/madsrdf:Organization/madsrdf:hasEarlierEstablishedForm/madsrdf:CorporateName/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Organization/madsrdf:hasEarlierEstablishedForm/madsrdf:CorporateName/madsrdf:variantLabel,"Fu tan ta hsüeh (Shanghai, China)
+Fu tan ta hsüeh, Shanghai.
+University of Birmingham. Dept. of
+                                            Economics"
+T,/rdf:RDF/madsrdf:Organization/madsrdf:hasReciprocalAuthority/madsrdf:Authority/rdf:type,http://www.loc.gov/mads/rdf/v1#CorporateName
+T,/rdf:RDF/madsrdf:Organization/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:authoritativeLabel,"Shanghai yi ke da xue
+University of Newark
+Unión de Naciones Suramericanas"
+T,/rdf:RDF/madsrdf:Organization/madsrdf:hasLaterEstablishedForm/madsrdf:Organization/rdf:type,"http://www.loc.gov/mads/rdf/v1#Authority
+http://www.loc.gov/mads/rdf/v1#CorporateName"
+T,/rdf:RDF/madsrdf:Organization/madsrdf:hasLaterEstablishedForm/madsrdf:Organization/madsrdf:authoritativeLabel,Universidad Autónoma de Coahuila
+T,/rdf:RDF/madsrdf:Organization/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/rdf:type,"http://www.loc.gov/mads/rdf/v1#CorporateName
+http://www.loc.gov/mads/rdf/v1#Organization"
+T,/rdf:RDF/madsrdf:Organization/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:authoritativeLabel,"Mining, Geological, and Metallurgical Institute
+                                            of India
+Ravenshaw University"
+T,/rdf:RDF/madsrdf:Geographic/madsrdf:authoritativeLabel,"Udaipur (Rajasthan, India)
+Kirkdale (Liverpool, England)
+Yogyakarta (Indonesia)"
+T,/rdf:RDF/madsrdf:Geographic/rdf:type,http://www.loc.gov/mads/rdf/v1#Authority
+T,/rdf:RDF/madsrdf:Geographic/madsrdf:hasReciprocalAuthority/madsrdf:Authority/rdf:type,http://www.loc.gov/mads/rdf/v1#Geographic
+T,/rdf:RDF/madsrdf:Geographic/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:authoritativeLabel,"Brandywine Village (Del.)
+San Andrés Sacamch'en de los Pobres
+                                            (Mexico)
+Ciudad Trujillo (Dominican Republic)"
+T,/rdf:RDF/madsrdf:Geographic/madsrdf:hasSource/madsrdf:Source/madsrdf:citationNote,"(ppl; 39°44ʹ45ʺN 075°32ʹ48ʺW)
+(Brandywine Village became part of Wilmington,
+                                            Del., in 1869)
+(Wilmington, Delaware; City of Wilmington;
+                                            largest and most populous city in the state of Delaware;
+                                            county seat of New Castle County; 39°44ʹ45ʺN
+                                            75°32ʹ48ʺW)"
+T,/rdf:RDF/madsrdf:Geographic/madsrdf:hasSource/madsrdf:Source/madsrdf:citationSource,"GeoNames, algorithmically matched, 2009
+NUCMC data from Historical Society of Delaware
+                                            for Brandywine Fire Company records, 1840-1851
+Wikipedia, June 30, 2019"
+T,/rdf:RDF/madsrdf:Geographic/madsrdf:hasVariant/madsrdf:Geographic/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Geographic/madsrdf:hasVariant/madsrdf:Geographic/madsrdf:variantLabel,"City of Wilmington (Del.)
+Gurudwara (India)
+Dehra Doon (India)"
+T,/rdf:RDF/madsrdf:Geographic/madsrdf:hasVariant/madsrdf:CorporateName/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Geographic/madsrdf:hasVariant/madsrdf:CorporateName/madsrdf:variantLabel,"Los Angeles (Calif.). Van Nuys
+Ulʹi︠a︡novskai︠a︡ oblastʹ (Russia).
+                                            Pravitelʹstvo
+Ulʹi︠a︡novskai︠a︡ oblastʹ (Russia).
+                                            Правительство"
+T,/rdf:RDF/madsrdf:Geographic/madsrdf:identifiesRWO/madsrdf:RWO/rdf:type,http://www.loc.gov/standards/mads/rdf/v1#Geographic
+T,/rdf:RDF/madsrdf:Geographic/madsrdf:identifiesRWO/madsrdf:RWO/madsrdf:associatedLocale/madsrdf:Geographic/rdfs:label,"Los Angeles County (Calif.)
+Argentina"
+T,/rdf:RDF/madsrdf:Geographic/madsrdf:identifiesRWO/madsrdf:RWO/madsrdf:entityDescriptor/skos:Concept/rdfs:label,"(aat) County seats
+Regency
+Town"
+T,/rdf:RDF/madsrdf:Geographic/madsrdf:hasEarlierEstablishedForm/madsrdf:Geographic/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:Geographic/madsrdf:hasEarlierEstablishedForm/madsrdf:Geographic/madsrdf:variantLabel,"Lin-yü hsien (China)
+Xiangxiang Xian (China)
+Pati, Indonesia (Jawa Tengah)"
+T,/rdf:RDF/madsrdf:Geographic/madsrdf:note,"[On Jan. 14, 1969, the name of Madras State was
+                                            changed to Tamil Nadu]"
+T,/rdf:RDF/skos:Concept/madsrdf:authoritativeLabel,"Painting, Spanish
+Irrigation
+Children's literature--Authorship"
+T,/rdf:RDF/skos:Concept/rdf:type,"http://www.loc.gov/mads/rdf/v1#Occupation
+http://www.loc.gov/mads/rdf/v1#Organization"
+T,/rdf:RDF/madsrdf:Occupation/madsrdf:authoritativeLabel,"Motivational speakers
+Astronauts
+Vina players"
+T,/rdf:RDF/madsrdf:Occupation/rdf:type,http://www.w3.org/2004/02/skos/core#Concept
+T,/rdf:RDF/bf:Organization/rdf:type,"http://www.loc.gov/mads/rdf/v1#RWO
+http://xmlns.com/foaf/0.1/Organization"
+T,/rdf:RDF/bf:Organization/madsrdf:associatedLanguage/madsrdf:Language/madsrdf:authoritativeLabel,English
+T,/rdf:RDF/bf:Organization/madsrdf:associatedLocale/madsrdf:Geographic/madsrdf:authoritativeLabel,"London (England)
+Great Britain
+England"
+T,/rdf:RDF/bf:Organization/madsrdf:entityDescriptor/skos:Concept/madsrdf:authoritativeLabel,"Charities
+County councils
+Labor unions"
+T,/rdf:RDF/bf:Organization/madsrdf:fieldOfActivity/skos:Concept/madsrdf:authoritativeLabel,"Medical care
+Public health
+Local government"
+T,/rdf:RDF/bf:Organization/madsrdf:fieldOfActivity/skos:Concept/rdfs:label,"(lcsh) College teachers--Services for
+(lcsh) Proteomics--Study and teaching
+                                            (Higher)
+(lcsh) Genetics--Study and teaching
+                                            (Higher)"
+T,/rdf:RDF/bf:Organization/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasAffiliationAddress/madsrdf:Address/madsrdf:city,"London
+Dourados
+Paris"
+T,/rdf:RDF/bf:Organization/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasAffiliationAddress/madsrdf:Address/madsrdf:country,"England
+Brasil
+France"
+T,/rdf:RDF/bf:Organization/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasAffiliationAddress/madsrdf:Address/madsrdf:state,NY
+T,/rdf:RDF/bf:Person/rdf:type,"http://www.loc.gov/mads/rdf/v1#RWO
+http://xmlns.com/foaf/0.1/Person"
+T,/rdf:RDF/bf:Person/madsrdf:birthDate/skos:Concept/rdfs:label,"(edtf) 1973
+(edtf) 1975-10-29
+(edtf) 1905-08-02"
+T,/rdf:RDF/bf:Person/madsrdf:birthPlace/madsrdf:Geographic/rdfs:label,"Mussoorie (India)
+Queens (New York, N.Y.)
+Haarlem, Netherlands"
+T,/rdf:RDF/bf:Person/madsrdf:birthPlace/madsrdf:Geographic/madsrdf:authoritativeLabel,"Brooklyn (New York, N.Y.)
+Seoul (Korea)
+Munich (Germany)"
+T,/rdf:RDF/bf:Person/madsrdf:deathDate/skos:Concept/rdfs:label,"(edtf) 1963-12-05
+(edtf) 2005-06-13
+1971"
+T,/rdf:RDF/bf:Person/madsrdf:occupation/madsrdf:Occupation/rdf:type,http://www.w3.org/2004/02/skos/core#Concept
+T,/rdf:RDF/bf:Person/madsrdf:occupation/madsrdf:Occupation/madsrdf:authoritativeLabel,"Translators
+Actresses
+Yoga teachers"
+T,/rdf:RDF/bf:Person/madsrdf:associatedLocale/madsrdf:Geographic/madsrdf:authoritativeLabel,"New Orleans (La.)
+Germany
+Vancouver (B.C.)"
+T,/rdf:RDF/bf:Person/madsrdf:gender/skos:Concept/rdf:type,http://www.loc.gov/mads/rdf/v1#Occupation
+T,/rdf:RDF/bf:Person/madsrdf:gender/skos:Concept/madsrdf:authoritativeLabel,"Females
+Males"
+T,/rdf:RDF/bf:Person/madsrdf:fieldOfActivity/skos:Concept/madsrdf:authoritativeLabel,"Acting
+Art music
+Composition (Music)"
+T,/rdf:RDF/bf:Person/madsrdf:deathPlace/madsrdf:Geographic/madsrdf:authoritativeLabel,Lisbon (Portugal)
+T,/rdf:RDF/madsrdf:RWO/rdf:type,http://www.loc.gov/standards/mads/rdf/v1#Geographic
+T,/rdf:RDF/madsrdf:RWO/madsrdf:associatedLocale/madsrdf:Geographic/madsrdf:authoritativeLabel,"Canada
+Nunavik (Québec)
+Namibia"
+T,/rdf:RDF/madsrdf:RWO/madsrdf:entityDescriptor/skos:Concept/rdfs:label,"Inuit communities
+Province
+(aat) Provinces"
+T,/rdf:RDF/madsrdf:RWO/madsrdf:entityDescriptor/skos:Concept/madsrdf:authoritativeLabel,"Capitals (Cities)
+Cities and towns
+French departments (Political divisions of
+                                            France)"
+T,/rdf:RDF/madsrdf:GenreForm/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+T,/rdf:RDF/madsrdf:GenreForm/madsrdf:variantLabel,"Genealogy
+Diaries"
+T,/rdf:RDF/bf:Meeting/rdf:type,http://www.loc.gov/mads/rdf/v1#RWO
+F,/rdf:RDF/madsrdf:Authority/identifiers:lccn,"n 85015108
+no2014113350
+n 2019016723"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:adminMetadata/ri:RecordInfo/ri:languageOfCataloging,http://id.loc.gov/vocabulary/iso639-2/eng
+F,/rdf:RDF/madsrdf:Authority/madsrdf:adminMetadata/ri:RecordInfo/ri:recordChangeDate,"2014-12-09T07:38:36
+1985-03-18T00:00:00
+2014-08-27T07:35:43"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:adminMetadata/ri:RecordInfo/ri:recordContentSource,"http://id.loc.gov/vocabulary/organizations/dlc
+http://id.loc.gov/vocabulary/organizations/icrlf"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:adminMetadata/ri:RecordInfo/ri:recordStatus,"revised
+new"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:elementList/madsrdf:FullNameElement/madsrdf:elementValue,"Shields, Joyce D.
+Risse, Stefanie
+Hall, Kenneth O."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:elementList/madsrdf:GenreFormElement/madsrdf:elementValue,"Series
+(lcgft) Statutes and codes"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:elementList/madsrdf:MainTitleElement/madsrdf:elementValue,"Pop and play (Kingfisher Publications)
+Structure of existence
+New directions in culture and governance"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:elementList/madsrdf:TermsOfAddressNameElement/madsrdf:elementValue,"(Lawyer)
+(Bass player)
+(Public officer)"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:elementList/madsrdf:DateNameElement/madsrdf:elementValue,"1975-
+1919-1970
+1990-"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"United States.
+Environmental Protection Agency.
+Region VI."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:elementList/madsrdf:GeographicElement/madsrdf:elementValue,"Minsk, Belarus)
+Ndougou (Gabon)
+Muscat, Oman)"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:elementList/madsrdf:PartNameElement/madsrdf:elementValue,"Jidō fukushi kihon hōsei
+Akademi dizisi
+Nomenclátor de autores medievales hispanos"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:elementList/madsrdf:NamePartElement/madsrdf:elementValue,Manuscript.
+F,/rdf:RDF/madsrdf:Authority/madsrdf:elementList/madsrdf:PartNumberElement/madsrdf:elementValue,"Reihe 16,
+Reihe B
+Saeculum XVI"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:elementList/madsrdf:LanguageElement/madsrdf:elementValue,"Afrikaans
+French (Outtier)
+Greek"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:elementList/madsrdf:SubTitleElement/madsrdf:elementValue,"(Georgian version).
+(Olson)
+(Estes)"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:elementList/madsrdf:TemporalElement/madsrdf:elementValue,"(1865 September 29)
+1992
+(2001 April 10)"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:elementList/madsrdf:hasSource/madsrdf:Source/rdfs:label,
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasExactExternalAuthority,"http://viaf.org/viaf/sourceID/LC%7Cn++85015108#skos:Concept
+http://viaf.org/viaf/sourceID/LC%7Cno2014113350#skos:Concept
+http://viaf.org/viaf/sourceID/LC%7Cn+2019016723#skos:Concept"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasSource/madsrdf:Source/madsrdf:citationStatus,found
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Person/rdfs:label,"Shields, Joyce D.
+Risse, Stefanie (Lawyer)
+Hall, Kenneth O."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Person/madsrdf:occupation/madsrdf:Occupation/madsrdf:hasSource/madsrdf:Source/rdfs:label,"(OCoLC)fst01061605
+(OCoLC)fst01149517
+(OCoLC)fst01154833"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Person/madsrdf:associatedLocale/madsrdf:Geographic/madsrdf:isMemberOfMADSScheme,http://id.loc.gov/authorities/names
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Person/madsrdf:associatedLocale/madsrdf:Geographic/madsrdf:hasSource/madsrdf:Source/rdfs:label,"http://id.loc.gov/authorities/names/n79040014
+Drug management of prostate cancer, c2010
+Shannon Finnegan website, Jan. 16, 2013"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Person/madsrdf:birthDate/skos:Concept/madsrdf:hasSource/madsrdf:Source/rdfs:label,"Whoplus, Mar. 9, 2022
+Shokkan seido to seikyō, 1988
+JTNDL in VIAF, Jan. 9, 2020"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Person/madsrdf:birthPlace/madsrdf:Geographic/madsrdf:isMemberOfMADSScheme,http://id.loc.gov/authorities/names
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Person/madsrdf:birthPlace/madsrdf:Geographic/madsrdf:hasSource/madsrdf:Source/rdfs:label,"http://id.loc.gov/authorities/names/n79097478
+naf
+Mizu no katachi, 2012"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Person/madsrdf:fieldOfActivity/skos:Concept/madsrdf:hasSource/madsrdf:Source/rdfs:label,"(OCoLC)fst01061714
+(OCoLC)fst01753278
+(OCoLC)fst00920831"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Person/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:email,"maretharetief@gmail.com
+kcarr@pa.gov
+ushagaur70@gmail.com"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Person/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasAffiliationAddress/madsrdf:Address/madsrdf:postcode,"16516
+20912
+WC1R 5BH"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Person/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasAffiliationAddress/madsrdf:Address/madsrdf:streetAddress,"Perum Wismamas Pondok Cabe Blok C1/23,
+                                            Cinangka, Sawangan
+67, Chancery Lane
+rue Mercière"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Person/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasAffiliationAddress/madsrdf:Address/madsrdf:extendedAddress,"(Grande) rue Mercière
+aux Halles de la Grenette
+rue Tupin"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Person/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasSource/madsrdf:Source/rdfs:label,"Revealed, 2018
+http://id.loc.gov/authorities/names/n79145123
+http://id.loc.gov/authorities/names/n81119193"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Person/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:affiliationEnd,"1979
+1990
+2002"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Person/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:affiliationStart,"1980
+2001
+2014"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Person/madsrdf:deathDate/skos:Concept/madsrdf:hasSource/madsrdf:Source/rdfs:label,"Whoplus, Mar. 9, 2022
+JTNDL in VIAF, Jan. 9, 2020
+Social Security death index, searched May 16,
+                                            2014"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Person/madsrdf:gender/skos:Concept/madsrdf:hasSource/madsrdf:Source/rdfs:label,"National Security Archive Staff and Fellows
+http://www.gwu.edu/~nsarchiv/nsa/arc_staff.html
+Le Mythe de Mapout, 2016"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Person/madsrdf:deathPlace/madsrdf:Geographic/madsrdf:hasSource/madsrdf:Source/rdfs:label,"naf
+New York times (online), viewed June 24,
+                                            2014
+http://en.wikipedia.org/wiki/Carl_von_Noorden"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Person/madsrdf:entityDescriptor/skos:Concept/madsrdf:hasSource/madsrdf:Source/rdfs:label,"http://id.loc.gov/authorities/demographicTerms/dg2022060296
+https://homosaurus.org/v3/homoit0000915
+http://id.loc.gov/authorities/demographicTerms/dg2022060262"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Organization/rdfs:label,"United States. Organization of American States
+                                            Revitalization and Reform Act of 2013
+United States. Environmental Protection Agency.
+                                            Region VI. Enforcement Division
+Eastern Association of College and University
+                                            Business Officers"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Organization/madsrdf:associatedLocale/madsrdf:Geographic/madsrdf:isMemberOfMADSScheme,http://id.loc.gov/authorities/names
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Organization/madsrdf:associatedLocale/madsrdf:Geographic/madsrdf:hasSource/madsrdf:Source/rdfs:label,"Nihon Kenchiku Kyōkai WWW home page, Feb. 1,
+                                            2015
+http://www.concrete.org/CHAPTERS/chap.asp?cid=c041"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Organization/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:email,"info.nz@movember.com
+anchalikitihas@gmail.com
+contacto@losperrosromanticos.cl"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Organization/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasAffiliationAddress/madsrdf:Address/madsrdf:postcode,"11831
+84501
+11012"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Organization/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasAffiliationAddress/madsrdf:Address/madsrdf:streetAddress,"P.O. Box 753
+750 East 400 North
+Krishi Anusandhan Bhavan, Pusa"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Organization/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasAffiliationAddress/madsrdf:Address/madsrdf:extendedAddress,"Tezpur University
+St Clement's Gardens
+Rosebery Avenue"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Organization/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:affiliationEnd,"1988
+1993
+1768"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Organization/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:affiliationStart,"1987
+1988
+1705"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Organization/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasSource/madsrdf:Source/rdfs:label,"http://id.loc.gov/authorities/names/n80021644
+https://www.usno.navy.mil/FNMOC
+https://hamiltonnature.org/about-us/contact-us/"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Organization/madsrdf:fieldOfActivity/skos:Concept/madsrdf:hasSource/madsrdf:Source/rdfs:label,"(OCoLC)fst01044222
+https://www.facebook.com/pages/Sangre-Felina-OFICIAL-Fans/214677995248407
+(OCoLC)fst01123192"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Organization/madsrdf:entityDescriptor/skos:Concept/madsrdf:hasSource/madsrdf:Source/rdfs:label,"http://vocab.getty.edu/page/aat/300232418
+http://vocab.getty.edu/aat/300386367"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Organization/madsrdf:associatedLanguage,"http://id.loc.gov/vocabulary/languages/eng
+http://id.loc.gov/vocabulary/languages/rus"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Organization/madsrdf:birthPlace/madsrdf:Geographic/madsrdf:isMemberOfMADSScheme,http://id.loc.gov/authorities/names
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Organization/madsrdf:occupation,"http://id.loc.gov/authorities/subjects/sh85077700
+http://id.loc.gov/authorities/subjects/sh85108871"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Meeting/rdfs:label,"Aktualʹnye problemy pravovykh, ėkonomicheskikh
+                                            i gumanitarnykh nauk (Conference) (5th : 2015 : Minsk,
+                                            Belarus)
+Intāj al-thaqāfī al-ʻUmānī wa-al-tarjamah
+                                            (Conference) (2016 : Muscat, Oman)
+Nobel Symposium in Economics"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Meeting/madsrdf:associatedLanguage,"http://id.loc.gov/vocabulary/languages/ara
+http://id.loc.gov/vocabulary/languages/eng
+http://id.loc.gov/vocabulary/languages/ita"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Meeting/madsrdf:associatedLocale/madsrdf:Geographic/madsrdf:isMemberOfMADSScheme,http://id.loc.gov/authorities/names
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Meeting/madsrdf:associatedLocale/madsrdf:Geographic/madsrdf:hasSource/madsrdf:Source/rdfs:label,"http://www.acresusa.com/tapes/thumbnail.asp?catid=79&pcid=3
+Acres USA website"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Meeting/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasAffiliationAddress/madsrdf:Address/madsrdf:postcode,"SE1 9DD
+SW1Y 5AG
+WC1B 3LS"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Meeting/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasAffiliationAddress/madsrdf:Address/madsrdf:streetAddress,"9 Montague Close
+6-9 Carlton House Terrace
+28 Great Russell Street"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Meeting/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasAffiliationAddress/madsrdf:Address/madsrdf:extendedAddress,"2101 Constitution Avenue, NW
+Kingsway
+500 Fifth St. NW"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Meeting/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:email,"office@balkanima.org
+cinarauv@correounivalle.edu.co
+encuentrosetnograficos@gmail.com"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Meeting/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasSource/madsrdf:Source/rdfs:label,t.p.
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Meeting/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:affiliationEnd,20160117
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Meeting/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:affiliationStart,20150922
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Meeting/madsrdf:entityDescriptor/skos:Concept/madsrdf:hasSource/madsrdf:Source/rdfs:label,(OCoLC)fst00875219
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Meeting/madsrdf:fieldOfActivity/skos:Concept/madsrdf:hasSource/madsrdf:Source/rdfs:label,"... International Symposium on Problems of
+                                            Redundancy in Information and Control Systems, 2012
+(OCoLC)fst01122877
+(OCoLC)fst01749717"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Meeting/madsrdf:birthPlace/madsrdf:Geographic/madsrdf:isMemberOfMADSScheme,http://id.loc.gov/authorities/names
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/madsrdf:RWO/rdfs:label,"Ndougou (Gabon)
+Bibra (Germany)
+Camp Breckinridge (Ky.)"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/madsrdf:RWO/madsrdf:associatedLocale/madsrdf:Geographic/madsrdf:isMemberOfMADSScheme,http://id.loc.gov/authorities/names
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/madsrdf:RWO/madsrdf:associatedLanguage,"http://id.loc.gov/vocabulary/languages/eng
+http://id.loc.gov/vocabulary/iso639-3/eng"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/madsrdf:RWO/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:email,"info@ci.international-falls.mn.us
+prensabrinkmann@gmail.com
+alcaldia@gramalote-nortedesantander.gov.co"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/madsrdf:RWO/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasAffiliationAddress/madsrdf:Address/madsrdf:postcode,"56649
+P0T 1B0
+74801-8699"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/madsrdf:RWO/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasAffiliationAddress/madsrdf:Address/madsrdf:streetAddress,"600 4th Street
+P.O. Box 10
+1601 S. Gordon Cooper Ave."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/madsrdf:RWO/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasAffiliationAddress/madsrdf:Address/madsrdf:extendedAddress,"PO Box 619
+501 Evergreen Point Road
+PO Box 144"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/madsrdf:RWO/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasSource/madsrdf:Source/rdfs:label,"Merced website, March 29, 2019
+Medina, Washington home page, January 23,
+                                            2015"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Family/rdfs:label,"Jackson (Family : Jackson, Howell Edmunds,
+                                            1832-1895)
+Hypes (Family : Hypes, Henry, 1775-1854)
+Foust (Family : Alamance County, N.C.)"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Family/madsrdf:associatedLocale/madsrdf:Geographic/madsrdf:isMemberOfMADSScheme,http://id.loc.gov/authorities/names
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Family/madsrdf:associatedLanguage,"http://id.loc.gov/vocabulary/languages/eng
+http://id.loc.gov/vocabulary/languages/nah"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:identifiesRWO/bf:Family/madsrdf:occupation,"http://id.loc.gov/authorities/subjects/sh85075847
+http://id.loc.gov/authorities/subjects/sh85083783
+http://id.loc.gov/authorities/subjects/sh85105726"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:isMemberOfMADSCollection,"http://id.loc.gov/authorities/names/collection_LCNAF
+http://id.loc.gov/authorities/names/collection_NamesAuthorizedHeadings
+http://id.loc.gov/authorities/names/collection_FRBRWork"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:isMemberOfMADSScheme,http://id.loc.gov/authorities/names
+F,/rdf:RDF/madsrdf:Authority/identifiers:local,"(OCoLC)oca09945404
+(OCoLC)oca01757491
+(OCoLC)oca08173533"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:creationDateStart/skos:Concept/madsrdf:hasSource/madsrdf:Source/rdfs:label,"CiNii, Nov. 19, 2013
+OCLC, 22 March 2022
+OCLC, 11 November 2020"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:workOrigin/madsrdf:Geographic/madsrdf:hasSource/madsrdf:Source/rdfs:label,"http://id.loc.gov/authorities/names/n79023147
+Uwajima, 2018
+Internet movie database, viewed February 13,
+                                            2020"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:fullerName/madsrdf:PersonalName/rdfs:label,"Kenneth Octavius
+Shannon J.
+Rudolf"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:fullerName/madsrdf:PersonalName/madsrdf:hasSource/madsrdf:Source/rdfs:label,"French Wikipedia, viewed May 27, 2014
+Norwegian Wikipedia WWW page, viewed February
+                                            25, 2014
+http://en.wikipedia.org/wiki/Carl_von_Noorden"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:PersonalName/madsrdf:elementList/madsrdf:FullNameElement/madsrdf:elementValue,"Hall, Kenneth,
+López, Abelino Beltrán
+中村麟子,"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:PersonalName/madsrdf:elementList/madsrdf:DateNameElement/madsrdf:elementValue,"1941-
+1916-2009
+1850-1924"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:PersonalName/madsrdf:elementList/madsrdf:TermsOfAddressNameElement/madsrdf:elementValue,"(Public officer)
+fray,"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:CorporateName/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"United States.
+Društvo hrvatskih književnika."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:CorporateName/madsrdf:elementList/madsrdf:NamePartElement/madsrdf:elementValue,"Liturgy and ritual.
+Laws, statutes, etc."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:CorporateName/madsrdf:elementList/madsrdf:DateNameElement/madsrdf:elementValue,"1999 :
+1960).
+(1720 :"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:Title/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:Title/madsrdf:elementList/madsrdf:TitleElement/madsrdf:elementValue,"Act to Support Revitalization and Reform of the
+                                            Organization of American States, and for Other
+                                            Purposes
+Public Law 113-41
+Unceasing lightning"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:Title/madsrdf:elementList/madsrdf:PartNameElement/madsrdf:elementValue,"Jidō fukushi kihon hōsei
+Gaude Maria
+Nomenclátor de autores medievales hispanos"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:Title/madsrdf:elementList/madsrdf:PartNumberElement/madsrdf:elementValue,"liber 1.
+op. 4"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:Title/madsrdf:elementList/madsrdf:GenreFormElement/madsrdf:elementValue,"Selections
+Protocols, etc.,"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:Title/madsrdf:elementList/madsrdf:LanguageElement/madsrdf:elementValue,"English.
+English"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:Title/madsrdf:elementList/madsrdf:GeographicElement/madsrdf:elementValue,"United States,
+Chile,"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:Title/madsrdf:elementList/madsrdf:TemporalElement/madsrdf:elementValue,"1834 Apr. 29
+1834 April 29
+1999"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:Title/madsrdf:variantLabel,"Act to Support Revitalization and Reform of the
+                                            Organization of American States, and for Other
+                                            Purposes
+Public Law 113-41
+Unceasing lightning"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:PersonalName/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:PersonalName/madsrdf:elementList/madsrdf:FullNameElement/madsrdf:elementValue,"Hernández, Miguel,
+Bullinger, Heinrich,
+Tomer, Avinoam,"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:PersonalName/madsrdf:elementList/madsrdf:DateNameElement/madsrdf:elementValue,"1910-1942.
+1504-1575.
+1939-"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:PersonalName/madsrdf:elementList/madsrdf:TermsOfAddressNameElement/madsrdf:elementValue,"de Machaut,"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:PersonalName/madsrdf:variantLabel,"Hernández, Miguel, 1910-1942.
+Bullinger, Heinrich, 1504-1575.
+Tomer, Avinoam, 1939-"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:ConferenceName/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:ConferenceName/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"Leon Levy Expedition to Ashkelon.
+Bienal Naïf.
+Vatican Council"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:ConferenceName/madsrdf:elementList/madsrdf:DateNameElement/madsrdf:elementValue,"1962-1965 :
+(1988 :"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:ConferenceName/madsrdf:elementList/madsrdf:GeographicElement/madsrdf:elementValue,"Basilica di San Pietro in Vaticano).
+Niamey, Niger)."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:ConferenceName/madsrdf:variantLabel,"Leon Levy Expedition to Ashkelon.
+Bienal Naïf.
+Vatican Council 1962-1965 : Basilica di San
+                                            Pietro in Vaticano)."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:Geographic/madsrdf:elementList/madsrdf:GeographicElement/madsrdf:elementValue,"Dogo (Gabon)
+Weimar/Lahn (Germany)
+Kasagake-mura (Japan)"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:Title/madsrdf:elementList/madsrdf:MainTitleElement/madsrdf:elementValue,"Main rouge (Motion picture)
+Empreinte ou La main rouge (Motion picture)
+Incriminating evidence (Motion picture)"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:Title/madsrdf:elementList/madsrdf:LanguageElement/madsrdf:elementValue,"Greek
+Hindi
+Spanish"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:Title/madsrdf:elementList/madsrdf:SubTitleElement/madsrdf:elementValue,"(Texte und Kommentare)
+Spoken word
+Guangzhou chu ban she"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:Title/madsrdf:elementList/madsrdf:PartNameElement/madsrdf:elementValue,"Serii︠a︡ ""Imena""
+Pelayaran Sawerigading ke tana Cina
+Pelayaran Sawerigading ke tanah Cina"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:Title/madsrdf:elementList/madsrdf:TemporalElement/madsrdf:elementValue,"1992
+(2001 April 10)
+1983"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:Title/madsrdf:elementList/madsrdf:PartNumberElement/madsrdf:elementValue,"Levels 8 & 9
+Series F,
+Series N,"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:Title/madsrdf:elementList/madsrdf:GenreFormElement/madsrdf:elementValue,"Protocols, etc.,
+Selections
+Selections."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:CorporateName/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"Universidade Positivo.
+Mestrado Profissional em Odontologia
+                                            Clínica"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:CorporateName/madsrdf:elementList/madsrdf:DateNameElement/madsrdf:elementValue,"2011 :
+(2015 :
+1985 :"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:CorporateName/madsrdf:elementList/madsrdf:NamePartElement/madsrdf:elementValue,Manuscript.
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:ConferenceName/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"إنتاج الثقافي العماني والترجمة (Conference)
+Symposium in Economics, Nobel
+Workshop on Structural Biology and Functional
+                                            Genomics, NATO Advanced Research"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:ConferenceName/madsrdf:elementList/madsrdf:DateNameElement/madsrdf:elementValue,"(2016 :
+(2018 :"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:ConferenceName/madsrdf:elementList/madsrdf:GeographicElement/madsrdf:elementValue,"Muscat, Oman)
+Kemerovo, Russia)"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:FamilyName/madsrdf:elementList/madsrdf:FullNameElement/madsrdf:elementValue,De la Cruz (Family :
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasVariant/madsrdf:FamilyName/madsrdf:variantLabel,"De la Cruz (Family : Cruz, Pedro de la,
+                                            approximately 1620-1675)"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:useFor/madsrdf:Authority/rdf:type,"http://www.loc.gov/mads/rdf/v1#PersonalName
+http://www.loc.gov/mads/rdf/v1#DeprecatedAuthority"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:useFor/madsrdf:Authority/rdfs:label,"n80041844
+no2003050384
+n82088155"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:useFor/madsrdf:DeprecatedAuthority/rdf:type,"http://www.loc.gov/mads/rdf/v1#PersonalName
+http://www.loc.gov/mads/rdf/v1#Variant"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:useFor/madsrdf:DeprecatedAuthority/madsrdf:adminMetadata/ri:RecordInfo/ri:languageOfCataloging,http://id.loc.gov/vocabulary/iso639-2/eng
+F,/rdf:RDF/madsrdf:Authority/madsrdf:useFor/madsrdf:DeprecatedAuthority/madsrdf:adminMetadata/ri:RecordInfo/ri:recordChangeDate,"2022-08-09T12:27:36
+2022-05-11T00:00:00
+1997-09-17T00:00:00"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:useFor/madsrdf:DeprecatedAuthority/madsrdf:adminMetadata/ri:RecordInfo/ri:recordContentSource,"http://id.loc.gov/vocabulary/organizations/cst
+http://id.loc.gov/vocabulary/organizations/dlc"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:useFor/madsrdf:DeprecatedAuthority/madsrdf:adminMetadata/ri:RecordInfo/ri:recordStatus,"deprecated
+new"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:useFor/madsrdf:DeprecatedAuthority/madsrdf:editorialNote,"[Duplicate record; reported for deletion in
+                                            favor of: no 94008057]"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:useFor/madsrdf:DeprecatedAuthority/madsrdf:elementList/madsrdf:FullNameElement/madsrdf:elementValue,"Maxamed Ibraahin Warsame
+Calder, Marie Donais"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:useFor/madsrdf:DeprecatedAuthority/madsrdf:identifiesRWO,"http://id.loc.gov/rwo/agents/n2022230325
+http://id.loc.gov/rwo/agents/n97093972"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:useFor/madsrdf:DeprecatedAuthority/madsrdf:variantLabel,"Maxamed Ibraahin Warsame
+Calder, Marie Donais"
+F,/rdf:RDF/madsrdf:Authority/bflc:marcKey,"1001 $aHodges, Shannon
+1001 $aAbe, Masashi
+1001 $aVan der Westhuizen, Thea"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/rdf:type,"http://www.loc.gov/mads/rdf/v1#CorporateName
+http://www.loc.gov/mads/rdf/v1#Title
+http://www.loc.gov/mads/rdf/v1#PersonalName"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:authoritativeLabel,"United States.
+Organization of American States Revitalization
+                                            and Reform Act of 2013
+Hernández, Miguel, 1910-1942."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"United States.
+Duomo di Siena."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:elementList/madsrdf:TitleElement/madsrdf:elementValue,"Organization of American States Revitalization
+                                            and Reform Act of 2013
+Rayo que no cesa.
+De fine saeculi et judicio venturo Domini
+                                            nostri Jesu Christi."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:elementList/madsrdf:FullNameElement/madsrdf:elementValue,"Hernández, Miguel,
+Bullinger, Heinrich,
+Anderson, Leroy,"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:elementList/madsrdf:DateNameElement/madsrdf:elementValue,"1910-1942.
+1504-1575.
+1908-1975."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:elementList/madsrdf:LanguageElement/madsrdf:elementValue,English
+F,/rdf:RDF/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:elementList/madsrdf:TermsOfAddressNameElement/madsrdf:elementValue,"de Machaut,
+de Segusio, Cardinal,
+(Psychologist)."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:elementList/madsrdf:PartNameElement/madsrdf:elementValue,"Psalm 42
+Neue Klassizismus
+Gaude Maria"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:elementList/madsrdf:GeographicElement/madsrdf:elementValue,"Peru
+Lima (Province)
+Missouri"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:elementList/madsrdf:GenreFormElement/madsrdf:elementValue,Selections
+F,/rdf:RDF/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:elementList/madsrdf:PartNumberElement/madsrdf:elementValue,"no. 1
+liber 1.
+op. 4"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:elementList/madsrdf:TemporalElement/madsrdf:elementValue,"1834 April 29
+1928
+1999"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:elementList/madsrdf:NamePartElement/madsrdf:elementValue,"Liturgy and ritual.
+Laws, statutes, etc."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:componentList/rdf:Description,"http://id.loc.gov/authorities/names/no2013042861
+http://id.loc.gov/authorities/subjects/sh85021043
+http://id.loc.gov/authorities/subjects/sh85125452"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:classification/ns2:ClassNumber/bf:assigner,"http://id.loc.gov/vocabulary/organizations/dlc
+http://id.loc.gov/vocabulary/organizations/caoonl"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:classification/ns2:ClassNumber/madsrdf:hasExactExternalAuthority,"http://id.loc.gov/authorities/classification/PQ2613.I74
+http://id.loc.gov/authorities/classification/PR9639.2.V63
+http://id.loc.gov/authorities/classification/PL314.A84"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:editorialNote,"[Non-Latin script reference not evaluated]
+[THIS 1XX FIELD CANNOT BE USED UNDER RDA UNTIL
+                                            THIS RECORD HAS BEEN REVIEWED AND/OR UPDATED]"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/rdf:type,"http://www.loc.gov/mads/rdf/v1#PersonalName
+http://www.loc.gov/mads/rdf/v1#CorporateName"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:elementList/madsrdf:FullNameElement/madsrdf:elementValue,"Voss, Richard
+Huang, Shan
+Mann, William C.,"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"Church of the Province of South Africa.
+Diocese of Kaffraria (1901-1922 : Williams)
+United Arab Republic."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:elementList/madsrdf:DateNameElement/madsrdf:elementValue,"1952-
+1943-
+active 1781-1817"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:elementList/madsrdf:MainTitleElement/madsrdf:elementValue,"Imena
+Colección científica (Instituto Nacional de
+                                            Antropología e Historia (Mexico)).
+Colección Etnohistoria"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:elementList/madsrdf:GeographicElement/madsrdf:elementValue,"Tsu-shi (Japan)
+Porto de Galinhas, Brazil)
+Oamaru (N.Z.)"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:elementList/madsrdf:TermsOfAddressNameElement/madsrdf:elementValue,"King of England,
+(Greek mythological character)"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:elementList/madsrdf:PartNameElement/madsrdf:elementValue,"Serie Etnohistoria
+Politique
+Série ""Aulica. L'univers de la cour"""
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:elementList/madsrdf:TemporalElement/madsrdf:elementValue,"(1715)
+1995
+(1863 June 9)"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:elementList/madsrdf:NamePartElement/madsrdf:elementValue,"Manuscript.
+Treaties, etc."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:elementList/madsrdf:LanguageElement/madsrdf:elementValue,"Latin.
+Hebrew."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:elementList/madsrdf:SubTitleElement/madsrdf:elementValue,"Biblioteca apostolica vaticana.
+Ben Sira scroll from Masada"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:elementList/madsrdf:GenreFormElement/madsrdf:elementValue,Manuscript.
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:elementList/madsrdf:PartNumberElement/madsrdf:elementValue,Vat. lat. 20
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/rdf:type,"http://www.loc.gov/mads/rdf/v1#PersonalName
+http://www.loc.gov/mads/rdf/v1#Title"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:authoritativeLabel,"Catholic Church.
+Decretales Gregorii IX
+Rosenfeld, Gerhard."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:elementList/madsrdf:FullNameElement/madsrdf:elementValue,"Catholic Church.
+Rosenfeld, Gerhard.
+Marescotti, André-François,"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:elementList/madsrdf:TitleElement/madsrdf:elementValue,"Decretales Gregorii IX
+Salamandrine voices
+Hymnes"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:elementList/madsrdf:DateNameElement/madsrdf:elementValue,"1902-1995.
+1756-1791.
+1660-1725."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:elementList/madsrdf:PartNumberElement/madsrdf:elementValue,"Nr. 1
+Level C"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"General Dysphoria Trust International.
+Catholic Church."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:elementList/madsrdf:LanguageElement/madsrdf:elementValue,Hungarian
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:elementList/madsrdf:PartNameElement/madsrdf:elementValue,Bobbie Kalman's leveled readers.
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:elementList/madsrdf:TermsOfAddressNameElement/madsrdf:elementValue,"Patriarch of the Chaldeans,
+Metropolitan of Erbil,"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:componentList/rdf:Description,http://id.loc.gov/authorities/subjects/sh85021043
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:identifiesRWO,"http://id.loc.gov/rwo/agents/no2022151445
+http://id.loc.gov/rwo/agents/nr2005018911
+http://id.loc.gov/rwo/agents/no2011157366"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/identifiers:lccn,"no2011157366
+nr 99032403
+no2019136846"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/identifiers:local,"(OCoLC)oca09001836
+(OCoLC)oca05084967
+(OCoLC)oca12439887"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:adminMetadata/ri:RecordInfo/ri:languageOfCataloging,http://id.loc.gov/vocabulary/iso639-2/eng
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:adminMetadata/ri:RecordInfo/ri:recordChangeDate,"2011-10-12T06:27:36
+2011-10-11T00:00:00
+2008-08-10T09:39:30"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:adminMetadata/ri:RecordInfo/ri:recordContentSource,"http://id.loc.gov/vocabulary/organizations/ilmchbwi
+http://id.loc.gov/vocabulary/organizations/ocolc"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:adminMetadata/ri:RecordInfo/ri:recordStatus,"revised
+new"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:hasExactExternalAuthority,"http://viaf.org/viaf/sourceID/LC%7Cno2011157366#skos:Concept
+http://viaf.org/viaf/sourceID/LC%7Cnr+99032403#skos:Concept
+http://viaf.org/viaf/sourceID/LC%7Cno2019136846#skos:Concept"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:hasSource/madsrdf:Source/madsrdf:citationStatus,found
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:isMemberOfMADSCollection,"http://id.loc.gov/authorities/names/collection_LCNAF
+http://id.loc.gov/authorities/names/collection_NamesAuthorizedHeadings"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:isMemberOfMADSScheme,http://id.loc.gov/authorities/names
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:editorialNote,"[Machine-derived non-Latin script reference
+                                            project.]
+[Non-Latin script reference not evaluated.]
+[Non-Latin script references not
+                                            evaluated.]"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:PersonalName/madsrdf:elementList/madsrdf:FullNameElement/madsrdf:elementValue,"임유진
+Perlow, B. H.
+פערלאוו, ב. ח."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:PersonalName/madsrdf:elementList/madsrdf:DateNameElement/madsrdf:elementValue,1913-2005
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:PersonalName/madsrdf:variantLabel,"임유진
+Perlow, B. H.
+פערלאוו, ב. ח."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:PersonalName/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:PersonalName/madsrdf:elementList/madsrdf:FullNameElement/madsrdf:elementValue,"ابن الهائم، أحمد بن محمد،
+Ibn al-Hāʼim, Aḥmad ibn Muḥammad,"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:PersonalName/madsrdf:elementList/madsrdf:DateNameElement/madsrdf:elementValue,-1412
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:PersonalName/madsrdf:variantLabel,"ابن الهائم، أحمد بن محمد، -1412.
+Ibn al-Hāʼim, Aḥmad ibn Muḥammad, -1412."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:Title/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:Title/madsrdf:elementList/madsrdf:TitleElement/madsrdf:elementValue,"تحفة القدسية
+Tuḥfah al-Qudsīyah fī ikhtiṣār al-Raḥbīyah
+تحفة القدسية في اختصار الرحبية"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:Title/madsrdf:variantLabel,"تحفة القدسية
+Tuḥfah al-Qudsīyah fī ikhtiṣār al-Raḥbīyah
+تحفة القدسية في اختصار الرحبية"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:variantLabel,"ابن الهائم، أحمد بن محمد، -1412. تحفة
+                                            القدسية
+Ibn al-Hāʼim, Aḥmad ibn Muḥammad, -1412. Tuḥfah
+                                            al-Qudsīyah fī ikhtiṣār al-Raḥbīyah
+ابن الهائم، أحمد بن محمد، -1412. تحفة القدسية
+                                            في اختصار الرحبية"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:CorporateName/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:CorporateName/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"Québec (Province).
+Agriculture, Ministère de l'
+Trinitarios Descalzos"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"Québec (Province).
+Département de l'agriculture et de
+                                            l'alimentation"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:hasReciprocalAuthority,"http://id.loc.gov/authorities/names/n81009362
+http://id.loc.gov/authorities/names/n83015500
+http://id.loc.gov/authorities/names/no92003101"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:useFor,https://id.loc.gov/authorities/names/no2007015678
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:CorporateName/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,Lubin Schools of Business
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Geographic/madsrdf:elementList/madsrdf:GeographicElement/madsrdf:elementValue,"Ahmadnagar (India : District)
+Hakodate-shi (Japan)
+Rome (Italy)"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasReciprocalAuthority/madsrdf:Organization/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"United Kingdom Atomic Energy Authority
+Bucknell University"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:NameTitle/madsrdf:componentList/madsrdf:PersonalName/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:NameTitle/madsrdf:componentList/madsrdf:PersonalName/madsrdf:elementList/madsrdf:FullNameElement/madsrdf:elementValue,"Guillaume,
+Byrd, William,
+Griebling, Stephen T."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:NameTitle/madsrdf:componentList/madsrdf:PersonalName/madsrdf:elementList/madsrdf:TermsOfAddressNameElement/madsrdf:elementValue,"de Machaut,
+de Segusio, Cardinal,"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:NameTitle/madsrdf:componentList/madsrdf:PersonalName/madsrdf:elementList/madsrdf:DateNameElement/madsrdf:elementValue,"ca. 1300-1377.
+1539 or 40-1623.
+ca. 1655-1701."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:NameTitle/madsrdf:componentList/madsrdf:PersonalName/madsrdf:variantLabel,"Guillaume, de Machaut, ca. 1300-1377.
+Byrd, William, 1539 or 40-1623.
+Griebling, Stephen T."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:NameTitle/madsrdf:componentList/madsrdf:Title/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:NameTitle/madsrdf:componentList/madsrdf:Title/madsrdf:elementList/madsrdf:TitleElement/madsrdf:elementValue,"Fons tocius/O livoris/Fera pessima
+Gradualia,
+Sonatas,"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:NameTitle/madsrdf:componentList/madsrdf:Title/madsrdf:elementList/madsrdf:PartNumberElement/madsrdf:elementValue,"liber 1.
+op. 4
+op. 1,"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:NameTitle/madsrdf:componentList/madsrdf:Title/madsrdf:elementList/madsrdf:PartNameElement/madsrdf:elementValue,"Gaude Maria
+Polígonos
+Applications and recommendations, 1861-1869"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:NameTitle/madsrdf:componentList/madsrdf:Title/madsrdf:elementList/madsrdf:GenreFormElement/madsrdf:elementValue,"Selections
+Protocols, etc.,"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:NameTitle/madsrdf:componentList/madsrdf:Title/madsrdf:elementList/madsrdf:LanguageElement/madsrdf:elementValue,"English.
+English"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:NameTitle/madsrdf:componentList/madsrdf:Title/madsrdf:elementList/madsrdf:GeographicElement/madsrdf:elementValue,"United States,
+United Provinces of the Netherlands,"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:NameTitle/madsrdf:componentList/madsrdf:Title/madsrdf:elementList/madsrdf:TemporalElement/madsrdf:elementValue,"1834 Apr. 29
+1999
+1992"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:NameTitle/madsrdf:componentList/madsrdf:Title/madsrdf:variantLabel,"Fons tocius/O livoris/Fera pessima
+Gradualia, liber 1. Gaude Maria
+Sonatas, violoncello, piano"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:NameTitle/madsrdf:componentList/madsrdf:CorporateName/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:NameTitle/madsrdf:componentList/madsrdf:CorporateName/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"American Bar Association.
+Section of Antitrust Law.
+Keiō Gijuku Daigaku, Tokyo."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:NameTitle/madsrdf:componentList/madsrdf:CorporateName/madsrdf:elementList/madsrdf:NamePartElement/madsrdf:elementValue,"Laws, statutes, etc."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:NameTitle/madsrdf:componentList/madsrdf:CorporateName/madsrdf:variantLabel,"American Bar Association. Section of Antitrust
+                                            Law.
+Keiō Gijuku Daigaku, Tokyo. Hōgaku
+                                            Kenkyūkai.
+Belo Horizonte, Brazil. Universidade de Minas
+                                            Gerais."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:NameTitle/madsrdf:componentList/madsrdf:ConferenceName/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:NameTitle/madsrdf:componentList/madsrdf:ConferenceName/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"Sovmestnai︠a︡ sovetsko-mongolʹskai︠a︡
+                                            nauchno-issledovatelʹskai︠a︡ geologicheskai︠a︡
+                                            ėkspedit︠s︡ii︠a︡."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:NameTitle/madsrdf:componentList/madsrdf:ConferenceName/madsrdf:variantLabel,"Sovmestnai︠a︡ sovetsko-mongolʹskai︠a︡
+                                            nauchno-issledovatelʹskai︠a︡ geologicheskai︠a︡
+                                            ėkspedit︠s︡ii︠a︡."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:CorporateName/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"Society for Clinical Ecology (U.S.)
+Bulgaria.
+Arkhiven otdel"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:CorporateName/madsrdf:elementList/madsrdf:DateNameElement/madsrdf:elementValue,"(1982-1984)
+1865
+(1994 :"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:CorporateName/madsrdf:elementList/madsrdf:NamePartElement/madsrdf:elementValue,"MSS. (5301-5320)
+Constitution, 1967
+MSS. (91)"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:Title/madsrdf:elementList/madsrdf:MainTitleElement/madsrdf:elementValue,"ORACLS (Computer program)
+Technical report (Saskatchewan. Dept. of
+                                            Highways and Transportation)
+Bible."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:Title/madsrdf:elementList/madsrdf:PartNameElement/madsrdf:elementValue,"N.T.
+Mark."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:Title/madsrdf:elementList/madsrdf:LanguageElement/madsrdf:elementValue,"Ghale.
+Galela
+German"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:Title/madsrdf:elementList/madsrdf:TemporalElement/madsrdf:elementValue,"1992
+(1974).
+1980 Apr. 11."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:Title/madsrdf:elementList/madsrdf:GenreFormElement/madsrdf:elementValue,"Protocols, etc.,
+Selections."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:Title/madsrdf:elementList/madsrdf:PartNumberElement/madsrdf:elementValue,"Reihe 31,
+Partnership sub-series 2,
+B"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:Title/madsrdf:elementList/madsrdf:SubTitleElement/madsrdf:elementValue,"Old Latin.
+Jerusalem Bible
+Aleksiĭ."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:PersonalName/madsrdf:elementList/madsrdf:FullNameElement/madsrdf:elementValue,"Megee, Mary Catherine
+Akbarī, Ṣiddīqah,
+Abū Ṭālib, Muḥsin ibn al-Ḥasan,"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:PersonalName/madsrdf:elementList/madsrdf:DateNameElement/madsrdf:elementValue,"1979 or 80-
+18th cent.
+ca. 1340-1393"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:PersonalName/madsrdf:elementList/madsrdf:TermsOfAddressNameElement/madsrdf:elementValue,"of Nepomuk, Saint,
+ha-Kohen,"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:Geographic/madsrdf:elementList/madsrdf:GeographicElement/madsrdf:elementValue,"Kasakake-mura, Japan
+Roannais, France
+Greater Accra Region, Ghana"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:ConferenceName/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"International Symposium on the Harmonization of
+                                            Internal Quality Assurance Schemes for Analytical
+                                            Laboratories
+Mezhdunarodnai︠a︡ letni︠a︡i︠a︡ varnenskai︠a︡
+                                            shkola marksistsko-leninskoĭ filosofii.
+Symposium on the Age of Parent Materials and
+                                            Soils,"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:ConferenceName/madsrdf:elementList/madsrdf:GeographicElement/madsrdf:elementValue,"Amsterdam,
+Seaside, Calif.)
+Atlanta,"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:ConferenceName/madsrdf:elementList/madsrdf:DateNameElement/madsrdf:elementValue,"1970
+2005 :
+1978."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:elementList/madsrdf:FullNameElement/madsrdf:elementValue,"Higgins, Eddie,
+Scott, Shannon
+Barrett, Joe,"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:elementList/madsrdf:DateNameElement/madsrdf:elementValue,"1932-2009
+1950-"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:elementList/madsrdf:TermsOfAddressNameElement/madsrdf:elementValue,"(Actress)
+Person County, N.C.)
+(Musician)"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"University of Otago.
+Centre for the Study of Agriculture, Food and
+                                            Environment
+State Museum of Pennsylvania"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:elementList/madsrdf:MainTitleElement/madsrdf:elementValue,"Omni book of science fiction.
+Commercio vinicolo"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:elementList/madsrdf:PartNumberElement/madsrdf:elementValue,"4th
+4 (1942)."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:elementList/madsrdf:GenreFormElement/madsrdf:elementValue,"Selections (Martinez Roca).
+(lcsh) Series (Publications)
+(lcsh) Monographic series"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:elementList/madsrdf:LanguageElement/madsrdf:elementValue,"Spanish
+English"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:elementList/madsrdf:PartNameElement/madsrdf:elementValue,"Series Apocryphorum
+Altes Testament"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:elementList/madsrdf:SubTitleElement/madsrdf:elementValue,"(Olson)
+(Estes)
+(Actus Vercellenses : Döhler)"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:elementList/madsrdf:GeographicElement/madsrdf:elementValue,"Mengzhou Shi (Henan Sheng, China)
+Turkmen S.S.R.
+Monasterace (Italy)"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:elementList/madsrdf:TemporalElement/madsrdf:elementValue,2019
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:elementList/madsrdf:NamePartElement/madsrdf:elementValue,Manuscript.
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/identifiers:lccn,"no2011045804
+n 80004176
+no2015004146"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/identifiers:local,"(OCoLC)oca08806272
+(OCoLC)oca00386826
+(OCoLC)oca10058537"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:adminMetadata/ri:RecordInfo/ri:languageOfCataloging,http://id.loc.gov/vocabulary/iso639-2/eng
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:adminMetadata/ri:RecordInfo/ri:recordChangeDate,"2011-03-23T00:00:00
+2015-04-22T07:39:01
+2023-03-11T06:45:38"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:adminMetadata/ri:RecordInfo/ri:recordContentSource,"http://id.loc.gov/vocabulary/organizations/ilmchbwi
+http://id.loc.gov/vocabulary/organizations/ienmu
+http://id.loc.gov/vocabulary/organizations/cst"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:adminMetadata/ri:RecordInfo/ri:recordStatus,"new
+revised"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasExactExternalAuthority,"http://viaf.org/viaf/sourceID/LC%7Cno2011045804#skos:Concept
+http://viaf.org/viaf/sourceID/LC%7Cn++80004176#skos:Concept
+http://viaf.org/viaf/sourceID/LC%7Cno2015004146#skos:Concept"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasSource/madsrdf:Source/madsrdf:citationStatus,found
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:identifiesRWO,"http://id.loc.gov/rwo/agents/no2011045804
+http://id.loc.gov/rwo/agents/n80004176
+http://id.loc.gov/rwo/agents/no2015004146"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:isMemberOfMADSCollection,"http://id.loc.gov/authorities/names/collection_LCNAF
+http://id.loc.gov/authorities/names/collection_NamesAuthorizedHeadings"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:isMemberOfMADSScheme,http://id.loc.gov/authorities/names
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:authoritativeLabel,"Terence.
+Works. Latin
+Plato."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:elementList/madsrdf:FullNameElement/madsrdf:elementValue,"Terence.
+Plato."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:elementList/madsrdf:TitleElement/madsrdf:elementValue,Works.
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:elementList/madsrdf:LanguageElement/madsrdf:elementValue,"Latin
+Greek"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:elementList/madsrdf:DateNameElement/madsrdf:elementValue,"approximately 234-approximately 305.
+1896-1949.
+1962-"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:elementList/madsrdf:TemporalElement/madsrdf:elementValue,"1874
+1894"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:elementList/madsrdf:PartNumberElement/madsrdf:elementValue,"no. 1
+op. 10.
+No. 5"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"Catholic Church.
+California.
+Bureau of State Audits."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:elementList/madsrdf:TermsOfAddressNameElement/madsrdf:elementValue,"graf,
+of Alexandria, Saint,
+M."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:elementList/madsrdf:GenreFormElement/madsrdf:elementValue,"Selections.
+Selections (Que los perdone dios)
+Selections"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:elementList/madsrdf:PartNameElement/madsrdf:elementValue,"Partita,
+Gavotte en rondeau
+If my complaints could passions move"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/bflc:marcKey,"1102 $aChalmers tekniska högskola
+1001 $aHammett, Larry
+1001 $aMulligan, Gerry"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:editorialNote,"[The following heading for an earlier name is a
+                                            valid AACR 2 heading: Chalmers tekniska institut]
+[Non-Latin script reference not evaluated.]
+[Machine-derived non-Latin script reference
+                                            project.]"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:CorporateName/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"Gothenburg, Sweden.
+Chalmers tekniska högskola
+Tulsa, Okla."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:PersonalName/madsrdf:elementList/madsrdf:FullNameElement/madsrdf:elementValue,"Roche, Paul,"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:PersonalName/madsrdf:elementList/madsrdf:DateNameElement/madsrdf:elementValue,1927-
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:CorporateName/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"Göteborg (Sweden).
+Chalmers tekniska högskola
+C.T.H."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:PersonalName/madsrdf:elementList/madsrdf:FullNameElement/madsrdf:elementValue,"林南山
+Corrich, Johannes,
+Corysius, Janus,"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:PersonalName/madsrdf:elementList/madsrdf:DateNameElement/madsrdf:elementValue,1457?-1527
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:Title/madsrdf:elementList/madsrdf:MainTitleElement/madsrdf:elementValue,"ScriptaAntiqua
+Ausonius publications.
+SA (Series : Ausonius (Institute))"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:Title/madsrdf:elementList/madsrdf:PartNameElement/madsrdf:elementValue,Scripta antiqua
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:Title/madsrdf:elementList/madsrdf:SubTitleElement/madsrdf:elementValue,(Brafman)
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:CorporateName/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:CorporateName/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,Ausonius (Institute).
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:CorporateName/madsrdf:variantLabel,Ausonius (Institute).
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:Title/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:Title/madsrdf:elementList/madsrdf:TitleElement/madsrdf:elementValue,"Scripta antiqua
+Titán
+Sidon en el espejo"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:Title/madsrdf:elementList/madsrdf:LanguageElement/madsrdf:elementValue,French
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:Title/madsrdf:variantLabel,"Scripta antiqua
+Titán
+Sidon en el espejo"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:PersonalName/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:PersonalName/madsrdf:elementList/madsrdf:FullNameElement/madsrdf:elementValue,"Dreiser, Theodore,
+Willis, Connie.
+Pitol, Sergio,"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:PersonalName/madsrdf:elementList/madsrdf:DateNameElement/madsrdf:elementValue,"1871-1945.
+1933-2018."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:PersonalName/madsrdf:variantLabel,"Dreiser, Theodore, 1871-1945.
+Willis, Connie.
+Pitol, Sergio, 1933-2018."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:classification/ns2:ClassNumber/madsrdf:hasExactExternalAuthority,http://id.loc.gov/authorities/classification/PA8485.C7715
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:classification/ns2:ClassNumber/bf:assigner,http://id.loc.gov/vocabulary/organizations/dlc
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,Graduate Women Waikato
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:elementList/madsrdf:FullNameElement/madsrdf:elementValue,"Dreiser, Theodore,"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:elementList/madsrdf:DateNameElement/madsrdf:elementValue,1871-1945.
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/rdf:type,"http://www.loc.gov/mads/rdf/v1#PersonalName
+http://www.loc.gov/mads/rdf/v1#Title"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:authoritativeLabel,"Dreiser, Theodore, 1871-1945.
+Trilogy of desire. Spanish"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:elementList/madsrdf:FullNameElement/madsrdf:elementValue,"Dreiser, Theodore,"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:elementList/madsrdf:DateNameElement/madsrdf:elementValue,1871-1945.
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:elementList/madsrdf:TitleElement/madsrdf:elementValue,Trilogy of desire.
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:elementList/madsrdf:LanguageElement/madsrdf:elementValue,Spanish
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasLaterEstablishedForm,"http://id.loc.gov/authorities/names/n78007300
+http://id.loc.gov/authorities/names/n89651478"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:hasReciprocalAuthority,"http://id.loc.gov/authorities/names/n78007299
+http://id.loc.gov/authorities/names/no2005059465
+http://id.loc.gov/authorities/names/n82083403"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:fullerName/madsrdf:PersonalName/rdfs:label,"Joy Kathleen
+Larry Duane
+Donald Robert Paul"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Organization/rdf:type,"http://www.loc.gov/mads/rdf/v1#Authority
+http://www.loc.gov/mads/rdf/v1#CorporateName"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Organization/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"Universität zu Köln
+Franklin and Marshall College
+Catholic University of America"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Organization/madsrdf:identifiesRWO,"http://id.loc.gov/rwo/agents/n79054102
+http://id.loc.gov/rwo/agents/n78096930
+http://id.loc.gov/rwo/agents/n79069981"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Organization/identifiers:lccn,n 79063699
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Organization/identifiers:local,(OCoLC)oca00296643
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Organization/madsrdf:adminMetadata/ri:RecordInfo/ri:languageOfCataloging,http://id.loc.gov/vocabulary/iso639-2/eng
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Organization/madsrdf:adminMetadata/ri:RecordInfo/ri:recordChangeDate,"1979-08-02T00:00:00
+2014-12-16T11:31:11"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Organization/madsrdf:adminMetadata/ri:RecordInfo/ri:recordContentSource,http://id.loc.gov/vocabulary/organizations/dlc
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Organization/madsrdf:adminMetadata/ri:RecordInfo/ri:recordStatus,"new
+revised"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Organization/madsrdf:hasEarlierEstablishedForm/madsrdf:CorporateName/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"North Dakota.
+University."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Organization/madsrdf:hasExactExternalAuthority,http://viaf.org/viaf/sourceID/LC%7Cn++79063699#skos:Concept
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Organization/madsrdf:hasReciprocalAuthority,http://id.loc.gov/authorities/names/n85185349
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Organization/madsrdf:hasSource/madsrdf:Source/madsrdf:citationStatus,found
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Organization/madsrdf:hasVariant/madsrdf:CorporateName/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"North Dakota.
+University.
+UND"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Organization/madsrdf:isMemberOfMADSCollection,"http://id.loc.gov/authorities/names/collection_LCNAF
+http://id.loc.gov/authorities/names/collection_NamesAuthorizedHeadings"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Organization/madsrdf:isMemberOfMADSScheme,http://id.loc.gov/authorities/names
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Geographic/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"La Plata (Argentina)
+Prussia (Germany)
+South Bend (Ind.)"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasCharacteristic/skos:Concept/madsrdf:hasSource/madsrdf:Source/rdfs:label,"Shashinshū, Hachiōji kuruma ningyō, 1990
+Osaki Midori, 2007
+Kanbotsu chitai, 2016"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"Bulgaria.
+Upravlenie na arkhivite
+Prince Edward Island."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:elementList/madsrdf:MainTitleElement/madsrdf:elementValue,"Technical report (Saskatchewan. Saskatchewan
+                                            Highways and Transportation)
+United States National Arboretum
+                                            contribution
+Springer series in electronics and
+                                            photonics"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:elementList/madsrdf:GeographicElement/madsrdf:elementValue,"Athena (Or.)
+Foça (Turkey)
+Westerwaldkreis (Germany)"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:elementList/madsrdf:PartNumberElement/madsrdf:elementValue,"Sección 3
+Series VI,
+Series P-27,"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:elementList/madsrdf:PartNameElement/madsrdf:elementValue,"Supplementum
+Anthropological series"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:elementList/madsrdf:DateNameElement/madsrdf:elementValue,"(1997 :
+(1980-1981 :
+1979 :"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:elementList/madsrdf:LanguageElement/madsrdf:elementValue,English
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/rdf:type,"http://www.loc.gov/mads/rdf/v1#CorporateName
+http://www.loc.gov/mads/rdf/v1#Title"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:authoritativeLabel,"International Association of Aquatic and Marine
+                                            Science Libraries and Information Centers. Annual
+                                            Conference.
+International Association of Aquatic and Marine
+                                            Science Libraries and Information Centers conference
+                                            series
+United States. Department of
+                                            Transportation."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"International Association of Aquatic and Marine
+                                            Science Libraries and Information Centers.
+Annual Conference.
+United States."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:elementList/madsrdf:TitleElement/madsrdf:elementValue,"International Association of Aquatic and Marine
+                                            Science Libraries and Information Centers conference
+                                            series
+News."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:componentList/madsrdf:Authority/madsrdf:elementList/madsrdf:PartNameElement/madsrdf:elementValue,NHTSA
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/identifiers:lccn,"n 78059564
+n 84004727
+n 50079899"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/identifiers:local,"(OCoLC)oca00195257
+(OCoLC)oca01190454
+(OCoLC)oca00113486"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:adminMetadata/ri:RecordInfo/ri:languageOfCataloging,http://id.loc.gov/vocabulary/iso639-2/eng
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:adminMetadata/ri:RecordInfo/ri:recordChangeDate,"1978-09-01T00:00:00
+2019-10-19T07:34:50
+1984-09-10T00:00:00"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:adminMetadata/ri:RecordInfo/ri:recordContentSource,"http://id.loc.gov/vocabulary/organizations/dlc
+http://id.loc.gov/vocabulary/organizations/dgpo"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:adminMetadata/ri:RecordInfo/ri:recordStatus,"new
+revised"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:editorialNote,"[Retrospective heading]
+[Machine-derived non-Latin script reference
+                                            project.]
+[Non-Latin script references not
+                                            evaluated.]"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasExactExternalAuthority,"http://viaf.org/viaf/sourceID/LC%7Cn++78059564#skos:Concept
+http://viaf.org/viaf/sourceID/LC%7Cn++84004727#skos:Concept
+http://viaf.org/viaf/sourceID/LC%7Cn++50079899#skos:Concept"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"United States.
+Joint Army-Navy Board of Aeronautics"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasSource/madsrdf:Source/madsrdf:citationStatus,found
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:identifiesRWO,"http://id.loc.gov/rwo/agents/n78059564
+http://id.loc.gov/rwo/agents/n84004727
+http://id.loc.gov/rwo/agents/n50079899"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:isMemberOfMADSCollection,"http://id.loc.gov/authorities/names/collection_Jurisdictions
+http://id.loc.gov/authorities/names/collection_LCNAF
+http://id.loc.gov/authorities/names/collection_NamesAuthorizedHeadings"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:isMemberOfMADSScheme,http://id.loc.gov/authorities/names
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:CorporateName/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"American Studies Association.
+Midcontinent Chapter
+Baldwin University (Saint Paul, Minn.)"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:ConferenceName/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"North-West European Conference on the
+                                            Psychology of Work and Organization"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:Title/madsrdf:elementList/madsrdf:MainTitleElement/madsrdf:elementValue,"Occasional paper series (Chung-hua ching chi
+                                            yen chiu yüan)
+Occasional paper (Zhonghua jing ji yan jiu
+                                            yuan)
+Transforming American politics series"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasEarlierEstablishedForm/madsrdf:Geographic/madsrdf:elementList/madsrdf:GeographicElement/madsrdf:elementValue,"Wei-fang shih (China)
+Weifang Diqu (China)"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasLaterEstablishedForm,"http://id.loc.gov/authorities/names/no94015008
+http://id.loc.gov/authorities/names/n78064270
+http://id.loc.gov/authorities/names/n97007830"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasVariant/madsrdf:CorporateName/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"Macalaster College
+Macalester College, St. Paul, Minn.
+Macalestri Collegium"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasVariant/madsrdf:ConferenceName/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"Conference on the Psychology of Work and
+                                            Organization, West European"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasVariant/madsrdf:Title/madsrdf:elementList/madsrdf:MainTitleElement/madsrdf:elementValue,"Occasional paper series (Chung-hua ching chi
+                                            yen chiu yüan)
+Einzelschrift (Saarland (Germany).
+                                            Statistisches Landesamt)
+Verhandelingen in-8o (Académie royale des
+                                            sciences coloniales (Belgium). Classe des sciences
+                                            techniques)"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:CorporateName/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"Zhonghua jing ji yan jiu yuan.
+Saarland (Germany).
+Statistisches Landesamt."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:CorporateName/madsrdf:variantLabel,"Zhonghua jing ji yan jiu yuan.
+Saarland (Germany). Statistisches
+                                            Landesamt.
+Académie royale des sciences coloniales
+                                            (Belgium). Classe des sciences techniques."
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:Title/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:Title/madsrdf:elementList/madsrdf:TitleElement/madsrdf:elementValue,"Occasional paper series
+Einzelschriften
+Mémoires in-8o"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasVariant/madsrdf:NameTitle/madsrdf:componentList/madsrdf:Title/madsrdf:variantLabel,"Occasional paper series
+Einzelschriften
+Mémoires in-8o"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasVariant/madsrdf:Geographic/madsrdf:elementList/madsrdf:GeographicElement/madsrdf:elementValue,"Weifang City (China)
+潍坊市 (China)
+Wei-fang shih (China)"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:hasReciprocalAuthority,http://id.loc.gov/authorities/names/n80096581
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:useFor,https://id.loc.gov/authorities/names/nr97001043
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Organization/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"Pakistan.
+Supreme Court
+International Water Association"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:hasLaterEstablishedForm/madsrdf:Geographic/madsrdf:elementList/madsrdf:GeographicElement/madsrdf:elementValue,"Wałbrzych (Poland)
+Fuzhou Shi (China)
+Tasmania"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:see/madsrdf:Authority/madsrdf:elementList/madsrdf:FullNameElement/madsrdf:elementValue,"Lazarus, Greg
+Lewis, Henry Harrison,
+Zoe, Bobby"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:see/madsrdf:Authority/madsrdf:elementList/madsrdf:DateNameElement/madsrdf:elementValue,"1863-1947
+1954-
+1917-1999"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:see/madsrdf:Authority/madsrdf:elementList/madsrdf:TermsOfAddressNameElement/madsrdf:elementValue,"Mrs.
+(Novelist)
+Rev.,"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:see/madsrdf:Authority/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"University of Papua New Guinea.
+Linguistic Society
+Linguistic Society of Papua New Guinea"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:see/madsrdf:Authority/madsrdf:identifiesRWO,"http://id.loc.gov/rwo/agents/no2023115759
+http://id.loc.gov/rwo/agents/n50027778
+http://id.loc.gov/rwo/agents/n50027799"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:see/madsrdf:Authority/identifiers:lccn,n 85232138
+F,/rdf:RDF/madsrdf:Authority/madsrdf:see/madsrdf:Authority/madsrdf:adminMetadata/ri:RecordInfo/ri:languageOfCataloging,http://id.loc.gov/vocabulary/iso639-2/eng
+F,/rdf:RDF/madsrdf:Authority/madsrdf:see/madsrdf:Authority/madsrdf:adminMetadata/ri:RecordInfo/ri:recordChangeDate,"2014-12-09T08:18:59
+1986-06-24T00:00:00"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:see/madsrdf:Authority/madsrdf:adminMetadata/ri:RecordInfo/ri:recordContentSource,http://id.loc.gov/vocabulary/organizations/dlc
+F,/rdf:RDF/madsrdf:Authority/madsrdf:see/madsrdf:Authority/madsrdf:adminMetadata/ri:RecordInfo/ri:recordStatus,"revised
+new"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:see/madsrdf:Authority/madsrdf:classification/ns2:ClassNumber/bf:assigner,http://id.loc.gov/vocabulary/organizations/dlc
+F,/rdf:RDF/madsrdf:Authority/madsrdf:see/madsrdf:Authority/madsrdf:editorialNote,"[Old catalog heading: Greig, Maysie, 1902-]"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:see/madsrdf:Authority/madsrdf:hasExactExternalAuthority,http://viaf.org/viaf/sourceID/LC%7Cn++85232138#skos:Concept
+F,/rdf:RDF/madsrdf:Authority/madsrdf:see/madsrdf:Authority/madsrdf:hasSource/madsrdf:Source/madsrdf:citationStatus,found
+F,/rdf:RDF/madsrdf:Authority/madsrdf:see/madsrdf:Authority/madsrdf:isMemberOfMADSCollection,"http://id.loc.gov/authorities/names/collection_LCNAF
+http://id.loc.gov/authorities/names/collection_NamesAuthorizedHeadings"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:see/madsrdf:Authority/madsrdf:isMemberOfMADSScheme,http://id.loc.gov/authorities/names
+F,/rdf:RDF/madsrdf:Authority/madsrdf:see/madsrdf:Authority/madsrdf:see,"http://id.loc.gov/authorities/names/n85232135
+http://id.loc.gov/authorities/names/n85232136
+http://id.loc.gov/authorities/names/n85232137"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:code,"e-un---
+n-us-va
+e-pl---"
+F,/rdf:RDF/madsrdf:Authority/madsrdf:creationDateEnd/skos:Concept/madsrdf:hasSource/madsrdf:Source/rdfs:label,"CiNii, Jan. 6, 2022
+http://epguides.com/BatmanTheBraveandtheBold/
+epguides, Aug. 31, 2012"
+F,/rdf:RDF/madsrdf:Authority/ns1:wrap,
+F,/rdf:RDF/madsrdf:Authority/ns1:test,
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/rdf:type,"http://www.loc.gov/mads/rdf/v1#PersonalName
+http://www.loc.gov/mads/rdf/v1#Variant
+http://www.loc.gov/mads/rdf/v1#NameTitle"
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:adminMetadata/ri:RecordInfo/ri:languageOfCataloging,http://id.loc.gov/vocabulary/iso639-2/eng
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:adminMetadata/ri:RecordInfo/ri:recordChangeDate,"1978-07-07T00:00:00
+2020-07-15T06:59:42
+2023-10-22T02:37:09"
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:adminMetadata/ri:RecordInfo/ri:recordContentSource,http://id.loc.gov/vocabulary/organizations/dlc
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:adminMetadata/ri:RecordInfo/ri:recordStatus,"new
+deprecated"
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:editorialNote,"[Machine-derived non-Latin script reference
+                                            project.]
+[Non-Latin script references not
+                                            evaluated.]
+[THIS 1XX FIELD CANNOT BE USED UNDER RDA UNTIL
+                                            THIS UNDIFFERENTIATED RECORD HAS BEEN HANDLED FOLLOWING
+                                            THE GUIDELINES IN DCM Z1 008/32]"
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:elementList/madsrdf:FullNameElement/madsrdf:elementValue,"Pak, Chong-chʻŏl
+Fréjaville, Gustave
+Chen, Guangxin"
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:elementList/madsrdf:MainTitleElement/madsrdf:elementValue,"Nihongo tadoku bukkusu = Taishukan Japanese
+                                            readers
+Economie et innovation.
+Sbornik nauchnykh trudov (Muzeĭ revoli︠u︡t︠s︡ii
+                                            (Russia))"
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:elementList/madsrdf:DateNameElement/madsrdf:elementValue,"1948-
+1912-
+1979-"
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:elementList/madsrdf:TermsOfAddressNameElement/madsrdf:elementValue,"(Colorist)
+(Illustrator)
+(Teacher)"
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:elementList/madsrdf:PartNameElement/madsrdf:elementValue,"Clichés
+Psalms.
+İlmî ara̧stırmalar dizisi"
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:elementList/madsrdf:GeographicElement/madsrdf:elementValue,"Huaiyin Shi (China)
+Figueres (Spain)
+Indramayu (Indonesia)"
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:elementList/madsrdf:LanguageElement/madsrdf:elementValue,English.
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:elementList/madsrdf:GenreFormElement/madsrdf:elementValue,Paraphrases.
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:elementList/madsrdf:SubTitleElement/madsrdf:elementValue,Sternhold and Hopkins
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:identifiesRWO/bf:Person/rdf:type,"http://www.loc.gov/mads/rdf/v1#RWO
+http://xmlns.com/foaf/0.1/Person"
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:identifiesRWO/bf:Person/rdfs:label,"Pak, Chong-chʻŏl
+Fréjaville, Gustave
+Chen, Guangxin"
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:identifiesRWO/bf:Person/madsrdf:associatedLanguage,"http://id.loc.gov/vocabulary/languages/fre
+http://id.loc.gov/vocabulary/languages/eng"
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:identifiesRWO/bf:Person/madsrdf:associatedLocale/madsrdf:Geographic/rdfs:label,"Reggio di Calabria (Italy)
+Rome (Italy)
+Italy"
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:identifiesRWO/bf:Person/madsrdf:associatedLocale/madsrdf:Geographic/madsrdf:isMemberOfMADSScheme,http://id.loc.gov/authorities/names
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:identifiesRWO/bf:Person/madsrdf:birthDate/skos:Concept/rdfs:label,"(edtf) 1948
+1979"
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:identifiesRWO/bf:Person/madsrdf:occupation/madsrdf:Occupation/rdfs:label,"Writer on Islamic studies
+Civil engineers
+Judge"
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:identifiesRWO/bf:Person/madsrdf:birthPlace/madsrdf:Geographic/rdfs:label,"Cantanzaro (Italy)
+Tanjong Malim (Perak, Malaysia)
+Paris (France)"
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:identifiesRWO/bf:Person/madsrdf:birthPlace/madsrdf:Geographic/madsrdf:isMemberOfMADSScheme,http://id.loc.gov/authorities/names
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:identifiesRWO/bf:Person/madsrdf:fieldOfActivity/skos:Concept/rdfs:label,"Music
+(lcsh) Islam -- Relations
+Young adult science fiction"
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:identifiesRWO/bf:Person/madsrdf:gender/skos:Concept/rdfs:label,"male
+female"
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:identifiesRWO/bf:Person/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:organization/madsrdf:Organization/rdfs:label,"Universiti Sains Malaysia. Faculty of Shariáh
+                                            and Law
+Dali da xue
+(naf) Colegio de Mexico"
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:identifiesRWO/bf:Person/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:email,"ynluoyong@outlook.com
+minutoli.fabio@unime.it"
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:identifiesRWO/bf:Person/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasAffiliationAddress/madsrdf:Address,
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:identifiesRWO/bf:Person/madsrdf:entityDescriptor/skos:Concept/rdfs:label,"French
+Ukrainians"
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:identifiesRWO/bf:Person/madsrdf:deathDate/skos:Concept/rdfs:label,"(edtf) 1993
+1814
+(edtf) 1759-08-04"
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:identifiesRWO/bf:Person/madsrdf:deathPlace/madsrdf:Geographic/rdfs:label,(lcsh) Cavan (Ireland)
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:identifiesRWO/bf:Organization/rdf:type,"http://www.loc.gov/mads/rdf/v1#RWO
+http://xmlns.com/foaf/0.1/Organization"
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:identifiesRWO/bf:Organization/rdfs:label,"Iraq. Qānūn al-aḥwāl al-shakhṣiyah raqm 188
+                                            (1959)
+China. Guo wu yuan. Zheng fu cai guo fa shi shi
+                                            tiao li"
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:identifiesRWO/bf:Family/rdf:type,"http://www.loc.gov/mads/rdf/v1#RWO
+http://xmlns.com/foaf/0.1/Group"
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:identifiesRWO/bf:Family/rdfs:label,Lechner (Family)
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:identifiesRWO/madsrdf:RWO/rdf:type,http://www.loc.gov/standards/mads/rdf/v1#Geographic
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:identifiesRWO/madsrdf:RWO/rdfs:label,"Huaiyin Shi (China)
+Figueres (Spain)
+Indramayu (Indonesia)"
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:variantLabel,"Pak, Chong-chʻŏl
+Iraq. Qānūn al-aḥwāl al-shakhṣiyah raqm 188
+                                            (1959)
+Graci, Kim. Gifted clans novel"
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:componentList/madsrdf:CorporateName/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:componentList/madsrdf:CorporateName/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"Iraq.
+China.
+Guo wu yuan."
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:componentList/madsrdf:CorporateName/madsrdf:variantLabel,"Iraq.
+China. Guo wu yuan."
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:componentList/madsrdf:Title/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:componentList/madsrdf:Title/madsrdf:elementList/madsrdf:TitleElement/madsrdf:elementValue,"Qānūn al-aḥwāl al-shakhṣiyah raqm 188
+                                            (1959)
+Gifted clans novel
+Pavan and galliard,"
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:componentList/madsrdf:Title/madsrdf:elementList/madsrdf:PartNumberElement/madsrdf:elementValue,"MB 16
+t. 2.
+V, 1."
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:componentList/madsrdf:Title/madsrdf:elementList/madsrdf:GenreFormElement/madsrdf:elementValue,Selections
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:componentList/madsrdf:Title/madsrdf:elementList/madsrdf:TemporalElement/madsrdf:elementValue,"2015
+2012
+1983"
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:componentList/madsrdf:Title/madsrdf:elementList/madsrdf:LanguageElement/madsrdf:elementValue,"Greek
+French & Latin
+English &Tibetan"
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:componentList/madsrdf:Title/madsrdf:elementList/madsrdf:PartNameElement/madsrdf:elementValue,"Nativitas Mariae
+Merci jeunes amies."
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:componentList/madsrdf:Title/madsrdf:variantLabel,"Qānūn al-aḥwāl al-shakhṣiyah raqm 188
+                                            (1959)
+Gifted clans novel
+Pavan and galliard, keyboard instrument, MB
+                                            16"
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:componentList/madsrdf:PersonalName/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:componentList/madsrdf:PersonalName/madsrdf:elementList/madsrdf:FullNameElement/madsrdf:elementValue,"Graci, Kim.
+Byrd, William,
+Bang, Mary Jo."
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:componentList/madsrdf:PersonalName/madsrdf:elementList/madsrdf:DateNameElement/madsrdf:elementValue,"1539 or 1540-1623.
+1981-2011.
+1007?-1072."
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:componentList/madsrdf:PersonalName/madsrdf:elementList/madsrdf:TermsOfAddressNameElement/madsrdf:elementValue,"Bishop of Cyrrhus.
+Saint,
+Mkhas-grub-rje,"
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:componentList/madsrdf:PersonalName/madsrdf:variantLabel,"Graci, Kim.
+Byrd, William, 1539 or 1540-1623.
+Bang, Mary Jo."
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:componentList/madsrdf:Geographic/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:componentList/madsrdf:Geographic/madsrdf:elementList/madsrdf:GeographicElement/madsrdf:elementValue,"Netherlands
+Oude Hollandse Waterlinie
+China"
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/madsrdf:componentList/madsrdf:Geographic/madsrdf:variantLabel,"Netherlands
+Oude Hollandse Waterlinie
+China"
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/ns1:wrap,
+F,/rdf:RDF/madsrdf:DeprecatedAuthority/ns1:test,
+F,/rdf:RDF/madsrdf:CorporateName/rdf:type,"http://www.loc.gov/mads/rdf/v1#DeprecatedAuthority
+http://www.loc.gov/mads/rdf/v1#Variant"
+F,/rdf:RDF/madsrdf:CorporateName/madsrdf:adminMetadata/ri:RecordInfo/ri:languageOfCataloging,http://id.loc.gov/vocabulary/iso639-2/eng
+F,/rdf:RDF/madsrdf:CorporateName/madsrdf:adminMetadata/ri:RecordInfo/ri:recordChangeDate,"2020-01-02T21:36:03
+2017-03-15T00:00:00
+2016-08-12T13:51:11"
+F,/rdf:RDF/madsrdf:CorporateName/madsrdf:adminMetadata/ri:RecordInfo/ri:recordContentSource,http://id.loc.gov/vocabulary/organizations/uk
+F,/rdf:RDF/madsrdf:CorporateName/madsrdf:adminMetadata/ri:RecordInfo/ri:recordStatus,"deprecated
+new"
+F,/rdf:RDF/madsrdf:CorporateName/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"Culturespaces (Firm)
+Bundesamt fur Seeschifffahrt und
+                                            Hydrographie
+Instituto Universitario de Investigación Ortega
+                                            y Gasset"
+F,/rdf:RDF/madsrdf:CorporateName/madsrdf:identifiesRWO/bf:Organization/rdfs:label,"Culturespaces (Firm)
+Bundesamt fur Seeschifffahrt und
+                                            Hydrographie
+Instituto Universitario de Investigación Ortega
+                                            y Gasset"
+F,/rdf:RDF/madsrdf:CorporateName/madsrdf:identifiesRWO/bf:Organization/madsrdf:associatedLanguage,"http://id.loc.gov/vocabulary/languages/fre
+http://id.loc.gov/vocabulary/languages/spa
+http://id.loc.gov/vocabulary/languages/eng"
+F,/rdf:RDF/madsrdf:CorporateName/madsrdf:identifiesRWO/bf:Organization/madsrdf:fieldOfActivity,"http://id.loc.gov/authorities/subjects/sh85063443
+http://id.loc.gov/authorities/subjects/sh85093937
+http://id.loc.gov/authorities/subjects/sh2002012003"
+F,/rdf:RDF/madsrdf:CorporateName/madsrdf:editorialNote,"[Do not confuse with Olympus Research
+                                            Corporation, Salt Lake City, Utah, which deals in the
+                                            fields of education, training, and employment.]
+[Duplicate record, reported for deletion in
+                                            favor of LCCN nr2002042382 (November 29, 2020).]
+[Duplicate name record; reported for deletion
+                                            in favor of: n 81047717]"
+F,/rdf:RDF/madsrdf:ConferenceName/rdf:type,"http://www.loc.gov/mads/rdf/v1#DeprecatedAuthority
+http://www.loc.gov/mads/rdf/v1#Variant"
+F,/rdf:RDF/madsrdf:ConferenceName/madsrdf:adminMetadata/ri:RecordInfo/ri:languageOfCataloging,http://id.loc.gov/vocabulary/iso639-2/eng
+F,/rdf:RDF/madsrdf:ConferenceName/madsrdf:adminMetadata/ri:RecordInfo/ri:recordChangeDate,"2015-01-23T00:00:00
+2015-08-25T07:43:35
+2019-09-19T00:00:00"
+F,/rdf:RDF/madsrdf:ConferenceName/madsrdf:adminMetadata/ri:RecordInfo/ri:recordContentSource,"http://id.loc.gov/vocabulary/organizations/uk
+http://id.loc.gov/vocabulary/organizations/dlc"
+F,/rdf:RDF/madsrdf:ConferenceName/madsrdf:adminMetadata/ri:RecordInfo/ri:recordStatus,"new
+deprecated"
+F,/rdf:RDF/madsrdf:ConferenceName/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"Nanostructures, Thin Films and Bulk
+                                            Oxides-Synthesis, Characterization and Applications
+                                            (Symposim)
+Arte e impresa: omaggio a Marco Rivetti
+                                            (Conference)
+Congreso Nacional de Violencia
+                                            Filio-Parental"
+F,/rdf:RDF/madsrdf:ConferenceName/madsrdf:elementList/madsrdf:DateNameElement/madsrdf:elementValue,"(2014 :
+(2016 :
+2019)"
+F,/rdf:RDF/madsrdf:ConferenceName/madsrdf:elementList/madsrdf:GeographicElement/madsrdf:elementValue,"San Francisco, Calif.)
+Rivoli, Italy)
+Milan, Italy)"
+F,/rdf:RDF/madsrdf:ConferenceName/madsrdf:identifiesRWO/bf:Meeting/rdfs:label,"Nanostructures, Thin Films and Bulk
+                                            Oxides-Synthesis, Characterization and Applications
+                                            (Symposim) (2014 : San Francisco, Calif.)
+Arte e impresa: omaggio a Marco Rivetti
+                                            (Conference) (2016 : Rivoli, Italy)
+Congreso Nacional de Violencia
+                                            Filio-Parental"
+F,/rdf:RDF/madsrdf:ConferenceName/madsrdf:identifiesRWO/bf:Meeting/madsrdf:associatedLanguage,"http://id.loc.gov/vocabulary/languages/eng
+http://id.loc.gov/vocabulary/languages/ita"
+F,/rdf:RDF/madsrdf:ConferenceName/madsrdf:identifiesRWO/bf:Meeting/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:organization,"http://id.loc.gov/authorities/names/n86058874
+http://id.loc.gov/authorities/names/n79021241
+http://id.loc.gov/authorities/names/n79120809"
+F,/rdf:RDF/madsrdf:ConferenceName/madsrdf:editorialNote,"[See also related access points for individual
+                                            instances of this conference, which include specific
+                                            information about the number, date, or place of
+                                            individual conferences.]
+[Do not consider phrase ""filosofico-teologico
+                                            sulla libertà religiosa"" on title page to be part of
+                                            conference name nor an alternate name.]
+[See also related access points for individual
+                                            instances of this conference which include specific
+                                            information about the number, date, or place of the
+                                            individual conference.]"
+F,/rdf:RDF/madsrdf:ComplexSubject/rdf:type,"http://www.loc.gov/mads/rdf/v1#DeprecatedAuthority
+http://www.loc.gov/mads/rdf/v1#Variant"
+F,/rdf:RDF/madsrdf:ComplexSubject/madsrdf:adminMetadata/ri:RecordInfo/ri:languageOfCataloging,http://id.loc.gov/vocabulary/iso639-2/eng
+F,/rdf:RDF/madsrdf:ComplexSubject/madsrdf:adminMetadata/ri:RecordInfo/ri:recordChangeDate,"2022-03-08T11:32:21
+2018-12-20T00:00:00
+2023-01-20T00:00:00"
+F,/rdf:RDF/madsrdf:ComplexSubject/madsrdf:adminMetadata/ri:RecordInfo/ri:recordContentSource,http://id.loc.gov/vocabulary/organizations/dlc
+F,/rdf:RDF/madsrdf:ComplexSubject/madsrdf:adminMetadata/ri:RecordInfo/ri:recordStatus,"deprecated
+new"
+F,/rdf:RDF/madsrdf:ComplexSubject/madsrdf:componentList/madsrdf:PersonalName/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+F,/rdf:RDF/madsrdf:ComplexSubject/madsrdf:componentList/madsrdf:PersonalName/madsrdf:elementList/madsrdf:FullNameElement/madsrdf:elementValue,"Wolkers, Jan, 1925-2007."
+F,/rdf:RDF/madsrdf:ComplexSubject/madsrdf:componentList/madsrdf:PersonalName/madsrdf:variantLabel,"Wolkers, Jan, 1925-2007."
+F,/rdf:RDF/madsrdf:ComplexSubject/madsrdf:componentList/rdf:Description,"http://id.loc.gov/authorities/subjects/sh99001602
+http://id.loc.gov/authorities/subjects/sh99001651"
+F,/rdf:RDF/madsrdf:ComplexSubject/madsrdf:componentList/madsrdf:Geographic/rdf:type,http://www.loc.gov/mads/rdf/v1#Variant
+F,/rdf:RDF/madsrdf:ComplexSubject/madsrdf:componentList/madsrdf:Geographic/madsrdf:elementList/madsrdf:GeographicElement/madsrdf:elementValue,Kirrweiler (Germany)
+F,/rdf:RDF/madsrdf:ComplexSubject/madsrdf:componentList/madsrdf:Geographic/madsrdf:variantLabel,Kirrweiler (Germany)
+F,/rdf:RDF/madsrdf:Organization/madsrdf:authoritativeLabel,"Centro de Pesquisa Agroflorestal da Amazônia
+                                            Oriental (Brazil)
+Università di Firenze
+Instituto Politécnico Nacional (Mexico)"
+F,/rdf:RDF/madsrdf:Organization/identifiers:lccn,"nr2002003756
+n 2018243612
+n 88643378"
+F,/rdf:RDF/madsrdf:Organization/identifiers:local,"(OCoLC)oca05676753
+(OCoLC)oca02298539
+(OCoLC)oca00512573"
+F,/rdf:RDF/madsrdf:Organization/madsrdf:adminMetadata/ri:RecordInfo/ri:languageOfCataloging,http://id.loc.gov/vocabulary/iso639-2/eng
+F,/rdf:RDF/madsrdf:Organization/madsrdf:adminMetadata/ri:RecordInfo/ri:recordChangeDate,"2002-01-25T00:00:00
+2022-03-24T06:45:48
+2018-07-21T00:00:00"
+F,/rdf:RDF/madsrdf:Organization/madsrdf:adminMetadata/ri:RecordInfo/ri:recordContentSource,"http://id.loc.gov/vocabulary/organizations/mhfa
+http://id.loc.gov/vocabulary/organizations/icu
+http://id.loc.gov/vocabulary/organizations/dlc"
+F,/rdf:RDF/madsrdf:Organization/madsrdf:adminMetadata/ri:RecordInfo/ri:recordStatus,"new
+revised"
+F,/rdf:RDF/madsrdf:Organization/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"Akademia Sztuk Pięknych we Wrocławiu
+Gossner Theological College.
+Dept. of Adivasi Theology & Cultural
+                                            Research"
+F,/rdf:RDF/madsrdf:Organization/madsrdf:hasExactExternalAuthority,"http://viaf.org/viaf/sourceID/LC%7Cnr2002003756#skos:Concept
+http://viaf.org/viaf/sourceID/LC%7Cn+2018243612#skos:Concept
+http://viaf.org/viaf/sourceID/LC%7Cn++88643378#skos:Concept"
+F,/rdf:RDF/madsrdf:Organization/madsrdf:hasRelatedAuthority/madsrdf:Authority/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"Akademia Sztuk Pięknych im. Eugeniusza Gepperta
+                                            we Wrocławiu
+Université de Caen Basse-Normandie
+International Association of Rotary Clubs"
+F,/rdf:RDF/madsrdf:Organization/madsrdf:hasRelatedAuthority/madsrdf:Organization/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"Institut zhivopisi, skulʹptury i arkhitektury
+                                            imeni I.E. Repina
+University of Manchester
+Katholieke Universiteit Brabant"
+F,/rdf:RDF/madsrdf:Organization/madsrdf:hasSource/madsrdf:Source/madsrdf:citationStatus,found
+F,/rdf:RDF/madsrdf:Organization/madsrdf:hasVariant/madsrdf:CorporateName/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"ASP we Wrocławiu
+Academy of Fine Arts in Wrocław
+Gossner Theological College."
+F,/rdf:RDF/madsrdf:Organization/madsrdf:identifiesRWO/bf:Organization/rdfs:label,"Akademia Sztuk Pięknych we Wrocławiu
+Gossner Theological College. Dept. of Adivasi
+                                            Theology & Cultural Research
+Universidad de Alcalá. Facultad de Derecho"
+F,/rdf:RDF/madsrdf:Organization/madsrdf:identifiesRWO/bf:Organization/madsrdf:associatedLocale/madsrdf:Geographic/madsrdf:isMemberOfMADSScheme,http://id.loc.gov/authorities/names
+F,/rdf:RDF/madsrdf:Organization/madsrdf:identifiesRWO/bf:Organization/madsrdf:associatedLanguage,http://id.loc.gov/vocabulary/languages/eng
+F,/rdf:RDF/madsrdf:Organization/madsrdf:identifiesRWO/bf:Organization/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasAffiliationAddress/madsrdf:Address/madsrdf:postcode,"F-13108
+CB1 3JS"
+F,/rdf:RDF/madsrdf:Organization/madsrdf:identifiesRWO/bf:Organization/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasAffiliationAddress/madsrdf:Address/madsrdf:streetAddress,"Suite 7, 505 Coldhams Lane"
+F,/rdf:RDF/madsrdf:Organization/madsrdf:identifiesRWO/bf:Organization/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:organization,http://id.loc.gov/authorities/names/n81092057
+F,/rdf:RDF/madsrdf:Organization/madsrdf:identifiesRWO/bf:Organization/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasSource/madsrdf:Source/rdfs:label,"Wikipedia WWW site, viewed March 17, 2021"
+F,/rdf:RDF/madsrdf:Organization/madsrdf:isMemberOfMADSCollection,"http://id.loc.gov/authorities/names/collection_LCNAF
+http://id.loc.gov/authorities/names/collection_NamesAuthorizedHeadings"
+F,/rdf:RDF/madsrdf:Organization/madsrdf:isMemberOfMADSScheme,http://id.loc.gov/authorities/names
+F,/rdf:RDF/madsrdf:Organization/madsrdf:editorialNote,"[Machine-derived non-Latin script reference
+                                            project.]
+[Non-Latin script references not
+                                            evaluated.]"
+F,/rdf:RDF/madsrdf:Organization/madsrdf:hasEarlierEstablishedForm/madsrdf:CorporateName/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"Fu tan ta hsüeh (Shanghai, China)
+Fu tan ta hsüeh, Shanghai.
+University of Birmingham."
+F,/rdf:RDF/madsrdf:Organization/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"Shanghai yi ke da xue
+University of Newark
+Unión de Naciones Suramericanas"
+F,/rdf:RDF/madsrdf:Organization/madsrdf:useFor/madsrdf:Authority/rdf:type,http://www.loc.gov/mads/rdf/v1#CorporateName
+F,/rdf:RDF/madsrdf:Organization/madsrdf:useFor/madsrdf:Authority/rdfs:label,"no2011187641
+no99034882"
+F,/rdf:RDF/madsrdf:Organization/bflc:marcKey,"1102 $aUniversité de Caen Normandie
+1102 $aIndian National Army
+1102 $aSankt-Peterburgskiĭ gosudarstvennyĭ
+                                            akademicheskiĭ institut zhivopisi, skulʹptury i
+                                            arkhitektury imeni I.E. Repina"
+F,/rdf:RDF/madsrdf:Organization/madsrdf:hasLaterEstablishedForm/madsrdf:Organization/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,Universidad Autónoma de Coahuila
+F,/rdf:RDF/madsrdf:Organization/madsrdf:hasLaterEstablishedForm/madsrdf:Authority/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"Mining, Geological, and Metallurgical Institute
+                                            of India
+Ravenshaw University"
+F,/rdf:RDF/madsrdf:Organization/ns1:test,
+F,/rdf:RDF/madsrdf:Geographic/identifiers:lccn,"n 78081234
+n 99007178
+n 81089769"
+F,/rdf:RDF/madsrdf:Geographic/identifiers:local,"(OCoLC)oca00216532
+(OCoLC)oca04908184
+(Uk)003649078"
+F,/rdf:RDF/madsrdf:Geographic/madsrdf:adminMetadata/ri:RecordInfo/ri:languageOfCataloging,http://id.loc.gov/vocabulary/iso639-2/eng
+F,/rdf:RDF/madsrdf:Geographic/madsrdf:adminMetadata/ri:RecordInfo/ri:recordChangeDate,"1978-12-01T00:00:00
+2019-07-02T07:31:37
+1999-01-28T00:00:00"
+F,/rdf:RDF/madsrdf:Geographic/madsrdf:adminMetadata/ri:RecordInfo/ri:recordContentSource,"http://id.loc.gov/vocabulary/organizations/dlc
+http://id.loc.gov/vocabulary/organizations/wau"
+F,/rdf:RDF/madsrdf:Geographic/madsrdf:adminMetadata/ri:RecordInfo/ri:recordStatus,"new
+revised"
+F,/rdf:RDF/madsrdf:Geographic/madsrdf:editorialNote,"[Founded in 1638 by Swedish colonists]
+[Old catalog heading: Wilmington, Del.]
+[Old catalog heading: Dehra Dūn]"
+F,/rdf:RDF/madsrdf:Geographic/madsrdf:elementList/madsrdf:GeographicElement/madsrdf:elementValue,"Wilmington (Del.)
+Rogatica (Bosnia and Herzegovina)
+Dehra Dūn (India)"
+F,/rdf:RDF/madsrdf:Geographic/madsrdf:hasExactExternalAuthority,"http://viaf.org/viaf/sourceID/LC%7Cn++78081234#skos:Concept
+http://viaf.org/viaf/sourceID/LC%7Cn++99007178#skos:Concept
+http://viaf.org/viaf/sourceID/LC%7Cn++81089769#skos:Concept"
+F,/rdf:RDF/madsrdf:Geographic/madsrdf:hasReciprocalAuthority/madsrdf:Authority/madsrdf:elementList/madsrdf:GeographicElement/madsrdf:elementValue,"Brandywine Village (Del.)
+San Andrés Sacamch'en de los Pobres
+                                            (Mexico)
+Ciudad Trujillo (Dominican Republic)"
+F,/rdf:RDF/madsrdf:Geographic/madsrdf:hasSource/madsrdf:Source/madsrdf:citationStatus,found
+F,/rdf:RDF/madsrdf:Geographic/madsrdf:hasVariant/madsrdf:Geographic/madsrdf:elementList/madsrdf:GeographicElement/madsrdf:elementValue,"City of Wilmington (Del.)
+Gurudwara (India)
+Dehra Doon (India)"
+F,/rdf:RDF/madsrdf:Geographic/madsrdf:hasVariant/madsrdf:CorporateName/madsrdf:elementList/madsrdf:NameElement/madsrdf:elementValue,"Los Angeles (Calif.).
+Van Nuys
+Ulʹi︠a︡novskai︠a︡ oblastʹ (Russia)."
+F,/rdf:RDF/madsrdf:Geographic/madsrdf:identifiesRWO/madsrdf:RWO/rdfs:label,"Wilmington (Del.)
+Rogatica (Bosnia and Herzegovina)
+Dehra Dūn (India)"
+F,/rdf:RDF/madsrdf:Geographic/madsrdf:isMemberOfMADSCollection,"http://id.loc.gov/authorities/names/collection_LCNAF
+http://id.loc.gov/authorities/names/collection_NamesAuthorizedHeadings"
+F,/rdf:RDF/madsrdf:Geographic/madsrdf:isMemberOfMADSScheme,http://id.loc.gov/authorities/names
+F,/rdf:RDF/madsrdf:Geographic/madsrdf:hasEarlierEstablishedForm/madsrdf:Geographic/madsrdf:elementList/madsrdf:GeographicElement/madsrdf:elementValue,"Lin-yü hsien (China)
+Xiangxiang Xian (China)
+Pati, Indonesia (Jawa Tengah)"
+F,/rdf:RDF/madsrdf:Geographic/rdfs:label,"Atlanta (Ga.)
+England
+Sakhalinskai︠a︡ oblastʹ (Russia)"
+F,/rdf:RDF/madsrdf:Geographic/madsrdf:useFor/madsrdf:Authority/rdf:type,http://www.loc.gov/mads/rdf/v1#DeprecatedAuthority
+F,/rdf:RDF/madsrdf:Geographic/madsrdf:useFor/madsrdf:Authority/rdfs:label,"n83128194
+nb2018002012
+sh85132197"
+F,/rdf:RDF/skos:Concept/rdfs:label,"Italians
+Societies
+Japanese"
+F,/rdf:RDF/bf:Organization/rdfs:label,"Health Foundation (Great Britain)
+Greater London Council
+British Geological Survey"
+F,/rdf:RDF/bf:Organization/madsrdf:associatedLocale/madsrdf:Geographic/rdfs:label,"Saint Petersburg (Russia)
+Japan"
+F,/rdf:RDF/bf:Organization/madsrdf:associatedLocale/madsrdf:Geographic/madsrdf:isMemberOfMADSScheme,http://id.loc.gov/authorities/names
+F,/rdf:RDF/bf:Organization/madsrdf:entityDescriptor/skos:Concept/rdfs:label,"Art schools
+Universities and colleges"
+F,/rdf:RDF/bf:Organization/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasAffiliationAddress/madsrdf:Address/madsrdf:postcode,"WC2E 9RA
+CEP 79804-970
+75016"
+F,/rdf:RDF/bf:Organization/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:hasAffiliationAddress/madsrdf:Address/madsrdf:streetAddress,"90 Long Acre
+Cidade Universitária de Dourados, Caixa postal
+                                            351
+39, rue Molitor"
+F,/rdf:RDF/bf:Organization/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:email,etude@deburauxduplessis.fr
+F,/rdf:RDF/bf:Person/rdfs:label,"Roche, Paul, 1916-2007
+Botchan, Rachel
+Lentini, M. V. (Maria Victoria)"
+F,/rdf:RDF/bf:Person/madsrdf:associatedLanguage,"http://id.loc.gov/vocabulary/languages/eng
+http://id.loc.gov/vocabulary/languages/spa"
+F,/rdf:RDF/bf:Person/madsrdf:birthPlace/madsrdf:Geographic/madsrdf:isMemberOfMADSScheme,http://id.loc.gov/authorities/names
+F,/rdf:RDF/bf:Person/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:organization,"http://id.loc.gov/authorities/names/n50051998
+http://id.loc.gov/authorities/names/n50053191
+http://id.loc.gov/authorities/names/n79026674"
+F,/rdf:RDF/bf:Person/madsrdf:hasAffiliation/madsrdf:Affiliation/madsrdf:affiliationEnd,"1972
+2005"
+F,/rdf:RDF/bf:Person/madsrdf:occupation/madsrdf:Occupation/rdfs:label,"(lcsh) Narrator of audiobooks
+Narrator of audiobooks
+Translator"
+F,/rdf:RDF/bf:Person/madsrdf:associatedLocale/madsrdf:Geographic/rdfs:label,China
+F,/rdf:RDF/bf:Person/madsrdf:gender/skos:Concept/rdfs:label,male
+F,/rdf:RDF/bf:Person/madsrdf:entityDescriptor,http://id.loc.gov/authorities/demographicTerms/dg2015060340
+F,/rdf:RDF/madsrdf:RWO/rdfs:label,"Kangiqsujuaq (Inuit community)
+Windhoek (Namibia)
+Argos (Greece)"
+F,/rdf:RDF/madsrdf:RWO/madsrdf:associatedLanguage,http://id.loc.gov/vocabulary/languages/fre
+F,/rdf:RDF/madsrdf:GenreForm/madsrdf:elementList/madsrdf:GenreFormElement/madsrdf:elementValue,"Genealogy
+Diaries"
+F,/rdf:RDF/bf:Meeting/rdfs:label,"West European Conference on the Psychology of
+                                            Work and Organization"
+,/rdf:RDF/madsrdf:Authority/rdfs:label,"n83220752
+n50065966
+n82110284"
