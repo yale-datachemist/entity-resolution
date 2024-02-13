@@ -15,7 +15,6 @@ Using these named entitites, we can then load data from other sources
 as embeddings and compare their distance to obtain a confidence of a
 match to the existing named entities.
 
-
 ## Initialization
 
 We need to convert the BibFrame ontology into a terminus schema
@@ -29,7 +28,7 @@ The final, TerminusDB ingestable schema is at
 BIBFRAME-LC extensions and should be useable with all three, or a
 mixture.
 
-## Data pipeline
+## Marc Data pipeline
 
 We have a data pipeline that transforms Marc into ttl files which are
 loadable into TerminusDB.
@@ -50,9 +49,28 @@ This command will attempt to process all files in the marc/ folder in
 parallel and finally merge them into TerminusDB. The entire process
 takes less than one hour from a full data load.
 
+## LoC MADS Data pipeline
+
+First run:
+
+`~/src/entity-resolution/bin/loc-data`
+
+This will get the data from the Library of Congress name resources.
+
+Then you can run:
+
+`~/src/entity-resolution/bin/terminus_load_mads`
+
+This will load the data into a TerminusDB.
+
 ## Generate embeddings from Data
 
-GraphQL query + template
+We generate embeddings with a GraphQL query and a handlebars
+template. These can be changed over-time as data processing improves
+or we learn better prompting for the embedding strings.
+
+The process involves adding annotations to the schema on the data
+types we want to index. (see ...)
 
 ## Obtain results
 
