@@ -32,7 +32,7 @@ mixture.
 ## Data pipeline
 
 We have a data pipeline that transforms Marc into ttl files which are
-loadable into TerminusDB
+loadable into TerminusDB.
 
 Schematically the process is something like this:
 
@@ -47,7 +47,8 @@ terminus_load_marc
 ```
 
 This command will attempt to process all files in the marc/ folder in
-parallel and finally merge them into TerminusDB
+parallel and finally merge them into TerminusDB. The entire process
+takes less than one hour from a full data load.
 
 ## Generate embeddings from Data
 
