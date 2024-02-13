@@ -4,7 +4,12 @@ MARC_DIR=/home/DataChemist/data/marc
 MARC_XML_DIR=/home/DataChemist/data/marcxml
 SPLIT_MARC_XML_DIR=/home/DataChemist/data/split_marcxml
 BIBFRAME_XML_DIR=/home/DataChemist/data/bibframexml
-BIBFRAME_TTL=/home/DataChemist/data/bibframexml
+BIBFRAME_TTL_DIR=/home/DataChemist/data/bibframettl
+
+mkdir -p $MARC_XML_DIR
+mkdir -p $SPLIT_MARC_XML_DIR
+mkdir -p $BIBFRAME_XML_DIR
+mkdir -p $BIBFRAME_TTL_DIR
 
 echo "Dumping MARC as xml"
 parallel "yaz-marcdump -f MARC-8 -t UTF-8 -i marc -o marcxml {} > $MARC_XML_DIR/{/.}.xml" ::: $MARC_DIR/*
