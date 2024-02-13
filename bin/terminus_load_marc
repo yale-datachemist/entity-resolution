@@ -13,7 +13,7 @@ echo "Splitting XML file"
 parallel "~/src/entity-resolution/bin/collection_splitter {} --prefix=$SPLIT_MARC_XML_DIR/{/.}. -n 20000" ::: $MARC_XML_DIR/*
 
 echo "XSLT tranformation"
-parallel "xsltproc --stringparam baseuri iri://d/ ~/src/marc2bibframe2/xsl/marc2bibframe2.xsl {} > $BIBFRAME_XML_DIR{/.}.xml" ::: $SPLIT_MARC_XML_DIR/*
+parallel "xsltproc --stringparam baseuri iri://d/ ~/src/marc2bibframe2/xsl/marc2bibframe2.xsl {} > $BIBFRAME_XML_DIR/{/.}.xml" ::: $SPLIT_MARC_XML_DIR/*
 
 echo "Transforming bibframe xml to ttl"
 parallel "rapper -i rdfxml -o turtle {} > $BIBFRAME_TTL_DIR/{/.}.ttl" ::: $BIBFRAME_XML_DIR/*
