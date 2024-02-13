@@ -47,7 +47,10 @@ echo "Loading into TerminusDB"
 parallel "terminusdb triples load admin/{/}/local/branch/main/instance {}" ::: $BIBFRAME_TTL_DIR/*
 
 echo "Squashing input"
-parallel "terminusdb reset admin/{} $(terminusdb squash --json {} | jq '."api:commit"')" ::: $BIBFRAME_TTL_DIR/*
+parallel 'terminusdb reset admin/{/} $(terminusdb squash --json {/} | jq '"'"'."api:commit"'"'"' | sed "s#\"##g")' ::: $BIBFRAME_TTL_DIR/*
 
+echo "Creating target database"
 terminusdb db create admin/yale --schema=false
+
+echo "Concatenating databases"
 ls $BIBFRAME_TTL_DIR | awk '{print "admin/"$1}' | terminusdb concat admin/yale
