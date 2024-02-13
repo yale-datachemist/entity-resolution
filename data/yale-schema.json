@@ -1417,6 +1417,10 @@
   "bflc:profile": {
     "@type": "Set",
     "@class": "rdfs:Literal"
+  },
+  "rdfs:label": {
+    "@type": "Set",
+    "@class": "rdfs:Literal"
   }
 }
 {
