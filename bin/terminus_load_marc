@@ -53,4 +53,4 @@ echo "Creating target database"
 terminusdb db create admin/yale --schema=false
 
 echo "Concatenating databases"
-ls $BIBFRAME_TTL_DIR | awk '{print "admin/"$1}' | terminusdb concat admin/yale -j | sed 's/"//' | $(awk '{print "terminusdb reset admin/yale "$1 }')
+ls $BIBFRAME_TTL_DIR | awk '{print "admin/"$1}' | terminusdb concat admin/yale -j | sed 's/"//g' | $(awk '{print "terminusdb reset admin/yale "$1 }')
