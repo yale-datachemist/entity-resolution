@@ -22,3 +22,11 @@ parallel "xsltproc --stringparam baseuri iri://d/ ~/src/marc2bibframe2/xsl/marc2
 
 echo "Transforming bibframe xml to ttl"
 parallel "rapper -i rdfxml -o turtle {} > $BIBFRAME_TTL_DIR/{/.}.ttl" ::: $BIBFRAME_XML_DIR/*
+
+echo "Creating DBs for merge load"
+for f in $BIBFRAME_TTL_DIR; do
+    terminusdb db create ${f##*/} --schema=false
+done
+
+echo "Loading into TerminusDB"
+parallel "terminusdb triples load admin/{/}/local/branch/main/instance {}" ::: $BIBFRAME_TTL_DIR/*
