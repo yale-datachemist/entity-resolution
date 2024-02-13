@@ -11,6 +11,8 @@ mkdir -p $SPLIT_MARC_XML_DIR
 mkdir -p $BIBFRAME_XML_DIR
 mkdir -p $BIBFRAME_TTL_DIR
 
+terminusdb store init
+
 echo "Dumping MARC as xml"
 parallel "yaz-marcdump -f MARC-8 -t UTF-8 -i marc -o marcxml {} > $MARC_XML_DIR/{/.}.xml" ::: $MARC_DIR/*
 
@@ -24,8 +26,9 @@ echo "Transforming bibframe xml to ttl"
 parallel "rapper -i rdfxml -o turtle {} > $BIBFRAME_TTL_DIR/{/.}.ttl" ::: $BIBFRAME_XML_DIR/*
 
 echo "Creating DBs for merge load"
-for f in $BIBFRAME_TTL_DIR; do
-    terminusdb db create ${f##*/} --schema=false
+for f in `ls $BIBFRAME_TTL_DIR/`
+do
+    echo terminusb db create admin/${f##*/} --schema=false
 done
 
 echo "Loading into TerminusDB"
