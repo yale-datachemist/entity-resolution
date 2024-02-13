@@ -22,4 +22,4 @@ echo "Creating target database"
 terminusdb db create admin/loc --schema=false
 
 echo "Concatenating databases"
-ls names_split | awk '{print "admin/"$1}' | terminusdb concat admin/loc -j | sed 's/"//' | $(awk '{print "terminusdb reset admin/loc "$1 }')
+ls names_split | awk '{print "admin/"$1}' | terminusdb concat admin/loc -j | sed 's/"//g' | $(awk '{print "terminusdb reset admin/loc "$1 }')
