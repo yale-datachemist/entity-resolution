@@ -2,6 +2,7 @@
 
 echo "Transforming ttl to ntriples"
 rapper -i turtle -o ntriples loc/names.madsrdf.ttl > loc/names.madsrdf.ntriples
+
 mkdir -p names_split
 echo "Splitting ntriples"
 split -C 1000000000 loc/names.madsrdf.ntriples names_split/names.madsrdf. --additional-suffix=.ntriples
