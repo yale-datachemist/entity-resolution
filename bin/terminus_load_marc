@@ -6,43 +6,14 @@ SPLIT_MARC_XML_DIR=/home/DataChemist/data/split_marcxml
 BIBFRAME_XML_DIR=/home/DataChemist/data/bibframexml
 BIBFRAME_TTL=/home/DataChemist/data/bibframexml
 
-for f in $MARC_DIR/*
-do
-    echo "Dumping MARC as xml $f..."
-    # take action on each file. $f stores current file name
-    SUBSTR=$(echo $f | cut -d"/" -f 6)
-    g="$MARC_XML_DIR/$SUBSTR.xml"
-    if ! [ -f $g ]; then
-        yaz-marcdump -f MARC-8 -t UTF-8 -i marc -o marcxml $f > $g
-    fi
-done
+echo "Dumping MARC as xml"
+parallel "yaz-marcdump -f MARC-8 -t UTF-8 -i marc -o marcxml {} > $MARC_XML_DIR/{/.}.xml" ::: $MARC_DIR/*
 
-for f in $MARC_XML_DIR/*
-do
-    echo "Splitting XML file $f..."
-    SUBSTR=$(echo $f | cut -d"/" -f 6)
-    g="$SPLIT_MARC_XML_DIR/${SUBSTR%.xml}."
-    if ! [ -f "$g0.xml" ]; then
-        ~/src/entity-resolution/bin/collection_splitter $f --prefix=$g -n 20000
-    fi
-done
+echo "Splitting XML file"
+parallel "~/src/entity-resolution/bin/collection_splitter {} --prefix=$SPLIT_MARC_XML_DIR/{/.}. -n 20000" ::: $MARC_XML_DIR/*
 
-for f in $SPLIT_MARC_XML_DIR/*
-do
-    echo "XSLT tranformation of $f..."
-    SUBSTR=$(echo $f | cut -d"/" -f 6)
-    g="$BIBFRAME_XML_DIR/${SUBSTR%.xml}.xml"
-    if ! [ -f $g ]; then
-        xsltproc --stringparam baseuri iri://d/ ~/src/marc2bibframe2/xsl/marc2bibframe2.xsl $f > $g
-    fi
-done
+echo "XSLT tranformation"
+parallel "xsltproc --stringparam baseuri iri://d/ ~/src/marc2bibframe2/xsl/marc2bibframe2.xsl {} > $BIBFRAME_XML_DIR{/.}.xml" ::: $SPLIT_MARC_XML_DIR/*
 
-for f in $BIBFRAME_XML_DIR/*
-do
-    echo "Transforming bibframe xml to ttl for $f..."
-    SUBSTR=$(echo $f | cut -d"/" -f 6)
-    g="$BIBFRAME_TTL_DIR/${SUBSTR%.xml}.ttl"
-    if ! [ -f $g ]; then
-        rapper -i rdfxml -o turtle $f > $g
-    fi
-done
+echo "Transforming bibframe xml to ttl"
+parallel "rapper -i rdfxml -o turtle {} > $BIBFRAME_TTL_DIR/{/.}.ttl" ::: $BIBFRAME_XML_DIR/*
