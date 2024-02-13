@@ -1,5 +1,25 @@
 #!/bin/bash
 
-rapper -i turtle -o ntriples data/names.madsrdf.ttl > data/names.madsrdf.ntriples
-split -n 200 data/names.madsrdf.ntriples data/names_split/names.madsrdf. --additional-suffix=.ntriples
-for i in `ls data/names_split`; do terminusdb triples load admin/mads/local/branch/main/instance "data/names_split/$i"; done
+echo "Transforming ttl to ntriples"
+rapper -i turtle -o ntriples loc/names.madsrdf.ttl > loc/names.madsrdf.ntriples
+mkdir -p names_split
+echo "Splitting ntriples"
+split -C 1000000000 loc/names.madsrdf.ntriples names_split/names.madsrdf. --additional-suffix=.ntriples
+
+for f in `ls names_split`;
+do
+    echo "Creating db $f..."
+    terminusdb db create admin/${f##*/} --schema=false
+done
+
+echo "Adding to terminusdb"
+parallel "terminusdb triples load admin/{/}/local/branch/main/instance {}" ::: names_split/*
+
+echo "Squashing input"
+parallel 'terminusdb reset admin/{/} $(terminusdb squash --json {/} | jq '"'"'."api:commit"'"'"' | sed "s#\"##g")' ::: names_split/*
+
+echo "Creating target database"
+terminusdb db create admin/loc --schema=false
+
+echo "Concatenating databases"
+ls names_split | awk '{print "admin/"$1}' | terminusdb concat admin/loc -j | sed 's/"//' | $(awk '{print "terminusdb reset admin/loc "$1 }')
