@@ -7,11 +7,12 @@ license = "Apache 2.0"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = ">=3.10, <3.12"
 pyld = "^2.0.3"
 pymarc = "^5.1.1"
 openai = "^1.11.1"
 rdflib = "^7.0.0"
+terminusdb-client = "^10.2.6"
 
 
 [build-system]

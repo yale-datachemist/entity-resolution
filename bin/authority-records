@@ -1,0 +1,68 @@
+#!/usr/bin/env python
+from terminusdb_client import Client
+import terminusdb_client.query_syntax as w
+import json
+
+gensym_counter = 0
+def gensym():
+    global gensym_counter
+    gensym_counter += 1
+    return gensym_counter
+
+def query_label(entity, prop, label):
+    # this should actually gensym
+    node = w.variables(f"{entity.name}_node_{gensym()}")
+
+    return w.once(w.select(label, w.triple(entity, prop, node) & w.triple(node, 'rdfs:label', label)))
+
+def query_authoritative_labels(entity, prop, labels):
+    # this should actually gensym
+    (node,label, intermediate) = w.variables(f"{entity.name}_node_{gensym()}", f"label_{gensym()}", f"intermediate_labels_{gensym()}")
+
+    return (w.group_by([entity], label, labels,
+                       (
+                           w.triple(entity, prop, node) &
+                           w.triple(node, 'madsrdf:authoritativeLabel', label)))
+            )
+
+def strip_jsonld(record):
+    if isinstance(record, dict):
+        if '@value' in record:
+            return record['@value']
+
+        result = {}
+        for k in record:
+            result[k] = strip_jsonld(record[k])
+
+        return result
+    elif isinstance(record, list):
+        result = []
+        for l in record:
+            result.append(strip_jsonld(l))
+        return result
+    else:
+        return record
+
+
+if __name__ == '__main__':
+    client = Client("http://localhost:6363")
+    client.connect(db='authority')
+    (person,label,gender,birthplace,occupations, result)=w.variables('person','label','gender','birthplace','occupations','result')
+
+    result_template = w.Doc({'@id': person,
+                             'label': label,
+                             'gender': gender,
+                             'birthplace': birthplace,
+                             'occupation': occupations})
+
+    query = w.select(result, (w.triple(person, 'rdf:type', 'bf:Person') &
+                              w.triple(person, 'rdfs:label', label) &
+                              w.opt(query_label(person, 'madsrdf:gender', gender)) &
+                              w.opt(query_label(person, 'madsrdf:birthPlace', birthplace)) &
+                              query_authoritative_labels(person, 'madsrdf:occupation', occupations) &
+                              w.equals(result, result_template)))
+
+
+    result = client.query(query)
+    mapped = list(map(strip_jsonld, result['bindings']))
+    print(json.dumps(mapped))
