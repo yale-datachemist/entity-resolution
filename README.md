@@ -24,7 +24,7 @@ This process was done with a mixture of the tool `bin/owl2terminus`
 and some hand modification of input TTL files and the final Schema.
 
 The final, TerminusDB ingestable schema is at
-`data/yale-schema.json`. This schema merges MADS and BIBFRAME and
+`schema/yale.json`. This schema merges MADS and BIBFRAME and
 BIBFRAME-LC extensions and should be useable with all three, or a
 mixture.
 
