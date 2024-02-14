@@ -14,8 +14,7 @@ do
 done
 
 echo "Translating EDTF"
-parallel --halt-on-error 2 "sed -i 's|http://id.loc.gov/datatypes/edtf|http://www.w3.org/2001/XMLSchema#string|g' {}" ::: names_split/*
-parallel --halt-on-error 2 "sed -i 's|http://www.w3.org/2001/XMLSchema#string/EDTF|http://www.w3.org/2001/XMLSchema#string|g' {}" ::: names_split/*
+parallel --halt-on-error 2 "sed -i 's|http://id.loc.gov/datatypes/edtf/EDTF|http://www.w3.org/2001/XMLSchema#string|g' {}" ::: names_split/*
 parallel --halt-on-error 2 "sed -i 's|http://id.loc.gov/datatypes/codes/gac|http://www.w3.org/2001/XMLSchema#string|g' {}" ::: names_split/*
 parallel --halt-on-error 2 "sed -i 's|http://id.loc.gov/datatypes/auths/gac|http://www.w3.org/2001/XMLSchema#string|g' {}" ::: names_split/*
 
