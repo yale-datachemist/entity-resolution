@@ -31,3 +31,6 @@ echo "Concatenating databases"
 ls names_split | awk '{print "admin/"$1}' | terminusdb concat admin/loc -j | sed 's/"//g' | $(awk '{print "terminusdb reset admin/loc "$1 }')
 
 terminusdb query admin/loc "t(X, rdf:first, Y),insert(X, rdf:type, rdf:'List')"
+terminusdb query admin/loc "t(X, rdf:type, madsrdf:'RWO'), delete(X, rdf:type, madsrdf:'RWO')"
+terminusdb query admin/loc "t(X, rdf:type, foaf:'Person'), delete(X, rdf:type, foaf:'Person')"
+terminusdb query admin/loc "t(X, rdf:type, foaf:'Organization'), delete(X, rdf:type, foaf:'Organization')"
