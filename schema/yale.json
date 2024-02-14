@@ -901,7 +901,8 @@
   "@id": "madsrdf:Occupation",
   "@type": "Class",
   "@inherits": [
-    "madsrdf:SimpleType"
+    "madsrdf:SimpleType",
+    "madsrdf:RWO"
   ],
   "@documentation": {
     "@label": "Occupation Type"

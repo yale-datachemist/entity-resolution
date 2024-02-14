@@ -32,10 +32,7 @@ echo "Translating Durations to Strings"
 parallel --halt-on-error 2 "sed -i 's|http://www.w3.org/2001/XMLSchema#duration|http://www.w3.org/2001/XMLSchema#string|g' {}" ::: $BIBFRAME_TTL_DIR/*
 
 echo "Translating Dates to Strings"
-parallel --halt-on-error 2 "sed -i 's|http://www.w3.org/2001/XMLSchema#date|http://www.w3.org/2001/XMLSchema#string|g' {}" ::: $BIBFRAME_TTL_DIR/*
-
-echo "Translating stringTime to dateTime"
-parallel --halt-on-error 2 "sed -i 's|http://www.w3.org/2001/XMLSchema#stringTime|http://www.w3.org/2001/XMLSchema#dateTime|g' {}" ::: $BIBFRAME_TTL_DIR/*
+parallel --halt-on-error 2 "sed -i 's|<http://www.w3.org/2001/XMLSchema#date>|<http://www.w3.org/2001/XMLSchema#string>|g' {}" ::: $BIBFRAME_TTL_DIR/*
 
 echo "Creating DBs for merge load"
 for f in `ls $BIBFRAME_TTL_DIR/`
