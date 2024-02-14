@@ -274,6 +274,7 @@
 {
   "@id": "madsrdf:Affiliation",
   "@type": "Class",
+  "@inherits" : [ "owl:Thing" ],
   "@documentation": {
     "@label": "Affiliation",
     "@properties": {
@@ -301,6 +302,9 @@
       },
       "madsrdf:phone": {
         "@label": "Phone"
+      },
+      "madsrdf:organization": {
+        "@label": "Organization"
       }
     }
   },
@@ -327,6 +331,10 @@
   "madsrdf:hours": {
     "@type": "Set",
     "@class": "rdf:PlainLiteral"
+  },
+  "madsrdf:organization": {
+    "@type": "Set",
+    "@class" : "Organization"
   },
   "madsrdf:phone": {
     "@type": "Set",
@@ -1011,6 +1019,10 @@
         "@comment": "The year a corporate body was established. Date of establishment may also include the month and day of the corporate body’s establishment.\n    ",
         "@label": "Established"
       },
+      "madsrdf:gender": {
+        "@comment": "The gender with which a person identifies.",
+        "@label": "Gender"
+      },
       "madsrdf:honoraryTitle": {
         "@comment": "Designation indicative of\n      royalty, nobility, or ecclesiastical rank or office, or a term of address for a person of\n      religious vocation.",
         "@label": "Honorary Title"
@@ -1044,6 +1056,10 @@
   "madsrdf:fieldOfActivity": {
     "@type": "Set",
     "@class": "owl:Thing"
+  },
+  "madsrdf:gender": {
+    "@type": "Set",
+    "@class": "skos:Concept"
   },
   "madsrdf:hasAffiliation": {
     "@type": "Set",
@@ -4986,6 +5002,7 @@
 {
   "@id": "skos:Concept",
   "@type": "Class",
+  "@inherits" : ["owl:Thing"],
   "@documentation": {}
 }
 {

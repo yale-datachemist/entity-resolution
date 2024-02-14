@@ -745,7 +745,7 @@ madsrdf:fullerName
     rdfs:range madsrdf:PersonalName .
 
 madsrdf:gender
-    a rdf:Property, owl:DataTypeProperty ;
+    a rdf:Property, owl:ObjectProperty ;
     rdfs:comment """The gender with which a
       person identifies. """^^xsd:string ;
     rdfs:domain madsrdf:RWO ;
@@ -1132,6 +1132,7 @@ madsrdf:organization
     rdfs:comment """The group or organization
       with which an individual is associated."""^^xsd:string ;
     rdfs:domain madsrdf:Affiliation ;
+    rdfs:range madsrdf:Organization ;
     rdfs:label """Organization or
       Group"""^^xsd:string .
 
