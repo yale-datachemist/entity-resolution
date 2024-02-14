@@ -3141,7 +3141,10 @@
   "@id": "bf:Person",
   "@type": "Class",
   "@inherits": [
-    "foaf:Person"
+    "foaf:Person",
+    "bf:Authority",
+    "bf:Agent",
+    "bf:Resource"
   ],
   "@documentation": {
     "@description": "Individual or identity established by an individual (either alone or in collaboration with one or more other individuals).",
