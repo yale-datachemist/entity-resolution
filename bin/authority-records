@@ -19,11 +19,12 @@ def query_authoritative_labels(entity, prop, labels):
     # this should actually gensym
     (node,label, intermediate) = w.variables(f"{entity.name}_node_{gensym()}", f"label_{gensym()}", f"intermediate_labels_{gensym()}")
 
-    return (w.group_by([entity], label, labels,
-                       (
-                           w.triple(entity, prop, node) &
-                           w.triple(node, 'madsrdf:authoritativeLabel', label)))
-            )
+    return w.once(w.woql_or((w.group_by([entity], label, labels,
+                                        (
+                                            w.triple(entity, prop, node) &
+                                            w.triple(node, 'madsrdf:authoritativeLabel', label)))
+                             ),
+                            w.equals(labels, [])))
 
 def strip_jsonld(record):
     if isinstance(record, dict):
@@ -47,19 +48,21 @@ def strip_jsonld(record):
 if __name__ == '__main__':
     client = Client("http://localhost:6363")
     client.connect(db='authority')
-    (person,label,gender,birthplace,occupations, result)=w.variables('person','label','gender','birthplace','occupations','result')
+    (person,label,gender,birthplace,occupations, death_date, result)=w.variables('person','label','gender','birthplace','occupations','death_date', 'result')
 
     result_template = w.Doc({'@id': person,
                              'label': label,
                              'gender': gender,
                              'birthplace': birthplace,
-                             'occupation': occupations})
+                             'occupation': occupations,
+                             'deathDate': death_date})
 
     query = w.select(result, (w.triple(person, 'rdf:type', 'bf:Person') &
                               w.triple(person, 'rdfs:label', label) &
                               w.opt(query_label(person, 'madsrdf:gender', gender)) &
                               w.opt(query_label(person, 'madsrdf:birthPlace', birthplace)) &
                               query_authoritative_labels(person, 'madsrdf:occupation', occupations) &
+                              w.opt(query_label(person, 'madsrdf:deathDate', death_date)) &
                               w.equals(result, result_template)))
 
 
