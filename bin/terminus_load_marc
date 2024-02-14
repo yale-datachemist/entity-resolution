@@ -6,6 +6,11 @@ SPLIT_MARC_XML_DIR=/home/DataChemist/data/split_marcxml
 BIBFRAME_XML_DIR=/home/DataChemist/data/bibframexml
 BIBFRAME_TTL_DIR=/home/DataChemist/data/bibframettl
 
+rm -rf $MARC_XML_DIR
+rm -rf $SPLIT_MARC_XML_DIR
+rm -rf $BIBFRAME_XML_DIR
+rm -rf $BIBFRAME_TTL_DIR
+
 mkdir -p $MARC_XML_DIR
 mkdir -p $SPLIT_MARC_XML_DIR
 mkdir -p $BIBFRAME_XML_DIR
