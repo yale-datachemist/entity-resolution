@@ -841,6 +841,7 @@
 {
   "@id": "madsrdf:MADSType",
   "@type": "Class",
+  "@inherits" : ["owl:Thing"],
   "@documentation": {
     "@label": "MADS Type"
   }
@@ -3142,9 +3143,9 @@
   "@type": "Class",
   "@inherits": [
     "foaf:Person",
-    "bf:Authority",
+    "madsrdf:Authority",
     "bf:Agent",
-    "bf:Resource"
+    "madsrdf:RWO"
   ],
   "@documentation": {
     "@description": "Individual or identity established by an individual (either alone or in collaboration with one or more other individuals).",
