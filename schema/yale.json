@@ -363,10 +363,6 @@
   "@documentation": {
     "@label": "Authority",
     "@properties": {
-      "madsrdf:authoritativeLabel": {
-        "@label": "Authoritative Label",
-        "@comment": "A lexical string representing a controlled, curated label for the Authority."
-      },
       "madsrdf:hasAbbreviationVariant": {
         "@label": "Has Abbreviation\n      Variant"
       },
@@ -428,10 +424,6 @@
         "@label": "Identifies RWO"
       }
     }
-  },
-  "madsrdf:authoritativeLabel": {
-    "@type": "Set",
-    "@class": "rdf:PlainLiteral"
   },
   "madsrdf:hasAbbreviationVariant": {
     "@type": "Set",
@@ -718,7 +710,8 @@
   "@id": "madsrdf:Geographic",
   "@type": "Class",
   "@inherits": [
-    "madsrdf:SimpleType"
+    "madsrdf:SimpleType",
+    "madsrdf:RWO"
   ],
   "@documentation": {
     "@label": "Geographic Authority"
@@ -971,6 +964,10 @@
         "@comment": "A town, city, province,\n      state, and/or country associated with persons, corporate bodies, families, works, and\n      expressions.",
         "@label": "Associated Locale"
       },
+      "madsrdf:authoritativeLabel": {
+        "@label": "Authoritative Label",
+        "@comment": "A lexical string representing a controlled, curated label for the Authority."
+      },
       "madsrdf:birthPlace": {
         "@comment": "The town, city, province,\n      state, and/or country in which a person was born.",
         "@label": "Place of Birth"
@@ -1044,6 +1041,10 @@
   "madsrdf:associatedLocale": {
     "@type": "Set",
     "@class": "madsrdf:Geographic"
+  },
+  "madsrdf:authoritativeLabel": {
+    "@type": "Set",
+    "@class": "rdf:PlainLiteral"
   },
   "madsrdf:birthPlace": {
     "@type": "Set",
@@ -2878,7 +2879,8 @@
   "@id": "bf:Meeting",
   "@type": "Class",
   "@inherits": [
-    "bf:Agent"
+    "bf:Agent",
+    "madsrdf:RWO"
   ],
   "@documentation": {
     "@description": "Gathering of individuals or representatives of various bodies for the purpose of discussing and/or acting on topics of common interest.",
@@ -3136,7 +3138,8 @@
   "@id": "bf:Organization",
   "@type": "Class",
   "@inherits": [
-    "bf:Agent"
+    "bf:Agent",
+    "madsrdf:RWO"
   ],
   "@documentation": {
     "@description": "Corporation or group of persons and/or organizations that acts, or may act, as a unit.",

@@ -508,7 +508,7 @@ madsrdf:authoritativeLabel
     a rdf:Property, owl:AnnotationProperty ;
     rdfs:comment """A lexical string representing a controlled, curated label for the
       Authority."""@en ;
-    rdfs:domain madsrdf:Authority ;
+    rdfs:domain madsrdf:RWO ;
     rdfs:label "Authoritative Label"@en ;
     rdfs:subPropertyOf rdfs:label, <http://www.w3.org/2004/02/skos/core#prefLabel> .
 
