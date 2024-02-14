@@ -4,27 +4,29 @@ import terminusdb_client.query_syntax as w
 import json
 
 gensym_counter = 0
-def gensym():
+def gensym(s):
     global gensym_counter
     gensym_counter += 1
-    return gensym_counter
+    return f"s_{gensym_counter}"
 
 def query_label(entity, prop, label):
-    # this should actually gensym
-    node = w.variables(f"{entity.name}_node_{gensym()}")
+    node = w.variables(gensym(entity.name + "_node"))
 
     return w.once(w.select(label, w.triple(entity, prop, node) & w.triple(node, 'rdfs:label', label)))
 
-def query_authoritative_labels(entity, prop, labels):
-    # this should actually gensym
-    (node,label, intermediate) = w.variables(f"{entity.name}_node_{gensym()}", f"label_{gensym()}", f"intermediate_labels_{gensym()}")
+def or_val(var, query, val):
+    return w.once(w.woql_or(query,
+                            w.equals(var, val)))
 
-    return w.once(w.woql_or((w.group_by([entity], label, labels,
-                                        (
-                                            w.triple(entity, prop, node) &
-                                            w.triple(node, 'madsrdf:authoritativeLabel', label)))
-                             ),
-                            w.equals(labels, [])))
+def query_authoritative_labels(entity, prop, labels):
+    (node,label, intermediate) = w.variables(gensym(entity.name + "_node"), "label", "intermediate_labels")
+
+    return or_val(labels,
+                  w.group_by([entity], label, labels,
+                             (
+                                 w.triple(entity, prop, node) &
+                                 w.triple(node, 'madsrdf:authoritativeLabel', label))),
+                  [])
 
 def strip_jsonld(record):
     if isinstance(record, dict):
@@ -44,26 +46,46 @@ def strip_jsonld(record):
     else:
         return record
 
+def query_citation(citation, result):
+    (node_id, note, source) = w.variables(gensym('id'), gensym('note'), gensym('source'))
+    result_template = w.Doc({'@id': node_id,
+                             'note': note,
+                             'source': source})
+
+    return (w.triple(citation, 'madsrdf:citationNote', note) &
+     w.opt(w.triple(citation, 'madsrdf:citationSource', source)) &
+     w.equals(result, result_template))
+
+def query_citations(person, result):
+    (citation_node,citation) = w.variables(gensym('citation_node'), 'citation')
+    return or_val(result,
+                  w.group_by([person], citation, result, (w.triple(person, 'madsrdf:hasSource', citation_node) & query_citation(citation_node, citation))),
+                  [])
+
 
 if __name__ == '__main__':
     client = Client("http://localhost:6363")
     client.connect(db='authority')
-    (person,label,gender,birthplace,occupations, death_date, result)=w.variables('person','label','gender','birthplace','occupations','death_date', 'result')
+    (person,label,gender,birthplace,occupations, death_date, citations, result)=w.variables('person','label','gender','birthplace','occupations','death_date', 'citations', 'result')
 
     result_template = w.Doc({'@id': person,
                              'label': label,
                              'gender': gender,
                              'birthplace': birthplace,
                              'occupation': occupations,
-                             'deathDate': death_date})
+                             'deathDate': death_date,
+                             'citations': citations})
 
-    query = w.select(result, (w.triple(person, 'rdf:type', 'bf:Person') &
-                              w.triple(person, 'rdfs:label', label) &
-                              w.opt(query_label(person, 'madsrdf:gender', gender)) &
-                              w.opt(query_label(person, 'madsrdf:birthPlace', birthplace)) &
-                              query_authoritative_labels(person, 'madsrdf:occupation', occupations) &
-                              w.opt(query_label(person, 'madsrdf:deathDate', death_date)) &
-                              w.equals(result, result_template)))
+    query = (w.triple(person, 'rdf:type', 'bf:Person') &
+             w.triple(person, 'rdfs:label', label) &
+             w.opt(query_label(person, 'madsrdf:gender', gender)) &
+             w.opt(query_label(person, 'madsrdf:birthPlace', birthplace)) &
+             query_authoritative_labels(person, 'madsrdf:occupation', occupations) &
+             w.opt(query_label(person, 'madsrdf:deathDate', death_date)) &
+             w.opt(query_citations(person, citations)) &
+             w.equals(result, result_template))
+
+    query = w.select(result, w.distinct(person, query))
 
 
     result = client.query(query)
