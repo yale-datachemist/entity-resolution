@@ -19,7 +19,7 @@ mkdir -p $BIBFRAME_TTL_DIR
 terminusdb store init
 
 echo "Dumping MARC as xml"
-parallel "yaz-marcdump -f MARC-8 -t UTF-8 -i marc -o marcxml {} > $MARC_XML_DIR/{/.}.xml" ::: $MARC_DIR/*
+parallel "yaz-marcdump -f MARC-8 -t UTF-8 -i marc -o marcxml {} > $MARC_XML_DIR/{/}.xml" ::: $MARC_DIR/*
 
 echo "Splitting XML file"
 parallel "~/src/entity-resolution/bin/collection_splitter {} --prefix=$SPLIT_MARC_XML_DIR/{/.}. -n 20000" ::: $MARC_XML_DIR/*
