@@ -77,12 +77,9 @@ def name_record(name_id, result):
 
 def name_records(person, names):
     (name_id,name) = w.variables(gensym('name_id'), gensym('name'))
-    return or_val(result,
-                  (w.triple(name_id, 'madsrdf:identifiesRWO', person) &
-                   w.group_by([person], name, names,
-                              name_record(name_id, name))),
-                  [])
-
+    return w.opt((w.triple(name_id, 'madsrdf:identifiesRWO', person) &
+                  w.group_by([person], name, names,
+                             name_record(name_id, name))))
 
 if __name__ == '__main__':
     client = Client("http://localhost:6363")
@@ -107,8 +104,7 @@ if __name__ == '__main__':
              w.equals(result, result_template))
 
     query = w.select(result, w.distinct(person, query))
-    #query = name_records(person, result)
 
     result = client.query(query)
-    mapped = list(map(strip_jsonld, result['bindings']))
-    print(json.dumps(mapped))
+    for result in result['bindings']:
+        print(json.dumps(strip_jsonld(result['result'])))

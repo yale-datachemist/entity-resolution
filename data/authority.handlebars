@@ -1,0 +1,14 @@
+This is a person named {{label}}.
+{{#if birthplace}}They were born in {{birthplace}}.
+{{/if}}
+{{#if birthDate}}They were born on the date {{birthDate}}.
+{{/if}}
+{{#if deathDate}}They died on the date {{deathDate}}.
+{{/if}}
+{{#if names}}
+  {{#each names}} {{../label}} is also referred to with the following names {{name}}
+    {{#if citations}}{{name}} was mentioned in the following citations:
+      {{#each citations}}{{note}} {{#if source}}according to the source {{source}}. {{/if}}
+      {{/each}}{{/if}}
+  {{/each}}
+{{/if}}

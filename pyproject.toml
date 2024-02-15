@@ -13,6 +13,7 @@ pymarc = "^5.1.1"
 openai = "^1.11.1"
 rdflib = "^7.0.0"
 terminusdb-client = "^10.2.6"
+pybars3 = "^0.9.7"
 
 
 [build-system]

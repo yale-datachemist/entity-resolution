@@ -1,0 +1,25 @@
+#!/usr/bin/env python
+import json
+import sys
+import argparse
+from pybars import Compiler
+
+
+if __name__ == '__main__':
+   parser = argparse.ArgumentParser()
+   parser.add_argument("template", help="Name of handlebars template file")
+   args = parser.parse_args()
+   with open(args.template, 'r') as f:
+      template_string = f.read()
+
+   compiler = Compiler()
+   template = compiler.compile(template_string)
+
+   for l in sys.stdin:
+      j = json.loads(l)
+      string = template(j)
+      o = { 'op' : 'Inserted',
+            'string' : string,
+            'id' : j['@id']}
+      #print(json.dumps(j))
+      print(json.dumps(o))
