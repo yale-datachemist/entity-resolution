@@ -1,0 +1,54 @@
+#!/usr/bin/env python
+from terminusdb_client import Client
+import terminusdb_client.query_syntax as w
+import json
+
+gensym_counter = 0
+def gensym(s):
+    global gensym_counter
+    gensym_counter += 1
+    return f"s_{gensym_counter}"
+
+def query_label(entity, prop, label):
+    node = w.variables(gensym(entity.name + "_node"))
+
+    return w.once(w.select(label, w.triple(entity, prop, node) & w.triple(node, 'rdfs:label', label)))
+
+def or_val(var, query, val):
+    return w.once(w.woql_or(query,
+                            w.equals(var, val)))
+
+def strip_jsonld(record):
+    if isinstance(record, dict):
+        if '@value' in record:
+            return record['@value']
+
+        result = {}
+        for k in record:
+            result[k] = strip_jsonld(record[k])
+
+        return result
+    elif isinstance(record, list):
+        result = []
+        for l in record:
+            result.append(strip_jsonld(l))
+        return result
+    else:
+        return record
+
+if __name__ == '__main__':
+    client = Client("http://localhost:6363")
+    client.connect(db='yale')
+    (person, label, result)=w.variables('person', 'label', 'result')
+    result_template = w.Doc({'@id': person,
+                             'lable': label})
+
+    query = (w.triple(person, 'rdf:type', 'bf:Person') &
+             w.triple(person, 'rdfs:label', label) &
+             w.equals(result, result_template))
+
+    query = w.select(result, w.distinct(person, query))
+
+    result = client.query(query)
+    for result in result['bindings']:
+        print(json.dumps(strip_jsonld(result['result'])))
