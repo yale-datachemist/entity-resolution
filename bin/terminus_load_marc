@@ -39,6 +39,13 @@ parallel --halt-on-error 2 "sed -i 's|http://www.w3.org/2001/XMLSchema#duration|
 echo "Translating Dates to Strings"
 parallel --halt-on-error 2 "sed -i 's|<http://www.w3.org/2001/XMLSchema#date>|<http://www.w3.org/2001/XMLSchema#string>|g' {}" ::: $BIBFRAME_TTL_DIR/*
 
+echo "Remove bad generated langstring output"
+parallel --halt-on-error 2 ./strip_langstrings {} ::: $BIBFRAME_TTL_DIR/*
+
+echo "Processing bad electronic resource field"
+parallel --halt-on-error 2 sed -i 's|\\\\\([A-Za-z]\)|//\1|g' {} ::: $BIBFRAME_TTL_DIR/*
+
+
 echo "Creating DBs for merge load"
 for f in `ls $BIBFRAME_TTL_DIR/`
 do
