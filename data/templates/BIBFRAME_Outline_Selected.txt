@@ -121,7 +121,7 @@ bf:Work
         bf:Hub
             bf:title
                 bf:Title [0..*]
-                    "This works has a part called: {CONCAT(bf:mainTitle
+                    "This work has a part called: {CONCAT(bf:mainTitle
                     bf:partNumber
                     bf:partName)}."
             bf:contribution
@@ -169,10 +169,7 @@ bf:Work
         bf:Work
             bf:title
                 bf:Title [0..*]
-                    "This work is a translation of: {bf:mainTitle}."            
-            bf:identifiedBy
-                bf:Issn
-                    rdf:value
+                    "This work is a translation of: {bf:mainTitle}."                      
             bf:contribution
                 bf:PrimaryContribution
                     bf:agent
