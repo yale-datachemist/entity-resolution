@@ -1,7 +1,4 @@
-bf:Work
-    bf:language
-        bf:Language [0..*]
-            "This work is expressed in the following language: {rdf:value}."                
+bf:Work           
     bf:contribution
         bf:Contribution
             rdf:type
