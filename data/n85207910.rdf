@@ -1,0 +1,342 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:bf="http://id.loc.gov/ontologies/bibframe/" xmlns:bflc="http://id.loc.gov/ontologies/bflc/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:cc="http://creativecommons.org/ns#" xmlns:foaf="http://xmlns.com/foaf/0.1/">
+  <madsrdf:PersonalName rdf:about="http://id.loc.gov/authorities/names/n85207910" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+    <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+    <madsrdf:authoritativeLabel>Butler, Samuel, 1774-1839</madsrdf:authoritativeLabel>
+    <madsrdf:elementList rdf:parseType="Collection">
+      <madsrdf:FullNameElement>
+	<madsrdf:elementValue>Butler, Samuel,</madsrdf:elementValue>
+      </madsrdf:FullNameElement>
+      <madsrdf:DateNameElement>
+	<madsrdf:elementValue>1774-1839</madsrdf:elementValue>
+      </madsrdf:DateNameElement>
+    </madsrdf:elementList>
+    <madsrdf:hasVariant>
+      <madsrdf:PersonalName>
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Variant"/>
+	<madsrdf:variantLabel>Butler, Samuel, Bp. of Lichfield and Coventry, 1774-1839</madsrdf:variantLabel>
+	<madsrdf:elementList rdf:parseType="Collection">
+	  <madsrdf:FullNameElement>
+	    <madsrdf:elementValue>Butler, Samuel,</madsrdf:elementValue>
+	  </madsrdf:FullNameElement>
+	  <madsrdf:TermsOfAddressNameElement>
+	    <madsrdf:elementValue>Bp. of Lichfield and Coventry,</madsrdf:elementValue>
+	  </madsrdf:TermsOfAddressNameElement>
+	  <madsrdf:DateNameElement>
+	    <madsrdf:elementValue>1774-1839</madsrdf:elementValue>
+	  </madsrdf:DateNameElement>
+	</madsrdf:elementList>
+      </madsrdf:PersonalName>
+    </madsrdf:hasVariant>
+    <bflc:marcKey>1001 $aButler, Samuel,$d1774-1839</bflc:marcKey>
+    <madsrdf:hasEarlierEstablishedForm>
+      <madsrdf:PersonalName>
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Variant"/>
+	<madsrdf:variantLabel>Butler, Samuel, Bp. of Lichfield and Coventry, 1774-1839</madsrdf:variantLabel>
+	<madsrdf:elementList rdf:parseType="Collection">
+	  <madsrdf:FullNameElement>
+	    <madsrdf:elementValue>Butler, Samuel,</madsrdf:elementValue>
+	  </madsrdf:FullNameElement>
+	  <madsrdf:TermsOfAddressNameElement>
+	    <madsrdf:elementValue>Bp. of Lichfield and Coventry,</madsrdf:elementValue>
+	  </madsrdf:TermsOfAddressNameElement>
+	  <madsrdf:DateNameElement>
+	    <madsrdf:elementValue>1774-1839</madsrdf:elementValue>
+	  </madsrdf:DateNameElement>
+	</madsrdf:elementList>
+      </madsrdf:PersonalName>
+    </madsrdf:hasEarlierEstablishedForm>
+    <madsrdf:hasCloseExternalAuthority>
+      <madsrdf:Authority rdf:about="http://www.wikidata.org/entity/Q1351792">
+	<madsrdf:authoritativeLabel>Samuel Butler</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasCloseExternalAuthority>
+    <madsrdf:hasCloseExternalAuthority>
+      <madsrdf:Authority rdf:about="https://id.worldcat.org/fast/0166404">
+	<madsrdf:authoritativeLabel>Butler, Samuel, 1774-1839</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasCloseExternalAuthority>
+    <madsrdf:hasCloseExternalAuthority>
+      <madsrdf:Authority rdf:about="https://d-nb.info/gnd/1055386408">
+	<madsrdf:authoritativeLabel>Butler, Samuel</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasCloseExternalAuthority>
+    <madsrdf:isMemberOfMADSCollection rdf:resource="http://id.loc.gov/authorities/names/collection_NamesAuthorizedHeadings"/>
+    <madsrdf:isMemberOfMADSCollection rdf:resource="http://id.loc.gov/authorities/names/collection_LCNAF"/>
+    <madsrdf:hasExactExternalAuthority rdf:resource="http://viaf.org/viaf/sourceID/LC%7Cn++85207910#skos:Concept"/>
+    <madsrdf:identifiesRWO>
+      <madsrdf:RWO rdf:about="http://id.loc.gov/rwo/agents/n85207910">
+	<rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<rdfs:label>Butler, Samuel, 1774-1839</rdfs:label>
+	<madsrdf:birthDate rdf:datatype="http://id.loc.gov/datatypes/edtf/EDTF">1774-01-30</madsrdf:birthDate>
+	<madsrdf:deathDate rdf:datatype="http://id.loc.gov/datatypes/edtf/EDTF">1839-12-04</madsrdf:deathDate>
+	<madsrdf:hasAffiliation>
+	  <madsrdf:Affiliation>
+	    <madsrdf:organization>
+	      <madsrdf:Organization rdf:about="http://id.loc.gov/authorities/names/n79056234">
+		<madsrdf:authoritativeLabel>Church of England</madsrdf:authoritativeLabel>
+	      </madsrdf:Organization>
+	    </madsrdf:organization>
+	    <madsrdf:organization>
+	      <madsrdf:Organization rdf:about="http://id.loc.gov/authorities/names/n90611742">
+		<madsrdf:authoritativeLabel>Shrewsbury School (Shrewsbury, England)</madsrdf:authoritativeLabel>
+	      </madsrdf:Organization>
+	    </madsrdf:organization>
+	  </madsrdf:Affiliation>
+	</madsrdf:hasAffiliation>
+	<madsrdf:birthPlace>
+	  <madsrdf:Geographic>
+	    <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/authorities/names"/>
+	    <rdfs:label>Kenilworth (England)</rdfs:label>
+	  </madsrdf:Geographic>
+	</madsrdf:birthPlace>
+	<madsrdf:associatedLanguage>
+	  <madsrdf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng">
+	    <madsrdf:authoritativeLabel xml:lang="en">English</madsrdf:authoritativeLabel>
+	  </madsrdf:Language>
+	</madsrdf:associatedLanguage>
+	<bflc:subjectOf>
+	  <bf:Work rdf:about="http://id.loc.gov/resources/works/13121469">
+	    <bflc:aap>Butler, Samuel, 1835-1902 The life and letters of Dr. Samuel Butler</bflc:aap>
+	  </bf:Work>
+	</bflc:subjectOf>
+	<bflc:subjectOf>
+	  <bf:Work rdf:about="http://id.loc.gov/resources/works/1719355">
+	    <bflc:aap>Butler, Samuel, 1835-1902. life and letters of Dr. Samuel Butler</bflc:aap>
+	  </bf:Work>
+	</bflc:subjectOf>
+	<bflc:subjectOf>
+	  <bf:Work rdf:about="http://id.loc.gov/resources/works/6321080">
+	    <bflc:aap>Butler, Samuel, 1835-1902. life and letters of Dr. Samuel Butler, head-master of Shrewsbury School 1798-1836, and afterwards Bishop of Lichfield, in so far as they illustrate the scholastic, religious, and social life of England, 1790-1840</bflc:aap>
+	  </bf:Work>
+	</bflc:subjectOf>
+	<bflc:contributorTo>
+	  <bf:Work rdf:about="http://id.loc.gov/resources/works/5889204">
+	    <bflc:aap>Bonaparte, Lucien, prince de Canino, 1775-1840. Charlemagne, or, The church delivered : an epic poem in twenty-four books</bflc:aap>
+	  </bf:Work>
+	</bflc:contributorTo>
+	<bflc:contributorTo>
+	  <bf:Work rdf:about="http://id.loc.gov/resources/works/5561470">
+	    <bflc:aap>Butler, Samuel, 1774-1839 A general atlas of ancient and modern geography</bflc:aap>
+	  </bf:Work>
+	</bflc:contributorTo>
+	<bflc:contributorTo>
+	  <bf:Work rdf:about="http://id.loc.gov/resources/works/16010911">
+	    <bflc:aap>Butler, Samuel, 1774-1839 An atlas of antient geography</bflc:aap>
+	  </bf:Work>
+	</bflc:contributorTo>
+	<bflc:contributorTo>
+	  <bf:Work rdf:about="http://id.loc.gov/resources/works/16011003">
+	    <bflc:aap>Butler, Samuel, 1774-1839 An atlas of antient geography</bflc:aap>
+	  </bf:Work>
+	</bflc:contributorTo>
+	<bflc:contributorTo>
+	  <bf:Work rdf:about="http://id.loc.gov/resources/works/16733614">
+	    <bflc:aap>Butler, Samuel, 1774-1839 An atlas of antient geography</bflc:aap>
+	  </bf:Work>
+	</bflc:contributorTo>
+	<bflc:contributorTo>
+	  <bf:Work rdf:about="http://id.loc.gov/resources/works/16735767">
+	    <bflc:aap>Butler, Samuel, 1774-1839 An atlas of antient geography</bflc:aap>
+	  </bf:Work>
+	</bflc:contributorTo>
+	<bflc:contributorTo>
+	  <bf:Work rdf:about="http://id.loc.gov/resources/works/16735779">
+	    <bflc:aap>Butler, Samuel, 1774-1839 An atlas of antient geography</bflc:aap>
+	  </bf:Work>
+	</bflc:contributorTo>
+	<bflc:contributorTo>
+	  <bf:Work rdf:about="http://id.loc.gov/resources/works/16735840">
+	    <bflc:aap>Butler, Samuel, 1774-1839 An atlas of antient geography</bflc:aap>
+	  </bf:Work>
+	</bflc:contributorTo>
+	<bflc:contributorTo>
+	  <bf:Work rdf:about="http://id.loc.gov/resources/works/264169">
+	    <bflc:aap>Butler, Samuel, 1774-1839 An atlas of antient geography</bflc:aap>
+	  </bf:Work>
+	</bflc:contributorTo>
+	<bflc:contributorTo>
+	  <bf:Work rdf:about="http://id.loc.gov/resources/works/265102">
+	    <bflc:aap>Butler, Samuel, 1774-1839 An atlas of antient geography</bflc:aap>
+	  </bf:Work>
+	</bflc:contributorTo>
+	<bflc:contributorTo>
+	  <bf:Work rdf:about="http://id.loc.gov/resources/works/5822834">
+	    <bflc:aap>Butler, Samuel, 1774-1839 An atlas of antient geography</bflc:aap>
+	  </bf:Work>
+	</bflc:contributorTo>
+	<bflc:contributorTo>
+	  <bf:Work rdf:about="http://id.loc.gov/resources/works/5831629">
+	    <bflc:aap>Butler, Samuel, 1774-1839 An atlas of antient geography</bflc:aap>
+	  </bf:Work>
+	</bflc:contributorTo>
+	<bflc:contributorTo>
+	  <bf:Work rdf:about="http://id.loc.gov/resources/works/5835261">
+	    <bflc:aap>Butler, Samuel, 1774-1839 An atlas of antient geography</bflc:aap>
+	  </bf:Work>
+	</bflc:contributorTo>
+	<bflc:contributorTo>
+	  <bf:Work rdf:about="http://id.loc.gov/resources/works/5841223">
+	    <bflc:aap>Butler, Samuel, 1774-1839 An atlas of antient geography</bflc:aap>
+	  </bf:Work>
+	</bflc:contributorTo>
+	<bflc:contributorTo>
+	  <bf:Work rdf:about="http://id.loc.gov/resources/works/6264946">
+	    <bflc:aap>Butler, Samuel, 1774-1839. Butler's Geographical and map exercises ..</bflc:aap>
+	  </bf:Work>
+	</bflc:contributorTo>
+	<bflc:contributorTo>
+	  <bf:Work rdf:about="http://id.loc.gov/resources/works/7669530">
+	    <bflc:aap>Butler, Samuel, 1774-1839. Butler's Geographical and map exercises ..</bflc:aap>
+	  </bf:Work>
+	</bflc:contributorTo>
+	<bflc:contributorTo>
+	  <bf:Work rdf:about="http://id.loc.gov/resources/works/8655486">
+	    <bflc:aap>Butler, Samuel, 1774-1839. Catalogue of the library of the late Right Rev. Samuel Butler, D.D., Lord Bishop of Lichfield</bflc:aap>
+	  </bf:Work>
+	</bflc:contributorTo>
+	<bflc:contributorTo>
+	  <bf:Work rdf:about="http://id.loc.gov/resources/works/4602369">
+	    <bflc:aap>Butler, Samuel, 1774-1839. Church in Derbyshire in 1823-4 : the parochial visitation of the Rev. Samuel Butler, archdeacon of Derby in the diocese of Lichfield and Coventry</bflc:aap>
+	  </bf:Work>
+	</bflc:contributorTo>
+	<bflc:contributorTo>
+	  <bf:Work rdf:about="http://id.loc.gov/resources/works/5854303">
+	    <bflc:aap>Butler, Samuel, 1774-1839. Geographia classica:</bflc:aap>
+	  </bf:Work>
+	</bflc:contributorTo>
+	<bflc:contributorTo>
+	  <bf:Work rdf:about="http://id.loc.gov/resources/works/6809168">
+	    <bflc:aap>Butler, Samuel, 1774-1839. Geographia classica:</bflc:aap>
+	  </bf:Work>
+	</bflc:contributorTo>
+	<bflc:contributorTo>
+	  <bf:Work rdf:about="http://id.loc.gov/resources/works/7265521">
+	    <bflc:aap>Butler, Samuel, 1774-1839. Geographia classica:</bflc:aap>
+	  </bf:Work>
+	</bflc:contributorTo>
+	<bflc:contributorTo>
+	  <bf:Work rdf:about="http://id.loc.gov/resources/works/9543188">
+	    <bflc:aap>Butler, Samuel, 1774-1839. Geographia classical, or, The application of ancient geography to the classics. For the use of students</bflc:aap>
+	  </bf:Work>
+	</bflc:contributorTo>
+	<bflc:contributorTo>
+	  <bf:Work rdf:about="http://id.loc.gov/resources/works/8224888">
+	    <bflc:aap>Butler, Samuel, 1774-1839. key to Dr. Butler's Praxis on the Latin prepositions</bflc:aap>
+	  </bf:Work>
+	</bflc:contributorTo>
+	<bflc:contributorTo>
+	  <bf:Work rdf:about="http://id.loc.gov/resources/works/13279837">
+	    <bflc:aap>Butler, Samuel, 1774-1839. letter to the Rev. C.J. Blomfield ... containing remarks on the Edinburgh review of the Cambridge Aeschylus, and incidental observations on that of the Oxford Strabo</bflc:aap>
+	  </bf:Work>
+	</bflc:contributorTo>
+	<bflc:contributorTo>
+	  <bf:Work rdf:about="http://id.loc.gov/resources/works/8693044">
+	    <bflc:aap>Butler, Samuel, 1774-1839. praxis on the Latin prepositions, being an attempt to illustrate their origin, signification, and government, in the way of exercise. For the use of schools</bflc:aap>
+	  </bf:Work>
+	</bflc:contributorTo>
+	<bflc:contributorTo>
+	  <bf:Work rdf:about="http://id.loc.gov/resources/works/6825694">
+	    <bflc:aap>Butler, Samuel, 1774-1839. Sidneiana : being a collection of fragments relative to Sir Philip Sidney, knt., and his immediate connections</bflc:aap>
+	  </bf:Work>
+	</bflc:contributorTo>
+	<bflc:contributorTo>
+	  <bf:Work rdf:about="http://id.loc.gov/resources/works/6839044">
+	    <bflc:aap>Butler, Samuel, 1774-1839. sketch of modern and antient geography, for the use of schools,</bflc:aap>
+	  </bf:Work>
+	</bflc:contributorTo>
+	<bflc:contributorTo>
+	  <bf:Work rdf:about="http://id.loc.gov/resources/works/7439360">
+	    <bflc:aap>Colman, David Stacy. Sabrinae corolla</bflc:aap>
+	  </bf:Work>
+	</bflc:contributorTo>
+      </madsrdf:RWO>
+    </madsrdf:identifiesRWO>
+    <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/authorities/names"/>
+    <identifiers:lccn xmlns:identifiers="http://id.loc.gov/vocabulary/identifiers/">n 85207910</identifiers:lccn>
+    <identifiers:local xmlns:identifiers="http://id.loc.gov/vocabulary/identifiers/">(OCoLC)oca01482089</identifiers:local>
+    <madsrdf:hasSource>
+      <madsrdf:Source>
+	<madsrdf:citationSource>His Atlas of antient geography, 1851:</madsrdf:citationSource>
+	<madsrdf:citationNote>t.p. (Samuel Butler, D.D.)</madsrdf:citationNote>
+	<madsrdf:citationStatus>found</madsrdf:citationStatus>
+      </madsrdf:Source>
+    </madsrdf:hasSource>
+    <madsrdf:hasSource>
+      <madsrdf:Source>
+	<madsrdf:citationSource>LC data base, 1-8-86</madsrdf:citationSource>
+	<madsrdf:citationNote>(hdg.: Butler, Samuel, Bp. of Lichfield and Coventry, 1774-1839)</madsrdf:citationNote>
+	<madsrdf:citationStatus>found</madsrdf:citationStatus>
+      </madsrdf:Source>
+    </madsrdf:hasSource>
+    <madsrdf:hasSource>
+      <madsrdf:Source>
+	<madsrdf:citationSource>Wikipedia, search Oct. 3, 2023</madsrdf:citationSource>
+	<madsrdf:citationSource rdf:resource="https://en.wikipedia.org/wiki/Samuel_Butler_(schoolmaster)"/>
+	<madsrdf:citationNote>(Samuel Butler (schoolmaster); Samuel Butler FRS (30 January 1774 - 4 December 1839) was an English classical scholar and schoolmaster of Shrewsbury School, and Bishop of Lichfield; his grandson was Samuel Butler (1835-1902), the author of the novel Erewhon; born at Kenilworth, Warwickshire; educated at Rugby School, and in 1791 was admitted to St John's College, Cambridge; in 1797 he was elected a fellow of St John's and ordained deacon in the Church of England, and in 1798 became headmaster of Shrewsbury School, the same year as his ordination as priest, at the age of 24; he was perpetual curate of Berwick Chapelry near Shrewsbury from 1801 to 1815 and in 1802 he was appointed as vicar of Kenilworth, in 1807 to a prebendal stall in Lichfield Cathedral, and in 1822 to the archdeaconry of Derby; all these appointments he had at the same time as his headmastership, but in 1836 he was promoted to the bishopric of Lichfield)</madsrdf:citationNote>
+	<madsrdf:citationStatus>found</madsrdf:citationStatus>
+      </madsrdf:Source>
+    </madsrdf:hasSource>
+    <madsrdf:adminMetadata>
+      <ri:RecordInfo xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#">
+	<ri:recordChangeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1986-01-14T00:00:00</ri:recordChangeDate>
+	<ri:recordStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new</ri:recordStatus>
+	<ri:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlc"/>
+	<ri:languageOfCataloging rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      </ri:RecordInfo>
+    </madsrdf:adminMetadata>
+    <madsrdf:adminMetadata>
+      <ri:RecordInfo xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#">
+	<ri:recordChangeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-04T06:45:43</ri:recordChangeDate>
+	<ri:recordStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">revised</ri:recordStatus>
+	<ri:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/cu"/>
+	<ri:languageOfCataloging rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      </ri:RecordInfo>
+    </madsrdf:adminMetadata>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Butler, Samuel, 1774-1839</skos:prefLabel>
+    <skosxl:altLabel xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#">
+      <rdf:Description>
+	<rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+	<skosxl:literalForm>Butler, Samuel, Bp. of Lichfield and Coventry, 1774-1839</skosxl:literalForm>
+      </rdf:Description>
+    </skosxl:altLabel>
+    <skos:exactMatch rdf:resource="http://viaf.org/viaf/sourceID/LC%7Cn++85207910#skos:Concept"/>
+    <skos:closeMatch>
+      <rdf:Description rdf:about="http://www.wikidata.org/entity/Q1351792">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel>Samuel Butler</skos:prefLabel>
+      </rdf:Description>
+    </skos:closeMatch>
+    <skos:closeMatch>
+      <rdf:Description rdf:about="https://id.worldcat.org/fast/0166404">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel>Butler, Samuel, 1774-1839</skos:prefLabel>
+      </rdf:Description>
+    </skos:closeMatch>
+    <skos:closeMatch>
+      <rdf:Description rdf:about="https://d-nb.info/gnd/1055386408">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel>Butler, Samuel</skos:prefLabel>
+      </rdf:Description>
+    </skos:closeMatch>
+    <skos:inScheme rdf:resource="http://id.loc.gov/authorities/names"/>
+    <skos:altLabel>Butler, Samuel, Bp. of Lichfield and Coventry, 1774-1839</skos:altLabel>
+    <skos:changeNote>
+      <cs:ChangeSet xmlns:cs="http://purl.org/vocab/changeset/schema#">
+	<cs:subjectOfChange rdf:resource="http://id.loc.gov/authorities/names/n85207910"/>
+	<cs:creatorName rdf:resource="http://id.loc.gov/vocabulary/organizations/dlc"/>
+	<cs:createdDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1986-01-14T00:00:00</cs:createdDate>
+	<cs:changeReason rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new</cs:changeReason>
+      </cs:ChangeSet>
+    </skos:changeNote>
+    <skos:changeNote>
+      <cs:ChangeSet xmlns:cs="http://purl.org/vocab/changeset/schema#">
+	<cs:subjectOfChange rdf:resource="http://id.loc.gov/authorities/names/n85207910"/>
+	<cs:creatorName rdf:resource="http://id.loc.gov/vocabulary/organizations/cu"/>
+	<cs:createdDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-04T06:45:43</cs:createdDate>
+	<cs:changeReason rdf:datatype="http://www.w3.org/2001/XMLSchema#string">revised</cs:changeReason>
+      </cs:ChangeSet>
+    </skos:changeNote>
+  </madsrdf:PersonalName>
+</rdf:RDF>
