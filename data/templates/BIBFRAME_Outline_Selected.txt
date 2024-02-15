@@ -70,7 +70,7 @@ bf:Work
             "This work is about or somehow associated with the following person: {rdfs:label}."
         bf:Organization [0..*]
             "This work is about or somehow associated with the following organization: {rdfs:label}."
-    bf:note
+    bf:note [IF rdf:type == http://id.loc.gov/vocabulary/mnotetype/local THEN "A copy of this work is described by the following note: {}."]
         bf:Note [0..*]
             "This work is described by the following note: {rdfs:label}."                
     bf:genreForm
@@ -190,7 +190,7 @@ bf:Instance
             bf:partNumber
             bf:partName)}."            
     bf:instanceOf [Link from Instance to Work]    
-    bf:note
+    bf:note [IF rdf:type == http://id.loc.gov/vocabulary/mnotetype/local THEN "A copy of this work is described by the following note: {}."]
         bf:Note [0..*]            
             "It is described by the following note: {rdfs:label}."                    
     "It has the following manufacture statement: {bflc:manufactureStatement}." [0..1]        
