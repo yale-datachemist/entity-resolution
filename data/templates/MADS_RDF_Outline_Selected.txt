@@ -26,10 +26,10 @@ madsrdf:Authority
                 madsrdf:Geographic [0..*]
                     "They are associated with the following place: {rdfs:label}."                    
             madsrdf:birthDate 
-                skos:Concept [1..1]
+                skos:Concept [0..1]
                     "Their date of birth is: {rdfs:label}."                    
             madsrdf:birthPlace
-                madsrdf:Geographic [1..1]
+                madsrdf:Geographic [0..1]
                     "Their place of birth is: {rdfs:label}."                    
             madsrdf:fieldOfActivity
                 skos:Concept [0..*]
@@ -43,10 +43,10 @@ madsrdf:Authority
                 madsrdf:Language [0..*]
                     "Their language is: {rdfs:label}."
             madsrdf:deathDate
-                skos:Concept [1..1]
+                skos:Concept [0..1]
                     "Their date of death is: {rdfs:label}."                           
             madsrdf:deathPlace
-                madsrdf:Geographic [1..1]
+                madsrdf:Geographic [0..1]
                     "Their place of death is: {rdfs:label}."
             madsrdf:entityDescriptor
                 skos:Concept [0..*]
