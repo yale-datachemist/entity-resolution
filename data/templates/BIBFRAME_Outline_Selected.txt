@@ -58,17 +58,17 @@ bf:Work
     bf:subject
         bf:Topic [0..*]
             "This work is about the following topic: {rdfs:label}."                
-        bf:Hub            
+        bf:Hub [0..*]           
             "This work is about another work called: {madsrdf:authoritativeLabel}."            
-        bf:Place
+        bf:Place [0..*]
             "This work is about the following place: {rdfs:label}."            
-        bf:Temporal            
+        bf:Temporal [0..*]            
             "This work is about the following time period: {rdfs:label}."            
-        bf:Event
+        bf:Event [0..*]
             "This work is about the following event: {rdfs:label}."            
-        bf:Person
+        bf:Person [0..*]
             "This work is about or somehow associated with the following person: {rdfs:label}."
-        bf:Organization
+        bf:Organization [0..*]
             "This work is about or somehow associated with the following organization: {rdfs:label}."
     bf:note
         bf:Note [0..*]
