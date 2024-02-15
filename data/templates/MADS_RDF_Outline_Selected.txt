@@ -1,0 +1,53 @@
+madsrdf:Authority
+    rdf:type [http://www.loc.gov/mads/rdf/v1#PersonalName] [1..1]    
+    "This person's name is {madsrdf:authoritativeLabel}."
+    madsrdf:hasVariant
+        madsrdf:PersonalName [0..*]           
+            "They are also known by the name: {madsrdf:variantLabel}."
+    madsrdf:hasEarlierEstablishedForm
+        madsrdf:PersonalName [0..*]            
+            "Their name was previously recorded as: {madsrdf:variantLabel}."
+    madsrdf:hasRelatedAuthority
+        madsrdf:Authority [0..*]
+            "They are related to this other entity: {madsrdf:authoritativeLabel}."
+    madsrdf:see
+        madsrdf:Authority
+            "They are also related to: {madsrdf:authoritativeLabel}."
+    madsrdf:hasSource
+        madsrdf:Source [1..*]
+            "The following citation note applies to this person: {madsrdf:citationNote}."
+            "This is according to: {madsrdf:citationSource}."                        
+    madsrdf:identifiesRWO
+        bf:Person            
+            madsrdf:occupation
+                madsrdf:Occupation [0..*]
+                    "They work in a field described as: {rdfs:label}."                    
+            madsrdf:associatedLocale
+                madsrdf:Geographic [0..*]
+                    "They are associated with the following place: {rdfs:label}."                    
+            madsrdf:birthDate 
+                skos:Concept [1..1]
+                    "Their date of birth is: {rdfs:label}."                    
+            madsrdf:birthPlace
+                madsrdf:Geographic [1..1]
+                    "Their place of birth is: {rdfs:label}."                    
+            madsrdf:fieldOfActivity
+                skos:Concept [0..*]
+                    "They are associated with the following field of activity: {rdfs:label}."
+            madsrdf:hasAffiliation
+                madsrdf:Affiliation [0..*]
+                    madsrdf:organization
+                        madsrdf:Organization
+                            "They are affiliated with the following organization: {rdfs:label}."                    
+            madsrdf:associatedLanguage
+                madsrdf:Language [0..*]
+                    "Their language is: {rdfs:label}."
+            madsrdf:deathDate
+                skos:Concept [1..1]
+                    "Their date of death is: {rdfs:label}."                           
+            madsrdf:deathPlace
+                madsrdf:Geographic [1..1]
+                    "Their place of death is: {rdfs:label}."
+            madsrdf:entityDescriptor
+                skos:Concept [0..*]
+                    "They are described by the following term: {rdfs:label}."

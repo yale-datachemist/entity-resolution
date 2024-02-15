@@ -1,0 +1,207 @@
+bf:Work
+    bf:language
+        bf:Language [0..*]
+            "This work is expressed in the following language: {rdf:value}."                
+    bf:contribution
+        bf:Contribution
+            rdf:type
+            bf:agent
+                bf:Agent [0..*]                    
+                    "{rdfs:label} contributed to this work."                    
+            bf:role
+                bf:Role [0..*]
+                    "Their role as a contributor is described as: {rdfs:label}."                    
+    bf:title
+        bf:Title [1..1]
+            "The title of this work is: {CONCAT(bf:mainTitle
+            bflc:nonSortNum
+            bf:partNumber
+            bf:partName)}."        
+        bf:VariantTitle [0..*]
+            "This work is also known as: {CONCAT(bf:mainTitle            
+            bf:partNumber
+            bf:partName
+            bf:date
+            bf:subtitle
+            bf:qualifier)}."            
+        bf:ParallelTitle [0..*]
+            "It is also know as: {CONCAT(bf:mainTitle
+            bf:partName
+            bf:date
+            bf:partNumber
+            bf:subtitle}."            
+        bf:CollectiveTitle [0..1]
+            "The collective title of this work is: {bf:mainTitle}."
+    bflc:relationship
+        bflc:Relationship            
+            bf:relatedTo
+                bf:Series                     
+                    bf:title
+                        bf:Title [0..*]
+                            "It is related to the following series: {bf:mainTitle}."                        
+                bf:Hub
+                    rdf:type
+                    bf:title
+                        bf:Title [0..*]
+                            "It is related to another work called: {CONCAT(bf:mainTitle
+                            bf:partNumber
+                            bf:partName)}."                    
+                    bf:contribution
+                        bf:Contribution
+                            bf:agent
+                                bf:Agent [0..*]                                    
+                                    "This related title was contributed to by: {rdfs:label}."
+                            bf:role
+                                bf:Role
+                                    "Their role is described as: {rdfs:label}."
+                    "This related work's date of creation was: {bf:originDate}."                    
+    bf:subject
+        bf:Topic [0..*]
+            "This work is about the following topic: {rdfs:label}."            
+        bf:Agent
+            rdf:type
+            "This work is about the following agent: {madsrdf:authoritativeLabel}."            
+        bf:Hub            
+            "This work is about another work called: {madsrdf:authoritativeLabel}."            
+        bf:Place
+            "This work is about the following place: {rdfs:label}."            
+        bf:Temporal            
+            "This work is about the following time period: {rdfs:label}."            
+        bf:Event
+            "This work is about the following event: {rdfs:label}."            
+        bf:Person
+            "This work is about the following person: {rdfs:label}."
+        bf:Organization
+            "This work is about the following organization: {rdfs:label}."
+    bf:note
+        bf:Note [0..*]
+            "This work is described by the following note: {rdfs:label}."                
+    bf:genreForm
+        bf:GenreForm [0..*]
+            "This work is characterized by the following genre or format: {rdfs:label}."
+    bf:musicFormat
+        bf:MusicFormat [0..*]
+            "This is a musical work that has the following format: {rdfs:label}."            
+    bf:instrument
+        bf:MusicInstrument [0..*]
+            "This is a musical work that features the following instrument: {rdfs:label}."            
+    bf:expressionOf
+        bf:Hub
+            bf:title
+                bf:Title [0..*]
+                    "This work is an expression of another work called: {CONCAT(bf:mainTitle
+                    bf:partNumber
+                    bf:partName)}."
+            bf:contribution
+                bf:Contribution
+                    rdf:type
+                    bf:agent
+                        bf:Agent [0..*]                            
+                            "This related work was contributed to by: {rdfs:label}."                            
+                    bf:role
+                        bf:Role [0..*]
+                            "Their role is described as: {rdfs:label}."            
+    bf:tableOfContents
+        bf:TableOfContents [0..*]
+            "This work has the following table of contents: {rdfs:label}."            
+    bf:references
+        bf:Work
+            bf:title
+                bf:Title [0..*]
+                    "This work references another title called: {bf:mainTitle}."                
+    bf:hasPart
+        bf:Work
+            rdf:type
+            bf:title
+                bf:Title [0..*]
+                    bflc:nonSortNum
+                    "This work has a part called: {CONCAT(bf:mainTitle
+            bf:partNumber
+            bf:partName)}."            
+        bf:Hub
+            bf:title
+                bf:Title [0..*]
+                    "This works has a part called: {CONCAT(bf:mainTitle
+                    bf:partNumber
+                    bf:partName)}."
+            bf:contribution
+                bf:Contribution
+                    bf:agent
+                        bf:Agent [0..*]
+                            rdf:type
+                            "This part was contributed to by: {rdfs:label}."
+                    bf:role
+                        bf:Role [0..*]
+                            "Their role is described as: {rdfs:label}."                                            
+    bf:summary
+        bf:Summary [0..*]
+            "This work is summarized by the following text: {rdfs:label}."
+    bf:hasSeries
+        bf:Work
+            bf:title
+                bf:Title [0..*]
+                    "This work is associated with the following series: {CONCAT(bf:mainTitle
+                    bf:qualifier)}."                
+    bf:place
+        bf:Place [0..*]            
+            "This work is associated with the following place: {rdfs:label}."
+    bf:issuedWith
+        bf:Work
+            bf:title
+                bf:Title [0..*]
+                    "This work was issued with: {bf:mainTitle}."                   
+    bf:partOf
+        bf:Work
+            bf:title
+                bf:Title [0..*]
+                    "This work is part of another work called: {bf:mainTitle}."                
+    bf:translation
+        bf:Work
+            bf:title
+                bf:Title [0..*]
+                    "This work has a translation called: {bf:mainTitle}."
+            bf:contribution
+                bf:PrimaryContribution
+                    bf:agent
+                        bf:Agent [0..*]
+                            "The translation was created by: {rdfs:label}."                
+    bf:translationOf
+        bf:Work
+            bf:title
+                bf:Title [0..*]
+                    "This work is a translation of: {bf:mainTitle}."            
+            bf:identifiedBy
+                bf:Issn
+                    rdf:value
+            bf:contribution
+                bf:PrimaryContribution
+                    bf:agent
+                        bf:Agent [0..*]
+                            "The translator was: {rdfs:label}."                    
+    bf:originPlace
+        bf:Place
+            "The place of origin of this work was: {rdfs:label}."            
+bf:Instance    
+    bf:provisionActivity
+        bf:ProvisionActivity [0..*]
+            "{bflc:simplePlace} is the place where this work was made available."
+            "This work was made available by: {bflc:simpleAgent}."
+            "{bflc:simpleDate} is the date when this work was made available."            
+    "This work has the following publication statement: {bflc:publicationStatement}." [0..*]        
+    "This work has the following statement of responsibility: {bf:responsibilityStatement}." [0..1]
+    bf:title
+        bf:Title [1..1]
+            "This work was made available under the following title: {CONCAT(bf:mainTitle
+            bf:subtitle
+            bf:partNumber
+            bf:partName)}."            
+    bf:instanceOf [Link from Instance to Work]    
+    bf:note
+        bf:Note [0..*]            
+            "It is described by the following note: {rdfs:label}."                    
+    "It has the following manufacture statement: {bflc:manufactureStatement}." [0..1]        
+    "It has the following credits: {bf:credits}." [0..1]
+    "It has the following copyright date: {bf:copyrightDate}." [0..1]
+    "It has the following custodial history: {bf:custodialHistory}." [0..1]        
+    "It has the following distribution statement: {bflc:distributionStatement}." [0..1]    
+    "It has the following production statement: {bflc:productionStatement}." [0..1]    
