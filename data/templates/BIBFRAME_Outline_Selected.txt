@@ -57,10 +57,7 @@ bf:Work
                     "This related work's date of creation was: {bf:originDate}."                    
     bf:subject
         bf:Topic [0..*]
-            "This work is about the following topic: {rdfs:label}."            
-        bf:Agent
-            rdf:type
-            "This work is about the following agent: {madsrdf:authoritativeLabel}."            
+            "This work is about the following topic: {rdfs:label}."                
         bf:Hub            
             "This work is about another work called: {madsrdf:authoritativeLabel}."            
         bf:Place
@@ -70,9 +67,9 @@ bf:Work
         bf:Event
             "This work is about the following event: {rdfs:label}."            
         bf:Person
-            "This work is about the following person: {rdfs:label}."
+            "This work is about or somehow associated with the following person: {rdfs:label}."
         bf:Organization
-            "This work is about the following organization: {rdfs:label}."
+            "This work is about or somehow associated with the following organization: {rdfs:label}."
     bf:note
         bf:Note [0..*]
             "This work is described by the following note: {rdfs:label}."                
