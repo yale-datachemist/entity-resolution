@@ -173,7 +173,7 @@ bf:Work
                         bf:Agent [0..*]
                             "The translator was: {rdfs:label}."                    
     bf:originPlace
-        bf:Place
+        bf:Place [0..*]
             "The place of origin of this work was: {rdfs:label}."            
 bf:Instance    
     bf:provisionActivity
