@@ -55,7 +55,7 @@ bf:Work
                                 bf:Role
                                     "Their role is described as: {rdfs:label}."
                     "This related work's date of creation was: {bf:originDate}."                    
-    bf:subject
+    bf:subject [FOR EACH: IF rdf:type == "https://library.yale.edu/vocab/LocalSubject" THEN "A copy of this work was associated with: {}."]
         bf:Topic [0..*]
             "This work is about the following topic: {rdfs:label}."                
         bf:Hub [0..*]           
