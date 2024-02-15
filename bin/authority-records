@@ -47,26 +47,47 @@ def strip_jsonld(record):
         return record
 
 def query_citation(citation, result):
-    (node_id, note, source) = w.variables(gensym('id'), gensym('note'), gensym('source'))
-    result_template = w.Doc({'@id': node_id,
+    (note, source) = w.variables(gensym('note'), gensym('source'))
+    result_template = w.Doc({'@id': citation,
                              'note': note,
                              'source': source})
 
     return (w.triple(citation, 'madsrdf:citationNote', note) &
-     w.opt(w.triple(citation, 'madsrdf:citationSource', source)) &
-     w.equals(result, result_template))
+            w.opt(w.triple(citation, 'madsrdf:citationSource', source)) &
+            w.equals(result, result_template))
 
-def query_citations(person, result):
-    (citation_node,citation) = w.variables(gensym('citation_node'), 'citation')
+def query_citations(name_id, result):
+    (citation_node,citation) = w.variables(gensym('citation_node'), gensym('citation'))
     return or_val(result,
-                  w.group_by([person], citation, result, (w.triple(person, 'madsrdf:hasSource', citation_node) & query_citation(citation_node, citation))),
+                  w.group_by([name_id], citation, result,
+                             (w.triple(name_id, 'madsrdf:hasSource', citation_node) &
+                              query_citation(citation_node, citation))),
+                  [])
+
+def name_record(name_id, result):
+    (citations,name_string) = w.variables(gensym('citations'), gensym('name_string'))
+    result_template = w.Doc({'@id': name_id,
+                             'citations': citations,
+                             'name': name_string
+                             })
+
+    return (w.opt(w.triple(name_id, 'madsrdf:authoritativeLabel', name_string)) &
+            query_citations(name_id, citations) &
+            w.equals(result, result_template))
+
+def name_records(person, names):
+    (name_id,name) = w.variables(gensym('name_id'), gensym('name'))
+    return or_val(result,
+                  (w.triple(name_id, 'madsrdf:identifiesRWO', person) &
+                   w.group_by([person], name, names,
+                              name_record(name_id, name))),
                   [])
 
 
 if __name__ == '__main__':
     client = Client("http://localhost:6363")
-    client.connect(db='authority')
-    (person,label,gender,birthplace,occupations, death_date, citations, result)=w.variables('person','label','gender','birthplace','occupations','death_date', 'citations', 'result')
+    client.connect(db='loc')
+    (person,label,gender,birthplace,occupations, death_date, names, result)=w.variables('person','label','gender','birthplace','occupations','death_date', 'names', 'result')
 
     result_template = w.Doc({'@id': person,
                              'label': label,
@@ -74,7 +95,7 @@ if __name__ == '__main__':
                              'birthplace': birthplace,
                              'occupation': occupations,
                              'deathDate': death_date,
-                             'citations': citations})
+                             'names': names})
 
     query = (w.triple(person, 'rdf:type', 'bf:Person') &
              w.triple(person, 'rdfs:label', label) &
@@ -82,11 +103,11 @@ if __name__ == '__main__':
              w.opt(query_label(person, 'madsrdf:birthPlace', birthplace)) &
              query_authoritative_labels(person, 'madsrdf:occupation', occupations) &
              w.opt(query_label(person, 'madsrdf:deathDate', death_date)) &
-             w.opt(query_citations(person, citations)) &
+             name_records(person, names) &
              w.equals(result, result_template))
 
     query = w.select(result, w.distinct(person, query))
-
+    #query = name_records(person, result)
 
     result = client.query(query)
     mapped = list(map(strip_jsonld, result['bindings']))
