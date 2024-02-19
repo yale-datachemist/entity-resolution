@@ -6,8 +6,8 @@ This is a person named {{label}}.
 {{#if deathDate}}They died on the date {{deathDate}}.
 {{/if}}
 {{#if names}}
-  {{#each names}} {{../label}} is also referred to with the following names {{name}}
-    {{#if citations}}{{name}} was mentioned in the following citations:
+  {{#each names}} {{../label}} was mentioned in the following citations:
+    {{#if citations}}A citation with respect to {{name}}
       {{#each citations}}{{note}} {{#if source}}according to the source {{source}}. {{/if}}
       {{/each}}{{/if}}
     {{#if variant.length}}{{name}} also has the following variant names:
