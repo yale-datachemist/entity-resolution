@@ -105,6 +105,6 @@ if __name__ == '__main__':
 
     query = w.select(result, w.distinct(person, query))
 
-    result = client.query(query)
+    result = client.query(query, streaming=True)
     for result in result['bindings']:
         print(json.dumps(strip_jsonld(result['result'])))
