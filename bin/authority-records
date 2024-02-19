@@ -64,15 +64,26 @@ def query_citations(name_id, result):
                               query_citation(citation_node, citation))),
                   [])
 
+def query_variants(name_id, result):
+    (variant_node,variant) = w.variables(gensym('variant_node'), gensym('variant'))
+    return or_val(result,
+                  w.group_by([name_id], variant, result,
+                             (w.triple(name_id, 'madsrdf:hasVariant', variant_node) &
+                              w.triple(variant_node, 'madsrdf:variantLabel', variant))),
+                  [])
+
+
 def name_record(name_id, result):
     (citations,name_string) = w.variables(gensym('citations'), gensym('name_string'))
     result_template = w.Doc({'@id': name_id,
                              'citations': citations,
-                             'name': name_string
+                             'name': name_string,
+                             'variant' : variants
                              })
 
     return (w.opt(w.triple(name_id, 'madsrdf:authoritativeLabel', name_string)) &
             query_citations(name_id, citations) &
+            query_variants(name_id, variants) &
             w.equals(result, result_template))
 
 def name_records(person, names):
