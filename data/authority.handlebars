@@ -10,5 +10,9 @@ This is a person named {{label}}.
     {{#if citations}}{{name}} was mentioned in the following citations:
       {{#each citations}}{{note}} {{#if source}}according to the source {{source}}. {{/if}}
       {{/each}}{{/if}}
+    {{#if variant.length}}{{name}} also has the following variant names:
+      {{#each variant}}{{this}}
+      {{/each}}
+    {{/if}}
   {{/each}}
 {{/if}}
