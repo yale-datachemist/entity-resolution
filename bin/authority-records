@@ -74,7 +74,7 @@ def query_variants(name_id, result):
 
 
 def name_record(name_id, result):
-    (citations,name_string) = w.variables(gensym('citations'), gensym('name_string'))
+    (citations,variants,name_string) = w.variables(gensym('citations'), gensym('variants'), gensym('name_string'))
     result_template = w.Doc({'@id': name_id,
                              'citations': citations,
                              'name': name_string,
