@@ -9,15 +9,18 @@ def gensym(s):
     gensym_counter += 1
     return f"s_{gensym_counter}"
 
+# Get the label value of an object connected to 'entity' by 'prop'
 def query_label(entity, prop, label):
     node = w.variables(gensym(entity.name + "_node"))
 
     return w.once(w.select(label, w.triple(entity, prop, node) & w.triple(node, 'rdfs:label', label)))
 
+# Bind var to the result of query (with exactly one solution!) or to val if query fails
 def or_val(var, query, val):
     return w.once(w.woql_or(query,
                             w.equals(var, val)))
 
+# Add authoritative labels list off of some object connected to 'entity' by 'prop'
 def query_authoritative_labels(entity, prop, labels):
     (node,label, intermediate) = w.variables(gensym(entity.name + "_node"), "label", "intermediate_labels")
 
@@ -28,6 +31,7 @@ def query_authoritative_labels(entity, prop, labels):
                                  w.triple(node, 'madsrdf:authoritativeLabel', label))),
                   [])
 
+# Remove unnecessary JSON-LD decorations
 def strip_jsonld(record):
     if isinstance(record, dict):
         if '@value' in record:
@@ -48,7 +52,6 @@ def strip_jsonld(record):
 
 # This query produces a citation from a citation template, filling in the note and source
 # (if they exist)
-
 def query_citation(citation, result):
     (note, source) = w.variables(gensym('note'), gensym('source'))
     result_template = w.Doc({'@id': citation,
