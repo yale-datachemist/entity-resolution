@@ -105,10 +105,10 @@ def name_records(person, names):
 # This query removes any undifferentiated names or deprecated authorities
 def filter_invalid(person):
     return (
-        w.not(w.triple(person,
+        w.woql_not(w.triple(person,
                        'madsrdf:isMemberOfMADSCollection',
                        'http://id.loc.gov/authorities/names/collection_NamesUndifferentiated')) &
-        w.not(w.triple(person, 'rdf:type', 'madsrdf:DeprecatedAuthority'))
+        w.woql_not(w.triple(person, 'rdf:type', 'madsrdf:DeprecatedAuthority'))
     )
 
 if __name__ == '__main__':
