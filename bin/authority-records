@@ -46,6 +46,9 @@ def strip_jsonld(record):
     else:
         return record
 
+# This query produces a citation from a citation template, filling in the note and source
+# (if they exist)
+
 def query_citation(citation, result):
     (note, source) = w.variables(gensym('note'), gensym('source'))
     result_template = w.Doc({'@id': citation,
@@ -56,6 +59,7 @@ def query_citation(citation, result):
             w.opt(w.triple(citation, 'madsrdf:citationSource', source)) &
             w.equals(result, result_template))
 
+# This query produces a list of citations
 def query_citations(name_id, result):
     (citation_node,citation) = w.variables(gensym('citation_node'), gensym('citation'))
     return or_val(result,
@@ -64,6 +68,7 @@ def query_citations(name_id, result):
                               query_citation(citation_node, citation))),
                   [])
 
+# This query returns all variant labels or an empty list if none exist
 def query_variants(name_id, result):
     (variant_node,variant) = w.variables(gensym('variant_node'), gensym('variant'))
     return or_val(result,
@@ -72,7 +77,8 @@ def query_variants(name_id, result):
                               w.triple(variant_node, 'madsrdf:variantLabel', variant))),
                   [])
 
-
+# This constructs a name record (from result_template) filling in various variables
+# from those elements which hang from the name.
 def name_record(name_id, result):
     (citations,variants,name_string) = w.variables(gensym('citations'), gensym('variants'), gensym('name_string'))
     result_template = w.Doc({'@id': name_id,
@@ -86,11 +92,21 @@ def name_record(name_id, result):
             query_variants(name_id, variants) &
             w.equals(result, result_template))
 
+# This *optionally* finds name records if they exist
 def name_records(person, names):
     (name_id,name) = w.variables(gensym('name_id'), gensym('name'))
     return w.opt((w.triple(name_id, 'madsrdf:identifiesRWO', person) &
                   w.group_by([person], name, names,
                              name_record(name_id, name))))
+
+# This query removes any undifferentiated names or deprecated authorities
+def filter_invalid(person):
+    return (
+        w.not(w.triple(person,
+                       'madsrdf:isMemberOfMADSCollection',
+                       'http://id.loc.gov/authorities/names/collection_NamesUndifferentiated')) &
+        w.not(w.triple(person, 'rdf:type', 'madsrdf:DeprecatedAuthority'))
+    )
 
 if __name__ == '__main__':
     client = Client("http://localhost:6363")
@@ -106,6 +122,7 @@ if __name__ == '__main__':
                              'names': names})
 
     query = (w.triple(person, 'rdf:type', 'bf:Person') &
+             filter_invalid(person) &
              w.triple(person, 'rdfs:label', label) &
              w.opt(query_label(person, 'madsrdf:gender', gender)) &
              w.opt(query_label(person, 'madsrdf:birthPlace', birthplace)) &
