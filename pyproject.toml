@@ -12,7 +12,7 @@ pyld = "^2.0.3"
 pymarc = "^5.1.1"
 openai = "^1.11.1"
 rdflib = "^7.0.0"
-terminusdb-client = "^10.2.6"
+terminusdb-client = { "git" = "https://github.com/terminusdb/terminusdb-client-python" }
 pybars3 = "^0.9.7"
 
 

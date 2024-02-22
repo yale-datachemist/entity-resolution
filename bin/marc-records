@@ -29,24 +29,24 @@ def strip_jsonld(record):
         return record
 
 def contribution(person, contribution):
-    v = Vars('hub', 'role_node', 'title_node', 'title', 'contribution_node', 'label')
+    v = Vars('hub', 'role_node', 'role', 'title_node', 'title', 'contribution_node', 'auth_label')
     result_template = w.Doc({'@id': v.contribution_node,
                              'role': v.role,
                              'title' : v.title,
-                             'label' : v.label
+                             'label' : v.auth_label
                              })
 
     return (w.triple(v.contribution_node, 'bf:agent', person) &
+            w.triple(v.hub, 'bf:contribution', v.contribution_node) &
             w.opt((w.triple(v.contribution_node, 'bf:role', v.role_node) &
                    w.triple(v.role_node, 'rdfs:label', v.role))) &
-            w.triple(v.hub, 'bf:contribution', v.contribution_node) &
             w.opt(w.triple(v.hub, 'bf:title', v.title_node) &
                   w.triple(v.title_node, 'bf:mainTitle', v.title)) &
-            w.opt(w.triple(v.hub, 'madsrdf:authoritativeLabel', v.label)) &
+            w.opt(w.triple(v.hub, 'madsrdf:authoritativeLabel', v.auth_label)) &
             w.equals(contribution, result_template))
 
 def contributions(person, contributions):
-    v = Vars('work', 'role', 'contribution', 'title_node', 'title')
+    v = Vars('contribution')
 
     return w.group_by([person], v.contribution, contributions,
                       contribution(person, v.contribution))
@@ -56,17 +56,15 @@ if __name__ == '__main__':
     client.connect(db='yale')
     v = Vars('person', 'label', 'contributions', 'result')
 
-    result_template = w.Doc({'@id': v.person,
-                             'label': v.label,
-                             'contributions': v.contributions})
-
     query = (w.triple(v.person, 'rdf:type', 'bf:Person') &
              w.triple(v.person, 'rdfs:label', v.label) &
-             contribution_records(v.person, v.contributions) &
-             w.equals(result, result_template))
+             contributions(v.person, v.contributions))
 
-    query = w.select(v.result, w.distinct(v.person, query))
+    query = w.distinct(v.person, query)
 
     results = client.query(query, streaming=True)
     for result in results:
-        print(json.dumps(strip_jsonld(result['result'])))
+        d = { '@id' : result['person'],
+              'label' : result['label'],
+              'contributions' : result['contributions'] }
+        print(json.dumps(strip_jsonld(d)))
