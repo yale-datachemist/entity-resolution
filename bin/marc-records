@@ -1,0 +1,72 @@
+#!/usr/bin/env python
+from terminusdb_client import Client, Vars
+import terminusdb_client.query_syntax as w
+import json
+
+gensym_counter = 0
+def gensym(s):
+    global gensym_counter
+    gensym_counter += 1
+    return f"s_{gensym_counter}"
+
+# Remove unnecessary JSON-LD decorations
+def strip_jsonld(record):
+    if isinstance(record, dict):
+        if '@value' in record:
+            return record['@value']
+
+        result = {}
+        for k in record:
+            result[k] = strip_jsonld(record[k])
+
+        return result
+    elif isinstance(record, list):
+        result = []
+        for l in record:
+            result.append(strip_jsonld(l))
+        return result
+    else:
+        return record
+
+def contribution(person, contribution):
+    v = Vars('hub', 'role_node', 'title_node', 'title', 'contribution_node', 'label')
+    result_template = w.Doc({'@id': v.contribution_node,
+                             'role': v.role,
+                             'title' : v.title,
+                             'label' : v.label
+                             })
+
+    return (w.triple(v.contribution_node, 'bf:agent', person) &
+            w.opt((w.triple(v.contribution_node, 'bf:role', v.role_node) &
+                   w.triple(v.role_node, 'rdfs:label', v.role))) &
+            w.triple(v.hub, 'bf:contribution', v.contribution_node) &
+            w.opt(w.triple(v.hub, 'bf:title', v.title_node) &
+                  w.triple(v.title_node, 'bf:mainTitle', v.title)) &
+            w.opt(w.triple(v.hub, 'madsrdf:authoritativeLabel', v.label)) &
+            w.equals(contribution, result_template))
+
+def contributions(person, contributions):
+    v = Vars('work', 'role', 'contribution', 'title_node', 'title')
+
+    return w.group_by([person], v.contribution, contributions,
+                      contribution(person, v.contribution))
+
+if __name__ == '__main__':
+    client = Client("http://localhost:6363")
+    client.connect(db='yale')
+    v = Vars('person', 'label', 'contributions', 'result')
+
+    result_template = w.Doc({'@id': v.person,
+                             'label': v.label,
+                             'contributions': v.contributions})
+
+    query = (w.triple(v.person, 'rdf:type', 'bf:Person') &
+             w.triple(v.person, 'rdfs:label', v.label) &
+             contribution_records(v.person, v.contributions) &
+             w.equals(result, result_template))
+
+    query = w.select(v.result, w.distinct(v.person, query))
+
+    results = client.query(query, streaming=True)
+    for result in results:
+        print(json.dumps(strip_jsonld(result['result'])))
