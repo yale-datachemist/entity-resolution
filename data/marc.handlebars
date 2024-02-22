@@ -1,0 +1,9 @@
+The person {{label}} is mentioned in relation to the following contributions:
+{{#each contribution}}
+  {{#if role}} {{../label}} had the role of {{role}}
+  {{/if}}
+  {{#if title}} in relation to {{title}}
+  {{/if}}
+  {{#if label}} which had an authoritative title of {{label}}
+  {{/if}}
+{{/each}}
