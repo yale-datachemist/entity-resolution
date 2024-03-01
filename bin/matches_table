@@ -10,7 +10,7 @@ def generate_id_map(filename):
       count = 0
       for l in f:
          d = json.loads(l)
-         indexed_ops[count] = d['id']
+         ops[count] = d['id']
          count += 1
    return ops
 
