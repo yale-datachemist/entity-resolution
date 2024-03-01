@@ -14,8 +14,6 @@ def generate_id_map(filename):
          count += 1
    return ops
 
-| identifier | identifier | distance |
-
 if __name__ == '__main__':
    parser = argparse.ArgumentParser()
    parser.add_argument("-m", "--matches", help="Name of the file of matches")
