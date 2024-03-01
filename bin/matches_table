@@ -1,0 +1,37 @@
+#!/usr/bin/env python
+
+import csv
+import argparse
+import json
+
+def generate_id_map(filename):
+   ops = {}
+   with open(filename, 'r') as f:
+      count = 0
+      for l in f:
+         d = json.loads(l)
+         indexed_ops[count] = d['id']
+         count += 1
+   return ops
+
+| identifier | identifier | distance |
+
+if __name__ == '__main__':
+   parser = argparse.ArgumentParser()
+   parser.add_argument("-m", "--matches", help="Name of the file of matches")
+   parser.add_argument("-i", "--indexed-ops", help="Name of the file of indexed operations")
+   parser.add_argument("-i", "--unindexed-ops", help="Name of the file of indexed operations")
+
+   args = parser.parse_args()
+
+   indexed_ops = generate_id_map(args.indexed_ops)
+   unindexed_ops = generate_id_map(args.unindexed_ops)
+
+   with open(args.matches) as f:
+      for l in f:
+         d = json.loads(l)
+         [u,matches] = d
+         un_id = unindexed_ops[u]
+         for [i,dist] in matches:
+            in_id = indexed_ops[i]
+            print(f"{un_id}, {in_id}, {dist}")
