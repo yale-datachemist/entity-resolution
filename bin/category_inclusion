@@ -3,18 +3,29 @@
 import os
 import sys
 from openai import OpenAI, Completion
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--child")
+parser.add_argument("--parent")
+args = parser.parse_args()
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 3:
-        print("Usage: category_inclusion <string1> <string2>")
-        sys.exit(1)
+    #if len(sys.argv) != 3:
+    #    print("Usage: category_inclusion <string1> <string2>")
+    #    sys.exit(1)
     client = OpenAI(
         api_key = os.environ.get('OPENAI_KEY'),
     )
 
-    prompt = f"Answer with 'Yes' or 'No'. Is '{sys.argv[1]}' in the category '{sys.argv[2]}'?"
-    #prompt = f"Answer with 'Yes' or 'No'. Is there a place called '{sys.argv[1]}' in {sys.argv[2]}?"
+    #prompt = f"Answer with 'Yes' or 'No'. Is '{sys.argv[1]}' in the category '{sys.argv[2]}'?"
+    preamble = "You are an expert geographer and are able to consult gazetteers to look up information about geographic places. \
+        I will give you two terms, and you must tell me (a) whether they are both geographic place names and (b) whether \
+            the place represented by the first term is located within the place represented by the second term. If the order is \
+                reversed (i.e., the second place is located within the first place), you must indicate that the order is reversed. \
+                    Truncate your answers using this pattern: (a) Yes/No (b) Correct/Reversed."
+    prompt = f"Answer Yes or No, followed by a one-sentence explanation. If you are uncertain, answer No. Does a place possibly known as '{args.child}' exist within the geographic boundaries of a place known as '{args.parent}'? Note that the names '{args.child}' and '{args.parent}' may not be exactly the same as the official names of the places."
     print(prompt)
 
     chat_completion = client.chat.completions.create(
