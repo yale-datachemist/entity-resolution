@@ -1,5 +1,4 @@
-Bib,Catalog,Normalized,Name,Different?,LC_ID,Gen_ID
-615210,https://search.library.yale.edu/catalog/615210,ford william author,"Ford, William (Author)",T,http://id.loc.gov/authorities/names/n2006006349,http://id.loc.gov/authorities/names/n2006006349
+Bib,Catalog,Normalized,Name,Different?,LC ID,Gen_ID
 615210,https://search.library.yale.edu/catalog/615210,ford william author,"Ford, William (Author)",T,http://id.loc.gov/authorities/names/n2006006349,http://id.loc.gov/authorities/names/n2006006349
 615258,https://search.library.yale.edu/catalog/615258,hollingsworth t h thomas henry,"Hollingsworth, T. H. (Thomas Henry)",F,http://id.loc.gov/authorities/names/no2002086684,615258#Agent100-14
 615405,https://search.library.yale.edu/catalog/615405,saffery a lynn ambrose lynn,"Saffery, A. Lynn (Ambrose Lynn)",F,http://id.loc.gov/authorities/names/no2006086209,615405#Agent100-14
@@ -17,8 +16,6 @@ Bib,Catalog,Normalized,Name,Different?,LC_ID,Gen_ID
 1083419,https://search.library.yale.edu/catalog/1083419,simons h j harold jack,"Simons, H. J. (Harold Jack)",F,http://id.loc.gov/authorities/names/n50026261,1083419#Agent600-23
 1083419,https://search.library.yale.edu/catalog/1083419,simons r e ray esther,"Simons, R. E. (Ray Esther)",F,http://id.loc.gov/authorities/names/n86803796,1083419#Agent600-24
 1129331,https://search.library.yale.edu/catalog/1129331,spencer william clergyman,"Spencer, William, clergyman.",F,http://id.loc.gov/authorities/names/n96030435,http://id.loc.gov/authorities/names/n96030435
-1129331,https://search.library.yale.edu/catalog/1129331,spencer william clergyman,"Spencer, William, clergyman.",F,http://id.loc.gov/authorities/names/n96030435,http://id.loc.gov/authorities/names/n96030435
-2973590,https://search.library.yale.edu/catalog/2973590,craft james of burlington nj,"Craft, James, of Burlington, N.J.",F,http://id.loc.gov/authorities/names/nr92016753,http://id.loc.gov/authorities/names/nr92016753
 2973590,https://search.library.yale.edu/catalog/2973590,craft james of burlington nj,"Craft, James, of Burlington, N.J.",F,http://id.loc.gov/authorities/names/nr92016753,http://id.loc.gov/authorities/names/nr92016753
 3107009,https://search.library.yale.edu/catalog/3107009,schaeffer l m luther melanchthon,"Schaeffer, L. M. (Luther Melanchthon)",F,http://id.loc.gov/authorities/names/nr00032870,3107009#Agent100-12
 3107009,https://search.library.yale.edu/catalog/3107009,schaeffer l m luther melanchthon,"Schaeffer, L. M. (Luther Melanchthon)",F,http://id.loc.gov/authorities/names/nr00032870,3107009#Agent600-36
@@ -33,7 +30,6 @@ Bib,Catalog,Normalized,Name,Different?,LC_ID,Gen_ID
 3150816,https://search.library.yale.edu/catalog/3150816,jones captain,"Jones, Captain.",T,http://id.loc.gov/authorities/names/n85088598,3150816#Agent600-38
 3150816,https://search.library.yale.edu/catalog/3150816,sherburne john p john pitts,"Sherburne, John P. (John Pitts)",F,http://id.loc.gov/authorities/names/n88020512,3150816#Agent600-47
 3152875,https://search.library.yale.edu/catalog/3152875,jewell david dr,"Jewell, David, Dr.",T,http://id.loc.gov/authorities/names/n97802248,http://id.loc.gov/authorities/names/n97802248
-3152911,https://search.library.yale.edu/catalog/3152911,price rose sir,"Price, Rose, Sir.",M,http://id.loc.gov/authorities/names/n88108981,http://id.loc.gov/authorities/names/n88108981
 3152911,https://search.library.yale.edu/catalog/3152911,price rose sir,"Price, Rose, Sir.",M,http://id.loc.gov/authorities/names/n88108981,http://id.loc.gov/authorities/names/n88108981
 3154298,https://search.library.yale.edu/catalog/3154298,abernethy alexander s alexander smith,"Abernethy, Alexander S. (Alexander Smith)",F,http://id.loc.gov/authorities/names/n88127514,3154298#Agent100-12
 3154298,https://search.library.yale.edu/catalog/3154298,abernethy alexander s alexander smith,"Abernethy, Alexander S. (Alexander Smith)",F,http://id.loc.gov/authorities/names/n88127514,3154298#Agent600-25
@@ -52,7 +48,6 @@ Bib,Catalog,Normalized,Name,Different?,LC_ID,Gen_ID
 3440839,https://search.library.yale.edu/catalog/3440839,coleman g p george p,"Coleman, G. P. (George P.)",T,http://id.loc.gov/authorities/names/no2011095352,3440839#Agent100-12
 3440839,https://search.library.yale.edu/catalog/3440839,coleman g p george p,"Coleman, G. P. (George P.)",T,http://id.loc.gov/authorities/names/no2011095352,3440839#Agent600-21
 3535878,https://search.library.yale.edu/catalog/3535878,pacheco de cordova y bocanegra francisco marques de villamayor,"Pacheco de Córdova y Bocanegra, Francisco, marqués de Villamayor.",F,http://id.loc.gov/authorities/names/nr2004020840,http://id.loc.gov/authorities/names/nr2004020840
-3536041,https://search.library.yale.edu/catalog/3536041,pacheco de cordova y bocanegra francisco marques de villamayor,"Pacheco de Córdova y Bocanegra, Francisco, marqués de Villamayor.",F,http://id.loc.gov/authorities/names/nr2004020840,http://id.loc.gov/authorities/names/nr2004020840
 3536041,https://search.library.yale.edu/catalog/3536041,pacheco de cordova y bocanegra francisco marques de villamayor,"Pacheco de Córdova y Bocanegra, Francisco, marqués de Villamayor.",F,http://id.loc.gov/authorities/names/nr2004020840,http://id.loc.gov/authorities/names/nr2004020840
 3536464,https://search.library.yale.edu/catalog/3536464,pacheco de cordova y bocanegra francisco marques de villamayor,"Pacheco de Córdova y Bocanegra, Francisco, marqués de Villamayor.",F,http://id.loc.gov/authorities/names/nr2004020840,http://id.loc.gov/authorities/names/nr2004020840
 3536477,https://search.library.yale.edu/catalog/3536477,pacheco de cordova y bocanegra francisco marques de villamayor,"Pacheco de Córdova y Bocanegra, Francisco, marqués de Villamayor.",F,http://id.loc.gov/authorities/names/nr2004020840,http://id.loc.gov/authorities/names/nr2004020840
