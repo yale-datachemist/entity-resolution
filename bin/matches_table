@@ -3,6 +3,7 @@
 import csv
 import argparse
 import json
+import sys
 
 def generate_id_map(filename):
    ops = {}
