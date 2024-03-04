@@ -19,7 +19,7 @@ if __name__ == '__main__':
 
     match_fields = ['unindexed', 'indexed', 'distance']
     matches = {}
-    with open(args.results, 'r') as f:
+    with open(args.matches, 'r') as f:
         r = csv.DictReader(f, fieldnames=match_fields)
         for d in r:
             matches[d['unindexed']] = { 'indexed': d['indexed'],
