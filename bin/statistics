@@ -48,7 +48,7 @@ if __name__ == '__main__':
             if name_id in name_agent_map:
                 found_name += 1
                 agent_id = name_agent_map[name_id]
-                print(f"agent id: {agent_id}, search result: {m['indexed']}")
+                print(f"agent id: {agent_id}, search result: {m['indexed']}, distance: {m['distance']}")
                 if agent_id == m['indexed']:
                     positive += 1
 
