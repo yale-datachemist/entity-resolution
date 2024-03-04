@@ -27,7 +27,7 @@ if __name__ == '__main__':
     total = 0
     relevant = 0
     positive = 0
-    with open(args.answers, 'r') as f:
+    with open(args.results, 'r') as f:
         r = csv.DictReader(f)
         for d in r:
             total += 1
