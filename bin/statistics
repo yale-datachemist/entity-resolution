@@ -38,7 +38,6 @@ if __name__ == '__main__':
             total += 1
             gen_id = d['Gen_ID']
             name_id = d['LC_ID']
-            print(json.dumps(d, indent=0))
             if gen_id in matches:
                 m = matches[gen_id]
             elif name_id in matches:
@@ -49,6 +48,7 @@ if __name__ == '__main__':
             if name_id in name_agent_map:
                 found_name += 1
                 agent_id = name_agent_map[name_id]
+                print(f"agent id: {agent_id}, search result: {m['indexed']}")
                 if agent_id == m['indexed']:
                     positive += 1
 
