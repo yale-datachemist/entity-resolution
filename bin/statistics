@@ -15,6 +15,7 @@ if __name__ == '__main__':
         r = csv.DictReader(f, fieldnames=match_fields)
         for d in r:
             name_agent_map[d['name']] = d['auth']
+    print('loaded name agent map')
 
     match_fields = ['unindexed', 'indexed', 'distance']
     matches = {}
@@ -23,6 +24,7 @@ if __name__ == '__main__':
         for d in r:
             matches[d['unindexed']] = { 'indexed': d['indexed'],
                                         'distance' : d['distance']}
+    print('loaded matches')
 
     total = 0
     relevant = 0
