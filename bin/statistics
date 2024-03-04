@@ -24,7 +24,7 @@ if __name__ == '__main__':
         r = csv.DictReader(f, fieldnames=match_fields)
         for d in r:
             matches[d['unindexed'].strip()] = { 'indexed': d['indexed'].strip(),
-                                                'distance' : d['distance'].strip()}
+                                                'distance' : float(d['distance'].strip())}
     print('loaded matches')
 
     total = 0
@@ -44,13 +44,14 @@ if __name__ == '__main__':
                 m = matches[name_id]
             else:
                 continue
-            relevant += 1
+
             if name_id in name_agent_map:
-                found_name += 1
+                relevant += 1
                 agent_id = name_agent_map[name_id]
-                print(f"agent id: {agent_id}, search result: {m['indexed']}, distance: {m['distance']}")
-                if agent_id == m['indexed']:
+                if agent_id == m['indexed'] and m['distance'] < 0.11 :
                     positive += 1
+                else:
+                    print(f"agent id: {agent_id}, search result: {m['indexed']}, distance: {m['distance']}")
 
     print(f"total: {total}\nrelevant: {relevant}\npositive: {positive}")
     print(f"found name: {found_name}")
