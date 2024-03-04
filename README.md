@@ -78,6 +78,16 @@ Get the data out of Terminusdb as embedding records
 
 ## Run indexing
 
+???
+
 ## Obtain all matches as result file
 
+???
+
+## Convert Results file to CSV of matches
+
+`~/src/entity-resolution/bin/matches_table -m marc-searches-in-loc-data-2.json -i authority_ops.json -u marc-ops.json | pv > matches.csv`
+
 ## Use Web API to obtain "on-the-fly" results
+
+How do we set up on the fly web requests with matches?
