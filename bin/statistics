@@ -23,8 +23,8 @@ if __name__ == '__main__':
     with open(args.matches, 'r') as f:
         r = csv.DictReader(f, fieldnames=match_fields)
         for d in r:
-            matches[d['unindexed']] = { 'indexed': d['indexed'],
-                                        'distance' : d['distance']}
+            matches[d['unindexed'].strip()] = { 'indexed': d['indexed'].strip(),
+                                                'distance' : d['distance'].strip()}
     print('loaded matches')
 
     total = 0
