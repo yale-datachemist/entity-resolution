@@ -45,10 +45,10 @@ if __name__ == '__main__':
             else:
                 continue
 
-            if name_id in name_agent_map:
+            if name_id in name_agent_map and m['distance'] < 0.11:
                 relevant += 1
                 agent_id = name_agent_map[name_id]
-                if agent_id == m['indexed'] and m['distance'] < 0.11 :
+                if agent_id == m['indexed']:
                     positive += 1
                 else:
                     print(f"agent id: {agent_id}, search result: {m['indexed']}, distance: {m['distance']}")
