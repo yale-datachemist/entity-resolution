@@ -27,6 +27,7 @@ if __name__ == '__main__':
     total = 0
     relevant = 0
     positive = 0
+    print('done loading, proceeding to iterating over the result csv')
     with open(args.results, 'r') as f:
         r = csv.DictReader(f)
         for d in r:
