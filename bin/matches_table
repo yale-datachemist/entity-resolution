@@ -32,4 +32,4 @@ if __name__ == '__main__':
          un_id = unindexed_ops[u]
          for [i,dist] in matches:
             in_id = indexed_ops[i]
-            print(f"{un_id}, {in_id}, {dist}")
+            print(f"{un_id},{in_id},{dist}")
