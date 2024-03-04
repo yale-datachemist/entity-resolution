@@ -40,14 +40,12 @@ if __name__ == '__main__':
             name_id = d['LC_ID']
             print(json.dumps(d, indent=0))
             if gen_id in matches:
-                relevant += 1
                 m = matches[gen_id]
             elif name_id in matches:
-                relevant += 1
                 m = matches[name_id]
             else:
                 continue
-
+            relevant += 1
             if name_id in name_agent_map:
                 found_name += 1
                 agent_id = name_agent_map[name_id]
