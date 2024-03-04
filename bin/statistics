@@ -29,6 +29,7 @@ if __name__ == '__main__':
     total = 0
     relevant = 0
     positive = 0
+    found_name = 0
     print('done loading, proceeding to iterating over the result csv')
     with open(args.results, 'r') as f:
         r = csv.DictReader(f)
@@ -36,16 +37,18 @@ if __name__ == '__main__':
             total += 1
             gen_id = d['Gen_ID']
             name_id = d['LC_ID']
+            print(json.dumps(d, indent=0))
             if gen_id in matches:
                 relevant += 1
                 m = matches[gen_id]
                 if name_id in name_agent_map:
+                    found_name += 1
                     agent_id = name_agent_map[name_id]
                     if agent_id == m['indexed']:
                         positive += 1
 
     print(f"total: {total}\nrelevant: {relevant}\npositive: {positive}")
-
+    print(f"found name: {found_name}")
     recall = relevant / total
     precision = positive / relevant
     print(f"recall: {recall}\nprecision: {precision}")
