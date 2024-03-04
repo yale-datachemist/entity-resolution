@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+from terminusdb_client import Client
+import terminusdb_client.query_syntax as w
+
+if __name__ == '__main__':
+    client = Client("http://localhost:6363")
+    client.connect(db='loc')
+    (name_id, person_id)=w.variables('name_id','person_id')
+    query = w.triple(name_id, 'madsrdf:identifiesRWO', person_id)
+    results = client.query(query, streaming=True)
+    for result in results:
+        print(f"{result['name_id']},{result['person_id']}")
+
