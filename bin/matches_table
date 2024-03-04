@@ -25,6 +25,7 @@ if __name__ == '__main__':
    indexed_ops = generate_id_map(args.indexed_ops)
    unindexed_ops = generate_id_map(args.unindexed_ops)
 
+   w = csv.writer(sys.stdout)
    with open(args.matches) as f:
       for l in f:
          d = json.loads(l)
@@ -32,4 +33,4 @@ if __name__ == '__main__':
          un_id = unindexed_ops[u]
          for [i,dist] in matches:
             in_id = indexed_ops[i]
-            print(f"{un_id},{in_id},{dist}")
+            w.writerow([un_id, in_id, dist])
