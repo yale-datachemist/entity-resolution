@@ -20,22 +20,28 @@ if __name__ == '__main__':
     with open(args.results, 'r') as f:
         r = csv.DictReader(f, fieldnames=match_fields)
         for d in r:
-            matches[d['indexed']] = { 'unindexed': d['unindexed'],
-                                      'distance' : d['distance']})
+            matches[d['unindexed']] = { 'indexed': d['indexed'],
+                                        'distance' : d['distance']})
 
+    total = 0
     relevant = 0
     positive = 0
     with open(args.answers, 'r') as f:
         r = csv.DictReader(f)
         for d in r:
-            u = d['Gen_ID']
+            total += 1
+            gen_id = d['Gen_ID']
             name_id = d['LC_ID']
-            if name_id in name_agent_map:
-                agent_id = name_agent_map[name_id]
-                if agent_id in matches:
-                    m = matches[agent_id]
-                    result_id = m['unindexed']
-                    if u == result_id or name_id == result_id:
-                        positive +=1
-                    dist = m['distance']
+            if gen_id in matches:
+                relevant += 1
+                m = matches[gen_id]
+                if name_id in name_agent_map:
+                    agent_id = name_agent_map[name_id]
+                    if agent_id == m['indexed']:
+                        positive += 1
 
+    print(f"total: {total}\nrelevant: {relevant}\npositive: {positive}")
+
+    recall = relevant / total
+    precision = positive / relevant
+    print(f"recall: {recall}\nprecision: {precision}")
