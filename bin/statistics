@@ -21,7 +21,7 @@ if __name__ == '__main__':
         r = csv.DictReader(f, fieldnames=match_fields)
         for d in r:
             matches[d['unindexed']] = { 'indexed': d['indexed'],
-                                        'distance' : d['distance']})
+                                        'distance' : d['distance']}
 
     total = 0
     relevant = 0
