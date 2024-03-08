@@ -1,0 +1,46 @@
+#!/usr/bin/env python
+import json
+import csv
+import argparse
+import sys
+
+def generate_id_map(filename):
+   ops = {}
+   with open(filename, 'r') as f:
+      count = 0
+      for l in f:
+         d = json.loads(l)
+         ops[count] = d['id']
+         count += 1
+   return ops
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--clusters", "-m", help="Cluster file")
+    parser.add_argument("--operations", "-o", help="Operations file (for ids)")
+    parser.add_argument("--results", "-r", help="Results CSV")
+
+    # Read results of clusters and assign ids from op file
+    args = parser.parse_args()
+
+    print("Reading id map", file=sys.stderr)
+    ids = generate_id_map(args.operations)
+
+    if args.clusters:
+        ifile = open(args.clusters, 'r')
+    else:
+        ifile = sys.stdin
+
+    if args.results:
+        ofile = open(args.results, 'w')
+    else:
+        ofile = sys.stdout
+
+    print("Writing clusters as CSV", file=sys.stderr)
+    w = csv.writer(ofile)
+    for i in ifile:
+        record = json.loads(i)
+        [center, matches] = record
+        for [ident, distance] in matches:
+            w.writerow([ids[center], ids[ident], distance])
+
