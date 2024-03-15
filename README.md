@@ -96,6 +96,8 @@ To search the Yale records instead, use:
 vectorlink search-server --key $OPENAI_KEY --size 5600000 --directory ~/data/vector_storage --domain 'marc' --commit fakecommit -o ~/data/marc-ops.json
 ```
 
+NOTE: The port can be specified with `--port`.
+
 After starting the server, we can invoke a search for an embedding
 string via the web, for instance with the following command:
 
