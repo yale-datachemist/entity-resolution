@@ -72,13 +72,38 @@ or we learn better prompting for the embedding strings.
 The process involves adding annotations to the schema on the data
 types we want to index. (see ...)
 
-## Obtain results
+## Obtain results from TerminusDB
 
-Get the data out of Terminusdb as embedding records
+To get the operations files from terminusdb, first we need to get
+record files, and then apply them to a template. This can be done as
+follows:
+
+```shell
+~/src/entity-resolution/bin/authority-records | pv > authority_records.json
+```
+
+This command, `authority-records` is a python file which generates the
+authority records with a WOQL query.
+
+The results of this can then be applied to a template with `record2ops`.
+
+```shell
+cat authority_records.json | ~/src/entity-resolution/bin/record2ops ~/src/entity-resolution/data/authority.handlebars | pv > authority_ops.json
+```
+
+Similarly we can apply this approach to marc records, using the python
+command `marc-records`:
+
+```shell
+~/src/entity-resolution/bin/marc-records | pv > marc-records.json
+cat marc_records.json | ~/src/entity-resolution/bin/record2ops ~/src/entity-resolution/data/marc.handlebars | pv > marc_ops.json
+```
 
 ## Convert Results file to CSV of matches
 
-`~/src/entity-resolution/bin/matches_table -m marc-searches-in-loc-data-2.json -i authority_ops.json -u marc-ops.json | pv > matches.csv`
+`~/src/entity-resolution/bin/matches_table -m
+marc-searches-in-loc-data-2.json -i authority_ops.json -u
+marc-ops.json | pv > matches.csv`
 
 ## Run indexing
 
