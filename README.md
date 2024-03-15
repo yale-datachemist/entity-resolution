@@ -9,6 +9,9 @@ Project server: **10.5.38.152**
 This project was done with TerminusDB 11.1.12 and VectorLink commit id
 "0233faa".
 
+Our Rust build uses SIMD instructions, so it needs to be on the
+nightly toolchain.
+
 ## Entity Designators
 
 We use the Library of Congress Name Authority as the "ground
