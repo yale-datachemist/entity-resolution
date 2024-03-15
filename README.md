@@ -76,18 +76,29 @@ types we want to index. (see ...)
 
 Get the data out of Terminusdb as embedding records
 
-## Run indexing
-
-???
-
-## Obtain all matches as result file
-
-???
-
 ## Convert Results file to CSV of matches
 
 `~/src/entity-resolution/bin/matches_table -m marc-searches-in-loc-data-2.json -i authority_ops.json -u marc-ops.json | pv > matches.csv`
 
 ## Use Web API to obtain "on-the-fly" results
 
-How do we set up on the fly web requests with matches?
+Set the open AI key in the environment: `export OPENAI_KEY=...`
+
+First, start the server from the data directory with the following invocation (for the Library of Congress dataset):
+
+```shell
+vectorlink search-server --key $OPENAI_KEY --size 4500000 --directory ~/data/vector_storage --domain 'loc' --commit fakecommit -o ~/data/authority_ops.json
+```
+
+To search the Yale records instead, use:
+
+```shell
+vectorlink search-server --key $OPENAI_KEY --size 5600000 --directory ~/data/vector_storage --domain 'marc' --commit fakecommit -o ~/data/marc-ops.json
+```
+
+After starting the server, we can invoke a search for an embedding
+string via the web, for instance with the following command:
+
+```shell
+curl 'http://localhost:8080?string=My+search+string+url+encoded+here'
+```
