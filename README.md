@@ -89,12 +89,12 @@ And then you can run the indexer against an operations file.
 To run the indexing for library of congress data:
 
 ```shell
-vectorlink load2 -k $OPENAI_KEY -c fakecommit --domain loc -d vector_storage -i authority_ops.json --size 8738134 --build-index true -m small3
+vectorlink load -k $OPENAI_KEY -c fakecommit --domain loc -d vector_storage -i authority_ops.json --size 8738134 --build-index true -m small3
 ```
 To run the indexing for marc records:
 
 ```shell
-vectorlink load2 -k $OPENAI_KEY -c fakecommit --domain marc -d vector_storage -i authority_ops.json --size 4500000 --build-index true -m small3
+vectorlink load -k $OPENAI_KEY -c fakecommit --domain marc -d vector_storage -i authority_ops.json --size 4500000 --build-index true -m small3
 ```
 
 ## Use Web API to obtain "on-the-fly" results
