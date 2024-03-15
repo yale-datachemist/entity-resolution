@@ -80,6 +80,23 @@ Get the data out of Terminusdb as embedding records
 
 `~/src/entity-resolution/bin/matches_table -m marc-searches-in-loc-data-2.json -i authority_ops.json -u marc-ops.json | pv > matches.csv`
 
+## Run indexing
+
+Set the open AI key in the environment: `export OPENAI_KEY=...`
+
+And then you can run the indexer against an operations file.
+
+To run the indexing for library of congress data:
+
+```shell
+vectorlink load2 -k $OPENAI_KEY -c fakecommit --domain loc -d vector_storage -i authority_ops.json --size 8738134 --build-index true -m small3
+```
+To run the indexing for marc records:
+
+```shell
+vectorlink load2 -k $OPENAI_KEY -c fakecommit --domain marc -d vector_storage -i authority_ops.json --size 4500000 --build-index true -m small3
+```
+
 ## Use Web API to obtain "on-the-fly" results
 
 Set the open AI key in the environment: `export OPENAI_KEY=...`
@@ -87,7 +104,7 @@ Set the open AI key in the environment: `export OPENAI_KEY=...`
 First, start the server from the data directory with the following invocation (for the Library of Congress dataset):
 
 ```shell
-vectorlink search-server --key $OPENAI_KEY --size 4500000 --directory ~/data/vector_storage --domain 'loc' --commit fakecommit -o ~/data/authority_ops.json
+vectorlink search-server --key $OPENAI_KEY --size 4500000 --directory ~/data/vector_storage --domain 'loc' --commit fakecommit -o ~/data/authgority_ops.json
 ```
 
 To search the Yale records instead, use:
