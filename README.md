@@ -4,6 +4,11 @@ See the [project planning document](https://docs.google.com/document/d/1AmMHoyix
 
 Project server: **10.5.38.152**
 
+## NOTES
+
+This project was done with TerminusDB 11.1.12 and VectorLink commit id
+"0233faa".
+
 ## Entity Designators
 
 We use the Library of Congress Name Authority as the "ground
