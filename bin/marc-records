@@ -29,11 +29,10 @@ def strip_jsonld(record):
         return record
 
 def contribution(person, contribution):
-    v = Vars('hub', 'role_node', 'role', 'title_node', 'title', 'contribution_node', 'auth_label')
+    v = Vars('hub', 'role_node', 'role', 'title_node', 'title', 'contribution_node')
     result_template = w.Doc({'@id': v.contribution_node,
                              'role': v.role,
-                             'title' : v.title,
-                             'label' : v.auth_label
+                             'title' : v.title
                              })
 
     return (w.triple(v.contribution_node, 'bf:agent', person) &
