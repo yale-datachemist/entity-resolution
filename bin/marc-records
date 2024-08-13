@@ -42,7 +42,6 @@ def contribution(person, contribution):
                    w.triple(v.role_node, 'rdfs:label', v.role))) &
             w.opt(w.triple(v.hub, 'bf:title', v.title_node) &
                   w.triple(v.title_node, 'bf:mainTitle', v.title)) &
-            w.opt(w.triple(v.hub, 'madsrdf:authoritativeLabel', v.auth_label)) &
             w.equals(contribution, result_template))
 
 def contributions(person, contributions):
