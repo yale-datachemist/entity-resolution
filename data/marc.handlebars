@@ -1,9 +1,9 @@
-The person {{label}} is mentioned in the following contributions:
+The person {{label.@value}} is mentioned in the following contributions:
 {{#each contributions}}
-  {{#if role}} {{../label}} had the role of {{role}}
+  {{#if role}} {{../label.@value}} had the role of {{role.@value}}
   {{/if}}
-  {{#if title}} in relation to "{{title}}"
+  {{#if title}} in relation to "{{title.@value}}"
   {{/if}}
-  {{#if label}} which had an authoritative title of "{{label}}"
+  {{#if label}} which had an authoritative title of "{{label.@value}}"
   {{/if}}
 {{/each}}

@@ -14,7 +14,7 @@ def strip_jsonld(record):
     if isinstance(record, dict):
         if '@value' in record:
             return record['@value']
-
+            
         result = {}
         for k in record:
             result[k] = strip_jsonld(record[k])
