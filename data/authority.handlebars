@@ -1,17 +1,17 @@
-This is a person named {{label.@value}}.
-{{#if birthplace}}They were born in {{birthplace.@value}}.
+This is a person named {{label}}.
+{{#if birthplace}}They were born in {{birthplace}}.
 {{/if}}
-{{#if birthDate}}They were born on the date {{birthDate.@value}}.
+{{#if birthDate}}They were born on the date {{birthDate}}.
 {{/if}}
-{{#if deathDate}}They died on the date {{deathDate.@value}}.
+{{#if deathDate}}They died on the date {{deathDate}}.
 {{/if}}
 {{#if names}}
-  {{#each names}} {{../label.@value}} was mentioned in the following citations:
-    {{#if citations}}A citation with respect to {{name.@value}}
-      {{#each citations}}{{note.@value}} {{#if source}}according to the source {{source.@value}}. {{/if}}
+  {{#each names}} {{../label}} was mentioned in the following citations:
+    {{#if citations}}A citation with respect to {{name}}
+      {{#each citations}}{{note}} {{#if source}}according to the source {{source}}. {{/if}}
       {{/each}}{{/if}}
-    {{#if variant.length}}{{name.@value}} also has the following variant names:
-      {{#each variant}}{{this.@value}}
+    {{#if variant.length}}{{name}} also has the following variant names:
+      {{#each variant}}{{this}}
       {{/each}}
     {{/if}}
   {{/each}}
