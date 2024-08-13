@@ -15,13 +15,12 @@ if __name__ == '__main__':
    compiler = Compiler()
    template = compiler.compile(template_string)
 
-   with open('../test_loc.json', 'r') as j:
-      contents = json.loads(j.read())
-      
-      string = template(contents)
+   for l in sys.stdin:
+      j = json.loads(l)
+      string = template(j)
       o = { 'op' : 'Inserted',
             'string' : string,
-            'id' : contents['@id']}
-      #print(json.dumps(contents))
+            'id' : j['@id']}
+      #print(json.dumps(j))
       print(json.dumps(o))
       
