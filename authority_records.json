@@ -1,0 +1,11 @@
+pyenv: python: command not found
+
+The `python' command exists in these Python versions:
+  3.10.3
+  3.11.2
+  3.11.4
+  3.11.4/envs/dfrnt
+  dfrnt
+
+Note: See 'pyenv help global' for tips on allowing both
+      python2 and python3 to be found.
