@@ -5,6 +5,10 @@ This is a person named {{label}}.
 {{/if}}
 {{#if deathDate}}They died on the date {{deathDate}}.
 {{/if}}
+{{#if occupation}}
+  {{#each occupation}}Their 
+  {{/each}}
+{{/if}}
 {{#if names}}
   {{#each names}} {{../label}} was mentioned in the following citations:
     {{#if citations}}A citation with respect to {{name}}
