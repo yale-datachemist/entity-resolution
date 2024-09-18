@@ -19,7 +19,7 @@ if __name__ == '__main__':
    parser = argparse.ArgumentParser()
    parser.add_argument("-m", "--matches", help="Name of the file of matches")
    parser.add_argument("-i", "--indexed-ops", help="Name of the file of indexed operations")
-   parser.add_argument("-u", "--unindexed-ops", help="Name of the file of indexed operations")
+   parser.add_argument("-u", "--unindexed-ops", help="Name of the file of unindexed operations")
 
    args = parser.parse_args()
 
