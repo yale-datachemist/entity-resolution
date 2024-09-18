@@ -109,12 +109,6 @@ command `marc-records`:
 cat marc_records.json | ~/src/entity-resolution/bin/record2ops ~/src/entity-resolution/data/marc.handlebars | pv > marc-ops.json
 ```
 
-## Convert Results file to CSV of matches
-
-`~/src/entity-resolution/bin/matches_table -m
-marc-searches-in-loc-data-2.json -i authority_ops.json -u
-marc-ops.json | pv > matches.csv`
-
 ## Run indexing
 
 Set the open AI key in the environment: `export OPENAI_KEY=...`
@@ -131,6 +125,20 @@ To run the indexing for marc records:
 ```shell
 vectorlink load -k $OPENAI_KEY -c fakecommit --domain marc -d vector_storage -i marc_ops.json -m small3
 ```
+
+## Generate a result file of marc matches in the loc data
+```shell
+vectorlink scan-neighbors --directory vector_storage --domain loc --commit fakecommit --sequence-domain marc > marc-searches-in-loc-data.json
+```
+
+## Convert Results file to CSV of matches
+
+```shell
+~/src/entity-resolution/bin/matches_table -m
+marc-searches-in-loc-data.json -i authority_ops.json -u
+marc-ops.json | pv > matches.csv
+```
+
 
 ## Use Web API to obtain "on-the-fly" results
 
