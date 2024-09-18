@@ -6,11 +6,13 @@ Project server: **10.5.38.152** -->
 
 ## NOTES
 
-This project was done with TerminusDB 11.1.12 and VectorLink commit id
-"0233faa".
+This project was done with TerminusDB 11.1.12 and VectorLink tag
+`preview-20240918`.
 
 Our Rust build uses SIMD instructions, so it needs to be on the
-nightly toolchain.
+nightly toolchain, and ensuring the rust compile flags enable
+avx2. The easiest way to get this right is to use nix, which builds
+vectorlink in a predefined environment.
 
 ## Entity Designators
 
@@ -104,7 +106,7 @@ command `marc-records`:
 
 ```shell
 ~/src/entity-resolution/bin/marc-records | pv > marc-records.json
-cat marc_records.json | ~/src/entity-resolution/bin/record2ops ~/src/entity-resolution/data/marc.handlebars | pv > marc_ops.json
+cat marc_records.json | ~/src/entity-resolution/bin/record2ops ~/src/entity-resolution/data/marc.handlebars | pv > marc-ops.json
 ```
 
 ## Convert Results file to CSV of matches
@@ -122,12 +124,12 @@ And then you can run the indexer against an operations file.
 To run the indexing for library of congress data:
 
 ```shell
-vectorlink load -k $OPENAI_KEY -c fakecommit --domain loc -d vector_storage -i authority_ops.json --size 8738134 --build-index true -m small3
+vectorlink load -k $OPENAI_KEY -c fakecommit --domain loc -d vector_storage -i authority_ops.json -m small3
 ```
 To run the indexing for marc records:
 
 ```shell
-vectorlink load -k $OPENAI_KEY -c fakecommit --domain marc -d vector_storage -i authority_ops.json --size 4500000 --build-index true -m small3
+vectorlink load -k $OPENAI_KEY -c fakecommit --domain marc -d vector_storage -i marc_ops.json -m small3
 ```
 
 ## Use Web API to obtain "on-the-fly" results
@@ -137,13 +139,13 @@ Set the open AI key in the environment: `export OPENAI_KEY=...`
 First, start the server from the data directory with the following invocation (for the Library of Congress dataset):
 
 ```shell
-vectorlink search-server --key $OPENAI_KEY --size 4500000 --directory ~/data/vector_storage --domain 'loc' --commit fakecommit -o ~/data/authgority_ops.json
+vectorlink search-server --key $OPENAI_KEY --directory ~/data/vector_storage --domain 'loc' --commit fakecommit -o ~/data/authority_ops.json
 ```
 
 To search the Yale records instead, use:
 
 ```shell
-vectorlink search-server --key $OPENAI_KEY --size 5600000 --directory ~/data/vector_storage --domain 'marc' --commit fakecommit -o ~/data/marc-ops.json
+vectorlink search-server --key $OPENAI_KEY --directory ~/data/vector_storage --domain 'marc' --commit fakecommit -o ~/data/marc-ops.json
 ```
 
 NOTE: The port can be specified with `--port`.
@@ -152,5 +154,5 @@ After starting the server, we can invoke a search for an embedding
 string via the web, for instance with the following command:
 
 ```shell
-curl 'http://localhost:8080?string=My+search+string+url+encoded+here'
+curl --get 'http://localhost:8080' --data-urlencode 'string=my search string here'
 ```
