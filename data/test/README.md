@@ -1,6 +1,12 @@
-# Ground-Truth Datasets
+# Ground-Truth Data
 
-* `Yale_catalog_disambiguated_names.csv` is a list of name clusters with 1+ distinct identities. Each identity is represented by a UUID and is mapped to a Library of Congress IRI when available. 
-* `Yale_catalog_names_without_dates.csv` is a list of individual names whose string value matches a Library of Congress name authority record, but which may or may not represent the same entity. If the entities are the same, the `Different?` column has a value of `F`. If the entities are different, the `Different?` column has a value of `T` (or `M` for Maybe). Only the first 50 rows have been reviewed.
+* `lib_people_benchmark_data.csv` is a list of name clusters with 1+ distinct identities. Each identity is represented by a UUID and is mapped to a Library of Congress IRI when available. 
+* URIs/IDs output by the `marc2bibframe2` XSLT converter are recorded in the `Gen_IDs` column. Because a name can appear multiple times on the same catalog record, some names have multiple values in this column (pipe separated): e.g., `9931651#Agent100-13|9931651#Agent700-45`.
+* Objects with embedding strings were extracted from catalog records for each field representing a person who contributed to a resource. Results for the records in the benchmark sample are in `lib_people_benchmark_data_for_embedding.json`.
+* Strings were embedded using the OpenAI text-embedding-3-small model.
+* Using VectorLink, similarity scores were calculated for each entity, with a cutoff threshhold of 0.15.
+* Similarity scores are in `lib_people_benchmark_results.json`.
+* Similarity scores for each entity were then mapped to IDs for easier comparison. The ID-mapped version is in `lib_people_benchmark_matches.csv`.
 
-URIs/IDs output by the `marc2bibframe2` XSLT converter are recorded in the `Gen_ID` column.
+
+
