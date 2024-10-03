@@ -1,3 +1,4 @@
+.DS_Store
 data/authority_ops.json
 data/authority_records_v2.json
 data/marc_ops.json
