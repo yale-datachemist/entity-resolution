@@ -2,7 +2,7 @@ xquery version "4.0";
 
 (:~ 
  :
- : Module name: BIBFRAME Contributor Person Name Extractor
+ : Module name: BIBFRAME Contributor Personal Name Extractor
  : Module version: 0.1
  : Date: October 3, 2024
  : License: Apache-2.0
