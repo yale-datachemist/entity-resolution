@@ -30,7 +30,7 @@ declare variable $N as xs:string external := "";
 declare variable $PATH as xs:string := "";
 
 (:~ 
- : Processes associated BIBFRAME RDF/XML to extract names and other associated 
+ : Processes BIBFRAME RDF/XML to extract names and other associated 
  : metadata.
  : 
  : @param $Resource a bf:Work or bf:Hub associated with a contributor name
@@ -87,7 +87,7 @@ declare function local:process(
        vocabulary (https://id.loc.gov/vocabulary/relators.html), or else from 
        a label, if supplied. Default is "Contributor." :)
     if (exists($Contribution/bf:role/bf:Role/@rdf:about))
-    then db:attribute("relators", $Contribution/bf:role/bf:Role/@rdf:about)/../data(madsrdf:authoritativeLabel)
+    then db:attribute("relators", $Contribution/bf:role/bf:Role/@rdf:about)/../data(skos:prefLabel)
     else 
       if (exists($Contribution/bf:role/bf:Role))
       then 
