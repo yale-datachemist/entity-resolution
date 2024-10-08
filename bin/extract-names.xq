@@ -113,6 +113,20 @@ declare function local:process(
         <fn:string key="roles">{string-join(distinct-values($role), "; ")}</fn:string>
         <fn:string key="title">{$InstanceTitle}</fn:string>
         {
+          if (exists($WorkTitles))
+          then <fn:string key="variant_titles">{normalize-space(string-join($WorkTitles, "; "))}</fn:string>
+          else <fn:null key="variant_titles"/>
+        }
+        {
+          if (exists($relation))
+          then 
+            <fn:map key="hub_title">
+              <fn:string key="relation">{$relation}</fn:string>
+              <fn:string key="title">{$HubTitle}</fn:string>
+            </fn:map>
+          else <fn:null key="hub_title"/>
+        }
+        {
           if (exists($subject))
           then <fn:string key="subjects">{string-join(distinct-values($subject), "; ")}</fn:string>
           else <fn:null key="subjects"/>
@@ -132,7 +146,7 @@ declare function local:process(
 };
 
 let $db := "BF"||$N
-let $d := db:get("schubert")
+let $d := db:get($db)
 return
 
   file:write-text-lines($PATH || lower-case($db) || ".json",
