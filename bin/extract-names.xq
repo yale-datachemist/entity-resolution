@@ -4,7 +4,7 @@ xquery version "4.0";
  :
  : Module name: BIBFRAME Contributor Personal Name Extractor
  : Module version: 0.1
- : Date: October 3, 2024
+ : Date: October 11, 2024
  : License: Apache-2.0
  : Proprietary XQuery extensions used: BaseX DB and File modules
  : XQuery specification: 4.0
@@ -49,7 +49,7 @@ declare function local:process(
   $InstanceTitle as xs:string*,
   $bib as xs:string*,
   $WorkTitles as xs:string*,
-  $resp as xs:string*,
+  $attr as xs:string*,
   $prov as xs:string*,
   $subject as xs:string*,
   $genre as xs:string*,
@@ -105,7 +105,7 @@ declare function local:process(
           "Title: " || $InstanceTitle || "&#10;",                  
           if (exists($WorkTitles)) then "Variant titles: " || normalize-space(string-join($WorkTitles, "; ")) || "&#10;" else (),        
           if (exists($relation)) then $relation || ": " || $HubTitle || "&#10;" else (),        
-          if (exists($resp)) then "Attribution: " || $resp || "&#10;" else (),
+          if (exists($attr)) then "Attribution: " || $attr || "&#10;" else (),
           if (exists($subject)) then "Subjects: " || string-join(distinct-values($subject), "; ") || "&#10;" else (),
           if (exists($genre)) then "Genres: " || string-join(distinct-values($genre), "; ") || "&#10;" else () ,
           if (exists($prov)) then "Provision information: " || string-join(distinct-values($prov), "; ") || "&#10;" else ()    
@@ -115,9 +115,9 @@ declare function local:process(
         <fn:string key="roles">{string-join(distinct-values($role), "; ")}</fn:string>
         <fn:string key="title">{$InstanceTitle}</fn:string>
         {
-          if (exists($resp))
-          then <fn:string key="responsibility">{$resp}</fn:string>
-          else <fn:null key="responsibility"/>
+          if (exists($attr))
+          then <fn:string key="attribution">{$attr}</fn:string>
+          else <fn:null key="attribution"/>
         }
         {
           if (exists($prov))
@@ -167,9 +167,9 @@ return
           else $main
         , "; "
       ))
-    let $resp := $Instance/bf:responsibilityStatement/data()
+    let $attr := $Instance/bf:responsibilityStatement/data()
     let $prov := distinct-values($Instance/*[ends-with(name(), "Statement") and not(name() = "bf:responsibilityStatement")]/data())
-    let $C := local:process($Work, $InstanceTitle, $bib, $WorkTitles, $resp, $prov, $subject, $genre)
+    let $C := local:process($Work, $InstanceTitle, $bib, $WorkTitles, $attr, $prov, $subject, $genre)
       
     let $H :=
       for $Hub in $Hubs
@@ -181,14 +181,14 @@ return
         else "Related work"
       let $HubTitle := $Hub/bf:title/*/bf:mainTitle
       return 
-        local:process($Hub, $InstanceTitle, $bib, $WorkTitles, $resp, $prov, $subject, $genre, $relation, $HubTitle)
+        local:process($Hub, $InstanceTitle, $bib, $WorkTitles, $attr, $prov, $subject, $genre, $relation, $HubTitle)
     
     let $E :=
       for $Hub in $Expressions
       let $relation := "Version of"  
       let $HubTitle := $Hub/bf:title/*/bf:mainTitle
       return 
-        local:process($Hub, $InstanceTitle, $bib, $WorkTitles, $resp, $prov, $subject, $genre, $relation, $HubTitle)
+        local:process($Hub, $InstanceTitle, $bib, $WorkTitles, $attr, $prov, $subject, $genre, $relation, $HubTitle)
       
     return ($C, $H, $E)
  
