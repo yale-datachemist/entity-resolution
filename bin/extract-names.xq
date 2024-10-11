@@ -49,6 +49,8 @@ declare function local:process(
   $InstanceTitle as xs:string*,
   $bib as xs:string*,
   $WorkTitles as xs:string*,
+  $resp as xs:string*,
+  $prov as xs:string*,
   $subject as xs:string*,
   $genre as xs:string*,
   $relation as xs:string* := (),
@@ -87,7 +89,7 @@ declare function local:process(
        vocabulary (https://id.loc.gov/vocabulary/relators.html), or else from 
        a label, if supplied. Default is "Contributor." :)
     if (exists($Contribution/bf:role/bf:Role/@rdf:about))
-    then db:attribute("relators", $Contribution/bf:role/bf:Role/@rdf:about)/../data(skos:prefLabel)
+    then db:attribute("relators", $Contribution/bf:role/bf:Role/@rdf:about)/../data(madsrdf:authoritativeLabel)
     else 
       if (exists($Contribution/bf:role/bf:Role))
       then 
@@ -103,29 +105,25 @@ declare function local:process(
           "Title: " || $InstanceTitle || "&#10;",                  
           if (exists($WorkTitles)) then "Variant titles: " || normalize-space(string-join($WorkTitles, "; ")) || "&#10;" else (),        
           if (exists($relation)) then $relation || ": " || $HubTitle || "&#10;" else (),        
-          (: if (exists($resp)) then "Attribution: " || $resp || "&#10;" else (), :)
+          if (exists($resp)) then "Attribution: " || $resp || "&#10;" else (),
           if (exists($subject)) then "Subjects: " || string-join(distinct-values($subject), "; ") || "&#10;" else (),
-          if (exists($genre)) then "Genres: " || string-join(distinct-values($genre), "; ") || "&#10;" else () (: ,
-          if (exists($prov)) then "Provision information: " || string-join(distinct-values($prov), "; ") || "&#10;" else () :)    
+          if (exists($genre)) then "Genres: " || string-join(distinct-values($genre), "; ") || "&#10;" else () ,
+          if (exists($prov)) then "Provision information: " || string-join(distinct-values($prov), "; ") || "&#10;" else ()    
         }</fn:string>
         <fn:string key="marcKey">{$key}</fn:string>
         <fn:string key="person">{$name}</fn:string>
         <fn:string key="roles">{string-join(distinct-values($role), "; ")}</fn:string>
         <fn:string key="title">{$InstanceTitle}</fn:string>
         {
-          if (exists($WorkTitles))
-          then <fn:string key="variant_titles">{normalize-space(string-join($WorkTitles, "; "))}</fn:string>
-          else <fn:null key="variant_titles"/>
+          if (exists($resp))
+          then <fn:string key="responsibility">{$resp}</fn:string>
+          else <fn:null key="responsibility"/>
         }
         {
-          if (exists($relation))
-          then 
-            <fn:map key="hub_title">
-              <fn:string key="relation">{$relation}</fn:string>
-              <fn:string key="title">{$HubTitle}</fn:string>
-            </fn:map>
-          else <fn:null key="hub_title"/>
-        }
+          if (exists($prov))
+          then <fn:string key="provision">{$prov}</fn:string>
+          else <fn:null key="provision"/>
+        }        
         {
           if (exists($subject))
           then <fn:string key="subjects">{string-join(distinct-values($subject), "; ")}</fn:string>
@@ -169,9 +167,9 @@ return
           else $main
         , "; "
       ))
-    (: let $resp := $Instance/bf:responsibilityStatement/data()
-    let $prov := distinct-values($Instance/*[ends-with(name(), "Statement") and not(name() = "bf:responsibilityStatement")]/data()) :)
-    let $C := local:process($Work, $InstanceTitle, $bib, $WorkTitles, $subject, $genre)
+    let $resp := $Instance/bf:responsibilityStatement/data()
+    let $prov := distinct-values($Instance/*[ends-with(name(), "Statement") and not(name() = "bf:responsibilityStatement")]/data())
+    let $C := local:process($Work, $InstanceTitle, $bib, $WorkTitles, $resp, $prov, $subject, $genre)
       
     let $H :=
       for $Hub in $Hubs
@@ -183,14 +181,14 @@ return
         else "Related work"
       let $HubTitle := $Hub/bf:title/*/bf:mainTitle
       return 
-        local:process($Hub, $InstanceTitle, $bib, $WorkTitles, $subject, $genre, $relation, $HubTitle)
+        local:process($Hub, $InstanceTitle, $bib, $WorkTitles, $resp, $prov, $subject, $genre, $relation, $HubTitle)
     
     let $E :=
       for $Hub in $Expressions
       let $relation := "Version of"  
       let $HubTitle := $Hub/bf:title/*/bf:mainTitle
       return 
-        local:process($Hub, $InstanceTitle, $bib, $WorkTitles, $subject, $genre, $relation, $HubTitle)
+        local:process($Hub, $InstanceTitle, $bib, $WorkTitles, $resp, $prov, $subject, $genre, $relation, $HubTitle)
       
     return ($C, $H, $E)
  
