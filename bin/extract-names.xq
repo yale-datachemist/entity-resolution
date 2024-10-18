@@ -37,6 +37,8 @@ declare variable $PATH as xs:string := "";
  : @param $InstanceTitle the main title for the resource
  : @param $bib the system ID from the originating catalog record
  : @param $WorkTitles variant titles associated with the resource
+ : @param $attr statement of responsibility from the record
+ : @param $prov provision (publication, etc.) information from the record
  : @param $subject subject headings associated with the resource
  : @param $genre genre headings associated with the resource
  : @param $relation a relation from a Work to a Hub resource
