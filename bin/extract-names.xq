@@ -8,7 +8,7 @@ xquery version "4.0";
  : License: Apache-2.0
  : Proprietary XQuery extensions used: BaseX DB and File modules
  : XQuery specification: 4.0
- : Module overview: Scraps BIBFRAME resources for person names and metadata 
+ : Module overview: Scrapes BIBFRAME resources for person names and metadata 
  : from the associated resource to generate a JSON object with an string for
  : text embedding, along with specific metadata fields.
  : 
@@ -89,7 +89,13 @@ declare function local:process-contribs(
        vocabulary (https://id.loc.gov/vocabulary/relators.html), or else from 
        a label, if supplied. Default is "Contributor." :)
     if (exists($Contribution/bf:role/bf:Role/@rdf:about))
-    then db:attribute("relators", $Contribution/bf:role/bf:Role/@rdf:about)/../data(madsrdf:authoritativeLabel)
+    then 
+      if (db:attribute("relators", $Contribution/bf:role/bf:Role/@rdf:about)/../data(madsrdf:authoritativeLabel))
+      then db:attribute("relators", $Contribution/bf:role/bf:Role/@rdf:about)/../data(madsrdf:authoritativeLabel)
+      else
+        if (db:attribute("relators", $Contribution/bf:role/bf:Role/@rdf:about)/../data(madsrdf:variantLabel))
+        then db:attribute("relators", $Contribution/bf:role/bf:Role/@rdf:about)/../data(madsrdf:variantLabel)
+        else "Contributor"
     else 
       if (exists($Contribution/bf:role/bf:Role))
       then 
@@ -274,9 +280,9 @@ return
     let $H :=
       for $Hub in $Hubs
       let $relation := 
-        if ($Hub/../../bf:relationship[bf:Relationship/rdfs:label])
+        if (exists($Hub/../../bf:relationship[bf:Relationship/rdfs:label]))
         then 
-          let $_ := replace(ft:normalize($Hub/../../bf:relationship/bf:Relationship/rdfs:label), "\p{P}", "")
+          let $_ := replace(ft:normalize($Hub/../../bf:relationship[1]/bf:Relationship/rdfs:label[1]), "\p{P}", "")
           return upper-case(substring($_, 1, 1)) || substring($_, 2)
         else "Related work"
       let $HubTitle := $Hub/bf:title/*/bf:mainTitle
