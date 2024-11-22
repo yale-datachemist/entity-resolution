@@ -8,7 +8,7 @@ xquery version "4.0";
  : License: Apache-2.0
  : Proprietary XQuery extensions used: BaseX DB and File modules
  : XQuery specification: 4.0
- : Module overview: Scraps BIBFRAME resources for person names and metadata 
+ : Module overview: Scrapes BIBFRAME resources for person names and metadata 
  : from the associated resource to generate a JSON object with an string for
  : text embedding, along with specific metadata fields.
  : 
@@ -46,7 +46,7 @@ declare variable $PATH as xs:string := "";
  : @return JSON object
  :
  :)
-declare function local:process(
+declare function local:process-contribs(
   $Resource as element()*, 
   $InstanceTitle as xs:string*,
   $bib as xs:string*,
@@ -91,58 +91,160 @@ declare function local:process(
        vocabulary (https://id.loc.gov/vocabulary/relators.html), or else from 
        a label, if supplied. Default is "Contributor." :)
     if (exists($Contribution/bf:role/bf:Role/@rdf:about))
-    then db:attribute("relators", $Contribution/bf:role/bf:Role/@rdf:about)/../data(madsrdf:authoritativeLabel)
+    then 
+      if (db:attribute("relators", $Contribution/bf:role/bf:Role/@rdf:about)/../data(madsrdf:authoritativeLabel))
+      then db:attribute("relators", $Contribution/bf:role/bf:Role/@rdf:about)/../data(madsrdf:authoritativeLabel)
+      else
+        if (db:attribute("relators", $Contribution/bf:role/bf:Role/@rdf:about)/../data(madsrdf:variantLabel))
+        then db:attribute("relators", $Contribution/bf:role/bf:Role/@rdf:about)/../data(madsrdf:variantLabel)
+        else "Contributor"
     else 
       if (exists($Contribution/bf:role/bf:Role))
       then 
         for $r in $Contribution/bf:role/bf:Role/rdfs:label
         return normalize-space(upper-case(substring($r, 1, 1)) || substring($r, 2))
       else "Contributor"
-  return 
-    serialize(
-      <fn:map>
-        <fn:string key="op">Inserted</fn:string>
-        <fn:string key="string">{
-          string-join(distinct-values($role), "; ") || ": " || $name || "&#10;",
-          "Title: " || $InstanceTitle || "&#10;",                  
-          if (exists($WorkTitles)) then "Variant titles: " || normalize-space(string-join($WorkTitles, "; ")) || "&#10;" else (),        
-          if (exists($relation)) then $relation || ": " || $HubTitle || "&#10;" else (),        
-          if (exists($attr)) then "Attribution: " || $attr || "&#10;" else (),
-          if (exists($subject)) then "Subjects: " || string-join(distinct-values($subject), "; ") || "&#10;" else (),
-          if (exists($genre)) then "Genres: " || string-join(distinct-values($genre), "; ") || "&#10;" else () ,
-          if (exists($prov)) then "Provision information: " || string-join(distinct-values($prov), "; ") || "&#10;" else ()    
-        }</fn:string>
-        <fn:string key="marcKey">{$key}</fn:string>
-        <fn:string key="person">{$name}</fn:string>
-        <fn:string key="roles">{string-join(distinct-values($role), "; ")}</fn:string>
-        <fn:string key="title">{$InstanceTitle}</fn:string>
-        {
-          if (exists($attr))
-          then <fn:string key="attribution">{$attr}</fn:string>
-          else <fn:null key="attribution"/>
-        }
-        {
-          if (exists($prov))
-          then <fn:string key="provision">{$prov}</fn:string>
-          else <fn:null key="provision"/>
-        }        
-        {
-          if (exists($subject))
-          then <fn:string key="subjects">{string-join(distinct-values($subject), "; ")}</fn:string>
-          else <fn:null key="subjects"/>
-        }
-        {
-          if (exists($genre))
-          then <fn:string key="genres">{string-join(distinct-values($genre), "; ")}</fn:string>
-          else <fn:null key="genres"/>
-        }      
-        <fn:string key="record">{$bib}</fn:string>
-        <fn:string key="id">{$id}</fn:string>
-      </fn:map>, {"method": "json", "escape-solidus": "no", "json": map {
-        "format": "basic", "indent": "no"
-      }}
-    )
+  return local:serialize(
+    $id,
+    $key,
+    $name,
+    $role,
+    $InstanceTitle,
+    $bib,
+    $WorkTitles,
+    $attr,
+    $prov,
+    $subject,
+    $genre,
+    $relation,
+    $HubTitle
+  )
+    
  
+};
+
+declare function local:process-subjects(
+  $Resource as element()*, 
+  $InstanceTitle as xs:string*,
+  $bib as xs:string*,
+  $WorkTitles as xs:string*,
+  $attr as xs:string*,
+  $prov as xs:string*,
+  $subject as xs:string*,
+  $genre as xs:string*,
+  $relation as xs:string* := (),
+  $HubTitle as xs:string* := ()
+) as xs:string* {
+  
+  (: Find all the People who are contributors. 
+     Note: this excludes People as subjects. :)
+  for $PersonalName in $Resource/bf:subject//bf:Agent[rdf:type/@rdf:resource = "http://www.loc.gov/mads/rdf/v1#PersonalName"]
+  
+    
+  
+  (: The ID for the Person :)
+  let $id := 
+    if (contains($PersonalName/@rdf:about, "iri://d/"))
+    then $PersonalName/substring-after(@rdf:about, "iri://d/")
+    else $PersonalName/data(@rdf:about)
+  let $name := $PersonalName/data(madsrdf:authoritativeLabel)
+  
+  let $subj := 
+    for $s in $subject
+    where not($s = $name)
+    return $s
+  
+  (: The bflc:marcKey contains the original MARC-encoded data as a string. :)
+  let $key := $PersonalName/data(bflc:marcKey)
+  
+  (: `$2` in the MARC indicates that this is not an LC name, so we skip it. :)
+  where not(contains($key, "$2"))
+  let $role := "Subject"
+  
+    
+  return local:serialize(
+    $id,
+    $key,
+    $name,
+    $role,
+    $InstanceTitle,
+    $bib,
+    $WorkTitles,
+    $attr,
+    $prov,
+    $subj,
+    $genre,
+    $relation,
+    $HubTitle
+  )
+    
+ 
+};
+
+declare function local:serialize(
+  $id as xs:string*,
+  $key as xs:string*,
+  $name as xs:string*,
+  $role as xs:string*,
+  $InstanceTitle as xs:string*,
+  $bib as xs:string*,
+  $WorkTitles as xs:string*,
+  $attr as xs:string*,
+  $prov as xs:string*,
+  $subject as xs:string*,
+  $genre as xs:string*,
+  $relation as xs:string* := (),
+  $HubTitle as xs:string* := ()
+) as xs:string* {
+  
+  serialize(
+    <fn:map>
+      <fn:string key="op">Inserted</fn:string>
+      <fn:string key="string">{
+        let $rec := (
+          string-join(distinct-values($role), "; ") || ": " || $name,
+          "Title: " || $InstanceTitle,
+          if (exists($WorkTitles)) then "Variant titles: " || normalize-space(string-join($WorkTitles, "; ")) else (),
+          if (exists($relation)) then $relation || ": " || $HubTitle else (),
+          if (exists($attr)) then "Attribution: " || $attr else (),
+          if (exists($subject)) then "Subjects: " || string-join(distinct-values($subject), "; ") else (),
+          if (exists($genre)) then "Genres: " || string-join(distinct-values($genre), "; ") else (),
+          if (exists($prov)) then "Provision information: " || string-join(distinct-values($prov), "; ") else ()
+        )
+        return string-join($rec, "&#10;")
+        
+      }</fn:string>
+      <fn:string key="marcKey">{$key}</fn:string>
+      <fn:string key="person">{$name}</fn:string>
+      <fn:string key="roles">{string-join(distinct-values($role), "; ")}</fn:string>
+      <fn:string key="title">{$InstanceTitle}</fn:string>
+      {
+        if (exists($attr))
+        then <fn:string key="attribution">{$attr}</fn:string>
+        else <fn:null key="attribution"/>
+      }
+      {
+        if (exists($prov))
+        then <fn:string key="provision">{$prov}</fn:string>
+        else <fn:null key="provision"/>
+      }        
+      {
+        if (exists($subject))
+        then <fn:string key="subjects">{string-join(distinct-values($subject), "; ")}</fn:string>
+        else <fn:null key="subjects"/>
+      }
+      {
+        if (exists($genre))
+        then <fn:string key="genres">{string-join(distinct-values($genre), "; ")}</fn:string>
+        else <fn:null key="genres"/>
+      }      
+      <fn:string key="record">{$bib}</fn:string>
+      <fn:string key="id">{$id}</fn:string>
+    </fn:map>, {"method": "json", "escape-solidus": "no", "json": map {
+      "format": "basic", "indent": "no"
+    }}
+  )
+  
 };
 
 let $db := "BF"||$N
@@ -171,26 +273,38 @@ return
       ))
     let $attr := $Instance/bf:responsibilityStatement/data()
     let $prov := distinct-values($Instance/*[ends-with(name(), "Statement") and not(name() = "bf:responsibilityStatement")]/data())
-    let $C := local:process($Work, $InstanceTitle, $bib, $WorkTitles, $attr, $prov, $subject, $genre)
-      
+    let $C := (
+      local:process-contribs($Work, $InstanceTitle, $bib, $WorkTitles, $attr, $prov, $subject, $genre)
+      ,
+      local:process-subjects($Work, $InstanceTitle, $bib, $WorkTitles, $attr, $prov, $subject, $genre)
+            
+    )
     let $H :=
       for $Hub in $Hubs
       let $relation := 
-        if ($Hub/../../bf:relationship[bf:Relationship/rdfs:label])
+        if (exists($Hub/../../bf:relationship[bf:Relationship/rdfs:label]))
         then 
-          let $_ := replace(ft:normalize($Hub/../../bf:relationship/bf:Relationship/rdfs:label), "\p{P}", "")
+          let $_ := replace(ft:normalize($Hub/../../bf:relationship[1]/bf:Relationship/rdfs:label[1]), "\p{P}", "")
           return upper-case(substring($_, 1, 1)) || substring($_, 2)
         else "Related work"
       let $HubTitle := $Hub/bf:title/*/bf:mainTitle
-      return 
-        local:process($Hub, $InstanceTitle, $bib, $WorkTitles, $attr, $prov, $subject, $genre, $relation, $HubTitle)
+      return (
+        local:process-contribs($Hub, $InstanceTitle, $bib, $WorkTitles, $attr, $prov, $subject, $genre, $relation, $HubTitle)
+        ,
+        local:process-subjects($Hub, $InstanceTitle, $bib, $WorkTitles, $attr, $prov, $subject, $genre, $relation, $HubTitle)
+      )
+        
     
     let $E :=
       for $Hub in $Expressions
       let $relation := "Version of"  
       let $HubTitle := $Hub/bf:title/*/bf:mainTitle
-      return 
-        local:process($Hub, $InstanceTitle, $bib, $WorkTitles, $attr, $prov, $subject, $genre, $relation, $HubTitle)
+      return (
+        local:process-contribs($Hub, $InstanceTitle, $bib, $WorkTitles, $attr, $prov, $subject, $genre, $relation, $HubTitle)
+        ,
+        local:process-subjects($Hub, $InstanceTitle, $bib, $WorkTitles, $attr, $prov, $subject, $genre, $relation, $HubTitle)
+      )
+        
       
     return ($C, $H, $E)
  
