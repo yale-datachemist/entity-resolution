@@ -55,7 +55,7 @@ declare function local:process-contribs(
   $genre as xs:string*,
   $relation as xs:string* := (),
   $HubTitle as xs:string* := ()
-) as xs:string* {
+) as element()* {
   
   (: Find all the People who are contributors. 
      Note: this excludes People as subjects. :)
@@ -132,7 +132,7 @@ declare function local:process-subjects(
   $genre as xs:string*,
   $relation as xs:string* := (),
   $HubTitle as xs:string* := ()
-) as xs:string* {
+) as element()* {
   
   (: Find all the People who are contributors. 
      Note: this excludes People as subjects. :)
@@ -193,12 +193,12 @@ declare function local:serialize(
   $genre as xs:string*,
   $relation as xs:string* := (),
   $HubTitle as xs:string* := ()
-) as xs:string* {
+) as element() {
   
-  serialize(
-    <fn:map>
-      <fn:string key="op">Inserted</fn:string>
-      <fn:string key="string">{
+  
+    <record>
+      <entry name="op">Inserted</entry>
+      <entry name="string">{
         let $rec := (
           string-join(distinct-values($role), "; ") || ": " || $name,
           "Title: " || $InstanceTitle,
@@ -211,37 +211,40 @@ declare function local:serialize(
         )
         return string-join($rec, "&#10;")
         
-      }</fn:string>
-      <fn:string key="marcKey">{$key}</fn:string>
-      <fn:string key="person">{$name}</fn:string>
-      <fn:string key="roles">{string-join(distinct-values($role), "; ")}</fn:string>
-      <fn:string key="title">{$InstanceTitle}</fn:string>
+      }</entry>
+      <entry name="marcKey">{$key}</entry>
+      <entry name="person">{$name}</entry>
+      <entry name="roles">{string-join(distinct-values($role), "; ")}</entry>
+      <entry name="title">{$InstanceTitle}</entry>
       {
         if (exists($attr))
-        then <fn:string key="attribution">{$attr}</fn:string>
-        else <fn:null key="attribution"/>
+        then <entry name="attribution">{$attr}</entry>
+        else <entry name="attribution">NaN</entry>
       }
       {
         if (exists($prov))
-        then <fn:string key="provision">{$prov}</fn:string>
-        else <fn:null key="provision"/>
+        then <entry name="provision">{$prov}</entry>
+        else <entry name="provision">NaN</entry>
       }        
       {
         if (exists($subject))
-        then <fn:string key="subjects">{string-join(distinct-values($subject), "; ")}</fn:string>
-        else <fn:null key="subjects"/>
+        then <entry name="subjects">{$HubTitle}</entry>
+        else <entry name="subjects">NaN</entry>
       }
       {
         if (exists($genre))
-        then <fn:string key="genres">{string-join(distinct-values($genre), "; ")}</fn:string>
-        else <fn:null key="genres"/>
+        then <entry name="genres">{string-join(distinct-values($genre), "; ")}</entry>
+        else <entry name="genres">NaN</entry>
       }      
-      <fn:string key="record">{$bib}</fn:string>
-      <fn:string key="id">{$id}</fn:string>
-    </fn:map>, {"method": "json", "escape-solidus": "no", "json": map {
-      "format": "basic", "indent": "no"
-    }}
-  )
+      {
+        if (exists($relation))
+        then <entry name="relatedWork">{$HubTitle}</entry>
+        else <entry name="relatedWork">NaN</entry>
+      }
+      <entry name="recordId">{$bib}</entry>
+      <entry name="id">{$id}</entry>
+    </record>
+  
   
 };
 
@@ -249,8 +252,9 @@ let $db := "BF"||$N
 let $d := db:get($db)
 return
 
-  file:write-text-lines($PATH || lower-case($db) || ".json",
+  file:write-text($PATH || lower-case($db) || ".json",
   
+  csv:serialize(<csv>{
     for $Work at $p in $d/rdf:RDF/bf:Work
     
     let $bib := $Work/bf:adminMetadata/bf:AdminMetadata/bf:identifiedBy/bf:Local[bf:assigner/bf:Agent[bf:code = "DLC"]]/data(rdf:value)
@@ -282,7 +286,7 @@ return
       let $relation := 
         if (exists($Hub/../../bf:relationship[bf:Relationship/rdfs:label]))
         then 
-          let $_ := replace(ft:normalize($Hub/../../bf:relationship[1]/bf:Relationship/rdfs:label[1]), "\p{P}", "")
+          let $_ := replace(ft:normalize(($Hub/../../bf:relationship/bf:Relationship/rdfs:label)[1]), "\p{P}", "")
           return upper-case(substring($_, 1, 1)) || substring($_, 2)
         else "Related work"
       let $HubTitle := $Hub/bf:title/*/bf:mainTitle
@@ -305,5 +309,5 @@ return
         
       
     return ($C, $H, $E)
- 
+ }</csv>, {"header": true(), "format": "attributes"})
 )
