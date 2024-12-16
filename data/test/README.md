@@ -17,5 +17,3 @@
   the data file, in an undirected edge list in the columns **Source** and
   **Target**, which reference the **id** values from the data.
 
-
-
