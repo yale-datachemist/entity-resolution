@@ -14,7 +14,7 @@
   * relatedWork
   * recordId
   * id (ID for the person) 
-* `benchmark_data_matches.csv` lists perfect matches for all person entities in 
+* `benchmark_data_matches_paired.csv` lists perfect matches for all person entities in 
   the data file, in an undirected edge list in the columns **Source** and
   **Target**, which reference the **id** values from the data.
 
