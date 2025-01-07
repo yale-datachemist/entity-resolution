@@ -1,6 +1,6 @@
 # Ground-Truth Data
 
-* `benchmark_data_records.csv` includes 2,261 records as CSV. The
+* `benchmark_data_records.csv` includes 2,248 records as CSV. The
   `record` string includes only non-null fields. Individual fields are recorded 
   with `NaN` values for null fields. Relevant fields are:
   * record (combined string)
