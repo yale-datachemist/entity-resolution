@@ -53,7 +53,7 @@ declare function local:process-contribs(
   $WorkTitles as xs:string*,
   $attr as xs:string*,
   $prov as xs:string*,
-  $subject as xs:string*,
+  $subject as element()*,
   $genre as xs:string*,
   $relation as xs:string* := (),
   $HubTitle as xs:string* := ()
@@ -75,7 +75,7 @@ declare function local:process-contribs(
            can cause the LC IRI for a Hub to be assigned to the associated 
            Person as well. As a workaround, generate a UUID and concatenate it 
            to the bad IRI. :)
-        random:uuid() || "[" || $Contribution/bf:agent/bf:Agent[rdf:type/@rdf:resource = "http://id.loc.gov/ontologies/bibframe/Person"]/data(@rdf:about) || "]"
+        $bib || "-" || random:uuid() || "#" || $Contribution/bf:agent/bf:Agent[rdf:type/@rdf:resource = "http://id.loc.gov/ontologies/bibframe/Person"]/data(@rdf:about)
       else
         $Contribution/bf:agent/bf:Agent[rdf:type/@rdf:resource = "http://id.loc.gov/ontologies/bibframe/Person"]/data(@rdf:about)
   let $name := $Contribution/bf:agent/bf:Agent[rdf:type/@rdf:resource = "http://id.loc.gov/ontologies/bibframe/Person"]/data(rdfs:label)
@@ -84,7 +84,7 @@ declare function local:process-contribs(
   let $key := $Contribution/bf:agent/bf:Agent[rdf:type/@rdf:resource = "http://id.loc.gov/ontologies/bibframe/Person"]/data(bflc:marcKey)
   
   (: `$2` in the MARC indicates that this is not an LC name, so we skip it. :)
-  where not(contains($key, "$2"))
+  where not(some $x in $key satisfies contains($x, "$2"))
   let $role := 
   
     (: If a role is specified, we get the label from the LC Relators 
@@ -130,15 +130,14 @@ declare function local:process-subjects(
   $WorkTitles as xs:string*,
   $attr as xs:string*,
   $prov as xs:string*,
-  $subject as xs:string*,
+  $subject as element()*,
   $genre as xs:string*,
   $relation as xs:string* := (),
   $HubTitle as xs:string* := ()
 ) as element()* {
   
-  (: Find all the People who are contributors. 
-     Note: this excludes People as subjects. :)
-  for $PersonalName in $Resource/bf:subject//bf:Agent[rdf:type/@rdf:resource = "http://www.loc.gov/mads/rdf/v1#PersonalName"]
+  
+  for $PersonalName in $Resource/bf:subject//bf:Agent[contains(rdf:type/@rdf:resource, "Person")]
   
     
   
@@ -147,7 +146,10 @@ declare function local:process-subjects(
     if (contains($PersonalName/@rdf:about, "iri://d/"))
     then $PersonalName/substring-after(@rdf:about, "iri://d/")
     else $PersonalName/data(@rdf:about)
-  let $name := $PersonalName/data(madsrdf:authoritativeLabel)
+  let $name := 
+    if (exists($PersonalName/rdfs:label))
+    then $PersonalName/data(rdfs:label)
+    else $PersonalName/data(madsrdf:authoritativeLabel)
   
   let $subj := 
     for $s in $subject
@@ -158,8 +160,11 @@ declare function local:process-subjects(
   let $key := $PersonalName/data(bflc:marcKey)
   
   (: `$2` in the MARC indicates that this is not an LC name, so we skip it. :)
-  where not(contains($key, "$2"))
-  let $role := "Subject"
+  where not(some $x in $key satisfies contains($x, "$2"))
+  let $role := 
+    if ($PersonalName/ancestor::bf:Topic[some $x in rdf:type satisfies ends-with($x/@rdf:resource, "LocalSubject")])
+    then "Associated person"
+    else "Subject"
   
     
   return local:serialize(
@@ -191,7 +196,7 @@ declare function local:serialize(
   $WorkTitles as xs:string*,
   $attr as xs:string*,
   $prov as xs:string*,
-  $subject as xs:string*,
+  $subject as element()*,
   $genre as xs:string*,
   $relation as xs:string* := (),
   $HubTitle as xs:string* := ()
@@ -199,15 +204,26 @@ declare function local:serialize(
   
   
     <record>
-      <entry name="op">Inserted</entry>
-      <entry name="string">{
+      <entry name="record">{
         let $rec := (
           string-join(distinct-values($role), "; ") || ": " || $name,
           "Title: " || $InstanceTitle,
           if (exists($WorkTitles)) then "Variant titles: " || normalize-space(string-join($WorkTitles, "; ")) else (),
           if (exists($relation)) then $relation || ": " || $HubTitle else (),
           if (exists($attr)) then "Attribution: " || $attr else (),
-          if (exists($subject)) then "Subjects: " || string-join(distinct-values($subject), "; ") else (),
+          if (exists($subject)) then "Subjects: " || string-join(distinct-values(
+            
+            for $s in $subject
+            return 
+              if (some $x in $s/../rdf:type satisfies (ends-with($x/@rdf:resource, "ComplexSubject") or ends-with($x/@rdf:resource, "NameTitle")))                  
+              then 
+                if (substring($s, string-length($s)) = ".")
+                then substring($s, 1, string-length($s) - 1)
+                else $s
+            else $s
+
+            
+          ), "; ") else (),
           if (exists($genre)) then "Genres: " || string-join(distinct-values($genre), "; ") else (),
           if (exists($prov)) then "Provision information: " || string-join(distinct-values($prov), "; ") else ()
         )
@@ -230,7 +246,16 @@ declare function local:serialize(
       }        
       {
         if (exists($subject))
-        then <entry name="subjects">{$HubTitle}</entry>
+        then <entry name="subjects">{string-join(distinct-values(
+          for $s in $subject
+          return 
+            if (some $x in $s/../rdf:type satisfies (ends-with($x/@rdf:resource, "ComplexSubject") or ends-with($x/@rdf:resource, "NameTitle")))
+            then 
+              if (substring($s, string-length($s)) = ".")
+              then substring($s, 1, string-length($s) - 1)
+              else $s
+            else $s
+        ), "; ")}</entry>
         else <entry name="subjects">NaN</entry>
       }
       {
@@ -244,19 +269,24 @@ declare function local:serialize(
         else <entry name="relatedWork">NaN</entry>
       }
       <entry name="recordId">{$bib}</entry>
-      <entry name="id">{$id}</entry>
+      <entry name="id">{
+        if (starts-with($id, "http"))
+        then $bib || "-" || random:uuid() || "#" || $id
+        else $id
+      }</entry>
     </record>
   
   
 };
 
 let $db := "BF"||$N
+let $db := "zora"
 let $d := db:get($db)
 return
 
-  file:write-text($PATH || lower-case($db) || ".json",
+  (: file:write-text($PATH || lower-case($db) || ".json", :)
   
-  csv:serialize(<csv>{
+  (: csv:serialize( :)<csv>{
     for $Work at $p in $d/rdf:RDF/bf:Work
     
     let $bib := $Work/bf:adminMetadata/bf:AdminMetadata/bf:identifiedBy/bf:Local[bf:assigner/bf:Agent[bf:code = "DLC"]]/data(rdf:value)
@@ -264,7 +294,7 @@ return
     let $Expressions := $Work/bf:expressionOf/bf:Hub
     let $Hubs := $Work/bf:relation/bf:Relation/bf:associatedResource/bf:Hub
     let $Instance := $Work/following-sibling::bf:Instance[@rdf:about = $Work/bf:hasInstance/@rdf:resource]
-    let $subject := $Work/bf:subject/*/madsrdf:authoritativeLabel/data()
+    let $subject := $Work/bf:subject/*/madsrdf:authoritativeLabel
     let $genre := $Work/bf:genreForm/*/rdfs:label/data()
     let $InstanceTitle := 
       normalize-space(string-join(
@@ -312,6 +342,6 @@ return
       
     return ($C, $H, $E)
 
- }</csv>, {"header": true(), "format": "attributes"})
-)
+ }</csv>(: , {"header": true(), "format": "attributes"})
+) :)
 
